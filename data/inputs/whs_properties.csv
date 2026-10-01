@@ -1,0 +1,1366 @@
+id_number,site,category,state,lat,lon
+1,Galápagos Islands,Natural,Ecuador,-0.6898600000,-90.5013190000
+2,City of Quito,Cultural,Ecuador,-0.2200000000,-78.5120833333
+3,Aachen Cathedral,Cultural,Germany,50.7747468537,6.0839199680
+4,L’Anse aux Meadows National Historic Site,Cultural,Canada,51.5847222222,-55.5500000000
+8,Ichkeul National Park,Natural,Tunisia,37.1636100000,9.6747200000
+9,Simien National Park,Natural,Ethiopia,13.1833333333,38.0666666667
+10,Lower Valley of the Awash,Cultural,Ethiopia,11.1000600000,40.5793900000
+12,Tiya,Cultural,Ethiopia,8.4349100000,38.6121000000
+13,Melka Kunture and Balchit: Archaeological and Palaeontological Sites in the Highland Area of Ethiopia,Cultural,Ethiopia,8.7034722222,38.5990833333
+15,Aksum,Cultural,Ethiopia,14.1301900000,38.7186100000
+17,Lower Valley of the Omo,Cultural,Ethiopia,4.8000000000,35.9666666700
+18,"Rock-Hewn Churches, Lalibela",Cultural,Ethiopia,12.0333333333,38.8166666667
+19,"Fasil Ghebbi, Gondar Region",Cultural,Ethiopia,12.6079090000,37.4697000000
+20,Ancient City of Damascus,Cultural,Syria,33.5108333333,36.3097222222
+21,Ancient City of Aleppo,Cultural,Syria,36.1991666667,37.1627777778
+22,Ancient City of Bosra,Cultural,Syria,32.5169444445,36.4680555556
+23,Site of Palmyra,Cultural,Syria,34.5541666667,38.2666666667
+24,Nahanni National Park,Natural,Canada,61.5472222200,-125.5894444000
+25,Djoudj National Bird Sanctuary,Natural,Senegal,16.4146020000,-16.2379060000
+26,Island of Gorée,Cultural,Senegal,14.6672200000,-17.4008300000
+27,Mesa Verde National Park,Cultural,United States,37.2616666700,-108.4855556000
+28,Yellowstone National Park,Natural,United States,44.4605600000,-110.8277800000
+29,Historic Centre of Kraków,Cultural,Poland,50.0613888889,19.9372222222
+30,Historic Centre of Warsaw,Cultural,Poland,52.2500000000,21.0130000000
+31,Auschwitz Birkenau German Nazi Concentration and Extermination Camp (1940-1945),Cultural,Poland,50.0238888889,19.2050000000
+32,Wieliczka and Bochnia Royal Salt Mines,Cultural,Poland,49.9691666667,20.4175000000
+33,Białowieża Forest,Natural,Belarus,52.7275000000,23.9811111111
+33,Białowieża Forest,Natural,Poland,52.7275000000,23.8991666667
+34,"Forts and Castles, Volta, Greater Accra, Central and Western Regions",Cultural,Ghana,5.3910300000,-0.4936100000
+35,Asante Traditional Buildings,Cultural,Ghana,6.4011111111,-1.6258333333
+36,Medina of Tunis,Cultural,Tunisia,36.8166700000,10.1666700000
+37,Archaeological Site of Carthage,Cultural,Tunisia,36.8372777777,10.3235555556
+38,Amphitheatre of El Jem,Cultural,Tunisia,35.2963900000,10.7069400000
+39,Ngorongoro Conservation Area,Mixed,Tanzania,-3.1872200000,35.5408300000
+42,Boyana Church,Cultural,Bulgaria,42.6446707809,23.2661877076
+43,Madara Rider,Cultural,Bulgaria,43.2774166667,27.1189444444
+44,Thracian Tomb of Kazanlak,Cultural,Bulgaria,42.6257740000,25.3991720000
+45,Rock-Hewn Churches of Ivanovo,Cultural,Bulgaria,43.6948580000,25.9878930000
+55,Røros Mining Town and the Circumference,Cultural,Norway,62.3219444444,11.8338888889
+58,Urnes Stave Church,Cultural,Norway,61.2982594908,7.3226782890
+59,Bryggen,Cultural,Norway,60.3959170000,5.3259050000
+63,Virunga National Park,Natural,Democratic Republic of the Congo,0.9166666670,29.1666666700
+64,Tikal National Park,Mixed,Guatemala,17.2166666700,-89.6166666700
+65,Antigua Guatemala,Cultural,Guatemala,14.5234680000,-90.7281600000
+71,Dinosaur Provincial Park,Natural,Canada,50.7677777800,-111.4922222000
+75,Grand Canyon National Park,Natural,United States,36.1008333300,-112.0905556000
+76,Everglades National Park,Natural,United States,25.5544444400,-80.9963888900
+78,Independence Hall,Cultural,United States,39.9486111100,-75.1500000000
+79,Paphos,Cultural,Cyprus,34.7086111111,32.5733333333
+80,Mont-Saint-Michel and its Bay,Cultural,France,48.5852500000,-1.5061388889
+81,Chartres Cathedral,Cultural,France,48.4475000000,1.4872222220
+83,Palace and Park of Versailles,Cultural,France,48.8050000000,2.1194444440
+84,"Vézelay, Church and Hill",Cultural,France,47.4581305447,3.7359678117
+85,Prehistoric Sites and Decorated Caves of the Vézère Valley,Cultural,France,44.9246944444,1.0205833333
+86,Memphis and its Necropolis – the Pyramid Fields from Giza to Dahshur,Cultural,Egypt,29.8555000000,31.2610555556
+87,Ancient Thebes with its Necropolis,Cultural,Egypt,25.6998611111,32.6390277777
+88,Nubian Monuments from Abu Simbel to Philae,Cultural,Egypt,22.3372222222,31.6258055556
+89,Historic Cairo,Cultural,Egypt,30.0066666667,31.2334444444
+90,Abu Mena,Cultural,Egypt,30.8358333333,29.6666666700
+91,"Historic Centre of Rome, the Properties of the Holy See in that City Enjoying Extraterritorial Rights and San Paolo Fuori le Mura",Cultural,Italy,41.8902222222,12.4923055556
+91,"Historic Centre of Rome, the Properties of the Holy See in that City Enjoying Extraterritorial Rights and San Paolo Fuori le Mura",Cultural,Vatican,41.8580560000,12.4761110000
+93,Church and Dominican Convent of Santa Maria delle Grazie with “The Last Supper” by Leonardo da Vinci,Cultural,Italy,45.4660000000,9.1710000000
+94,Rock Drawings in Valcamonica,Cultural,Italy,45.8885030000,10.1804690000
+95,Old City of Dubrovnik,Cultural,Croatia,42.6289444445,18.1180555556
+96,Stari Ras and Sopoćani,Cultural,Serbia,43.1188888889,20.4227777778
+97,Historical Complex of Split with the Palace of Diocletian,Cultural,Croatia,43.5088888889,16.4391666667
+98,Plitvice Lakes National Park,Natural,Croatia,44.8777800000,15.6144400000
+99,Natural and Cultural Heritage of the Ohrid region,Mixed,Albania,40.9672933093,20.6761045412
+99,Natural and Cultural Heritage of the Ohrid region,Mixed,North Macedonia,41.0280000000,20.7220000000
+100,Durmitor National Park,Natural,Montenegro,43.1330000000,19.0166000000
+102,Al Qal'a of Beni Hammad,Cultural,Algeria,35.8184400000,4.7868400000
+111,Bale Mountains National Park,Natural,Ethiopia,6.7977777778,39.7488888889
+113,Tchogha Zanbil,Cultural,Iran,32.0085700000,48.5221180000
+114,Persepolis,Cultural,Iran,29.9344400000,52.8902800000
+115,"Meidan Emam, Esfahan",Cultural,Iran,32.6574500000,51.6777777777
+116,Old Towns of Djenné,Cultural,Mali,13.8902549013,-4.5404433959
+119,Timbuktu,Cultural,Mali,16.7733333300,-2.9994444440
+120,Sagarmatha National Park,Natural,Nepal,27.9652800000,86.9130600000
+121,Kathmandu Valley,Cultural,Nepal,27.6724260000,85.4284670000
+124,Historic Town of Ouro Preto,Cultural,Brazil,-20.3888888900,-43.5055555600
+125,Natural and Culturo-Historical Region of Kotor,Cultural,Montenegro,42.4833300000,18.7000000000
+129,Maya Site of Copan,Cultural,Honduras,14.8380000000,-89.1420000000
+130,Ħal Saflieni Hypogeum,Cultural,Malta,35.8695900049,14.5068833733
+131,City of Valletta,Cultural,Malta,35.9005600000,14.5144400000
+132,Megalithic Temples of Malta,Cultural,Malta,35.8267376530,14.4367730611
+134,Redwood National and State Parks,Natural,United States,41.3738888900,-123.9980556000
+135,Fortifications on the Caribbean Side of Panama: Portobelo-San Lorenzo,Cultural,Panama,9.3241666667,-80.0030555556
+136,Garamba National Park,Natural,Democratic Republic of the Congo,4.1666666667,29.4997222222
+137,Kahuzi-Biega National Park,Natural,Democratic Republic of the Congo,-2.3340530000,28.1807430000
+138,Archaeological Ruins at Moenjodaro,Cultural,Pakistan,27.3291666700,68.1388888900
+139,Taxila,Cultural,Pakistan,33.7277688503,72.8805234113
+140,Buddhist Ruins of Takht-i-Bahi and Neighbouring City Remains at Sahr-i-Bahlol,Cultural,Pakistan,34.2555555556,71.9505555556
+143,"Historical Monuments at Makli, Thatta",Cultural,Pakistan,24.7666666700,67.9000000000
+144,Ruins of Kilwa Kisiwani and Ruins of Songo Mnara,Cultural,Tanzania,-8.9577777778,39.5227777778
+145,Los Glaciares National Park,Natural,Argentina,-50.0000000000,-73.2494400000
+147,Kakadu National Park,Mixed,Australia,-12.1052777778,132.3838888889
+148,Old City of Jerusalem and its Walls,Cultural,Jerusalem (Site proposed by Jordan),31.7777777778,35.2316666667
+149,Archaeological Park and Ruins of Quirigua,Cultural,Guatemala,15.2705900000,-89.0402500000
+150,Mammoth Cave National Park,Natural,United States,37.1872222200,-86.1030555600
+151,Olympic National Park,Natural,United States,47.7984800000,-123.5792000000
+153,Niokolo-Koba National Park,Natural,Senegal,13.0060000000,-13.0040000000
+154,Great Barrier Reef,Natural,Australia,-18.2861111100,147.7000000000
+155,Mount Nimba Strict Nature Reserve,Natural,Ivory Coast,7.6031800000,-8.3909700000
+156,Serengeti National Park,Natural,Tanzania,-2.7400000000,34.8590000000
+157,SGang Gwaay,Cultural,Canada,52.0950000000,-131.2202778000
+158,Head-Smashed-In Buffalo Jump,Cultural,Canada,49.7084055556,-113.6520527778
+159,Darien National Park,Natural,Panama,7.7361111110,-77.5472222200
+160,Palace and Park of Fontainebleau,Cultural,France,48.4019444400,2.6980555560
+162,Amiens Cathedral,Cultural,France,49.8950000000,2.3016666670
+163,"Roman Theatre and its Surroundings and the ""Triumphal Arch"" of Orange",Cultural,France,44.1357222222,4.8084166667
+164,"Arles, Roman and Romanesque Monuments",Cultural,France,43.6776388900,4.6306944440
+165,Cistercian Abbey of Fontenay,Cultural,France,47.6394400000,4.3891100000
+166,Sydney Opera House,Cultural,Australia,-33.8566666667,151.2152777777
+167,Willandra Lakes Region,Mixed,Australia,-33.6730000000,143.0350000000
+168,Speyer Cathedral,Cultural,Germany,49.3172222222,8.4423888889
+169,Würzburg Residence with the Court Gardens and Residence Square,Cultural,Germany,49.7927777778,9.9388888889
+170,Medina of Fez,Cultural,Morocco,34.0551111111,-4.9903611111
+171,Fort and Shalamar Gardens in Lahore,Cultural,Pakistan,31.5871411427,74.3821290705
+173,Stone Town of Zanzibar,Cultural,Tanzania,-6.1630600000,39.1891700000
+174,Historic Centre of Florence,Cultural,Italy,43.7730600000,11.2561100000
+175,Medici Villas and Gardens in Tuscany,Cultural,Italy,43.7488888889,11.2477777778
+179,Tassili n'Ajjer,Mixed,Algeria,25.5000000000,9.0000000000
+180,"National History Park – Citadel, Sans Souci, Ramiers",Cultural,Haiti,19.5730250000,-72.2342680000
+181,Tasmanian Wilderness,Mixed,Australia,-43.1184722222,146.2305555556
+183,Archaeological Site of Leptis Magna,Cultural,Libya,32.6383300000,14.2930600000
+184,Archaeological Site of Sabratha,Cultural,Libya,32.8052800000,12.4850000000
+185,Aldabra Atoll,Natural,Seychelles,-9.4166666670,46.4166666700
+186,Lord Howe Island Group,Natural,Australia,-31.5655555600,159.0883333000
+187,St Mary's Cathedral and St Michael's Church at Hildesheim,Cultural,Germany,52.1488888889,9.9472222222
+188,M'Zab Valley,Cultural,Algeria,32.4717222222,3.7516666667
+189,Historic Centre of the Town of Olinda,Cultural,Brazil,-8.0133333330,-34.8450000000
+190,Archaeological Site of Cyrene,Cultural,Libya,32.8250000000,21.8583300000
+191,Djémila,Cultural,Algeria,36.3205600000,5.7366700000
+192,Old Walled City of Shibam,Cultural,Yemen,15.9269400000,48.6266700000
+193,Tipasa,Cultural,Algeria,36.5748333333,2.5531666667
+194,Timgad,Cultural,Algeria,35.4841666667,6.4688611111
+195,Taï National Park,Natural,Ivory Coast,5.6488888889,-7.0952777778
+196,Río Plátano Biosphere Reserve,Natural,Honduras,15.7444444400,-84.6750000000
+198,Cahokia Mounds State Historic Site,Cultural,United States,38.6586111100,-90.0613888900
+199,Selous Game Reserve,Natural,Tanzania,-9.0000000000,37.4000000000
+200,Sacred City of Anuradhapura,Cultural,Sri Lanka,8.3333333330,80.3833333300
+201,Ancient City of Polonnaruwa,Cultural,Sri Lanka,7.9158333330,81.0005555600
+202,Ancient City of Sigiriya,Cultural,Sri Lanka,7.9500000000,80.7500000000
+203,"From the Great Saltworks of Salins-les-Bains to the Royal Saltworks of Arc-et-Senans, the Production of Open-pan Salt",Cultural,France,46.9375000000,5.8763888889
+204,Old Havana and its Fortification System,Cultural,Cuba,23.1197850000,-82.3464970000
+205,Talamanca Range-La Amistad Reserves / La Amistad National Park,Natural,Costa Rica,9.4070833330,-82.9388055600
+206,Central Zone of the Town of Angra do Heroismo in the Azores,Cultural,Portugal,38.6550000000,-27.2200000000
+208,Cultural Landscape and Archaeological Remains of the Bamiyan Valley,Cultural,Afghanistan,34.8109722222,66.8435277778
+211,Minaret and Archaeological Remains of Jam,Cultural,Afghanistan,34.3964166667,64.5158888889
+216,Rila Monastery,Cultural,Bulgaria,42.1148458508,23.3085522023
+217,Ancient City of Nessebar,Cultural,Bulgaria,42.6591111111,27.7360277778
+219,Srebarna Nature Reserve,Natural,Bulgaria,44.1144400000,27.0780600000
+225,Pirin National Park,Natural,Bulgaria,41.7427222222,23.4304722222
+227,Comoé National Park,Natural,Ivory Coast,9.0770000000,-3.7580000000
+228,"Historic Centre of Avignon: Papal Palace, Episcopal Ensemble and Avignon Bridge",Cultural,France,43.9527777800,4.8061111110
+229,"Place Stanislas, Place de la Carrière and Place d'Alliance in Nancy",Cultural,France,48.6936111100,6.1833333330
+230,Abbey Church of Saint-Savin sur Gartempe,Cultural,France,46.5647200000,0.8661100000
+231,Red Fort Complex,Cultural,India,28.6555555556,77.2408333333
+232,"Humayun's Tomb, Delhi",Cultural,India,28.5933300000,77.2505600000
+233,"Qutb Minar and its Monuments, Delhi",Cultural,India,28.5258300000,77.1852800000
+234,Churches and Convents of Goa,Cultural,India,15.5022200000,73.9116700000
+239,Group of Monuments at Pattadakal,Cultural,India,15.9478610000,75.8171940000
+240,Khajuraho Group of Monuments,Cultural,India,24.8250930000,79.9310950000
+241,Group of Monuments at Hampi,Cultural,India,15.3144400000,76.4716700000
+242,Ajanta Caves,Cultural,India,20.5531110000,75.7002500000
+243,Ellora Caves,Cultural,India,20.0263900000,75.1791700000
+244,Elephanta Caves,Cultural,India,18.9666700000,72.9358300000
+246,"Sun Temple, Konârak",Cultural,India,19.8875000000,86.0947200000
+247,Hill Forts of Rajasthan,Cultural,India,24.6263888889,76.1872222222
+249,Group of Monuments at Mahabalipuram,Cultural,India,12.6175000000,80.1988888889
+250,Great Living Chola Temples,Cultural,India,10.7838610000,79.1315830000
+251,Agra Fort,Cultural,India,27.1798060000,78.0215280000
+252,Taj Mahal,Cultural,India,27.1741700000,78.0422200000
+255,Fatehpur Sikri,Cultural,India,27.0975280000,77.6665000000
+256,Wood Buffalo National Park,Natural,Canada,59.3583333300,-112.2933333000
+258,"Gulf of Porto: Calanche of Piana, Gulf of Girolata, Scandola Reserve",Natural,France,42.3251944400,8.6288333330
+259,Great Smoky Mountains National Park,Natural,United States,35.5930555600,-83.4355555600
+260,Sangay National Park,Natural,Ecuador,-1.8333300000,-78.3333300000
+261,Vallée de Mai Nature Reserve,Natural,Seychelles,-4.3310000000,55.7380000000
+262,Sanganeb Marine National Park and Dungonab Bay – Mukkawar Island Marine National Park,Natural,Sudan,19.7361111111,37.4430555556
+263,Monastery of the Hieronymites and Tower of Belém in Lisbon,Cultural,Portugal,38.6915965311,-9.2159801015
+264,Monastery of Batalha,Cultural,Portugal,39.6577800000,-8.8269400000
+265,Convent of Christ in Tomar,Cultural,Portugal,39.6047200000,-8.4175000000
+266,La Fortaleza and San Juan National Historic Site in Puerto Rico,Cultural,United States,18.4639770166,-66.1168205745
+267,Old City of Berne,Cultural,Switzerland,46.9480600000,7.4502800000
+268,Abbey of St Gall,Cultural,Switzerland,47.4233300000,9.3777800000
+269,Benedictine Convent of St John at Müstair,Cultural,Switzerland,46.6294500000,10.4476500000
+271,Pilgrimage Church of Wies,Cultural,Germany,47.6806460297,10.9000214547
+272,Hanseatic City of Lübeck,Cultural,Germany,53.8625000000,10.6833333333
+273,City of Cuzco,Cultural,Peru,-13.5166888889,-71.9786972222
+274,Historic Sanctuary of Machu Picchu,Mixed,Peru,-13.1849340000,-72.5334430000
+275,"Jesuit Missions of the Guaranis: San Ignacio Mini, Santa Ana, Nuestra Señora de Loreto and Santa Maria Mayor (Argentina), Ruins of Sao Miguel das Missoes (Brazil)",Cultural,Argentina,-27.2557080000,-55.5314360000
+275,"Jesuit Missions of the Guaranis: San Ignacio Mini, Santa Ana, Nuestra Señora de Loreto and Santa Maria Mayor (Argentina), Ruins of Sao Miguel das Missoes (Brazil)",Cultural,Brazil,-28.5475300000,-54.5555550000
+276,Samarra Archaeological City,Cultural,Iraq,34.0802897222,43.9155883333
+277,Hatra,Cultural,Iraq,35.5880600000,42.7183300000
+278,Babylon,Cultural,Iraq,32.5419694444,44.4208333333
+280,Salonga National Park,Natural,Democratic Republic of the Congo,-1.5026432572,21.6661880712
+284,Chitwan National Park,Natural,Nepal,27.5000000000,84.3333300000
+285,"Port, Fortresses and Group of Monuments, Cartagena",Cultural,Colombia,10.4166666700,-75.5333333300
+286,Vatican City,Cultural,Vatican,41.9021600000,12.4573600000
+287,Rock-Art Sites of Tadrart Acacus,Cultural,Libya,24.8333300000,10.3333300000
+288,Castles of Augustusburg and Falkenlust at Brühl,Cultural,Germany,50.8250277800,6.9097777780
+289,Lake Malawi National Park,Natural,Malawi,-14.0333300000,34.8833300000
+292,Cologne Cathedral,Cultural,Germany,50.9411111100,6.9572222220
+293,Anjar,Cultural,Lebanon,33.7319444444,35.9333333333
+294,Baalbek,Cultural,Lebanon,34.0066666667,36.2041666667
+295,Byblos,Cultural,Lebanon,34.1191700000,35.6455555556
+299,Tyre,Cultural,Lebanon,33.2691666667,35.1958333333
+300,Historic District of Old Québec,Cultural,Canada,46.8094444400,-71.2105555600
+302,"Mana Pools National Park, Sapi and Chewore Safari Areas",Natural,Zimbabwe,-15.8194444400,29.4080555600
+303,Iguazu National Park,Natural,Argentina,-25.5773570000,-54.2860730000
+304,Canadian Rocky Mountain Parks,Natural,Canada,51.4247222200,-116.4797222000
+306,Matobo Hills,Cultural,Zimbabwe,-20.5000000000,28.5000000000
+307,Statue of Liberty,Cultural,United States,40.6894444400,-74.0447222200
+308,Yosemite National Park,Natural,United States,37.7461111100,-119.5966667000
+309,Historic Centre of Salvador de Bahia,Cultural,Brazil,-12.9729170000,-38.5129810000
+310,Cave of Altamira and Paleolithic Cave Art of Northern Spain,Cultural,Spain,43.2358794000,-2.2753798000
+311,Old Town of Segovia and its Aqueduct,Cultural,Spain,40.9484722200,-4.1167500000
+312,Monuments of Oviedo and the Kingdom of the Asturias,Cultural,Spain,43.1272783474,-5.8143160480
+313,Historic Centre of Cordoba,Cultural,Spain,37.8791944400,-4.7797222220
+314,"Alhambra, Generalife and Albayzín, Granada",Cultural,Spain,37.1767777778,-3.5899166667
+316,Burgos Cathedral,Cultural,Spain,42.3407333333,-3.7040111111
+318,"Monastery and Site of the Escurial, Madrid",Cultural,Spain,40.5853055555,-4.1580277778
+320,Works of Antoni Gaudí,Cultural,Spain,41.3638839363,2.0279446455
+321,Historic Mosque City of Bagerhat,Cultural,Bangladesh,22.6666700000,89.8000000000
+322,Ruins of the Buddhist Vihara at Paharpur,Cultural,Bangladesh,25.0333333300,88.9833333300
+323,Royal Palaces of Abomey,Cultural,Benin,7.1875000000,1.9922222222
+326,Petra,Cultural,Jordan,30.3305600000,35.4433300000
+327,Quseir Amra,Cultural,Jordan,31.8018055556,36.5873055556
+330,Chavin (Archaeological Site),Cultural,Peru,-9.5927725444,-77.1784535027
+331,Medina of Marrakesh,Cultural,Morocco,31.6138888889,-8.0222222222
+332,Punic Town of Kerkuane and its Necropolis,Cultural,Tunisia,36.9463888889,11.0991666666
+333,Huascarán National Park,Natural,Peru,-9.3333300000,-77.4000000000
+334,Sanctuary of Bom Jesus do Congonhas,Cultural,Brazil,-20.5082010000,-43.8608060000
+335,Nanda Devi and Valley of Flowers National Parks,Natural,India,30.4186111111,79.8497222222
+337,Kaziranga National Park,Natural,India,26.6666666700,93.4166666700
+338,Manas Wildlife Sanctuary,Natural,India,26.7250000000,91.0305555600
+340,Keoladeo National Park,Natural,India,27.1588888900,77.5086111100
+344,Pont du Gard (Roman Aqueduct),Cultural,France,43.9472222200,4.5352777780
+345,Historic Fortified City of Carcassonne,Cultural,France,43.2070631000,2.3636562000
+347,Santiago de Compostela (Old Town),Cultural,Spain,42.8610833333,-8.5553888889
+348,Old Town of Ávila with its Extra-Muros Churches,Cultural,Spain,40.6502777778,-4.6885000000
+351,Painted Churches in the Troodos Region,Cultural,Cyprus,34.8931026876,32.9662974012
+352,Rock Art of Alta,Cultural,Norway,69.9480000000,23.1870000000
+353,Chaco Culture,Cultural,United States,35.3694166667,-107.7780555560
+354,Waterton Glacier International Peace Park,Natural,Canada,49.0833888889,-113.9166388890
+354,Waterton Glacier International Peace Park,Natural,United States,48.7560555556,-113.7797777780
+355,Iguaçu National Park,Natural,Brazil,-25.4481472222,-53.8001444444
+356,Historic Areas of Istanbul,Cultural,Turkey,41.0083333333,28.9833333333
+357,Göreme National Park and the Rock Sites of Cappadocia,Mixed,Turkey,38.4056666667,34.7576388889
+358,Great Mosque and Hospital of Divriği,Cultural,Turkey,39.3712710000,38.1218260000
+359,Thracian Tomb of Sveshtari,Cultural,Bulgaria,43.7449166667,26.7665277778
+361,Historic Centre of Évora,Cultural,Portugal,38.5730600000,-7.9077800000
+362,Old Town of Ghadamès,Cultural,Libya,30.1333333300,9.5000000000
+364,Great Zimbabwe National Monument,Cultural,Zimbabwe,-20.2711699520,30.9332689726
+365,Khami Ruins National Monument,Cultural,Zimbabwe,-20.1583333300,28.3766666700
+366,Chan Chan Archaeological Zone,Cultural,Peru,-8.1078360000,-79.0747370000
+367,"Roman Monuments, Cathedral of St Peter and Church of Our Lady in Trier",Cultural,Germany,49.7091666667,6.5495277777
+368,Gondwana Rainforests of Australia,Natural,Australia,-26.2717243446,149.4299549290
+369,Giant's Causeway and Causeway Coast,Natural,United Kingdom,55.2408333333,-6.5116666667
+370,Durham Castle and Cathedral,Cultural,United Kingdom,54.7747222200,-1.5761111110
+371,Ironbridge Gorge,Cultural,United Kingdom,52.6263888900,-2.4727777780
+372,Studley Royal Park including the Ruins of Fountains Abbey,Cultural,United Kingdom,54.1088888889,-1.5883333333
+373,"Stonehenge, Avebury and Associated Sites",Cultural,United Kingdom,51.1788611111,-1.8254444445
+374,Castles and Town Walls of King Edward in Gwynedd,Cultural,United Kingdom,52.8600000000,-4.1090000000
+377,Hattusha: the Hittite Capital,Cultural,Turkey,40.0032222222,34.6372222222
+378,Mudejar Architecture of Aragon,Cultural,Spain,40.3419722222,-1.1080000000
+379,Historic City of Toledo,Cultural,Spain,39.8569444444,-4.0244444444
+380,Garajonay National Park,Natural,Spain,28.1262500000,-17.2372222200
+381,Old City of Salamanca,Cultural,Spain,40.9618888889,-5.6602777778
+383,"Cathedral, Alcázar and Archivo de Indias in Seville",Cultural,Spain,37.3838333333,-5.9915555556
+384,Old Town of Cáceres,Cultural,Spain,39.4744400000,-6.3700000000
+385,Old City of Sana'a,Cultural,Yemen,15.3555555600,44.2080555600
+387,St Kilda,Mixed,United Kingdom,57.8172222200,-8.5766666670
+389,Studenica Monastery,Cultural,Serbia,43.4865277778,20.5316666667
+390,Škocjan Caves,Natural,Slovenia,45.6666700000,14.0000000000
+392,Temple of Apollo Epicurius at Bassae,Cultural,Greece,37.4349800000,21.8969400000
+393,Archaeological Site of Delphi,Cultural,Greece,38.4814900000,22.4961700000
+394,Venice and its Lagoon,Cultural,Italy,45.4343055600,12.3389444400
+395,"Piazza del Duomo, Pisa",Cultural,Italy,43.7230555600,10.3963888900
+398,Castel del Monte,Cultural,Italy,41.0848055600,16.2709444400
+400,"Budapest, including the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue",Cultural,Hungary,47.4970470000,19.0428833000
+401,Old Village of Hollókő and its Surroundings,Cultural,Hungary,47.9944400000,19.5291700000
+402,Manú National Park,Natural,Peru,-12.2500000000,-71.7500000000
+403,Kilimanjaro National Park,Natural,Tanzania,-3.0666700000,37.3666700000
+404,"Acropolis, Athens",Cultural,Greece,37.9708700000,23.7261800000
+405,Sinharaja Forest Reserve,Natural,Sri Lanka,6.4166666670,80.5000000000
+407,Dja Faunal Reserve,Natural,Cameroon,3.1250000000,12.9950000000
+409,Hawaii Volcanoes National Park,Natural,United States,19.3333333333,-155.5000000000
+410,Sian Ka'an,Natural,Mexico,19.3833300000,-87.7916700000
+411,Pre-Hispanic City and National Park of Palenque,Cultural,Mexico,17.4833300000,-92.0500000000
+412,Historic Centre of Mexico City and Xochimilco,Cultural,Mexico,19.2206630000,-98.9643930000
+414,Pre-Hispanic City of Teotihuacan,Cultural,Mexico,19.6916700000,-98.8416700000
+415,Historic Centre of Oaxaca and Archaeological Site of Monte Albán,Cultural,Mexico,17.0463230000,-96.7681330000
+416,Historic Centre of Puebla,Cultural,Mexico,19.0459670000,-98.1977690000
+417,"Ibiza, Biodiversity and Culture",Mixed,Spain,38.7925277778,1.4451944444
+419,Gros Morne National Park,Natural,Canada,49.6125000000,-57.5313888900
+420,City of Potosí,Cultural,Bolivia,-19.5991120000,-65.7498130000
+421,Tongariro National Park,Mixed,New Zealand,-39.0154208950,175.7315772460
+422,The English Lake District,Cultural,United Kingdom,54.4766111111,-3.0824166667
+425,Blenheim Palace,Cultural,United Kingdom,51.8419444400,-1.3613888890
+426,Palace of Westminster and Westminster Abbey including Saint Margaret’s Church,Cultural,United Kingdom,51.4990000000,-0.1270000000
+428,City of Bath,Cultural,United Kingdom,51.3813055556,-2.3590555556
+429,New Lanark,Cultural,United Kingdom,55.6633333300,-3.7830555560
+430,Frontiers of the Roman Empire,Cultural,Germany,48.7864060000,9.7786070000
+430,Frontiers of the Roman Empire,Cultural,United Kingdom,54.3495500000,-3.4056490000
+433,Bahla Fort,Cultural,Oman,22.9641700000,57.3011100000
+434,"Archaeological Sites of Bat, Al-Khutm and Al-Ayn",Cultural,Oman,23.2698600000,56.7450000000
+437,Mount Taishan,Mixed,China,36.2666700000,117.1000000000
+438,The Great Wall,Cultural,China,39.8000000000,98.2250000000
+439,Imperial Palaces of the Ming and Qing Dynasties in Beijing and Shenyang,Cultural,China,39.9171180000,116.3971510000
+440,Mogao Caves,Cultural,China,40.1333300000,94.8166700000
+441,Mausoleum of the First Qin Emperor,Cultural,China,34.3814166667,109.2536666670
+442,Monticello and the University of Virginia in Charlottesville,Cultural,United States,38.0030000000,-78.4310000000
+444,Ksar of Ait-Ben-Haddou,Cultural,Morocco,31.0472200000,-7.1288900000
+445,Brasilia,Cultural,Brazil,-15.7833300000,-47.9000000000
+447,Uluru-Kata Tjuta National Park,Mixed,Australia,-25.3333333300,131.0000000000
+448,Nemrut Dağ,Cultural,Turkey,37.9807939663,38.7409837493
+449,Peking Man Site at Zhoukoudian,Cultural,China,39.6894490000,115.9227020000
+450,Sacred City of Kandy,Cultural,Sri Lanka,7.2936111110,80.6402777800
+451,Old Town of Galle and its Fortifications,Cultural,Sri Lanka,6.0280510000,80.2163460000
+452,Sundarbans National Park,Natural,India,21.9450000000,88.8958333300
+454,Mount Athos,Mixed,Greece,40.2666700000,24.2166700000
+455,Meteora,Mixed,Greece,39.7166700000,21.6333300000
+456,Paleochristian and Byzantine Monuments of Thessalonika,Cultural,Greece,40.6389722222,22.9703055556
+460,Trinidad and the Valley de los Ingenios,Cultural,Cuba,21.8030555556,-79.9844444444
+474,Hortobágy National Park - the Puszta,Cultural,Hungary,47.5945800000,21.1567800000
+475,Manovo-Gounda St Floris National Park,Natural,Central African Republic,9.0000000000,21.5000000000
+476,Chongoni Rock-Art Area,Cultural,Malawi,-14.2185207713,34.2070738323
+479,Town of Luang Prabang,Cultural,Laos,19.8888900000,102.1333300000
+481,Vat Phou and Associated Ancient Settlements within the Champasak Cultural Landscape,Cultural,Laos,14.8483333333,105.8222222222
+482,Historic Town of Guanajuato and Adjacent Mines,Cultural,Mexico,21.0169400000,-101.2555600000
+483,Pre-Hispanic City of Chichen-Itza,Cultural,Mexico,20.6827390000,-88.5686540000
+484,Xanthos-Letoon,Cultural,Turkey,36.3268333333,29.2976388889
+485,Hierapolis-Pamukkale,Mixed,Turkey,37.9238900000,29.1233300000
+486,Wet Tropics of Queensland,Natural,Australia,-17.1919444444,145.9461111111
+487,Henderson Island,Natural,United Kingdom,-24.3666666667,-128.3333333330
+488,Tower of London,Cultural,United Kingdom,51.5080555600,-0.0761111110
+491,Sanctuary of Asklepios at Epidaurus,Cultural,Greece,37.6000000000,23.0805555556
+492,Taos Pueblo,Cultural,United States,36.4380000000,-105.5460000000
+493,Medieval City of Rhodes,Cultural,Greece,36.4472200000,28.2277800000
+494,Andrefana Dry Forests,Natural,Madagascar,-12.7838158333,49.4798983334
+495,"Strasbourg, Grande-Île and Neustadt",Cultural,France,48.5844444444,7.7488888889
+496,"Canterbury Cathedral, St Augustine's Abbey, and St Martin's Church",Cultural,United Kingdom,51.2782777778,1.0940000000
+498,Medina of Sousse,Cultural,Tunisia,35.8277800000,10.6386100000
+499,Kairouan,Cultural,Tunisia,35.6777777778,10.1000000000
+500,Historic Centre of Lima,Cultural,Peru,-12.0367944444,-77.0325861111
+502,Historic City of Vigan,Cultural,Philippines,17.5750000000,120.3875000000
+505,Monastery of Alcobaça,Cultural,Portugal,39.5500000000,-8.9766700000
+506,Banc d'Arguin National Park,Natural,Mauritania,20.2347200000,-16.1088900000
+509,Mosi-oa-Tunya / Victoria Falls,Natural,Zambia,-17.9245300000,25.8553900000
+511,Archaeological Site of Mystras,Cultural,Greece,37.0805600000,22.3666700000
+514,Heart of Neolithic Orkney,Cultural,United Kingdom,58.9941805296,-3.2080578668
+515,Abbey and Altenmünster of Lorsch,Cultural,Germany,49.6536944444,8.5685833333
+516,Cliff of Bandiagara (Land of the Dogons),Mixed,Mali,14.4049575002,-3.6986554779
+517,Archaeological Site of Olympia,Cultural,Greece,37.6400000000,21.6340000000
+518,Poblet Monastery,Cultural,Spain,41.3808300000,1.0825000000
+522,Renaissance Monumental Ensembles of Úbeda and Baeza,Cultural,Spain,37.9910000000,-3.4690000000
+524,Buddhist Monuments at Sanchi,Cultural,India,23.4794400000,77.7397200000
+526,Colonial City of Santo Domingo,Cultural,Dominican Republic,18.4723940000,-69.8858410000
+527,"Kyiv: Saint-Sophia Cathedral and Related Monastic Buildings, Kyiv-Pechersk Lavra",Cultural,Ukraine,50.4339333333,30.5583750000
+529,Jesuit Missions of the Chiquitos,Cultural,Bolivia,-16.1353100000,-62.0234390000
+530,Delos,Cultural,Greece,37.4000000000,25.2666700000
+532,Palaces and Parks of Potsdam and Berlin,Cultural,Germany,52.4000000000,13.0333333300
+534,Garden Kingdom of Dessau-Wörlitz,Cultural,Germany,51.8066777238,12.1498302600
+535,"Collegiate Church, Castle and Old Town of Quedlinburg",Cultural,Germany,51.7847222222,11.1302777778
+537,"Monasteries of Daphni, Hosios Loukas and Nea Moni of Chios",Cultural,Greece,38.0130816013,23.6366237875
+540,Historic Centre of Saint Petersburg and Related Groups of Monuments,Cultural,Russia,59.5531025003,30.1211424909
+541,Vilnius Historic Centre,Cultural,Lithuania,54.6866700000,25.2930600000
+543,Itchan Kala,Cultural,Uzbekistan,41.3780880000,60.3602530000
+544,Kizhi Pogost,Cultural,Russia,62.0675833333,35.2243611111
+545,"Kremlin and Red Square, Moscow",Cultural,Russia,55.7540277778,37.6204166667
+546,Maulbronn Monastery Complex,Cultural,Germany,48.9918277777,8.7977500000
+547,Mount Huangshan,Mixed,China,30.1453330000,118.1550830000
+548,Río Abiseo National Park,Mixed,Peru,-7.7500000000,-77.2500000000
+549,"18th-Century Royal Palace at Caserta with the Park, the Aqueduct of Vanvitelli, and the San Leucio Complex",Cultural,Italy,41.0733300000,14.3263900000
+550,Historic Centre of San Gimignano,Cultural,Italy,43.4680600000,11.0416700000
+551,Te Wahipounamu – South West New Zealand,Natural,New Zealand,-45.0360277800,167.3196111000
+554,Whale Sanctuary of El Vizcaino,Natural,Mexico,26.9786100000,-113.1649030000
+555,Birka and Hovgården,Cultural,Sweden,59.3351388889,17.5426388889
+556,Engelsberg Ironworks,Cultural,Sweden,59.9700000000,16.0100000000
+557,Rock Carvings in Tanum,Cultural,Sweden,58.7011100000,11.3411100000
+558,Skogskyrkogården,Cultural,Sweden,59.2755600000,18.0994400000
+559,Royal Domain of Drottningholm,Cultural,Sweden,59.3230600000,17.8833300000
+560,"Archaeological Zone of Paquimé, Casas Grandes",Cultural,Mexico,30.3671280000,-107.9481220000
+561,Rangiri Dambulla Cave Temple,Cultural,Sri Lanka,7.8566666670,80.6491666700
+564,Old City of Zamość,Cultural,Poland,50.7169444444,23.2527777778
+565,Kasbah of Algiers,Cultural,Algeria,36.7833300000,3.0602800000
+566,Historic City of Sucre,Cultural,Bolivia,-19.0479900000,-65.2595920000
+567,Tiwanaku: Spiritual and Political Centre of the Tiwanaku Culture,Cultural,Bolivia,-16.5550030000,-68.6732780000
+569,Historic Centres of Berat and Gjirokastra,Cultural,Albania,40.0741666667,20.1408333333
+570,Butrint,Cultural,Albania,39.7457320000,20.0209500000
+573,Air and Ténéré Natural Reserves,Natural,Niger,19.0761926358,9.6619999976
+574,Historic Town of Sukhothai and Associated Historic Towns,Cultural,Thailand,16.4959210000,99.5106930000
+575,Ban Chiang Archaeological Site,Cultural,Thailand,17.4077720000,103.2375890000
+576,Historic City of Ayutthaya,Cultural,Thailand,14.3477800000,100.5605600000
+577,Heard and McDonald Islands,Natural,Australia,-53.1000000000,73.5000000000
+578,"Shark Bay, Western Australia",Natural,Australia,-25.4861111100,113.4361111000
+579,Bronze Age Burial Site of Sammallahdenmäki,Cultural,Finland,61.1205600000,21.7775000000
+582,Old Rauma,Cultural,Finland,61.1280600000,21.5116700000
+583,Fortress of Suomenlinna,Cultural,Finland,60.1472200000,24.9872200000
+584,Petäjävesi Old Church,Cultural,Finland,62.2500000000,25.1833300000
+585,Historic Centre of Morelia,Cultural,Mexico,19.7009270000,-101.1903760000
+586,Rohtas Fort,Cultural,Pakistan,32.9625000000,73.5888888900
+588,Danube Delta,Natural,Romania,45.0833300000,29.5000000000
+590,Dong Phayayen-Khao Yai Forest Complex,Natural,Thailand,14.0833333333,102.1666666667
+591,Thungyai-Huai Kha Khaeng Wildlife Sanctuaries,Natural,Thailand,15.3333300000,98.9166700000
+592,Borobudur Temple Compounds,Cultural,Indonesia,-7.6048610000,110.2301110000
+593,Sangiran Early Man Site,Cultural,Indonesia,-7.4000000000,110.8166667000
+595,Pythagoreion and Heraion of Samos,Cultural,Greece,37.6733333333,26.8894444444
+596,Villages with Fortified Churches in Transylvania,Cultural,Romania,45.7225000000,25.7755555556
+597,Monastery of Horezu,Cultural,Romania,45.1697222222,24.0072222222
+598,Churches of Moldavia,Cultural,Romania,47.3833333333,27.5000000000
+599,Island of Mozambique,Cultural,Mozambique,-15.0341700000,40.7358300000
+600,"Paris, Banks of the Seine",Cultural,France,48.8655000000,2.3211388889
+601,"Cathedral of Notre-Dame, Former Abbey of Saint-Rémi and Palace of Tau, Reims",Cultural,France,49.2540000000,4.0340000000
+602,Historic Centre of Bukhara,Cultural,Uzbekistan,39.7747200000,64.4286100000
+603,Samarkand – Crossroad of Cultures,Cultural,Uzbekistan,39.6305555556,66.9638888889
+604,Historic Monuments of Novgorod and Surroundings,Cultural,Russia,58.4734325752,31.2746248771
+606,Serra da Capivara National Park,Cultural,Brazil,-8.7186340000,-42.6524360000
+608,Ujung Kulon National Park,Natural,Indonesia,-6.1493818886,105.4422409130
+609,Komodo National Park,Natural,Indonesia,-8.5433300000,119.4894400000
+611,Historic Town of Zabid,Cultural,Yemen,14.1953333333,43.3155277778
+613,Ruins of León Viejo,Cultural,Nicaragua,12.4004700000,-86.6163360000
+614,City of Safranbolu,Cultural,Turkey,41.2455555556,32.6926388889
+616,Historic Centre of Prague,Cultural,Czechia,49.9894444444,14.5500000000
+617,Historic Centre of Český Krumlov,Cultural,Czechia,48.8106944444,14.3150277778
+618,Historic Town of Banská Štiavnica and the Technical Monuments in its Vicinity,Cultural,Slovakia,48.4611100000,18.9000000000
+620,"Levoča, Spišský Hrad and the Associated Cultural Monuments",Cultural,Slovakia,48.9994444444,20.7675000000
+621,Historic Centre of Telč,Cultural,Czechia,49.1841388889,15.4539722222
+622,Vlkolínec,Cultural,Slovakia,49.0391666667,19.2783333333
+623,"Mines of Rammelsberg, Historic Town of Goslar and Upper Harz Water Management System",Cultural,Germany,51.8200000000,10.3400000000
+624,Town of Bamberg,Cultural,Germany,49.8916666700,10.8888888900
+625,Mir Castle Complex,Cultural,Belarus,53.4510833300,26.4727222200
+629,Macquarie Island,Natural,Australia,-54.5947222200,158.8955556000
+630,K’gari,Natural,Australia,-25.2166666700,153.1333333000
+631,"El Tajin, Pre-Hispanic City",Cultural,Mexico,20.4460950000,-97.3776420000
+632,Cultural and Historic Ensemble of the Solovetsky Islands,Cultural,Russia,64.9500000000,35.6666666667
+633,White Monuments of Vladimir and Suzdal,Cultural,Russia,56.1269177807,40.3973646343
+634,"Church of the Ascension, Kolomenskoye",Cultural,Russia,55.6555600000,37.6738900000
+635,Bourges Cathedral,Cultural,France,47.0822222200,2.3983333330
+637,Jiuzhaigou Valley Scenic and Historic Interest Area,Natural,China,33.0833300000,103.9166700000
+638,Huanglong Scenic and Historic Interest Area,Natural,China,32.7541700000,103.8222200000
+640,Wulingyuan Scenic and Historic Interest Area,Natural,China,29.3333300000,110.5000000000
+642,Prambanan Temple Compounds,Cultural,Indonesia,-7.7522200000,110.4916700000
+648,Jesuit Missions of La Santísima Trinidad de Paraná and Jesús de Tavarangue,Cultural,Paraguay,-27.0562500000,-55.7529972222
+652,Puerto-Princesa Subterranean River National Park,Natural,Philippines,10.1666666700,118.9166667000
+653,Tubbataha Reefs Natural Park,Natural,Philippines,8.9533333333,119.8675000000
+657,Architectural Ensemble of the Trinity Sergius Lavra in Sergiev Posad,Cultural,Russia,56.3103500000,38.1312000000
+658,Coro and its Port,Cultural,Venezuela,11.4097916667,-69.6792277778
+659,Brú na Bóinne - Archaeological Ensemble of the Bend of the Boyne,Cultural,Ireland,53.6946944444,-6.4755000000
+660,Buddhist Monuments in the Horyu-ji Area,Cultural,Japan,34.6144720000,135.7342220000
+661,Himeji-jo,Cultural,Japan,34.8333333300,134.7000000000
+662,Yakushima,Natural,Japan,30.3150000000,130.5086111111
+663,Shirakami-Sanchi,Natural,Japan,40.4525000000,140.1155555556
+664,Archaeological Ensemble of Mérida,Cultural,Spain,38.7847327917,-6.2435718419
+665,Royal Monastery of Santa María de Guadalupe,Cultural,Spain,39.4528500000,-5.3275000000
+666,"Lumbini, the Birthplace of the Lord Buddha",Cultural,Nepal,27.4688900000,83.2761100000
+668,Angkor,Cultural,Cambodia,13.3357170000,103.9740070000
+669,Routes of Santiago de Compostela: Camino Francés and Routes of Northern Spain,Cultural,Spain,42.5892730000,-2.8424390000
+670,The Sassi and the Park of the Rupestrian Churches of Matera,Cultural,Italy,40.6663888900,16.6102777800
+672,Ha Long Bay - Cat Ba Archipelago,Natural,Vietnam,20.8327777778,107.1611111111
+675,Joya de Cerén Archaeological Site,Cultural,El Salvador,13.8275000000,-89.3691666700
+676,Historic Centre of Zacatecas,Cultural,Mexico,22.7754840000,-102.5735310000
+677,Baroque Churches of the Philippines,Cultural,Philippines,10.6419080000,122.2353830000
+678,Complex of Hué Monuments,Cultural,Vietnam,16.3619730000,107.5957100000
+682,Bwindi Impenetrable National Park,Natural,Uganda,-1.0470000000,29.6920000000
+684,Rwenzori Mountains National Park,Natural,Uganda,0.2236111110,29.9241666700
+685,Doñana National Park,Natural,Spain,36.9477000000,-6.3588610000
+686,Miguasha National Park,Natural,Canada,48.0930950000,-66.3418990000
+687,Völklingen Ironworks,Cultural,Germany,49.2487222222,6.8442222222
+688,"Historic Monuments of Ancient Kyoto (Kyoto, Uji and Otsu Cities)",Cultural,Japan,34.8894491103,135.8076675570
+689,As-Salt - The Place of Tolerance and Urban Hospitality,Cultural,Jordan,32.0426111111,35.7283055556
+690,Pilgrimage Church of St John of Nepomuk at Zelená Hora,Cultural,Czechia,49.5802000000,15.9420583333
+692,Forest Massif of Odzala-Kokoua,Natural,Republic of the Congo,1.3355555556,14.8602777778
+695,Roskilde Cathedral,Cultural,Denmark,55.6426654094,12.0798998457
+696,Kronborg Castle,Cultural,Denmark,56.0388900000,12.6208333300
+697,"Jelling Mounds, Runic Stones and Church",Cultural,Denmark,55.7563888900,9.4200000000
+698,Australian Fossil Mammal Sites (Riversleigh / Naracoorte),Natural,Australia,-19.0333333333,138.6333333330
+699,City of Luxembourg: its Old Quarters and Fortifications,Cultural,Luxembourg,49.6100000000,6.1333300000
+700,Lines and Geoglyphs of Nasca and Palpa,Cultural,Peru,-14.7258300000,-75.1486100000
+701,Canaima National Park,Natural,Venezuela,5.3379940000,-62.0378830000
+702,Earliest 16th-Century Monasteries on the Slopes of Popocatepetl,Cultural,Mexico,18.7839310000,-98.7660200000
+703,"Mountain Resort and its Outlying Temples, Chengde",Cultural,China,40.9869400000,117.9383300000
+704,Temple and Cemetery of Confucius and the Kong Family Mansion in Qufu,Cultural,China,35.6132150000,116.9945610000
+705,Ancient Building Complex in the Wudang Mountains,Cultural,China,32.4666700000,111.0000000000
+707,"Historic Ensemble of the Potala Palace, Lhasa",Cultural,China,29.6502480000,91.1337880000
+708,Historical Monuments of Mtskheta,Cultural,Georgia,41.8386473703,44.7337706398
+709,Upper Svaneti,Cultural,Georgia,42.9140000000,43.0090000000
+710,Gelati Monastery,Cultural,Georgia,42.2947222222,42.7683333333
+711,Los Katíos National Park,Natural,Colombia,7.8039750000,-77.1462710000
+712,City of Vicenza and the Palladian Villas of the Veneto,Cultural,Italy,45.0308002094,11.6407034424
+714,Rock Paintings of the Sierra de San Francisco,Cultural,Mexico,27.6269630000,-113.0204270000
+715,Rapa Nui National Park,Cultural,Chile,-27.0744030000,-109.3656830000
+717,Historic Centre of Siena,Cultural,Italy,43.3186111100,11.3316666700
+718,Okapi Wildlife Reserve,Natural,Democratic Republic of the Congo,2.0000000000,28.5000000000
+719,Virgin Komi Forests,Natural,Russia,61.8788888889,57.0083333333
+720,Messel Pit Fossil Site,Natural,Germany,49.9180000000,8.7570000000
+721,Carlsbad Caverns National Park,Natural,United States,32.1374714111,-104.5380960770
+722,Rice Terraces of the Philippine Cordilleras,Cultural,Philippines,16.7702777778,121.0605555556
+723,Cultural Landscape of Sintra,Cultural,Portugal,38.7833300000,-9.4166700000
+724,Medieval Monuments in Kosovo,Cultural,Serbia,42.2000000000,20.7333333333
+725,Caves of Aggtelek Karst and Slovak Karst,Natural,Hungary,48.3632185937,20.6255304505
+725,Caves of Aggtelek Karst and Slovak Karst,Natural,Slovakia,48.5506878081,20.5124439597
+726,Historic Centre of Naples,Cultural,Italy,40.7956944444,14.1920527778
+728,Old and New Towns of Edinburgh,Cultural,United Kingdom,55.9500000000,-3.2166666670
+729,"Bauhaus and its Sites in Weimar, Dessau and Bernau",Cultural,Germany,50.9738852126,11.3396692937
+730,Crespi d'Adda,Cultural,Italy,45.5933300000,9.5383300000
+731,Hanseatic Town of Visby,Cultural,Sweden,57.6416700000,18.2958300000
+732,Kutná Hora: Historical Town Centre with the Church of St Barbara and the Cathedral of Our Lady at Sedlec,Cultural,Czechia,49.9499760000,15.2674020000
+733,"Ferrara, City of the Renaissance, and its Po Delta",Cultural,Italy,44.8372418244,11.6197696436
+734,Historic Villages of Shirakawa-go and Gokayama,Cultural,Japan,36.2555555556,136.9019444440
+736,Seokguram Grotto and Bulguksa Temple,Cultural,South Korea,35.7914980000,129.3490290000
+737,"Haeinsa Temple Janggyeong Panjeon, the Depositories for the Tripitaka Koreana Woodblocks",Cultural,South Korea,35.8016720000,128.0987110000
+738,Jongmyo Shrine,Cultural,South Korea,37.5747222222,126.9936111111
+739,Schokland and Surroundings,Cultural,The Netherlands,52.6386111100,5.7716666670
+740,Gough and Inaccessible Islands,Natural,United Kingdom,-37.3000000000,-12.6833333333
+741,Old Town Lunenburg,Cultural,Canada,44.3761111100,-64.3091666700
+742,Historic Centre of Santa Cruz de Mompox,Cultural,Colombia,9.2404920000,-74.4230840000
+743,National Archeological Park of Tierradentro,Cultural,Colombia,2.5672110000,-76.0490350000
+744,San Agustín Archaeological Park,Cultural,Colombia,1.8874750000,-76.2977260000
+747,Historic Quarter of the City of Colonia del Sacramento,Cultural,Uruguay,-34.4711900000,-57.8498980000
+749,W-Arly-Pendjari Complex,Natural,Benin,11.8841666667,2.6544444444
+749,W-Arly-Pendjari Complex,Natural,Burkina Faso,11.9000000000,2.1616666667
+749,W-Arly-Pendjari Complex,Natural,Niger,12.3170000000,2.2720000000
+750,"Ancient Ksour of Ouadane, Chinguetti, Tichitt and Oualata",Cultural,Mauritania,17.3000000000,-7.0333333333
+751,Verla Groundwood and Board Mill,Cultural,Finland,61.0619400000,26.6408300000
+753,Medina of Essaouira (formerly Mogador),Cultural,Morocco,31.4956944444,-9.7866666666
+754,Lake Baikal,Natural,Russia,53.1736111100,107.6625000000
+755,"Historic Centre of Oporto, Luiz I Bridge and Monastery of Serra do Pilar",Cultural,Portugal,41.1416666700,-8.6166666670
+757,Sceilg Mhichíl,Cultural,Ireland,51.7719400000,-10.5386100000
+758,Millenary Benedictine Abbey of Pannonhalma and its Natural Environment,Cultural,Hungary,47.5588900000,17.7844400000
+759,Dutch Water Defence Lines,Cultural,The Netherlands,51.8764444445,5.4072666667
+761,Kunta Kinteh Island and Related Sites,Cultural,Gambia,13.3176406821,-16.3613520360
+762,"Church Town of Gammelstad, Luleå",Cultural,Sweden,65.6461100000,22.0286100000
+763,Lednice-Valtice Cultural Landscape,Cultural,Czechia,48.7999444444,16.8033861111
+764,Belize Barrier Reef Reserve System,Natural,Belize,16.1091390000,-88.2695570000
+765,Volcanoes of Kamchatka,Natural,Russia,51.3333333333,157.0000000000
+766,Central Sikhote-Alin,Natural,Russia,45.1285277778,136.7561111110
+768,Golden Mountains of Altai,Natural,Russia,49.3666666667,87.5000000000
+769,Uvs Nuur Basin,Natural,Mongolia,49.7666666667,91.3666666667
+769,Uvs Nuur Basin,Natural,Russia,50.0833333333,95.2500000000
+770,Canal du Midi,Cultural,France,43.6100000000,1.4160000000
+772,Fertö / Neusiedlersee Cultural Landscape,Cultural,Austria,47.7192777800,16.7227222200
+773,Pyrénées - Mont Perdu,Mixed,France,42.6854200000,-0.0005000000
+774,Laponian Area,Mixed,Sweden,67.3333300000,17.5833300000
+775,Hiroshima Peace Memorial (Genbaku Dome),Cultural,Japan,34.3955560000,132.4536110000
+776,Itsukushima Shinto Shrine,Cultural,Japan,34.2944166700,132.3246389000
+777,Monasteries of Haghpat and Sanahin,Cultural,Armenia,41.0873715480,44.6664437384
+778,Lushan National Park,Cultural,China,29.4333333300,115.8666667000
+779,"Mount Emei Scenic Area, including Leshan Giant Buddha Scenic Area",Mixed,China,29.5447222222,103.7733333333
+780,Archaeological Site of Aigai (modern name Vergina),Cultural,Greece,40.4713888889,22.3183333333
+781,Historic Walled Town of Cuenca,Cultural,Spain,40.0740000000,-2.1310000000
+782,La Lonja de la Seda de Valencia,Cultural,Spain,39.4744166700,-0.3784444440
+783,Luther Memorials in Eisleben and Wittenberg,Cultural,Germany,51.5269166667,11.5503333333
+784,Historic Centre of the City of Salzburg,Cultural,Austria,47.8005555600,13.0433333300
+785,Semmering Railway,Cultural,Austria,47.6487777800,15.8279722200
+786,Palace and Gardens of Schönbrunn,Cultural,Austria,48.1866666700,16.3133333300
+787,The Trulli of Alberobello,Cultural,Italy,40.7822171383,17.2369443548
+788,Early Christian Monuments of Ravenna,Cultural,Italy,44.3802987918,12.2331114233
+789,Historic Centre of the City of Pienza,Cultural,Italy,43.0769444400,11.6786111100
+791,Pre-Hispanic Town of Uxmal,Cultural,Mexico,20.1725340000,-89.5786740000
+792,Historic Monuments Zone of Querétaro,Cultural,Mexico,20.5932920000,-100.3921350000
+793,Historic City of Meknes,Cultural,Morocco,33.8833300000,-5.5583300000
+794,Dougga / Thugga,Cultural,Tunisia,36.4236100000,9.2202800000
+795,Maritime Greenwich,Cultural,United Kingdom,51.4811666667,-0.0037777778
+797,City of Verona,Cultural,Italy,45.4386111100,10.9938888900
+798,The Sundarbans,Natural,Bangladesh,21.7758410000,89.2319560000
+800,Mount Kenya National Park/Natural Forest,Natural,Kenya,-0.1550000000,37.3155555556
+801,Lake Turkana National Parks,Natural,Kenya,2.6325000000,36.5947222222
+803,Las Médulas,Cultural,Spain,42.4288055556,-6.7761388889
+804,"Palau de la Música Catalana and Hospital de Sant Pau, Barcelona",Cultural,Spain,41.3877777778,2.1750000000
+805,San Millán Yuso and Suso Monasteries,Cultural,Spain,42.3258333333,-2.8650000000
+806,Hallstatt-Dachstein / Salzkammergut Cultural Landscape,Cultural,Austria,47.5594444400,13.6463888900
+809,Episcopal Complex of the Euphrasian Basilica in the Historic Centre of Poreč,Cultural,Croatia,45.2285833333,13.5933333333
+810,Historic City of Trogir,Cultural,Croatia,43.5170833333,16.2513611111
+811,Old Town of Lijiang,Cultural,China,26.8750000000,100.2333333330
+812,Ancient City of Ping Yao,Cultural,China,37.1707390000,112.1317450000
+813,Classical Gardens of Suzhou,Cultural,China,31.1578840000,120.7204220000
+814,Morne Trois Pitons National Park,Natural,Dominica,15.3311130000,-61.3066100000
+815,"Hospicio Cabañas, Guadalajara",Cultural,Mexico,20.6768880000,-103.3377980000
+816,Changdeokgung Palace Complex,Cultural,South Korea,37.5788888889,126.9911111111
+817,Hwaseong Fortress,Cultural,South Korea,37.2722200000,127.0083300000
+818,Mill Network at Kinderdijk-Elshout,Cultural,The Netherlands,51.8825000000,4.6494444440
+819,"Historic Area of Willemstad, Inner City and Harbour, Curaçao",Cultural,The Netherlands,12.1019400000,-68.9022200000
+820,Cocos Island National Park,Natural,Costa Rica,5.5333333330,-87.0666666700
+821,Historic Centre of São Luís,Cultural,Brazil,-2.5300540000,-44.3033690000
+822,Historic Centre (Old Town) of Tallinn,Cultural,Estonia,59.4370000000,24.7400000000
+823,Residences of the Royal House of Savoy,Cultural,Italy,44.6833055556,7.8949722222
+824,"Botanical Garden (Orto Botanico), Padua",Cultural,Italy,45.3991111100,11.8806666700
+825,Archaeological Area and the Patriarchal Basilica of Aquileia,Cultural,Italy,45.7683333300,13.3675000000
+826,"Portovenere, Cinque Terre, and the Islands (Palmaria, Tino and Tinetto)",Cultural,Italy,44.0236111111,9.8510277778
+827,"Cathedral, Torre Civica and Piazza Grande, Modena",Cultural,Italy,44.6462400000,10.9256800000
+828,Historic Centre of Urbino,Cultural,Italy,43.7261395291,12.6359248950
+829,"Archaeological Areas of Pompei, Herculaneum and Torre Annunziata",Cultural,Italy,40.7511111111,14.4861111111
+830,Costiera Amalfitana,Cultural,Italy,40.6333333333,14.6027777778
+831,Archaeological Area of Agrigento,Cultural,Italy,37.2897222200,13.5933333300
+832,Villa Romana del Casale,Cultural,Italy,37.3661100000,14.3341700000
+833,Su Nuraxi di Barumini,Cultural,Italy,39.7058333300,8.9913888890
+835,Medieval Town of Toruń,Cultural,Poland,53.0105555556,18.6041666667
+836,Archaeological Site of Volubilis,Cultural,Morocco,34.0738900000,-5.5569400000
+837,Medina of Tétouan (formerly known as Titawin),Cultural,Morocco,35.5708300000,-5.3666700000
+839,Alejandro de Humboldt National Park,Natural,Cuba,20.4500000000,-75.0000000000
+840,Viñales Valley,Cultural,Cuba,22.6166700000,-83.7166700000
+841,"San Pedro de la Roca Castle, Santiago de Cuba",Cultural,Cuba,19.9684460000,-75.8704410000
+842,"Cilento and Vallo di Diano National Park with the Archeological Sites of Paestum and Velia, and the Certosa di Padula",Cultural,Italy,40.0666666667,15.4333333333
+846,Classical Weimar,Cultural,Germany,50.9775000000,11.3286100000
+847,Castle of the Teutonic Order in Malbork,Cultural,Poland,54.0410000000,19.0297222222
+848,Choirokoitia,Cultural,Cyprus,34.7967406661,33.3439431453
+849,Archaeological Site of Troy,Cultural,Turkey,39.9564400000,26.2390000000
+850,Ouadi Qadisha (the Holy Valley) and the Forest of the Cedars of God (Horsh Arz el-Rab),Cultural,Lebanon,34.2430555555,36.0488888889
+852,Historic Centre of Riga,Cultural,Latvia,56.9541700000,24.1166700000
+853,Early Christian Necropolis of Pécs (Sopianae),Cultural,Hungary,46.0744400000,18.2277800000
+854,East Rennell,Natural,Solomon Islands,-11.6833300000,160.3333300000
+855,Flemish Béguinages,Cultural,Belgium,50.7789722222,5.4691388889
+856,"The Four Lifts on the Canal du Centre and their Environs, La Louvière and Le Roeulx (Hainaut)",Cultural,Belgium,50.4811100000,4.1372200000
+857,"La Grand-Place, Brussels",Cultural,Belgium,50.8466800000,4.3524200000
+859,Holy Trinity Column in Olomouc,Cultural,Czechia,49.5939361111,17.2504583333
+860,Gardens and Castle at Kroměříž,Cultural,Czechia,49.2964740000,17.3818600000
+861,Holašovice Historic Village,Cultural,Czechia,48.9696388889,14.2726111111
+862,Historic Monuments Zone of Tlacotalpan,Cultural,Mexico,18.6134590000,-95.6586760000
+863,Historic Centre of Santa Ana de los Ríos de Cuenca,Cultural,Ecuador,-2.8974470000,-79.0043820000
+865,L'viv – the Ensemble of the Historic Centre,Cultural,Ukraine,49.8386111111,24.0144444444
+866,Prehistoric Rock Art Sites in the Côa Valley and Siega Verde,Cultural,Portugal,40.9338888889,-7.0852777778
+866,Prehistoric Rock Art Sites in the Côa Valley and Siega Verde,Cultural,Spain,40.6975000000,-6.6611111111
+867,Ir.D.F. Woudagemaal (D.F. Wouda Steam Pumping Station),Cultural,The Netherlands,52.8458300000,5.6788900000
+870,Historic Monuments of Ancient Nara,Cultural,Japan,34.6683333333,135.7841666670
+871,Naval Port of Karlskrona,Cultural,Sweden,56.1077777778,15.5880555556
+872,Historic Site of Lyon,Cultural,France,45.7672200000,4.8333300000
+873,"Provins, Town of Medieval Fairs",Cultural,France,48.5597222200,3.2988888890
+874,Rock Art of the Mediterranean Basin on the Iberian Peninsula,Cultural,Spain,37.5818055556,-1.2021666667
+875,Archaeological Ensemble of Tarraco,Cultural,Spain,41.1135000000,1.2477777778
+876,University and Historic Precinct of Alcalá de Henares,Cultural,Spain,40.4813888900,-3.3680555560
+877,New Zealand Sub-Antarctic Islands,Natural,New Zealand,-47.7516070000,179.0254340000
+880,"Summer Palace, an Imperial Garden in Beijing",Cultural,China,39.9969444444,116.2680277780
+881,Temple of Heaven: an Imperial Sacrificial Altar in Beijing,Cultural,China,39.8821666667,116.4066666670
+883,Fuerte de Samaipata,Cultural,Bolivia,-18.1783230000,-63.8204850000
+884,"Three Castles, Defensive Wall and Ramparts of the Market-Town of Bellinzona",Cultural,Switzerland,46.1881430000,9.0300303000
+885,Historic Centre of Shakhrisyabz,Cultural,Uzbekistan,39.0500000000,66.8333300000
+886,State Historical and Cultural Park “Ancient Merv”,Cultural,Turkmenistan,37.5000000000,62.0666666667
+887,Kuk Early Agricultural Site,Cultural,Papua New Guinea,-5.7837111111,144.3317222222
+889,Desembarco del Granma National Park,Natural,Cuba,19.8833300000,-77.6333300000
+890,Historic Centre of the Town of Diamantina,Cultural,Brazil,-18.2447760000,-43.5976800000
+892,Discovery Coast Atlantic Forest Reserves,Natural,Brazil,-15.1896550000,-39.1060450000
+893,Atlantic Forest South-East Reserves,Natural,Brazil,-24.1560320000,-47.9662480000
+895,Historic Fortified Town of Campeche,Cultural,Mexico,19.8463900000,-90.5372200000
+896,"Museumsinsel (Museum Island), Berlin",Cultural,Germany,52.5197222200,13.3986111100
+897,Wartburg Castle,Cultural,Germany,50.9667777800,10.3070000000
+898,High Coast / Kvarken Archipelago,Natural,Finland,62.9666666667,20.9500000000
+898,High Coast / Kvarken Archipelago,Natural,Sweden,63.0000000000,18.5000000000
+899,Droogmakerij de Beemster (Beemster Polder),Cultural,The Netherlands,52.5488888900,4.9111111110
+900,Western Caucasus,Natural,Russia,44.0000000000,40.0000000000
+901,Litomyšl Castle,Cultural,Czechia,49.8736100000,16.3144400000
+902,Historic Centre of Sighişoara,Cultural,Romania,46.2177777800,24.7922222200
+904,Wooden Churches of Maramureş,Cultural,Romania,47.4700000000,23.9283333333
+905,Kalwaria Zebrzydowska: the Mannerist Architectural and Park Landscape Complex and Pilgrimage Park,Cultural,Poland,49.8666800000,19.6763610000
+906,Dacian Fortresses of the Orastie Mountains,Cultural,Romania,45.4666666667,23.2166666667
+907,Villa Adriana (Tivoli),Cultural,Italy,41.9441666700,12.7719722200
+908,Isole Eolie (Aeolian Islands),Natural,Italy,38.4878611100,14.9455833300
+910,Brimstone Hill Fortress National Park,Cultural,Saint Kitts and Nevis,17.3469400000,-62.8372200000
+911,Mount Wuyi,Mixed,China,27.5544444444,118.0430555560
+912,Dazu Rock Carvings,Cultural,China,29.5833333333,105.5666666667
+913,Shrines and Temples of Nikko,Cultural,Japan,36.7475000000,139.6105556000
+914,iSimangaliso Wetland Park – Maputo National Park,Natural,Mozambique,-26.4363888889,32.8705555556
+914,iSimangaliso Wetland Park – Maputo National Park,Natural,South Africa,-27.8388888889,32.5500000000
+915,Fossil Hominid Sites of South Africa,Cultural,South Africa,-24.1586111111,29.1769444444
+916,Robben Island,Cultural,South Africa,-33.8000000000,18.3666666700
+917,Greater Blue Mountains Area,Natural,Australia,-33.7000000000,150.0000000000
+922,"Rani-ki-Vav (the Queen’s Stepwell) at Patan, Gujarat",Cultural,India,23.8588888889,72.1016666667
+925,Rock Shelters of Bhimbetka,Cultural,India,22.9388888889,77.6033333333
+927,Ancient Buddhist Site of Sarnath,Cultural,India,25.3741666667,83.0236111111
+928,Area de Conservación Guanacaste,Natural,Costa Rica,10.8500000000,-85.6166666700
+929,San Cristóbal de La Laguna,Cultural,Spain,28.4778888900,-16.3117777800
+930,Palmeral of Elche,Cultural,Spain,38.2666666700,-0.7166666670
+931,City of Graz – Historic Centre and Schloss Eggenberg,Cultural,Austria,47.0730555556,15.4386111111
+932,Jurisdiction of Saint-Emilion,Cultural,France,44.8947222200,-0.1552777778
+933,The Loire Valley between Sully-sur-Loire and Chalonnes,Cultural,France,47.3988900000,0.7027800000
+934,Laurisilva of Madeira,Natural,Portugal,32.7666666700,-17.0000000000
+936,"Cueva de las Manos, Río Pinturas",Cultural,Argentina,-47.1500000000,-70.6666666700
+937,Península Valdés,Natural,Argentina,-42.5000000000,-64.0000000000
+938,Sukur Cultural Landscape,Cultural,Nigeria,10.7405600000,13.5719400000
+939,Archaeological Monuments Zone of Xochicalco,Cultural,Mexico,18.8039720000,-99.2963900000
+940,Historic Inner City of Paramaribo,Cultural,Suriname,5.8261100000,-55.1500000000
+941,Archaeological Sites of Mycenae and Tiryns,Cultural,Greece,37.6000000000,22.8000000000
+942,The Historic Centre (Chorá) with the Monastery of Saint-John the Theologian and the Cave of the Apocalypse on the Island of Pátmos,Cultural,Greece,37.3000000000,26.5500000000
+943,Belfries of Belgium and France,Cultural,Belgium,50.3398333333,4.2870000000
+943,Belfries of Belgium and France,Cultural,France,49.8958333333,2.2963888889
+944,Mountain Railways of India,Cultural,India,11.5102777778,76.9316666667
+945,Chhatrapati Shivaji Terminus (formerly Victoria Terminus),Cultural,India,18.9401222222,72.8362027777
+946,Old Bridge Area of the Old City of Mostar,Cultural,Bosnia and Herzegovina,43.3373055556,17.8150000000
+948,Hoi An Ancient Town,Cultural,Vietnam,15.8833333300,108.3333333000
+949,My Son Sanctuary,Cultural,Vietnam,15.7738430000,108.1091690000
+950,Royal Hill of Ambohimanga,Cultural,Madagascar,-18.7591700000,47.5627800000
+951,Phong Nha-Ke Bang National Park and Hin Nam No National Park,Natural,Laos,17.3755555556,105.8841666670
+951,Phong Nha-Ke Bang National Park and Hin Nam No National Park,Natural,Vietnam,17.5372222222,106.1512500000
+954,Saint Catherine Area,Cultural,Egypt,28.5562300000,33.9754300000
+955,Lorentz National Park,Natural,Indonesia,-4.7500000000,137.8333300000
+956,Island of Saint-Louis,Cultural,Senegal,16.0277800000,-16.5044400000
+958,Walled City of Baku with the Shirvanshah's Palace and Maiden Tower,Cultural,Azerbaijan,40.3666666700,49.8333333300
+959,Historic Quarter of the Seaport City of Valparaíso,Cultural,Chile,-33.0406388900,-71.6280000000
+960,Monastery of Geghard and the Upper Azat Valley,Cultural,Armenia,40.1404390000,44.8185250000
+963,The Cathedral of St James in Šibenik,Cultural,Croatia,43.7356919539,15.8891302403
+965,Rietveld Schröderhuis (Rietveld Schröder House),Cultural,The Netherlands,52.0853333333,5.1475555556
+966,Ischigualasto / Talampaya Natural Parks,Natural,Argentina,-30.0000000000,-68.0000000000
+967,Noel Kempff Mercado National Park,Natural,Bolivia,-14.2666700000,-60.8666700000
+968,Agricultural Landscape of Southern Öland,Cultural,Sweden,56.3250000000,16.4833300000
+970,Wachau Cultural Landscape,Cultural,Austria,48.3644444400,15.4341666700
+971,Churches of Chiloé,Cultural,Chile,-42.2588055556,-73.4019416667
+972,Gusuku Sites and Related Properties of the Kingdom of Ryukyu,Cultural,Japan,26.1611944444,127.8066944444
+973,Bardejov Town Conservation Reserve,Cultural,Slovakia,49.2927777778,21.2755555556
+974,Monastic Island of Reichenau,Cultural,Germany,47.6987222200,9.0613055560
+975,Zollverein Coal Mine Industrial Complex in Essen,Cultural,Germany,51.4913888900,7.0461111110
+976,Gyeongju Historic Areas,Cultural,South Korea,35.8300000000,129.2200000000
+977,"Gochang, Hwasun and Ganghwa Dolmen Sites",Cultural,South Korea,34.9867280000,126.9171610000
+978,Old Town of Corfu,Cultural,Greece,39.6239413889,19.9275000000
+980,Historic and Architectural Complex of the Kazan Kremlin,Cultural,Russia,55.7994526626,49.1064602384
+981,Bolgar Historical and Archaeological Complex,Cultural,Russia,54.9666666667,49.0588888889
+982,Ensemble of the Ferapontov Monastery,Cultural,Russia,59.9500000000,38.5666666700
+983,"Historic Town of St George and Related Fortifications, Bermuda",Cultural,United Kingdom,32.3400800000,-64.6731500000
+984,Blaenavon Industrial Landscape,Cultural,United Kingdom,51.7763888900,-3.0880555560
+985,Maloti-Drakensberg Park,Mixed,Lesotho,-29.9152777778,29.1230555556
+985,Maloti-Drakensberg Park,Mixed,South Africa,-29.3833300000,29.5405600000
+986,Ciudad Universitaria de Caracas,Cultural,Venezuela,10.4907300000,-66.8906800000
+987,Roman Walls of Lugo,Cultural,Spain,43.0106407944,-7.5530699413
+988,Catalan Romanesque Churches of the Vall de Boí,Cultural,Spain,42.4431388889,0.7455277778
+989,Archaeological Site of Atapuerca,Cultural,Spain,42.3497222222,-3.5152777778
+990,"Assisi, the Basilica of San Francesco and Other Franciscan Sites",Cultural,Italy,43.0580555556,12.5802777778
+993,Historic Centre of the Town of Goiás,Cultural,Brazil,-15.9342310000,-50.1401640000
+994,Curonian Spit,Cultural,Lithuania,55.2745800000,20.9623900000
+995,Jesuit Block and Estancias of Córdoba,Cultural,Argentina,-30.8699590000,-64.2338810000
+996,Historic Centre of Brugge,Cultural,Belgium,51.2089100000,3.2252700000
+998,Central Amazon Conservation Complex,Natural,Brazil,-2.1948927881,-63.3499785448
+999,Pantanal Conservation Area,Natural,Brazil,-17.6560000000,-57.3590000000
+1000,Brazilian Atlantic Islands: Fernando de Noronha and Atol das Rocas Reserves,Natural,Brazil,-3.8579444444,-32.4251111111
+1001,Mount Qingcheng and the Dujiangyan Irrigation System,Cultural,China,31.0016700000,103.6052800000
+1002,Ancient Villages in Southern Anhui – Xidi and Hongcun,Cultural,China,29.9044444444,117.9875000000
+1003,Longmen Grottoes,Cultural,China,34.4666666700,112.4666667000
+1004,Imperial Tombs of the Ming and Qing Dynasties,Cultural,China,31.0166666667,112.6500000000
+1005,Major Town Houses of the Architect Victor Horta (Brussels),Cultural,Belgium,50.8242222222,4.3556666667
+1006,Neolithic Flint Mines at Spiennes (Mons),Cultural,Belgium,50.4201134823,3.9822689106
+1007,Cape Floral Region Protected Areas,Natural,South Africa,-34.3558051153,18.4750321846
+1008,Archaeological Landscape of the First Coffee Plantations in the South-East of Cuba,Cultural,Cuba,20.0115080000,-75.6307050000
+1009,Notre-Dame Cathedral in Tournai,Cultural,Belgium,50.6060300000,3.3892600000
+1010,Land of Frankincense,Cultural,Oman,17.0166666667,54.0500000000
+1011,Cathedral and Churches of Echmiatsin and the Archaeological Site of Zvartnots,Cultural,Armenia,40.1586666667,44.3246388889
+1012,Kinabalu Park,Natural,Malaysia,6.1470000000,116.6420000000
+1013,Gunung Mulu National Park,Natural,Malaysia,4.1333300000,114.9166700000
+1014,The Archaeological Heritage of Niah National Park’s Caves Complex,Cultural,Malaysia,3.8042916667,113.7807666667
+1016,Historical Centre of the City of Arequipa,Cultural,Peru,-16.3983530000,-71.5367770000
+1017,Central Suriname Nature Reserve,Natural,Suriname,4.0000000000,-56.5000000000
+1018,Ephesus,Cultural,Turkey,37.9116666667,27.3336111111
+1021,Tsodilo,Cultural,Botswana,-18.7500000000,21.7333333300
+1022,Tombs of Buganda Kings at Kasubi,Cultural,Uganda,0.3297128643,32.5542099716
+1023,Natural System of Wrangel Island Reserve,Natural,Russia,71.1888888900,-179.7152778000
+1024,Late Baroque Towns of the Val di Noto (South-Eastern Sicily),Cultural,Italy,36.7924166667,14.7057222222
+1025,"Villa d'Este, Tivoli",Cultural,Italy,41.9639166700,12.7962500000
+1026,Val d'Orcia,Cultural,Italy,43.0666666700,11.5500000000
+1027,Mining Area of the Great Copper Mountain in Falun,Cultural,Sweden,60.6047200000,15.6308300000
+1028,Saltaire,Cultural,United Kingdom,53.8391666700,-1.7883333330
+1029,Dorset and East Devon Coast,Natural,United Kingdom,50.5957777778,-2.4582222222
+1030,Derwent Valley Mills,Cultural,United Kingdom,53.0288888900,-1.4880555560
+1031,Historic Centre of Guimarães and Couros Zone,Cultural,Portugal,41.4430000000,-8.2927777778
+1033,Historic Centre of Vienna,Cultural,Austria,48.2094000000,16.3699000000
+1035,Cerrado Protected Areas: Chapada dos Veadeiros and Emas National Parks,Natural,Brazil,-13.9660000000,-47.4120000000
+1037,Swiss Alps Jungfrau-Aletsch,Natural,Switzerland,46.5000000000,8.0333333333
+1039,Yungang Grottoes,Cultural,China,40.1097200000,113.1222200000
+1040,Masada,Cultural,Israel,31.3155555556,35.3536111111
+1042,Old City of Acre,Cultural,Israel,32.9216666667,35.0688888889
+1044,Aranjuez Cultural Landscape,Cultural,Spain,40.0364500000,-3.6093400000
+1046,Alto Douro Wine Region,Cultural,Portugal,41.1016666700,-7.7988888890
+1052,Tugendhat Villa in Brno,Cultural,Czechia,49.2071833333,16.6160555556
+1053,Wooden Churches of Southern Małopolska,Cultural,Poland,49.4666666667,20.2166666667
+1054,Churches of Peace in Jawor and Świdnica,Cultural,Poland,50.8465040556,16.4918123577
+1055,Lamu Old Town,Cultural,Kenya,-2.2844444440,40.8525000000
+1056,Mahabodhi Temple Complex at Bodh Gaya,Cultural,India,24.6952800000,84.9938900000
+1058,Portuguese City of Mazagan (El Jadida),Cultural,Morocco,33.2566700000,-8.5019400000
+1060,Kenya Lake System in the Great Rift Valley,Natural,Kenya,-0.3588888889,36.0855555556
+1061,"Ancient Maya City and Protected Tropical Forests of Calakmul, Campeche",Mixed,Mexico,18.0530277778,-89.7372833333
+1063,Tokaj Wine Region Historic Cultural Landscape,Cultural,Hungary,48.1500000000,21.3500000000
+1066,Upper Middle Rhine Valley,Cultural,Germany,50.1736111100,7.6941666670
+1067,Historic Centres of Stralsund and Wismar,Cultural,Germany,53.8833333333,11.4666666667
+1068,Sacri Monti of Piedmont and Lombardy,Cultural,Italy,45.0947222222,8.2697222222
+1070,"Citadel, Ancient City and Fortress Buildings of Derbent",Cultural,Russia,42.0558333333,48.2827777778
+1073,Gebel Barkal and the Sites of the Napatan Region,Cultural,Sudan,18.3700000000,31.7411111111
+1076,Gobustan Rock Art Cultural Landscape,Cultural,Azerbaijan,40.0584750000,49.3962180000
+1077,Takht-e Soleyman,Cultural,Iran,36.6038888900,47.2350000000
+1078,Jewish Quarter and St Procopius' Basilica in Třebíč,Cultural,Czechia,49.2169138889,15.8734694445
+1079,Franciscan Missions in the Sierra Gorda of Querétaro,Cultural,Mexico,21.1639730000,-99.1917570000
+1081,Orkhon Valley Cultural Landscape,Cultural,Mongolia,47.4792140000,102.6784820000
+1083,Three Parallel Rivers of Yunnan Protected Areas,Natural,China,27.8950000000,98.4063888900
+1084,"Royal Botanic Gardens, Kew",Cultural,United Kingdom,51.4819444400,-0.2940277778
+1087,Town Hall and Roland on the Marketplace of Bremen,Cultural,Germany,53.0759722200,8.8074722220
+1090,Monte San Giorgio,Natural,Italy,45.9020000000,8.9230000000
+1091,Complex of Koguryo Tombs,Cultural,North Korea,38.4402777778,125.5075000000
+1093,Um er-Rasas (Kastrom Mefa'a),Cultural,Jordan,31.4833333333,35.9166666667
+1094,Purnululu National Park,Natural,Australia,-17.5000000000,128.5000000000
+1096,White City of Tel-Aviv – the Modern Movement,Cultural,Israel,32.0777777778,34.7741666667
+1097,Ensemble of the Novodevichy Convent,Cultural,Russia,55.7261111100,37.5550833300
+1099,Mapungubwe Cultural Landscape,Cultural,South Africa,-22.1925000000,29.2388900000
+1100,Rio de Janeiro: Carioca Landscapes between the Mountain and the Sea,Cultural,Brazil,-22.9477777778,-43.2913888889
+1101,Champaner-Pavagadh Archaeological Park,Cultural,India,22.4833333333,73.5333333333
+1102,Saryarka – Steppe and Lakes of Northern Kazakhstan,Natural,Kazakhstan,50.4333333333,69.1888888889
+1103,Mausoleum of Khoja Ahmed Yasawi,Cultural,Kazakhstan,43.2976944444,68.2710555556
+1106,Pasargadae,Cultural,Iran,30.1938300000,53.1672900000
+1107,Incense Route - Desert Cities in the Negev,Cultural,Israel,30.5738888889,35.0091666667
+1108,"Biblical Tels - Megiddo, Hazor, Beer Sheba",Cultural,Israel,31.2447222222,34.8408333333
+1110,Historic Centre of Macao,Cultural,China,22.1911111111,113.5363888889
+1111,Cultural Landscape of Honghe Hani Rice Terraces,Cultural,China,23.0932777778,102.7799805556
+1112,Kaiping Diaolou and Villages,Cultural,China,22.2587740000,112.5257270000
+1113,Fujian Tulou,Cultural,China,24.5508333333,116.9002777778
+1114,Yin Xu,Cultural,China,36.1219780000,114.3251620000
+1115,Lagoons of New Caledonia: Reef Diversity and Associated Ecosystems,Natural,France,-18.4366666667,163.0802777778
+1116,Quebrada de Humahuaca,Cultural,Argentina,-23.1998611100,-65.3488611100
+1117,Landscape of the Pico Island Vineyard Culture,Cultural,Portugal,38.4229685259,-28.4366544651
+1118,Osun-Osogbo Sacred Grove,Cultural,Nigeria,7.7555600000,4.5522200000
+1121,Coffee Cultural Landscape of Colombia,Cultural,Colombia,4.1597222222,-76.3947222222
+1127,Muskauer Park / Park Mużakowski,Cultural,Germany,51.5476530000,14.7293890000
+1130,Ashur (Qal'at Sherqat),Cultural,Iraq,35.4566666667,43.2611111111
+1131,Royal Exhibition Building and Carlton Gardens,Cultural,Australia,-37.8044601952,144.9716931130
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Albania,41.2000000000,20.5000000000
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Austria,47.7333333333,14.4666666667
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Belgium,50.7270000000,4.4310000000
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Bosnia and Herzegovina,44.1460000000,17.2820000000
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Bulgaria,42.6833333333,24.9666666667
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Croatia,44.3333333333,15.5000000000
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Czechia,50.8600000000,15.1600000000
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,France,42.4800000000,3.0320000000
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Germany,51.0666666667,10.4333333333
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Italy,38.1320000000,15.9610000000
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,North Macedonia,41.7640000000,20.5910000000
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Poland,49.0666666667,22.7333333333
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Romania,44.9000000000,21.8000000000
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Slovakia,48.9160000000,22.1850000000
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Slovenia,45.5420000000,14.7690000000
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Spain,41.1100000000,-3.4990000000
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Switzerland,46.2500000000,8.6500000000
+1133,Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe,Natural,Ukraine,47.9400000000,24.3090000000
+1134,"Grimeton Radio Station, Varberg",Cultural,Sweden,57.1000000000,12.3833333300
+1135,Capital Cities and Tombs of the Ancient Koguryo Kingdom,Cultural,China,41.1387222222,126.1761944440
+1136,Luis Barragán House and Studio,Cultural,Mexico,19.4111978833,-99.1923533395
+1137,Kernavė Archaeological Site (Cultural Reserve of Kernavė),Cultural,Lithuania,54.8790000000,24.8530000000
+1138,Coiba National Park and its Special Zone of Marine Protection,Natural,Panama,7.4330000000,-81.7660000000
+1139,Tomb of Askia,Cultural,Mali,16.2898000000,-0.0445600000
+1140,"Koutammakou, the Land of the Batammariba",Cultural,Benin,10.3914638889,1.0589138889
+1140,"Koutammakou, the Land of the Batammariba",Cultural,Togo,10.0666666667,1.1333333333
+1141,Proto-urban Site of Sarazm,Cultural,Tajikistan,39.5078888889,67.4587222222
+1142,Sacred Sites and Pilgrimage Routes in the Kii Mountain Range,Cultural,Japan,33.6405555556,135.4072222220
+1143,Vegaøyan – The Vega Archipelago,Cultural,Norway,65.6166700000,11.7500000000
+1145,Petroglyphs of the Archaeological Landscape of Tanbaly,Cultural,Kazakhstan,43.8033333300,75.5350000000
+1147,Ecosystem and Relict Cultural Landscape of Lopé-Okanda,Mixed,Gabon,-0.0833330000,11.1333330000
+1149,Ilulissat Icefjord,Natural,Denmark,69.1333333300,-49.5000000000
+1152,Þingvellir National Park,Cultural,Iceland,64.2538055600,-21.0372500000
+1153,"The Causses and the Cévennes, Mediterranean agro-pastoral Cultural Landscape",Cultural,France,44.2202777778,3.4730555556
+1155,Old town of Regensburg with Stadtamhof,Cultural,Germany,49.0205555600,12.0991666700
+1158,Etruscan Necropolises of Cerveteri and Tarquinia,Cultural,Italy,42.0068333333,12.1018888889
+1160,Madriu-Perafita-Claror Valley,Cultural,Andorra,42.4947222200,1.5955555560
+1161,Pitons Management Area,Natural,Saint Lucia,13.8070833300,-61.0703611100
+1162,Vredefort Dome,Natural,South Africa,-26.7753952000,27.2563699000
+1165,Centennial Hall in Wrocław,Cultural,Poland,51.1069472222,17.0770138888
+1167,Tropical Rainforest Heritage of Sumatra,Natural,Indonesia,-1.6913930453,101.2664323190
+1170,Historical Centre of the City of Yaroslavl,Cultural,Russia,57.6527800000,39.8761100000
+1174,Chiribiquete National Park – “The Maloca of the Jaguar”,Mixed,Colombia,0.5252777778,-72.7972222222
+1178,Humberstone and Santa Laura Saltpeter Works,Cultural,Chile,-20.2058200000,-69.7940600000
+1179,Swiss Tectonic Arena Sardona,Natural,Switzerland,46.9166666667,9.2500000000
+1181,"Le Havre, the City Rebuilt by Auguste Perret",Cultural,France,49.4927800000,0.1075000000
+1182,Islands and Protected Areas of the Gulf of California,Natural,Mexico,20.6980710000,-105.5863500000
+1183,Kondoa Rock-Art Sites,Cultural,Tanzania,-4.7244444444,35.8338888888
+1185,Plantin-Moretus House-Workshops-Museum Complex,Cultural,Belgium,51.2183300000,4.3977800000
+1186,Wadi Al-Hitan (Whale Valley),Natural,Egypt,29.3333300000,30.1833300000
+1187,Struve Geodetic Arc,Cultural,Belarus,52.1608333333,25.5713888889
+1187,Struve Geodetic Arc,Cultural,Estonia,58.3788888889,26.7200000000
+1187,Struve Geodetic Arc,Cultural,Finland,60.2763888889,26.6033333333
+1187,Struve Geodetic Arc,Cultural,Latvia,56.5013888889,25.8566666667
+1187,Struve Geodetic Arc,Cultural,Lithuania,54.6344444444,25.4291666667
+1187,Struve Geodetic Arc,Cultural,Moldova,48.3188888889,27.8766666667
+1187,Struve Geodetic Arc,Cultural,Norway,69.0286111111,23.3052777778
+1187,Struve Geodetic Arc,Cultural,Russia,60.0741666667,26.9697222222
+1187,Struve Geodetic Arc,Cultural,Sweden,66.0180555556,23.9225000000
+1187,Struve Geodetic Arc,Cultural,Ukraine,45.3325962000,28.9278807000
+1188,Soltaniyeh,Cultural,Iran,36.4176111111,48.7946944444
+1189,"Harar Jugol, the Fortified Historic Town",Cultural,Ethiopia,9.3088888888,42.1377777777
+1192,Qal’at al-Bahrain – Ancient Harbour and Capital of Dilmun,Cultural,Bahrain,26.2344444444,50.5183333333
+1193,Shiretoko,Natural,Japan,43.9494400000,144.9658300000
+1194,Cultural Landscape of Bali Province: the Subak System as a Manifestation of the Tri Hita Karana Philosophy,Cultural,Indonesia,-8.2547222222,115.3361111111
+1195,West Norwegian Fjords – Geirangerfjord and Nærøyfjord,Natural,Norway,60.9166666667,7.0000000000
+1196,"Architectural, Residential and Cultural Complex of the Radziwill Family at Nesvizh",Cultural,Belarus,53.2227800000,26.6913900000
+1199,Kunya-Urgench,Cultural,Turkmenistan,42.3052777778,59.1416666667
+1200,Syracuse and the Rocky Necropolis of Pantalica,Cultural,Italy,37.0594444444,15.2930555556
+1201,Mount Mulanje Cultural Landscape,Cultural,Malawi,-15.9116666667,35.6580555556
+1202,Urban Historic Centre of Cienfuegos,Cultural,Cuba,22.1458870000,-80.4521830000
+1203,Central Highlands of Sri Lanka,Natural,Sri Lanka,6.8061305556,80.7965416667
+1207,Aflaj Irrigation Systems of Oman,Cultural,Oman,22.7333333333,57.7666666667
+1208,Bam and its Cultural Landscape,Cultural,Iran,29.1168300000,58.3666666667
+1209,Agave Landscape and Ancient Industrial Facilities of Tequila,Cultural,Mexico,20.6833305556,-103.8166666670
+1211,Genoa: Le Strade Nuove and the system of the Palazzi dei Rolli,Cultural,Italy,44.4120000000,8.9300000000
+1213,"Sichuan Giant Panda Sanctuaries - Wolong, Mt Siguniang and Jiajin Mountains",Natural,China,30.8333333333,103.0000000000
+1214,Sewell Mining Town,Cultural,Chile,-34.0844444444,-70.3827777777
+1215,Cornwall and West Devon Mining Landscape,Cultural,United Kingdom,50.0938888889,-5.3647222222
+1216,Malpelo Fauna and Flora Sanctuary,Natural,Colombia,4.0033440000,-81.6075720000
+1217,Vizcaya Bridge,Cultural,Spain,43.3231750000,-3.0168333333
+1220,Bahá’i Holy Places in Haifa and the Western Galilee,Cultural,Israel,32.8145944444,34.9872777777
+1221,Rideau Canal,Cultural,Canada,44.2221416667,-76.4903388889
+1222,Bisotun,Cultural,Iran,34.3883333333,47.4366666666
+1223,"Melaka and George Town, Historic Cities of the Straits of Malacca",Cultural,Malaysia,2.1916666667,102.2625000000
+1224,Temple of Preah Vihear,Cultural,Cambodia,14.3908410000,104.6803250000
+1225,Ruins of Loropéni,Cultural,Burkina Faso,10.2500229431,-3.5833384934
+1226,Stone Circles of Senegambia,Cultural,Gambia,13.6920000000,-14.8730000000
+1226,Stone Circles of Senegambia,Cultural,Senegal,13.6952814295,-15.5353004100
+1227,Aapravasi Ghat,Cultural,Mauritius,-20.1586388889,57.5031666666
+1229,Crac des Chevaliers and Qal’at Salah El-Din,Cultural,Syria,34.7566666667,36.2944444444
+1230,Sulaiman-Too Sacred Mountain,Cultural,Kyrgyzstan,40.5311111111,72.7827777778
+1231,Sacred Mijikenda Kaya Forests,Cultural,Kenya,-3.6205555556,39.7361111111
+1234,Putorana Plateau,Natural,Russia,69.0469444444,94.1580555556
+1236,León Cathedral,Cultural,Nicaragua,12.4350000000,-86.8780555556
+1237,The Dolomites,Natural,Italy,46.1641666667,10.9025000000
+1239,Berlin Modernism Housing Estates,Cultural,Germany,52.4108333333,13.5666666667
+1240,Stari Grad Plain,Cultural,Croatia,43.1816666667,16.6386111111
+1242,Parthian Fortresses of Nisa,Cultural,Turkmenistan,37.9512600000,58.2109930000
+1243,"Lavaux, Vineyard Terraces",Cultural,Switzerland,46.4919444444,6.7461111111
+1245,San Marino Historic Centre and Mount Titano,Cultural,San Marino,43.9327777778,12.4519444444
+1246,Iwami Ginzan Silver Mine and its Cultural Landscape,Cultural,Japan,35.0838888889,132.4169444444
+1248,South China Karst,Natural,China,24.7177777778,103.3441666670
+1250,Central University City Campus of the Universidad Nacional Autónoma de México (UNAM),Cultural,Mexico,19.3322222222,-99.1880555555
+1252,Tajik National Park (Mountains of the Pamirs),Natural,Tajikistan,38.7650000000,72.3052777778
+1253,"Gamzigrad-Romuliana, Palace of Galerius",Cultural,Serbia,43.8993055556,22.1861111111
+1255,Twyfelfontein or /Ui-//aes,Cultural,Namibia,-20.5947689881,14.3750965572
+1256,"Bordeaux, Port of the Moon",Cultural,France,44.8388888889,-0.5722222222
+1257,Rainforests of the Atsinanana,Natural,Madagascar,-14.4597222222,49.7025000000
+1258,Teide National Park,Natural,Spain,28.2713888889,-16.6436111111
+1259,Le Morne Cultural Landscape,Cultural,Mauritius,-20.4519444444,57.3283333333
+1260,Mehmed Paša Sokolović Bridge in Višegrad,Cultural,Bosnia and Herzegovina,43.7814444444,19.2880250000
+1262,Armenian Monastic Ensembles of Iran,Cultural,Iran,38.9752777778,45.5727777778
+1263,Socotra Archipelago,Natural,Yemen,12.1236111111,53.2733333333
+1264,Jeju Volcanic Island and Lava Tubes,Natural,South Korea,33.3586111111,126.5252777780
+1265,Richtersveld Cultural and Botanical Landscape,Cultural,South Africa,-28.6000000000,17.2038888888
+1267,Surtsey,Natural,Iceland,63.3030555556,-20.6022222222
+1268,Historic Centre of Agadez,Cultural,Niger,16.9736111111,7.9913888889
+1269,Sacred City of Caral-Supe,Cultural,Peru,-10.8916666667,-77.5213888889
+1270,Historic Centre of Camagüey,Cultural,Cuba,21.3786111111,-77.9186111111
+1272,São Francisco Square in the Town of São Cristóvão,Cultural,Brazil,-11.0136554428,-37.2053747585
+1273,Wooden Churches of the Slovak part of the Carpathian Mountain Area,Cultural,Slovakia,48.6488888889,19.1547222222
+1274,Protective town of San Miguel and the Sanctuary of Jesús Nazareno de Atotonilco,Cultural,Mexico,20.9144444444,-100.7463888889
+1276,Rhaetian Railway in the Albula / Bernina Landscapes,Cultural,Italy,46.4983333333,9.8463888889
+1277,"Hiraizumi – Temples, Gardens and Archaeological Sites Representing the Buddhist Pure Land",Cultural,Japan,38.9886111111,141.1077777780
+1278,Historic Monuments and Sites in Kaesong,Cultural,North Korea,37.9717800000,126.5564840000
+1279,Mount Wutai,Cultural,China,38.8822222222,113.3494444444
+1280,Chief Roi Mata’s Domain,Cultural,Vanuatu,-17.6280694444,168.1777194444
+1282,Decorated Farmhouses of Hälsingland,Cultural,Sweden,61.2722222222,16.9933333333
+1283,Fortifications of Vauban,Cultural,France,42.5100000000,2.1197222222
+1285,Joggins Fossil Cliffs,Natural,Canada,45.7097222222,-64.4358333333
+1287,Mantua and Sabbioneta,Cultural,Italy,44.9983333333,10.4902777778
+1290,Monarch Butterfly Biosphere Reserve,Natural,Mexico,19.3691666667,-100.2602777778
+1292,Mount Sanqingshan National Park,Natural,China,28.9158333333,118.0644444444
+1293,Hegra Archaeological Site (al-Hijr / Madā ͐ in Ṣāliḥ),Cultural,Saudi Arabia,26.7836111111,37.9550000000
+1295,"Fort Jesus, Mombasa",Cultural,Kenya,-4.0627777778,39.6794444444
+1298,Stoclet House,Cultural,Belgium,50.8350000000,4.4161111111
+1299,Lena Pillars Nature Park,Natural,Russia,60.6666666667,127.0000000000
+1302,"La Chaux-de-Fonds / Le Locle, Watchmaking Town Planning",Cultural,Switzerland,47.0581888889,6.7495694444
+1303,Pontcysyllte Aqueduct and Canal,Cultural,United Kingdom,52.9702777778,-3.0877777778
+1305,Historic Monuments of Dengfeng in “The Centre of Heaven and Earth”,Cultural,China,34.3997138889,113.1412444444
+1306,Australian Convict Sites,Cultural,Australia,-29.0533333333,167.9586111110
+1308,Paraty and Ilha Grande – Culture and Biodiversity,Mixed,Brazil,-23.0186055556,-44.6853666666
+1310,"Cidade Velha, Historic Centre of Ribeira Grande",Cultural,Cabo Verde,14.9151388889,-23.6051944444
+1312,Tower of Hercules,Cultural,Spain,43.3858333333,-8.4063888889
+1313,Heritage of Mercury. Almadén and Idrija,Cultural,Slovenia,45.9700000000,13.9470000000
+1313,Heritage of Mercury. Almadén and Idrija,Cultural,Spain,38.7718055556,-4.8341666667
+1314,Wadden Sea,Natural,Denmark,54.6086111111,8.4663888889
+1314,Wadden Sea,Natural,Germany,53.2752777778,7.1636111111
+1314,Wadden Sea,Natural,The Netherlands,53.3666666667,6.8963888889
+1315,Shushtar Historical Hydraulic System,Cultural,Iran,32.0186111111,48.8358333333
+1317,"Pitons, cirques and remparts of Reunion Island",Natural,France,-21.0994444444,55.4800000000
+1318,Longobards in Italy. Places of the Power (568-774 A.D.),Cultural,Italy,41.1305555556,14.7813888889
+1319,Royal Tombs of the Joseon Dynasty,Cultural,South Korea,37.1974166666,128.4528611110
+1321,"The Architectural Work of Le Corbusier, an Outstanding Contribution to the Modern Movement",Cultural,Argentina,-34.9113416667,-57.9418250000
+1321,"The Architectural Work of Le Corbusier, an Outstanding Contribution to the Modern Movement",Cultural,Belgium,51.1836670000,4.3932500000
+1321,"The Architectural Work of Le Corbusier, an Outstanding Contribution to the Modern Movement",Cultural,France,43.2613700000,5.3961800000
+1321,"The Architectural Work of Le Corbusier, an Outstanding Contribution to the Modern Movement",Cultural,Germany,48.7998450000,9.1776650000
+1321,"The Architectural Work of Le Corbusier, an Outstanding Contribution to the Modern Movement",Cultural,India,30.7575000000,76.8055555556
+1321,"The Architectural Work of Le Corbusier, an Outstanding Contribution to the Modern Movement",Cultural,Japan,35.7152777778,139.7758333330
+1321,"The Architectural Work of Le Corbusier, an Outstanding Contribution to the Modern Movement",Cultural,Switzerland,46.2001600000,6.1564090000
+1322,Historic Town of Grand-Bassam,Cultural,Ivory Coast,5.1958333333,-3.7363888889
+1324,Historic Villages of Korea: Hahoe and Yangdong,Cultural,South Korea,35.9991666667,129.2913888889
+1325,Phoenix Islands Protected Area,Natural,Kiribati,-3.8644540000,-172.6502030000
+1326,Papahānaumokuākea,Mixed,United States,25.3490700000,-170.1458200000
+1328,Central Sector of the Imperial Citadel of Thang Long - Hanoi,Cultural,Vietnam,21.0375200000,105.8386230000
+1329,At-Turaif District in ad-Dir'iyah,Cultural,Saudi Arabia,24.7341333333,46.5724666667
+1330,Residence of Bukovinian and Dalmatian Metropolitans,Cultural,Ukraine,48.2966666667,25.9247222222
+1333,Konso Cultural Landscape,Cultural,Ethiopia,5.3000000000,37.4000000000
+1334,West Lake Cultural Landscape of Hangzhou,Cultural,China,30.2375000000,120.1408333333
+1335,China Danxia,Natural,China,24.9652777778,113.7033333333
+1336,Archaeological Sites of the Island of Meroe,Cultural,Sudan,16.2708333333,33.2791666667
+1337,Episcopal City of Albi,Cultural,France,43.9291666667,2.1441666667
+1338,"The Jantar Mantar, Jaipur",Cultural,India,26.9247222222,75.8250000000
+1339,Bikini Atoll Nuclear Test Site,Cultural,Marshall Islands,11.6000000000,165.3805555556
+1342,Western Ghats,Natural,India,10.2177777778,77.1800000000
+1343,"Cultural Sites of Al Ain (Hafit, Hili, Bidaa Bint Saud and Oases Areas)",Cultural,United Arab Emirates,24.0679510000,55.8066300000
+1344,Major Mining Sites of Wallonia,Cultural,Belgium,50.3777777778,4.4408333333
+1345,Sheikh Safi al-din Khānegāh and Shrine Ensemble in Ardabil,Cultural,Iran,38.2486111111,48.2913888889
+1346,Tabriz Historic Bazaar Complex,Cultural,Iran,38.0736111111,46.3008333333
+1348,Ancient Villages of Northern Syria,Cultural,Syria,35.6697222222,36.5686111111
+1349,Seventeenth-Century Canal Ring Area of Amsterdam inside the Singelgracht,Cultural,The Netherlands,52.3650000000,4.8877777778
+1351,Camino Real de Tierra Adentro,Cultural,Mexico,19.4333180000,-99.1329430000
+1352,Prehistoric Caves of Yagul and Mitla in the Central Valley of Oaxaca,Cultural,Mexico,16.9508333333,-96.4211111111
+1356,Blue and John Crow Mountains,Mixed,Jamaica,18.0775000000,-76.5711111111
+1358,Citadel of the Ho Dynasty,Cultural,Vietnam,20.0455555556,105.6211111110
+1359,Saloum Delta,Cultural,Senegal,13.8352777778,-16.4986111111
+1360,Nord-Pas de Calais Mining Basin,Cultural,France,50.3147222222,3.3572222222
+1361,"Historic Jeddah, the Gate to Makkah",Cultural,Saudi Arabia,21.4838888889,39.1875000000
+1362,Ogasawara Islands,Natural,Japan,24.2350000000,141.4625000000
+1363,Prehistoric Pile Dwellings around the Alps,Cultural,Austria,46.5870210000,14.1594620000
+1363,Prehistoric Pile Dwellings around the Alps,Cultural,France,45.5433390000,5.8046810000
+1363,Prehistoric Pile Dwellings around the Alps,Cultural,Germany,47.6609490000,8.9388940000
+1363,Prehistoric Pile Dwellings around the Alps,Cultural,Italy,45.1076510000,10.3929760000
+1363,Prehistoric Pile Dwellings around the Alps,Cultural,Slovenia,45.9706170000,14.5416230000
+1363,Prehistoric Pile Dwellings around the Alps,Cultural,Switzerland,46.2533330000,6.1904610000
+1364,"Pearling, Testimony of an Island Economy",Cultural,Bahrain,26.2408200000,50.6133100000
+1366,Selimiye Mosque and its Social Complex,Cultural,Turkey,41.6777777778,26.5594444444
+1367,Garrison Border Town of Elvas and its Fortifications,Cultural,Portugal,38.8712055556,-7.1546666667
+1368,Fagus Factory in Alfeld,Cultural,Germany,51.9838888889,9.8122222222
+1369,Ningaloo Coast,Natural,Australia,-22.4510000000,113.8100000000
+1370,Caves of Maresha and Bet-Guvrin in the Judean Lowlands as a Microcosm of the Land of the Caves,Cultural,Israel,31.6011111111,34.9000000000
+1371,Cultural Landscape of the Serra de Tramuntana,Cultural,Spain,39.7308333333,2.6947222222
+1372,The Persian Garden,Cultural,Iran,29.6361111111,52.5252777778
+1375,Santiniketan,Cultural,India,23.6802777778,87.6849722222
+1376,Historic Bridgetown and its Garrison,Cultural,Barbados,13.0966666667,-59.6138888889
+1377,Wadi Rum Protected Area,Mixed,Jordan,29.6397222222,35.4338888889
+1379,Margravial Opera House Bayreuth,Cultural,Germany,49.9443931107,11.5784979437
+1380,Sangha Trinational,Natural,Cameroon,2.3672222223,15.8141666667
+1380,Sangha Trinational,Natural,Central African Republic,2.9166666667,16.4241666667
+1380,Sangha Trinational,Natural,Republic of the Congo,2.6094444444,16.5541666667
+1382,Petroglyphic Complexes of the Mongolian Altai,Cultural,Mongolia,48.7389500000,88.1496500000
+1386,Rock Islands Southern Lagoon,Mixed,Palau,7.2469250000,134.3525000000
+1387,University of Coimbra – Alta and Sofia,Cultural,Portugal,40.2078111111,-8.4257750000
+1388,Chengjiang Fossil Site,Natural,China,24.6688888889,102.9772222222
+1389,Site of Xanadu,Cultural,China,42.3580000000,116.1851277778
+1390,Vineyard Landscape of Piedmont: Langhe-Roero and Monferrato,Cultural,Italy,44.6086111111,7.9636111111
+1393,Sites of Human Evolution at Mount Carmel: The Nahal Me’arot / Wadi el-Mughara Caves,Cultural,Israel,32.6686111111,34.9680555556
+1396,Archaeological Heritage of the Lenggong Valley,Cultural,Malaysia,5.0679083333,100.9723277778
+1397,Masjed-e Jāmé of Isfahan,Cultural,Iran,32.6697222222,51.6852777778
+1398,Gonbad-e Qābus,Cultural,Iran,37.2580277778,55.1690000000
+1399,Levuka Historical Port Town,Cultural,Fiji,-17.6833777778,178.8345333333
+1400,Lakes of Ounianga,Natural,Chad,19.0550000000,20.5055555556
+1401,"Rabat, Modern Capital and Historic City: a Shared Heritage",Cultural,Morocco,34.0136111111,-6.8469444444
+1402,Al Zubarah Archaeological Site,Cultural,Qatar,25.9780555556,51.0297222222
+1403,Mount Hamiguitan Range Wildlife Sanctuary,Natural,Philippines,6.7171694444,126.1734305556
+1404,Landscape of Grand Pré,Cultural,Canada,45.1183333333,-64.3072222222
+1405,Neolithic Site of Çatalhöyük,Cultural,Turkey,37.6666666667,32.8280555556
+1406,Great Himalayan National Park Conservation Area,Natural,India,31.8333333333,77.5833333333
+1407,"Bassari Country: Bassari, Fula and Bedik Cultural Landscapes",Cultural,Senegal,12.3638888889,-12.3386111111
+1410,El Pinacate and Gran Desierto de Altar Biosphere Reserve,Natural,Mexico,32.0000000000,-113.9166666667
+1411,Ancient City of Tauric Chersonese and its Chora,Cultural,Ukraine,44.5238888889,33.5008333333
+1412,Red Bay Basque Whaling Station,Cultural,Canada,51.7269250000,-56.4295222222
+1413,Bergpark Wilhelmshöhe,Cultural,Germany,51.3158333333,9.3930555556
+1414,Xinjiang Tianshan,Natural,China,41.9683333333,80.3541666667
+1415,Pimachiowin Aki,Mixed,Canada,51.8264166667,-95.4112777778
+1416,Stevns Klint,Natural,Denmark,55.2672222222,12.4233333333
+1418,"Fujisan, sacred place and source of artistic inspiration",Cultural,Japan,34.9936111111,138.5227777780
+1422,Golestan Palace,Cultural,Iran,35.6803666667,51.4205111111
+1423,Cultural Landscape of Maymand,Cultural,Iran,30.1680555556,55.3755555556
+1424,Wooden Tserkvas of the Carpathian Region in Poland and Ukraine,Cultural,Poland,49.2096388889,22.6877777778
+1424,Wooden Tserkvas of the Carpathian Region in Poland and Ukraine,Cultural,Ukraine,48.2551388889,24.3445833333
+1425,"The Climats, terroirs of Burgundy",Cultural,France,47.0580555556,4.8644444444
+1426,"Decorated Cave of Pont d’Arc, known as Grotte Chauvet-Pont d’Arc, Ardèche",Cultural,France,44.3875000000,4.4161111111
+1427,Mount Etna,Natural,Italy,37.7561111111,14.9966666667
+1430,Namib Sand Sea,Natural,Namibia,-24.8852777778,15.4077777778
+1431,Coastal and Marine Ecosystems of the Bijagós Archipelago – Omatí Minhô,Natural,Guinea-Bissau,11.1200000000,-15.9488888889
+1432,Okavango Delta,Natural,Botswana,-19.2833333333,22.9000000000
+1433,"Birthplace of Jesus: Church of the Nativity and the Pilgrimage Route, Bethlehem",Cultural,Palestinian Territory,31.7043527778,35.2075000000
+1434,Chaîne des Puys - Limagne fault tectonic arena,Natural,France,45.7793888889,2.9651111111
+1435,Monumental Earthworks of Poverty Point,Cultural,United States,32.6369444444,-91.4063888889
+1437,Erbil Citadel,Cultural,Iraq,36.1911111111,44.0091666667
+1438,Trang An Landscape Complex,Mixed,Vietnam,20.2566666667,105.8963888889
+1439,Namhansanseong,Cultural,South Korea,37.4591666667,127.1863888890
+1440,Great Burkhan Khaldun Mountain and its surrounding sacred landscape,Cultural,Mongolia,48.7619777778,109.0093277778
+1441,Van Nellefabriek,Cultural,The Netherlands,51.9244444444,4.4325000000
+1442,Silk Roads: the Routes Network of Chang'an-Tianshan Corridor,Cultural,China,33.1588888889,107.2911111110
+1442,Silk Roads: the Routes Network of Chang'an-Tianshan Corridor,Cultural,Kazakhstan,42.8944444444,72.1477777777
+1442,Silk Roads: the Routes Network of Chang'an-Tianshan Corridor,Cultural,Kyrgyzstan,42.7466666666,75.2502777778
+1443,The Grand Canal,Cultural,China,29.8747222222,121.5572222220
+1444,Pyu Ancient Cities,Cultural,Myanmar,18.7983333333,95.2900000000
+1446,Baptism Site “Bethany Beyond the Jordan” (Al-Maghtas),Cultural,Jordan,31.8372222222,35.5527777778
+1447,Carolingian Westwork and Civitas Corvey,Cultural,Germany,51.7782777778,9.4102500000
+1448,Landscapes of Dauria,Natural,Mongolia,49.2666666667,113.7500000000
+1448,Landscapes of Dauria,Natural,Russia,50.1972222222,116.0000000000
+1449,Tomioka Silk Mill and Related Sites,Cultural,Japan,36.2033333333,139.0316666667
+1450,Thimlich Ohinga Archaeological Site,Cultural,Kenya,-0.8913380556,34.3261070000
+1452,Bursa and Cumalıkızık: the Birth of the Ottoman Empire,Cultural,Turkey,40.1750000000,29.1730555556
+1453,Precolumbian Chiefdom Settlements with Stone Spheres of the Diquís,Cultural,Costa Rica,8.9107320000,-83.4788550000
+1455,Susa,Cultural,Iran,32.1894583333,48.2563722222
+1456,Shahr-i Sokhta,Cultural,Iran,30.5938888889,61.3277777778
+1457,Pergamon and its Multi-Layered Cultural Landscape,Cultural,Turkey,39.1033000000,27.1696277778
+1459,"Qhapaq Ñan, Andean Road System",Cultural,Argentina,-23.3666666667,-64.9666666667
+1459,"Qhapaq Ñan, Andean Road System",Cultural,Bolivia,-16.5500000000,-68.6666666667
+1459,"Qhapaq Ñan, Andean Road System",Cultural,Chile,-18.2500000000,-69.5833333333
+1459,"Qhapaq Ñan, Andean Road System",Cultural,Colombia,0.8000000000,-77.6500000000
+1459,"Qhapaq Ñan, Andean Road System",Cultural,Ecuador,-0.0500000000,-78.2000000000
+1459,"Qhapaq Ñan, Andean Road System",Cultural,Peru,-12.0166666667,-76.6500000000
+1461,Kaeng Krachan Forest Complex,Natural,Thailand,12.8656666667,99.4001666667
+1463,Aqueduct of Padre Tembleque Hydraulic System,Cultural,Mexico,19.8352777778,-98.6625666667
+1464,Fray Bentos Industrial Landscape,Cultural,Uruguay,-33.1177777778,-58.3316666667
+1465,"Champagne Hillsides, Houses and Cellars",Cultural,France,49.0408333333,3.9613888889
+1466,San Antonio Missions,Cultural,United States,29.0950000000,-98.1666666667
+1467,Speicherstadt and Kontorhaus District with Chilehaus,Cultural,Germany,53.5455555556,9.9994444444
+1468,Moravian Church Settlements,Cultural,Denmark,55.3555555556,9.4813888889
+1468,Moravian Church Settlements,Cultural,Germany,51.0155555556,14.7441666666
+1468,Moravian Church Settlements,Cultural,United Kingdom,54.8536111111,-6.3269444445
+1468,Moravian Church Settlements,Cultural,United States,40.6191666667,-75.3808333334
+1469,The par force hunting landscape in North Zealand,Cultural,Denmark,55.8000000000,12.5666666667
+1470,Naumburg Cathedral,Cultural,Germany,51.1548055556,11.8040000000
+1471,Necropolis of Bet She’arim: A Landmark of Jewish Renewal,Cultural,Israel,32.7022222222,35.1269444444
+1472,Rock Art in the Hail Region of Saudi Arabia,Cultural,Saudi Arabia,26.1536111111,39.8916666667
+1473,Brâncuși Monumental Ensemble of Târgu Jiu,Cultural,Romania,45.0382777778,23.2787777778
+1474,Tusi Sites,Cultural,China,27.8116666667,106.8169444444
+1475,Ennedi Massif: Natural and Cultural Landscape,Mixed,Chad,17.0416666667,21.8627777778
+1477,Baekje Historic Areas,Cultural,South Korea,35.9750000000,127.0555555556
+1478,Erzgebirge/Krušnohoří Mining Region,Cultural,Czechia,50.3289555556,12.9534083333
+1478,Erzgebirge/Krušnohoří Mining Region,Cultural,Germany,50.5126666667,12.5992194444
+1480,Victorian Gothic and Art Deco Ensembles of Mumbai,Cultural,India,18.9298055556,72.8300833333
+1481,The Ahwar of Southern Iraq: Refuge of Biodiversity and the Relict Landscape of the Mesopotamian Cities,Mixed,Iraq,30.7391666667,47.4386111111
+1483,Singapore Botanic Gardens,Cultural,Singapore,1.3152777778,103.8161111111
+1484,"Sites of Japan’s Meiji Industrial Revolution: Iron and Steel, Shipbuilding and Coal Mining",Cultural,Japan,31.6166666667,130.5666666667
+1485,The Forth Bridge,Cultural,United Kingdom,56.0011111111,-3.3888888889
+1486,Rjukan-Notodden Industrial Heritage Site,Cultural,Norway,59.8786111111,8.5936111111
+1487,Arab-Norman Palermo and the Cathedral Churches of Cefalú and Monreale,Cultural,Italy,38.0400000000,14.0233333333
+1488,Diyarbakır Fortress and Hevsel Gardens Cultural Landscape,Cultural,Turkey,37.9031000000,40.2393083333
+1490,Western Tien-Shan,Natural,Kazakhstan,41.9576990000,70.0135030000
+1490,Western Tien-Shan,Natural,Kyrgyzstan,41.5919444444,70.4577777778
+1490,Western Tien-Shan,Natural,Uzbekistan,41.2100000000,69.9341666667
+1492,"Palestine: Land of Olives and Vines – Cultural Landscape of Southern Jerusalem, Battir",Cultural,Palestinian Territory,31.7163888889,35.1588888889
+1493,Pampulha Modern Ensemble,Cultural,Brazil,-19.8519444444,-43.9736111111
+1495,Hidden Christian Sites in the Nagasaki Region,Cultural,Japan,32.3122222222,130.0258333330
+1496,The 20th-Century Architecture of Frank Lloyd Wright,Cultural,United States,33.6063888889,-111.8455555560
+1497,Mistaken Point,Natural,Canada,46.6350000000,-53.2111111111
+1498,"Seowon, Korean Neo-Confucian Academies",Cultural,South Korea,35.3106083333,126.7517194440
+1499,Antigua Naval Dockyard and Related Archaeological Sites,Cultural,Antigua and Barbuda,17.0069444444,-61.7616666667
+1500,Gorham's Cave Complex,Cultural,United Kingdom,36.1226694444,-5.3420611111
+1501,Antequera Dolmens Site,Cultural,Spain,36.9646111111,-4.5406388889
+1502,"Archaeological Site of Nalanda Mahavihara at Nalanda, Bihar",Cultural,India,25.1366666667,85.4438888889
+1503,Nan Madol: Ceremonial Centre of Eastern Micronesia,Cultural,Micronesia,6.8397222222,158.3308333333
+1504,Stećci Medieval Tombstone Graveyards,Cultural,Bosnia and Herzegovina,42.9045833333,18.4644444444
+1504,Stećci Medieval Tombstone Graveyards,Cultural,Croatia,42.5417833333,18.4223805556
+1504,Stećci Medieval Tombstone Graveyards,Cultural,Montenegro,43.0948166667,19.1491833333
+1504,Stećci Medieval Tombstone Graveyards,Cultural,Serbia,43.2988888889,19.6244444444
+1505,Lut Desert,Natural,Iran,30.2161111111,58.8388888889
+1506,The Persian Qanat,Cultural,Iran,29.0894444444,58.3986111111
+1507,"Phu Phrabat, a testimony to the Sīma stone tradition of the Dvaravati period",Cultural,Thailand,17.6304972223,102.3318777780
+1508,Zuojiang Huashan Rock Art Cultural Landscape,Cultural,China,22.2555555556,107.0313888890
+1509,Hubei Shennongjia,Natural,China,31.4630555556,110.5091666670
+1510,Archipiélago de Revillagigedo,Natural,Mexico,18.3563888889,-114.7233333330
+1511,"Mbanza Kongo, Vestiges of the Capital of the former Kingdom of Kongo",Cultural,Angola,-6.2688888889,14.2497222222
+1513,Khangchendzonga National Park,Mixed,India,27.7647222222,88.3772222222
+1517,Archaeological Site of Philippi,Cultural,Greece,41.0147222222,24.2852777778
+1518,Archaeological Site of Ani,Cultural,Turkey,40.5000000000,43.5666666667
+1519,Aphrodisias,Cultural,Turkey,37.7083333333,28.7236111111
+1523,Churches of the Pskov School of Architecture,Cultural,Russia,57.8053583333,28.3340527777
+1525,Assumption Cathedral and Monastery of the town-island of Sviyazhsk,Cultural,Russia,55.7702777778,48.6527777778
+1526,Los Alerces National Park,Natural,Argentina,-42.8528000000,-71.8728000000
+1527,Caves and Ice Age Art in the Swabian Jura,Cultural,Germany,48.3877777778,9.7655555556
+1528,Talayotic Menorca,Cultural,Spain,39.8738888889,4.2661111111
+1529,Taputapuātea,Cultural,France,-16.8414000000,-151.3723777778
+1532,"Temple Zone of Sambor Prei Kuk, Archaeological Site of Ancient Ishanapura",Cultural,Cambodia,12.8725000000,105.0430555556
+1533,Venetian Works of Defence between the 16th and 17th Centuries: Stato da Terra – Western Stato da Mar,Cultural,Croatia,43.7213888889,15.8547222222
+1533,Venetian Works of Defence between the 16th and 17th Centuries: Stato da Terra – Western Stato da Mar,Cultural,Italy,45.4388888889,10.6941666667
+1533,Venetian Works of Defence between the 16th and 17th Centuries: Stato da Terra – Western Stato da Mar,Cultural,Montenegro,42.4236111111,18.7719444444
+1534,Tehuacán-Cuicatlán Valley: originary habitat of Mesoamerica,Mixed,Mexico,17.9899611111,-97.1871527778
+1535,Sacred Island of Okinoshima and Associated Sites in the Munakata Region,Cultural,Japan,33.8175000000,130.4861111110
+1536,Kujataa Greenland: Norse and Inuit Farming at the Edge of the Ice Cap,Cultural,Denmark,60.7925000000,-45.8344444444
+1537,Ancient City of Qalhat,Cultural,Oman,22.6952222222,59.3781111111
+1538,"Ivrea, industrial city of the 20th century",Cultural,Italy,45.4575000000,7.8691666667
+1539,Tarnowskie Góry Lead-Silver-Zinc Mine and its Underground Water Management System,Cultural,Poland,50.4426972222,18.8512277778
+1540,Qinghai Hoh Xil,Natural,China,35.3802777778,92.4391666667
+1541,"Kulangsu, a Historic International Settlement",Cultural,China,24.4475000000,118.0619444444
+1542,Dilmun Burial Mounds,Cultural,Bahrain,26.0750000000,50.5055555556
+1544,Historic City of Yazd,Cultural,Iran,31.8836111111,54.3730555556
+1545,ǂKhomani Cultural Landscape,Cultural,South Africa,-25.6876111111,20.3745833333
+1548,Valongo Wharf Archaeological Site,Cultural,Brazil,-22.8971111111,-43.1873944444
+1549,Historic Centre of Sheki with the Khan’s Palace,Cultural,Azerbaijan,41.2033333333,47.1875000000
+1550,Asmara: A Modernist African City,Cultural,Eritrea,15.3352777778,38.9358333333
+1551,Historic City of Ahmadabad,Cultural,India,23.0263888889,72.5880555556
+1552,Roșia Montană Mining Landscape,Cultural,Romania,46.3061111111,23.1305555556
+1553,Archaeological Border complex of Hedeby and the Danevirke,Cultural,Germany,54.4556388889,9.3468333333
+1555,Colonies of Benevolence,Cultural,Belgium,51.4028305556,4.8243055556
+1555,Colonies of Benevolence,Cultural,The Netherlands,52.8572861111,6.1671666667
+1557,Aasivissuit – Nipisat. Inuit Hunting Ground between Ice and Sea,Cultural,Denmark,67.0639305556,-51.4332055556
+1558,Žatec and the Landscape of Saaz Hops,Cultural,Czechia,50.3202777778,13.6200000000
+1559,Fanjingshan,Natural,China,27.8955555556,108.6800000000
+1560,Caliphate City of Medina Azahara,Cultural,Spain,37.8858888889,-4.8676944444
+1561,Quanzhou: Emporium of the World in Song-Yuan China,Cultural,China,24.7102777778,118.4441666670
+1562,"Sansa, Buddhist Mountain Monasteries in Korea",Cultural,South Korea,34.4755555556,126.6169444440
+1563,"Al-Ahsa Oasis, an Evolving Cultural Landscape",Cultural,Saudi Arabia,25.3680250000,49.5769166667
+1564,Tr’ondëk-Klondike,Cultural,Canada,64.0503472222,-139.4399472220
+1565,Hebron/Al-Khalil Old Town,Cultural,Palestinian Territory,31.5244444444,35.1083333333
+1568,Sassanid Archaeological Landscape of Fars Region,Cultural,Iran,28.8521472222,52.5325416667
+1569,The Maison Carrée of Nîmes,Cultural,France,43.8382222222,4.3561944444
+1570,"Kakatiya Rudreshwara (Ramappa) Temple, Telangana",Cultural,India,18.2591333333,79.9432055556
+1571,Le Colline del Prosecco di Conegliano e Valdobbiadene,Cultural,Italy,45.9530277778,12.2261111111
+1572,Göbekli Tepe,Cultural,Turkey,37.2232419444,38.9223638889
+1573,"Royal Building of Mafra – Palace, Basilica, Convent, Cerco Garden and Hunting Park (Tapada)",Cultural,Portugal,38.9371666667,-9.3255277778
+1574,"Amami-Oshima Island, Tokunoshima Island, Northern part of Okinawa Island, and Iriomote Island",Natural,Japan,24.3261805556,123.8087444440
+1575,Barberton Makhonjwa Mountains,Natural,South Africa,-25.9738888889,31.0138888889
+1577,Budj Bim Cultural Landscape,Cultural,Australia,-38.0811083334,141.8852750000
+1578,Risco Caido and the Sacred Mountains of Gran Canaria Cultural Landscape,Cultural,Spain,28.0443888889,-15.6611944444
+1580,Water Management System of Augsburg,Cultural,Germany,48.3654722222,10.9020000000
+1581,"Beaches of the D-Day Landings, Normandy, 1944",Cultural,France,49.2961111111,-0.2911111111
+1582,The Colonial Transisthmian Route of Panamá,Cultural,Panama,8.9524305556,-79.5347416666
+1584,Hyrcanian Forests,Natural,Azerbaijan,38.4549666667,48.6793027778
+1584,Hyrcanian Forests,Natural,Iran,36.0988305555,53.3937500000
+1585,Trans-Iranian Railway,Cultural,Iran,35.6583055556,51.3983333333
+1586,"Memorial sites of the Genocide: Nyamata, Murambi, Gisozi and Bisesero",Cultural,Rwanda,-1.9303333334,30.0605833333
+1587,Megalithic Jar Sites in Xiengkhuang – Plain of Jars,Cultural,Laos,19.2841638889,103.1530555560
+1588,Bagan,Cultural,Myanmar,21.1125000000,94.9641666667
+1589,Landscape for Breeding and Training of Ceremonial Carriage Horses at Kladruby nad Labem,Cultural,Czechia,50.0566500000,15.4842583333
+1590,Sanctuary of Bom Jesus do Monte in Braga,Cultural,Portugal,41.5549444444,-8.3770277778
+1591,"Getbol, Korean Tidal Flats",Natural,South Korea,34.7889944444,127.5639722220
+1592,Archaeological Ruins of Liangzhu City,Cultural,China,30.3955500000,119.9908277780
+1593,Mozu-Furuichi Kofun Group: Mounded Tombs of Ancient Japan,Cultural,Japan,34.5466638889,135.4994416670
+1594,Jodrell Bank Observatory,Cultural,United Kingdom,53.2339166667,-2.3038611111
+1595,The Archaeological Ensemble of 17th Century Port Royal,Cultural,Jamaica,17.9386138889,-76.8433777778
+1597,Writing-on-Stone / Áísínai’pi,Cultural,Canada,49.0750000000,-111.6333305560
+1599,Krzemionki Prehistoric Striped Flint Mining Region,Cultural,Poland,50.8843027777,21.5288888889
+1602,Ancient Ferrous Metallurgy Sites of Burkina Faso,Cultural,Burkina Faso,11.6223916667,-3.8919444444
+1603,French Austral Lands and Seas,Natural,France,-38.3001388889,77.5836083333
+1604,Vatnajökull National Park - Dynamic Nature of Fire and Ice,Natural,Iceland,64.5773630000,-16.8815404444
+1605,"Jaipur City, Rajasthan",Cultural,India,26.9242777778,75.8218611111
+1606,Migratory Bird Sanctuaries along the Coast of Yellow Sea-Bohai Gulf of China,Natural,China,31.5129166667,121.9993888890
+1608,Frontiers of the Roman Empire – The Danube Limes (Western Segment),Cultural,Austria,48.1151916667,16.8614166667
+1608,Frontiers of the Roman Empire – The Danube Limes (Western Segment),Cultural,Germany,48.5699444445,13.4620805556
+1608,Frontiers of the Roman Empire – The Danube Limes (Western Segment),Cultural,Slovakia,47.7449972222,18.1981916666
+1610,Ombilin Coal Mining Heritage of Sawahlunto,Cultural,Indonesia,-0.4636750000,100.3951166670
+1611,Lençóis Maranhenses National Park,Natural,Brazil,-2.5366666667,-43.0636111111
+1612,The work of engineer Eladio Dieste: Church of Atlántida,Cultural,Uruguay,-34.7439194444,-55.7664083333
+1613,The Great Spa Towns of Europe,Cultural,Austria,48.0100000000,16.2336111111
+1613,The Great Spa Towns of Europe,Cultural,Belgium,50.4922222222,5.8669444445
+1613,The Great Spa Towns of Europe,Cultural,Czechia,49.9649573961,12.7013222261
+1613,The Great Spa Towns of Europe,Cultural,France,46.1236083334,3.4202777778
+1613,The Great Spa Towns of Europe,Cultural,Germany,48.7574972222,8.2424972222
+1613,The Great Spa Towns of Europe,Cultural,Italy,43.8872164768,10.7749785403
+1613,The Great Spa Towns of Europe,Cultural,United Kingdom,51.3813055556,-2.3588888889
+1614,Mathildenhöhe Darmstadt,Cultural,Germany,49.8750000000,8.6638888889
+1616,Colchic Rainforests and Wetlands,Natural,Georgia,41.7022777778,41.9512000000
+1618,"Paseo del Prado and Buen Retiro, a landscape of Arts and Sciences",Cultural,Spain,40.4153333333,-3.6870555556
+1619,Ḥimā Cultural Area,Cultural,Saudi Arabia,18.2437500000,44.4628583333
+1620,Sítio Roberto Burle Marx,Cultural,Brazil,-23.0223777778,-43.5462222222
+1621,Deer Stone Monuments and Related Bronze Age Sites,Cultural,Mongolia,47.7427777777,101.2258333330
+1622,Arslantepe Mound,Cultural,Turkey,38.3822000000,38.3610916667
+1623,Padua’s fourteenth-century fresco cycles,Cultural,Italy,45.4013527778,11.8690805556
+1624,Chankillo Archaeoastronomical Complex,Cultural,Peru,-9.5183333334,-78.1813888889
+1625,Cordouan Lighthouse,Cultural,France,45.5863055556,-1.1733333333
+1627,Cultural Heritage Sites of Ancient Khuttal,Cultural,Tajikistan,37.5474722222,69.3702027778
+1631,Frontiers of the Roman Empire – The Lower German Limes,Cultural,Germany,50.5780000000,7.2340000000
+1631,Frontiers of the Roman Empire – The Lower German Limes,Cultural,The Netherlands,51.8140000000,5.9140000000
+1632,Jomon Prehistoric Sites in Northern Japan,Cultural,Japan,40.1980555555,141.3058333330
+1633,The Slate Landscape of Northwest Wales,Cultural,United Kingdom,52.6383333333,-3.9658333333
+1634,Settlement and Artificial Mummification of the Chinchorro Culture in the Arica and Parinacota Region,Cultural,Chile,-18.4807444445,-70.3215333334
+1635,"Nice, Winter Resort Town of the Riviera",Cultural,France,43.7016944444,7.2723055556
+1636,"ShUM Sites of Speyer, Worms and Mainz",Cultural,Germany,49.3162055556,8.4395444444
+1638,Badain Jaran Desert - Towers of Sand and Lakes,Natural,China,39.8897222222,102.2894444444
+1640,Djerba: Testimony to a settlement pattern in an island territory,Cultural,Tunisia,33.7068888889,10.8618055556
+1641,The Gedeo Cultural Landscape,Cultural,Ethiopia,6.2488888889,38.2877777778
+1642,Mount Kumgang – Diamond Mountain from the Sea,Mixed,North Korea,38.6602777778,128.1375000000
+1643,The works of Jože Plečnik in Ljubljana – Human Centred Urban Design,Cultural,Slovenia,46.0122222222,14.5058333333
+1645,Dholavira: a Harappan City,Cultural,India,23.8884083333,70.2133027778
+1647,Cultural Landscape of Hawraman/Uramanat,Cultural,Iran,34.9462916666,46.1365138889
+1648,Sudanese style mosques in northern Côte d’Ivoire,Cultural,Ivory Coast,10.0902500000,-5.1948611111
+1650,The Porticoes of Bologna,Cultural,Italy,44.4853888889,11.3019166667
+1653,Ivindo National Park,Natural,Gabon,0.1130000000,12.6480000000
+1654,Petroglyphs of Lake Onega and the White Sea,Cultural,Russia,61.7298972223,36.0126388889
+1656,Jewish-Medieval Heritage of Erfurt,Cultural,Germany,50.9782805556,11.0299000000
+1657,Volcanoes and Forests of Mount Pelée and the Pitons of Northern Martinique,Natural,France,14.7224055556,-61.0940888889
+1658,Old town of Kuldīga,Cultural,Latvia,56.9677500000,21.9715277778
+1660,Viking-Age Ring Fortresses,Cultural,Denmark,55.3913888889,10.3891666666
+1661,"Modernist Kaunas: Architecture of Optimism, 1919-1939",Cultural,Lithuania,54.8969444444,23.9291666667
+1662,The Ancient Town of Si Thep and its Associated Dvaravati Monuments,Cultural,Thailand,15.4658166667,101.1511138890
+1663,National Archaeological Park Tak’alik Ab’aj,Cultural,Guatemala,14.6386111111,-91.7325000000
+1665,Cultural Landscape of Old Tea Forests of the Jingmai Mountain in Pu’er,Cultural,China,22.1841666667,100.0075000000
+1666,Gaya Tumuli,Cultural,South Korea,34.9803777778,128.3213111110
+1667,Koh Ker: Archaeological Site of Ancient Lingapura or Chok Gargyar,Cultural,Cambodia,13.7830555556,104.5372222222
+1668,The Persian Caravanserai,Cultural,Iran,27.1985000000,54.3759722223
+1669,Gordion,Cultural,Turkey,39.6433333333,31.9861111111
+1670,Sacred Ensembles of the Hoysalas,Cultural,India,12.2759694445,76.8817916667
+1671,The Cosmological Axis of Yogyakarta and its Historic Landmarks,Cultural,Indonesia,-7.8013888889,110.3647777778
+1673,"Vjetrenica Cave, Ravno",Natural,Bosnia and Herzegovina,42.8450000000,17.9888888889
+1675,Silk Roads: Zarafshan-Karakum Corridor,Cultural,Tajikistan,39.3876055555,67.8522305556
+1675,Silk Roads: Zarafshan-Karakum Corridor,Cultural,Turkmenistan,37.9214555556,62.2080888889
+1675,Silk Roads: Zarafshan-Karakum Corridor,Cultural,Uzbekistan,39.3806111111,67.2419750000
+1676,"Human Rights, Liberation and Reconciliation: Nelson Mandela Legacy Sites",Cultural,South Africa,-25.7406916666,28.2117916667
+1678,Astronomical Observatories of Kazan Federal University,Cultural,Russia,55.7909083333,49.1190972223
+1680,Jodensavanne Archaeological Site: Jodensavanne Settlement and Cassipora Creek Cemetery,Cultural,Suriname,5.4110000000,-54.9787222223
+1681,"ESMA Museum and Site of Memory – Former Clandestine Centre of Detention, Torture and Extermination",Cultural,Argentina,-34.5366416667,-58.4653333333
+1683,Eisinga Planetarium in Franeker,Cultural,The Netherlands,53.1873750000,5.5437527778
+1685,Tugay forests of the Tigrovaya Balka Nature Reserve,Natural,Tajikistan,37.2047222222,68.3413888889
+1686,Anticosti,Natural,Canada,49.5386111111,-63.2452777778
+1687,Ancient Jericho/Tell es-Sultan,Cultural,Palestinian Territory,31.8713055556,35.4440555556
+1688,Cultural Landscape of Kenozero Lake,Cultural,Russia,61.9280000000,38.1726111111
+1689,Hopewell Ceremonial Earthworks,Cultural,United States,39.2374694444,-83.2198250000
+1692,Evaporitic Karst and Caves of Northern Apennines,Natural,Italy,43.8750000000,12.5475000000
+1693,Cold Winter Deserts of Turan,Natural,Kazakhstan,43.8936111111,78.6558333333
+1693,Cold Winter Deserts of Turan,Natural,Turkmenistan,38.6016666667,63.2502777778
+1693,Cold Winter Deserts of Turan,Natural,Uzbekistan,42.0813888889,56.6647222222
+1694,Wooden Hypostyle Mosques of Medieval Anatolia,Cultural,Turkey,37.6834666666,31.7186083334
+1695,Zagori Cultural Landscape,Cultural,Greece,39.9052777778,20.8197222222
+1696,Cultural Landscape of Khinalig People and “Köç Yolu” Transhumance Route,Cultural,Azerbaijan,40.7059000000,48.8854000000
+1697,Nyungwe National Park,Natural,Rwanda,-2.4520500000,29.0866500000
+1698,Sado Island Gold Mines,Cultural,Japan,37.9097222222,138.3252777780
+1699,‘Uruq Bani Ma’arid,Natural,Saudi Arabia,19.3638888889,45.5983333333
+1700,"Landmarks of the Ancient Kingdom of Saba, Marib",Cultural,Yemen,15.3975666666,45.2687527778
+1702,Rachid Karami International Fair-Tripoli,Cultural,Lebanon,34.4377777778,35.8241666667
+1703,The Historic Centre of Odesa,Cultural,Ukraine,46.4864500000,30.7416138889
+1704,Wixárika Route through Sacred Sites to Wirikuta (Tatehuarí Huajuyé),Cultural,Mexico,21.5375388889,-105.2999750000
+1705,Schwerin Residence Ensemble,Cultural,Germany,53.6241666667,11.4188888889
+1707,Te Henua Enata – The Marquesas Islands,Mixed,France,-10.4847638889,-138.6555777780
+1708,Via Appia. Regina Viarum,Cultural,Italy,40.4711972223,17.2421083333
+1709,Murujuga Cultural Landscape,Cultural,Australia,-20.5650277778,116.6685277778
+1711,Moidams – the Mound-Burial System of the Ahom Dynasty,Cultural,India,26.9411747222,94.8763500000
+1712,The Cultural Landscape of Al-Faw Archaeological Area,Cultural,Saudi Arabia,19.7649166667,45.1633888889
+1713,Royal Court of Tiébélé,Cultural,Burkina Faso,11.0892222222,-0.9618611111
+1714,Beijing Central Axis: A Building Ensemble Exhibiting the Ideal Order of the Chinese Capital,Cultural,China,39.9072222222,116.3913888889
+1715,Gdynia Modernist City Centre,Cultural,Poland,54.5193611111,18.5425277777
+1716,Hegmataneh,Cultural,Iran,34.8035555556,48.5183333334
+1718,Frontiers of the Roman Empire – Dacia,Cultural,Romania,43.7333333333,24.9666666667
+1719,The wider area of Mount Olympus,Mixed,Greece,40.0999160000,22.3909690000
+1720,The Historic Town and Archaeological Site of Gedi,Cultural,Kenya,-3.3102638889,40.0172638889
+1721,Umm Al-Jimāl,Cultural,Jordan,32.3269444444,36.3700000000
+1722,The Flow Country,Natural,United Kingdom,58.1686111111,-4.1072222222
+1723,The Emergence of Modern Human Behaviour: The Pleistocene Occupation Sites of South Africa,Cultural,South Africa,-29.5220000000,31.0860000000
+1724,Wadi Wurayah,Natural,United Arab Emirates,25.4823305556,56.2657916667
+1725,Megaliths of Carnac and of the shores of Morbihan,Cultural,France,47.5044444444,-3.1297222223
+1726,"The Palaces of King Ludwig II of Bavaria: Neuschwanstein, Linderhof, Schachen and Herrenchiemsee",Cultural,Germany,47.4197222223,11.1127777778
+1728,Møns Klint,Natural,Denmark,54.9791666667,12.4983333333
+1730,Funerary Tradition in the Prehistory of Sardinia – The domus de janas,Cultural,Italy,39.1343305555,8.6673638889
+1731,Sardis and the Lydian Tumuli of Bin Tepe,Cultural,Turkey,38.4819444445,28.0452777777
+1732,"Yen Tu-Vinh Nghiem-Con Son, Kiep Bac Complex of Monuments and Landscapes",Cultural,Vietnam,20.9361666666,106.7837972220
+1733,Minoan Palatial Centres,Cultural,Greece,35.0511111111,24.8141666667
+1734,Forest Research Institute Malaysia Forest Park Selangor,Cultural,Malaysia,3.2292500000,101.6272777778
+1735,Faya Palaeolandscape,Cultural,United Arab Emirates,25.0828055556,55.8065833333
+1736,Xixia Imperial Tombs,Cultural,China,38.4158333333,105.9711111111
+1739,Maratha Military Landscapes of India,Cultural,India,12.2505555556,79.4013888889
+1740,Petroglyphs along the Bangucheon Stream,Cultural,South Korea,35.6084500000,129.1739972222
+1742,Aqaba Marine Reserve,Natural,Jordan,29.4297222223,34.9755555556
+1743,Rock Paintings of Shulgan-Tash Cave,Cultural,Russia,53.0494444444,57.0720277778
+1744,Prehistoric Sites of the Khorramabad Valley,Cultural,Iran,33.4418472222,48.3393444444
+1745,Diy-Gid-Biy Cultural Landscape of the Mandara Mountains,Cultural,Cameroon,10.9033333333,13.7955555556
+1746,Gola-Tiwai Complex,Natural,Sierra Leone,7.3666666667,-11.2000000000
+1747,Peruaçu River Canyon,Natural,Brazil,-15.0750000000,-44.2083333333
+1748,Cambodian Memorial Sites: From centres of repression to places of peace and reflection,Cultural,Cambodia,11.4844222222,104.9021111110
+1749,Saint Hilarion Monastery/ Tell Umm Amer,Cultural,Palestinian Territory,31.4473055556,34.3663611111
+1750,The Roças of Sao Tome and Principe: Colonial Agricultural System and Forced Migration,Cultural,Sao Tome and Principe,0.1402222222,6.6462222222
+1751,Okefenokee National Wildlife Refuge,Natural,United States,30.7988888889,-82.3050000000
+1752,Aalto Works,Cultural,Finland,60.1760927778,24.9333925000
+1755,Royal Capetian Fortresses of Languedoc,Cultural,France,42.8038055556,2.2996138889
+1757,Ancient Capitals of Asuka and Fujiwara,Cultural,Japan,34.4511111111,135.8050000000
+1758,The Bony Fish Fossils of the Western Limfjord – Evolution and Climate Adaptation in the Earliest Eocene,Natural,Denmark,56.8382160000,8.9646530000
+1759,The Cemetery Complexes of the Xiongnu Nobility,Cultural,Mongolia,46.5980555555,107.0814166670
+1760,Rock Mosques and Associated Sacred Sites of Mangystau,Cultural,Kazakhstan,43.5482027777,53.3878583333
+1761,"Wat Phra Mahathat Woramahawihan, Nakhon Si Thammarat",Cultural,Thailand,8.4114750000,99.9662166667
+1762,The system of Italian-style condominio theatres of the 18th and 19th centuries in Central Italy,Cultural,Italy,42.7355777777,12.7352666666
+1765,Jingdezhen Handicraft Porcelain Industry Sites,Cultural,China,29.2863888889,117.2433333330
+1766,Tashkent Modernist Architecture. Modernity and Tradition in Central Asia,Cultural,Uzbekistan,41.3026833333,69.2672222223
+1768,The Medinas of the Historic Sultanates of the Comoros,Cultural,Comoros,-11.6636888889,43.2700166667
+1769,Village of Sidi Bou Saïd,Cultural,Tunisia,36.8710277778,10.3486388889
+1770,Alamūt Castle and Related Fortifications,Cultural,Iran,36.3906472222,50.7263750000
+1774,Amazonia Theaters,Cultural,Brazil,-1.4530277778,-48.4937027777
+1808,Boma–Badingilo Migratory Landscape,Natural,South Sudan,6.9416666666,33.2775000000
+1809,Sebastia,Cultural,Palestinian Territory,32.2763388889,35.1888750000
+1810,Mount Amel Castles,Cultural,Lebanon,33.1456777777,35.2090583333

@@ -1,0 +1,107 @@
+golden_id,country,iso3,expected_name,aliases,row_kind,type,lat,lon,tol_km,min_tier,max_tier,kinds_expected,whs_id,qid,qid_status,relation,target_id,regression,evidence,note
+G001,Egypt,EGY,Giza Pyramids,Giza|Giza Pyramids|Pyramids of Giza|Memphis and its Necropolis,positive,site,29.977,31.132,5,Icon,,ruins|desert|sacred,86,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,"Giza necropolis (part of WHS 86); Khufu pyramid is a serial component, not a separate pin; the Sphinx and pyramids may also exist as nested parts"
+G002,Egypt,EGY,Cairo,Historic Cairo|Islamic Cairo|Al-Qahira,positive,settlement,30.044,31.236,8,Icon,,metropolis|old_town|capital,89,,to_resolve,,,y,whs_id verified by name in whs_expanded.xml,v1 merged Cairo into Giza; Cairo must exist by name
+G003,Egypt,EGY,Luxor (Thebes),Luxor|Thebes|Ancient Thebes,positive,settlement,25.7,32.64,8,Icon,,capital|sacred|ruins,87,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,"Karnak, Luxor Temple and the Valley of the Kings are parts of one place"
+G004,Egypt,EGY,Abu Simbel,,positive,site,22.337,31.626,5,Icon,,ruins|sacred|desert,88,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,WHS 'Nubian Monuments from Abu Simbel to Philae'
+G005,Egypt,EGY,Aswan,,positive,settlement,24.089,32.899,6,Major,,water|desert,,,to_resolve,,,,,Philae and the High Dam are near; Aswan is the settlement
+G006,Egypt,EGY,Alexandria,Iskandariyya,positive,settlement,31.2,29.919,8,Major,,coast|capital|metropolis,,,to_resolve,,,,,Ptolemaic capital
+G007,Egypt,EGY,Saint Catherine's Monastery and Mount Sinai,Saint Catherine's Monastery|Mount Sinai|Saint Catherine Area,positive,site,28.556,33.976,6,Major,,sacred|mountain|desert,954,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G008,Egypt,EGY,Siwa Oasis,,positive,area,29.203,25.519,10,Major,,desert|rural,,,to_resolve,,,,,
+G009,Egypt,EGY,White Desert,,positive,area,27.33,28.17,25,Notable,,desert,,,to_resolve,,,,,Farafra; area anchor tolerance is wide
+G010,Egypt,EGY,Sharm el-Sheikh,,positive,settlement,27.916,34.33,8,Major,,coast,,,to_resolve,,,,,Ras Mohammed is near; one pin is enough
+G011,Egypt,EGY,Saqqara,,positive,site,29.871,31.216,5,Major,,ruins|desert|sacred,86,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,Step Pyramid; ~20 km from Giza
+G012,Egypt,EGY,Edfu,,positive,settlement,24.978,32.873,5,Notable,,sacred|ruins,,,to_resolve,,,,,
+G013,Egypt,EGY,Wadi Al-Hitan,Whale Valley|Wadi El-Hitan,positive,area,29.27,30.04,20,Notable,Notable,desert,1186,,to_resolve,,,y,whs_id verified by name in whs_expanded.xml,"v1's Egypt #1 was a Faiyum village; this natural WHS must be Notable, not top"
+G014,Peru,PER,Machu Picchu,Machu Pichu|Historic Sanctuary of Machu Picchu,positive,site,-13.163,-72.545,5,Icon,,mountain|sacred|ruins,274,,to_resolve,,,y,whs_id verified by name in whs_expanded.xml,"v1 shipped this as 'Quillabamba'; Aguas Calientes is the gateway, linked not merged"
+G015,Peru,PER,Cusco,Cuzco,positive,settlement,-13.532,-71.967,6,Icon,,capital|old_town|mountain,273,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,Inca capital
+G016,Peru,PER,Sacred Valley (Ollantaytambo),,positive,area,-13.258,-72.264,15,Major,,mountain|rural,,,to_resolve,,,,,
+G017,Peru,PER,Lima,,positive,settlement,-12.046,-77.03,12,Major,,capital|metropolis|old_town,500,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,Historic centre
+G018,Peru,PER,Lake Titicaca (Puno),,positive,area,-15.84,-70.02,15,Major,,water,,,to_resolve,,,,,
+G019,Peru,PER,Colca Canyon,,positive,area,-15.6,-71.97,20,Major,,mountain|rural,,,to_resolve,,,,,
+G020,Peru,PER,Arequipa,,positive,settlement,-16.399,-71.537,6,Major,,old_town|volcanic|mountain,1016,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G021,Peru,PER,Nazca Lines,Nasca Lines|Nazca and Palpa,positive,area,-14.739,-75.13,15,Major,,ruins|desert,700,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,"a plateau, so typed area"
+G022,Peru,PER,Manu National Park,,positive,area,-11.9,-71.6,60,Major,,forest|wildlife,402,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G023,Peru,PER,Iquitos,,positive,settlement,-3.749,-73.253,8,Notable,,forest,,,to_resolve,,,,,Amazon gateway
+G024,Peru,PER,Huascarán National Park (Huaraz),Huaraz|Huascarán|Cordillera Blanca,positive,area,-9.526,-77.528,30,Notable,,mountain,333,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G025,Peru,PER,Chan Chan,,positive,site,-8.107,-79.074,6,Notable,,ruins|capital|desert,366,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,Chimú capital
+G026,Peru,PER,Paracas,Paracas National Reserve,positive,area,-13.83,-76.25,20,Notable,,coast|desert|wildlife,,,to_resolve,,,,,
+G027,Italy,ITA,Rome,,positive,settlement,41.893,12.482,8,Icon,,capital|old_town|metropolis,91,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,"Colosseum and Forum are parts of Rome, not separate pins"
+G028,Italy,ITA,Florence,,positive,settlement,43.769,11.255,5,Icon,,old_town,174,,to_resolve,,,y,whs_id verified by name in whs_expanded.xml,Must outrank Belluno (v1: Belluno 90 > Florence 77)
+G029,Italy,ITA,Venice,,positive,settlement,45.438,12.327,5,Icon,,coast|old_town,394,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G030,Italy,ITA,Pompeii,,positive,site,40.751,14.487,4,Icon,,ruins|volcanic,829,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,Pompeii (WHS 829); Vesuvius is a separate volcano place
+G031,Italy,ITA,Milan,,positive,settlement,45.464,9.19,8,Major,,metropolis,,,to_resolve,,,,,
+G032,Italy,ITA,Naples,,positive,settlement,40.852,14.268,10,Major,,old_town|coast|volcanic,726,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G033,Italy,ITA,Siena,,positive,settlement,43.318,11.331,4,Major,,old_town,717,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G034,Italy,ITA,Amalfi Coast,Costiera Amalfitana|Amalfi,positive,area,40.634,14.603,12,Major,,coast|rural,830,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G035,Italy,ITA,Cinque Terre,Cinque Terre|Portovenere|Riomaggiore|Vernazza|Monterosso,positive,area,44.135,9.684,15,Major,,coast|rural,826,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G036,Italy,ITA,Dolomites (Cortina d'Ampezzo),Dolomites|Cortina d'Ampezzo|Dolomiti,positive,area,46.537,12.136,25,Major,,mountain,1237,,to_resolve,,,y,whs_id verified by name in whs_expanded.xml,"v1: Belluno 90 stood in for the Dolomites; WHS 1237 centroid is ~70 km from Cortina, so match by id or footprint, not by distance"
+G037,Italy,ITA,Lake Como,,positive,area,45.987,9.262,15,Major,,water|mountain,,,to_resolve,,,,,
+G038,Italy,ITA,Pisa,,positive,settlement,43.723,10.396,4,Major,,old_town,395,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G039,Italy,ITA,Mount Etna,,positive,area,37.751,14.994,12,Major,,volcanic|mountain,1427,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G040,Italy,ITA,Valley of the Temples (Agrigento),,positive,site,37.291,13.586,4,Major,,ruins,831,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,Taxonomy gap
+G041,Italy,ITA,Matera,,positive,settlement,40.667,16.604,4,Major,,old_town|rural,670,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G042,Italy,ITA,Assisi,,positive,settlement,43.071,12.619,4,Major,,sacred|old_town,990,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G043,Italy,ITA,Alberobello,,positive,settlement,40.783,17.237,3,Notable,,rural,787,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G044,Jordan,JOR,Petra,Petra|Wadi Musa,positive,site,30.329,35.444,5,Icon,,ruins|desert,326,,to_resolve,,,y,whs_id verified by name in whs_expanded.xml,"v1 shipped this as ""Ma'an""; Wadi Musa is the gateway; Nabataean capital (historic, in the note only)"
+G045,Jordan,JOR,Wadi Rum,,positive,area,29.576,35.42,12,Icon,,desert,1377,,to_resolve,,,y,whs_id verified by name in whs_expanded.xml,v1 absorbed this into Aqaba
+G046,Jordan,JOR,Amman,,positive,settlement,31.954,35.91,10,Major,,metropolis|capital,,,to_resolve,,,,,
+G047,Jordan,JOR,Jerash,Gerasa,positive,site,32.28,35.891,4,Major,,ruins,,,to_resolve,,,,,Taxonomy gap (Roman city)
+G048,Jordan,JOR,Dead Sea (Jordan shore),,positive,area,31.58,35.57,15,Major,,water|desert,,,to_resolve,,,,,
+G049,Jordan,JOR,Aqaba,,positive,settlement,29.532,35.006,6,Major,,coast,,,to_resolve,,,,,
+G050,Jordan,JOR,Mount Nebo,,positive,site,31.767,35.725,4,Notable,,sacred,,,to_resolve,,,,,
+G051,Jordan,JOR,Bethany Beyond the Jordan,,positive,site,31.837,35.551,4,Notable,,sacred,1446,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G052,Jordan,JOR,Dana Biosphere Reserve,,positive,area,30.68,35.61,15,Notable,,wildlife|mountain,,,to_resolve,,,,,
+G053,Jordan,JOR,Karak Castle,,positive,site,31.18,35.704,3,Notable,,ruins,,,to_resolve,,,,,Taxonomy gap
+G054,Jordan,JOR,Umm Qais,,positive,site,32.653,35.685,3,Notable,,ruins,,,to_resolve,,,,,Taxonomy gap
+G055,Tanzania,TZA,Serengeti National Park,,positive,area,-2.333,34.833,50,Icon,,wildlife,156,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G056,Tanzania,TZA,Ngorongoro Crater,,positive,area,-3.17,35.58,15,Icon,,wildlife|volcanic,39,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G057,Tanzania,TZA,Mount Kilimanjaro,Kilimanjaro|Kilimanjaro National Park,positive,area,-3.067,37.355,15,Icon,,mountain|volcanic|wildlife,403,,to_resolve,,,y,whs_id verified by name in whs_expanded.xml,v1 shipped this as 'Tarakea'; Moshi is the gateway
+G058,Tanzania,TZA,"Stone Town, Zanzibar",Stone Town|Zanzibar City,positive,settlement,-6.163,39.19,4,Icon,,old_town|coast,173,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,
+G059,Tanzania,TZA,Dar es Salaam,,positive,settlement,-6.792,39.208,10,Major,,metropolis|coast,,,to_resolve,,,,,
+G060,Tanzania,TZA,Nyerere National Park (Selous),Selous Game Reserve|Selous|Nyerere NP,positive,area,-8.5,37.5,60,Notable,,wildlife,199,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,"WHS 199 is ""Selous Game Reserve"" (-9.0,37.4); WDPA lists ""Selous G.R"" (-8.86,37.41); match by id, footprint or alias"
+G061,Tanzania,TZA,Tarangire National Park,,positive,area,-3.83,36.0,20,Notable,,wildlife,,,to_resolve,,,,,
+G062,Tanzania,TZA,Lake Manyara National Park,,positive,area,-3.6,35.8,20,Notable,,water|wildlife,,,to_resolve,,,,,
+G063,Tanzania,TZA,Mount Meru (Arusha National Park),Mount Meru|Arusha National Park,positive,area,-3.246,36.8,15,Notable,,mountain|volcanic,,,to_resolve,,,,,
+G065,Tanzania,TZA,Kilwa Kisiwani,,positive,site,-8.958,39.515,6,Notable,,ruins|coast,144,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,Taxonomy gap
+G066,Tanzania,TZA,Gombe Stream National Park,,positive,area,-4.67,29.63,15,Notable,,wildlife|water,,,to_resolve,,,,,
+G067,Tanzania,TZA,Ruaha National Park,,positive,area,-7.6,34.9,40,Notable,,wildlife,,,to_resolve,,,,,
+G068,Tanzania,TZA,Olduvai Gorge,,positive,area,-2.99,35.35,10,Notable,,ruins,,,to_resolve,,,,,Taxonomy gap (prehistoric site)
+G069,Tanzania,TZA,Dodoma,,positive,settlement,-6.173,35.742,8,Notable,,capital,,,to_resolve,,,,,Capital of Tanzania
+G070,Egypt,EGY,Dahab,Dahab South Sinai|Dahab Blue Hole,positive,settlement,28.493,34.505,6,Notable,,coast,,,to_resolve,,,,wikidata Q370495 sitelinks=45 dist 0 km,v1: absent (nearest v1 Sharm el-Sheikh 66.4 km). Red Sea dive/windsurf town on Gulf of Aqaba
+G071,Egypt,EGY,Faiyum,Al Fayyum|Fayoum|Medinet el-Fayoum,positive,settlement,29.310,30.842,8,Notable,,rural|water,,,to_resolve,,,,world_settlements geonameid 361320 Al Fayyum pop 519047,v1: absent (nearest v1 Yusuf as-Siddiq 28.9 km; that is a village). Oasis governorate capital; Lake Qarun and Wadi El Rayan nearby
+G072,Egypt,EGY,Abydos,Abydos Temple of Seti I|Al Balyana|El Araba el Madfuna,positive,site,26.185,31.919,6,Notable,,ruins|sacred,,,to_resolve,,,,wikidata Q192268 sitelinks=58 dist 0 km,v1: misplaced:Al Balyanā 10.2 km. Osiris cult centre; Seti I temple; v1 has only the modern town Al Balyana
+G073,Egypt,EGY,Wadi El Rayan,Wadi El Rayan Protected Area|Wadi Rayyan|Wadi El-Rayan waterfalls,positive,area,29.202,30.284,15,Notable,,desert|water,,,to_resolve,,,,wdpa 555547985 Wadi El Rayan Protected Area IUCN II GIS_AREA 1756.36,v1: absent (nearest v1 Yusuf as-Siddiq 33.4 km). Fayum desert lakes and waterfalls; 24 km from Wadi Al-Hitan G013
+G074,Italy,ITA,Mantua,Mantova|Sabbioneta,positive,settlement,45.156,10.791,5,Notable,,old_town,1287,,to_resolve,,,,WHS 1287 Mantua and Sabbioneta 44.998/10.490 (Italy); wikidata Q6247 sitelinks=119 dist 0.1km; settlements pop 39260,"v1: absent. nearest v1 Viadana 32.5 km, Verona 35.2 km"
+G075,Italy,ITA,Val d'Orcia,Pienza|Montalcino|San Quirico d'Orcia,positive,area,43.067,11.550,15,Notable,,rural|old_town,1026,,to_resolve,,,,WHS 1026 Val d'Orcia 43.067/11.550 (Italy); wikidata Q217449 sitelinks=47 dist 0.0km,v1: absent. nearest v1 Siena 33.1 km; Pienza WHS 789 is a sibling pin 11 km away
+G076,Italy,ITA,Su Nuraxi di Barumini,Barumini|Nuraghe,positive,site,39.706,8.991,4,Notable,,ruins,833,,to_resolve,,,,WHS 833 Su Nuraxi di Barumini 39.706/8.991 (Italy),v1: absent. nearest v1 Oristano 40.5 km; Nuragic Bronze Age civilisation
+G077,Italy,ITA,Paestum,Paestum Greek temples|Poseidonia,positive,site,40.420,15.006,4,Notable,,ruins,842,,to_resolve,,,,wikidata Q329967 sitelinks=57 dist 0.0km; inside WHS 842 Cilento and Vallo di Diano NP with Paestum (40.067/15.433),v1: absent. nearest v1 Agropoli 8.0 km (name mismatch)
+G078,Italy,ITA,Aeolian Islands,Isole Eolie|Lipari|Stromboli|Vulcano,positive,area,38.488,14.946,30,Notable,,volcanic|coast,908,,to_resolve,,,,WHS 908 Isole Eolie 38.488/14.946 (Italy); wikidata Q179883 sitelinks=75 dist 1.3km,v1: absent. nearest v1 Milazzo 39.3 km
+G079,Italy,ITA,Orvieto,,positive,settlement,42.718,12.108,4,Notable,,old_town,,,to_resolve,,,,wikidata Q541 sitelinks=83 dist 0.2km (not WHS),v1: absent. nearest v1 Viterbo 33.2 km; Etruscan/medieval hill town
+G080,Italy,ITA,Mount Vesuvius,Vesuvio|Parco nazionale del Vesuvio,positive,area,40.823,14.432,10,Major,,volcanic|mountain,,,to_resolve,,,,WDPA 63646 Parco nazionale del Vesuvio IUCN II 82.71 km2 40.823/14.432,v1: absent. nearest v1 Ottaviano 5.0 km (name mismatch); ~9 km from Pompeii G030 but distinct volcano
+G081,Italy,ITA,Gran Paradiso National Park,Gran Paradiso|Parco nazionale del Gran Paradiso,positive,area,45.541,7.324,25,Notable,,mountain|wildlife,,,to_resolve,,,,WDPA 718 Parco nazionale del Gran Paradiso IUCN II 711.09 km2 45.541/7.324,v1: absent. nearest v1 Aosta 21.9 km; ibex habitat
+G082,Jordan,JOR,Quseir Amra,Qusayr Amra|Qasr Amra|Quseir Amra Desert Castle,positive,site,31.802,36.587,5,Notable,,ruins,327,,to_resolve,,,,WHS 327 Quseir Amra 31.8018 36.5873 Jordan; Wikidata Q499517 sitelinks 46 dist 0.0km,v1: absent (nearest v1 Az̧ Z̧ulayl 45.8 km). Umayyad desert bath-palace
+G083,Jordan,JOR,Umm ar-Rasas,Um er-Rasas|Kastrom Mefa'a|Umm al-Rasas,positive,site,31.483,35.917,5,Notable,,ruins,1093,,to_resolve,,,,WHS 1093 Um er-Rasas 31.4833 35.9167 Jordan; Wikidata Q822842 sitelinks 40 dist 1.8km,v1: absent (nearest v1 Mādabā 28.4 km). Roman-Byzantine-early Islamic town with mosaics
+G084,Jordan,JOR,Umm al-Jimal,Umm Al-Jimāl|Umm el-Jimal,positive,site,32.327,36.370,5,Notable,,ruins,1721,,to_resolve,,,,WHS 1721 Umm Al-Jimal 32.32694 36.37 Jordan,v1: absent (nearest v1 Mafraq 15.3 km). Basalt Roman-Byzantine town
+G085,Jordan,JOR,Aqaba Marine Reserve,Aqaba Marine Park|Aqaba Coral Reserve,positive,area,29.430,34.976,12,Notable,,coast|water,1742,,to_resolve,,,,WHS 1742 Aqaba Marine Reserve 29.4297 34.9756 Jordan,v1: absent (nearest v1 Aqaba 11.2 km; no name match). Distinct from Aqaba city row (11.7 km); Red Sea coral
+G086,Jordan,JOR,Mujib Nature Reserve,Wadi Mujib|Mujib Biosphere Reserve|Wadi al-Mujib,positive,area,31.499,35.634,12,Notable,,wildlife|mountain|water,,,to_resolve,,,,WDPA 17232 Mujib Nature Reserve cat II 212.40 km2 31.49896 35.63415,v1: absent (nearest v1 Mādabā 28.5 km). Canyon gorge reserve; 10.9 km from Dead Sea row centre
+G087,Jordan,JOR,Azraq Wetland Reserve,Azraq Oasis|Azraq,positive,area,31.820,36.861,10,Local,,water|wildlife,,,to_resolve,,,,WDPA 3215 Azraq Wetland Reserve cat IV 74.27 km2 31.81955 36.86052,v1: absent (nearest v1 Az̧ Z̧ulayl 64.2 km). Desert oasis wetland
+G088,Jordan,JOR,Ajloun,Ajlun|Ajloun Castle|Qal'at ar-Rabad,positive,settlement,32.333,35.753,6,Notable,,old_town,,,to_resolve,,,,world_settlements Ajlūn pop 125557 at 32.3333 35.7528,v1: absent (nearest v1 Judita 9.3 km). Castle town; castle (Qal'at ar-Rabad) ~1 km away
+G089,Peru,PER,Caral-Supe,Sacred City of Caral-Supe|Caral|Caral Supe,positive,site,-10.892,-77.521,6,Notable,,ruins,1269,,to_resolve,,,,"WHS 1269 Sacred City of Caral-Supe (-10.8916,-77.52138; Peru); wikidata Q219279 sl=46","v1: misplaced:Hualmay 24.7. v1 Hualmay (-11.096,-77.614) carries whs=1 (likely Caral credit) but is a town 24.7 km away; oldest city in the Americas (c.2600 BCE)"
+G090,Peru,PER,Chavín de Huántar,Chavin|Chavín (Archaeological Site)|Chavin de Huantar,positive,site,-9.593,-77.178,5,Notable,,ruins|sacred|mountain,330,,to_resolve,,,,"WHS 330 Chavin (Archaeological Site) (-9.59277,-77.17845; Peru); wikidata Q732554 sl=43 dist 0 km",v1: absent. nearest v1 place Huaraz 39.3 km (whs=1 is Huascarán); Chavín culture temple complex
+G091,Peru,PER,Cerros de Amotape National Park,Amotape|Parque Nacional Cerros de Amotape,positive,area,-4.013,-80.474,25,Local,,forest|wildlife,,,to_resolve,,,,"WDPAID 259 Cerros de Amotape IUCN II GIS_AREA 1521.53 km2 (-4.01254,-80.47408)",v1: absent. nearest v1 place Tumbes 50.9 km; tropical dry forest
+G092,Peru,PER,Megantoni National Sanctuary,Santuario Nacional Megantoni|Megantoni,positive,area,-12.276,-72.449,25,Local,,forest|wildlife|mountain,,,to_resolve,,,,"WDPAID 20186 Megantoni IUCN III GIS_AREA 2155.91 km2 (-12.27628,-72.44916)",v1: absent. nearest v1 place Quillabamba 70.4 km; Urubamba/Pongo de Mainique
+G093,Tanzania,TZA,Kondoa Rock-Art Sites,Kondoa Irangi|Kondoa Rock Paintings,positive,area,-4.724,35.834,10,Notable,,ruins|sacred,1183,,to_resolve,,,,WHS 1183 Kondoa Rock-Art Sites -4.7244 35.8339 Tanzania; nearest v1 Kondoa 20.4 km,v1: misplaced:Kondoa 20.4. v1 Kondoa town is 20 km off the WHS
+G094,Tanzania,TZA,Mwanza,,positive,settlement,-2.517,32.900,8,Major,,metropolis|water,,,to_resolve,,,,world_settlements Mwanza pop 1104521; nearest v1 Mhalamba 99.1 km,v1: absent. Lake Victoria port; second city
+G095,Tanzania,TZA,Katavi National Park,Katavi,positive,area,-6.978,31.292,25,Notable,,wildlife,,,to_resolve,,,,WDPA 921 Katavi National Park II 4206.92 km2 -6.97758 31.29208; nearest v1 Usevia 15.0 km,v1: absent. Usevia is a village not the park
+G096,Tanzania,TZA,Udzungwa Mountains National Park,Udzungwa,positive,area,-7.781,36.656,20,Local,,forest|mountain|wildlife,,,to_resolve,,,,WDPA 19297 Udzungwa Mountains National Park II 1906.58 km2 -7.78053 36.65573; nearest v1 Kidatu 34.4 km,v1: absent. 
+G097,Tanzania,TZA,Mikumi National Park,Mikumi,positive,area,-7.364,37.237,20,Notable,,wildlife,,,to_resolve,,,,WDPA 919 Mikumi National Park II 3352.57 km2 -7.36435 37.23726; nearest v1 Mikumi town 28.4 km,v1: misplaced:Mikumi 28.4. v1 Mikumi is the town
+G098,Tanzania,TZA,Moshi,,positive,settlement,-3.350,37.333,8,Local,,metropolis|mountain,,,to_resolve,,,,world_settlements Moshi pop 221733; nearest v1 Tarakea 46.5 km,v1: absent. Kilimanjaro gateway
+N001,Egypt,EGY,Great Pyramid of Khufu,,negative,,,,,,,,,,n/a,component_of,G001,,,True serial component of WHS 86: must not be a separate pin
+N002,Egypt,EGY,Valley of the Kings,,negative,,,,,,,,,,n/a,component_of,G003,,,Component of the Ancient Thebes property (WHS 87): must not be a separate pin
+N003,Italy,ITA,Colosseum,,optional,,,,,,,,,,n/a,part_of,G027,,,Nested destination: may exist as its own place or as evidence on Rome; both pass
+N004,Italy,ITA,Uffizi Gallery,,optional,,,,,,,,,,n/a,part_of,G028,,,Nested destination: either is fine
+N005,Italy,ITA,Belluno,,negative,,,,,,,,,,n/a,not_above,G028,y,,Must not outrank Florence (v1: Belluno 90 > Florence 77)
+N006,Peru,PER,Quillabamba,,negative,,,,,,,,,,n/a,not_credited,G014,y,,Must not carry Machu Picchu's World Heritage evidence
+N007,Jordan,JOR,Ma'an,,negative,,,,,,,,,,n/a,not_credited,G044,y,,Must not carry Petra's World Heritage evidence
+N008,Tanzania,TZA,Tarakea,,negative,,,,,,,,,,n/a,not_credited,G057,y,,Must not carry Kilimanjaro's evidence
+N009,Egypt,EGY,Yusuf as-Siddiq,,negative,,,,,,,,,,n/a,not_above,G001|G002|G003|G004,y,,"Must not outrank any of Giza, Cairo, Luxor, Abu Simbel (v1: Egypt #1)"

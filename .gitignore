@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+# raw inputs and build outputs never go in git; manifests pin them
+data/raw/
+bundle/
+build/
+*.duckdb
+*.duckdb.wal
+.DS_Store

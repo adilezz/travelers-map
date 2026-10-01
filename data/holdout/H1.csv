@@ -1,0 +1,1 @@
+golden_id,country,iso3,expected_name,aliases,row_kind,type,lat,lon,tol_km,min_tier,max_tier,kinds_expected,whs_id,qid,qid_status,relation,target_id,regression,evidence,note

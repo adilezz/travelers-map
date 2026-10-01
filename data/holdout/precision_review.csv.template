@@ -1,0 +1,2 @@
+verdict_options: right|wrong_entity|wrong_place|wrong_name|should_not_exist
+place_id,name_en,verdict,note
