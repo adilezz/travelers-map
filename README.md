@@ -14,8 +14,8 @@ Version 2, started 1 October 2026 in this clean repository. The v1 attempt lives
 
 | Milestone | State |
 |---|---|
-| **M0** Specs, ground truth, gates as code | **Done**: 5 specification documents, a 106-row golden set, 16 gates, 75 tests |
-| M1 Backbone: pinned inputs, Wikidata filter, registry, asset table | Next |
+| **M0** Specs, ground truth, gates as code | **Done**: 5 specification documents, a 106-row golden set, 16 gates, 77 tests |
+| M1 Backbone: pinned inputs, Wikidata filter, registry, asset table | Next, after the owner writes H1 and ratifies the 13 kinds |
 | M2 Places: candidates, resolution, admission, names | |
 | M3 Rank and kinds | |
 | M4 Printed map | |
@@ -27,7 +27,7 @@ The first prototype covers five countries (Egypt, Peru, Italy, Jordan, Tanzania)
 
 ```bash
 pip install duckdb pytest ruff     # Python 3.11+
-make test                          # 75 tests; must always pass
+make test                          # 77 tests; must always pass
 make lint
 make verify                        # expected to fail: there is no bundle yet
 make verify BUNDLE=path/to/bundle ARGS=--prototype

@@ -34,7 +34,7 @@ Composition (stratified, so no region or kind dominates):
 
 Built so it is **not correlated with the seeding signal**:
 
-- **H1 Hand-listed travel picks (100):** typed by the owner from their own travel knowledge and guidebooks they hold, for countries *not* used heavily in the golden set. Source recorded per row.
+- **H1 Hand-listed travel picks (100):** typed by the owner from their own travel knowledge, **disjoint from the golden set**, written before any pipeline output is seen and then frozen. Source recorded per row. For the five-country prototype H1 holds **20 rows per prototype country** (the bundle can only be judged on countries it contains); a world build needs a world H1 across other countries. Rows should deliberately include what a heritage-led pipeline overlooks: towns, trails, beaches, markets, food and everyday places, not only monuments. Instructions: `data/holdout/README.md`.
 - **H2 Wikivoyage "See" leaders (100):** the destinations a community of travelers ranks first. Reported **separately** because it is partly correlated with Wikidata attention.
 - **H3 Stratified random draw (100):** a random draw from the published database, stratified by region and tier, for *precision* review (2.4).
 

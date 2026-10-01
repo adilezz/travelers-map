@@ -5,7 +5,7 @@ BUNDLE ?=
 PREVIOUS ?=
 ARGS ?=
 
-.PHONY: help test lint verify release-verify
+.PHONY: help test lint verify release-verify freeze
 
 help:
 	@echo "make test            unit and mutation tests for the gates (must always pass)"
@@ -13,6 +13,7 @@ help:
 	@echo "make verify BUNDLE=  run every gate on a published bundle; exits 1 until it passes"
 	@echo "                     (the 'Error 1' make prints is that exit status, not a crash)"
 	@echo "make release-verify  also run the holdout and precision gates"
+	@echo "make freeze          freeze the owner-written holdout by hash (see data/holdout/README.md)"
 	@echo "ARGS=--prototype     accept skipped checks for a declared prototype build"
 
 test:
@@ -26,3 +27,6 @@ verify:
 
 release-verify:
 	$(PY) -m atlas.verify --release $(if $(BUNDLE),--bundle $(BUNDLE)) $(if $(PREVIOUS),--previous $(PREVIOUS)) $(ARGS)
+
+freeze:
+	$(PY) -m atlas.freeze

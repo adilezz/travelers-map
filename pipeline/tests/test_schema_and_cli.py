@@ -37,6 +37,42 @@ def test_schema_rejects_bad_rows():
         con.execute("insert into place_kind values ('pl_0000000001','ruins','r',1.0,[])")
 
 
+def test_reserved_tables_exist_and_enforce_their_constraints():
+    con = duckdb.connect()
+    con.execute(SCHEMA)
+    tables = {r[0] for r in con.execute("show tables").fetchall()}
+    assert {"place_crossref", "place_text", "place_season", "travel_effort", "place_stay"} <= tables
+    cols = {r[0] for r in con.execute("describe place_metric").fetchall()}
+    assert "pageviews_monthly" in cols
+    assert "redistributable" in {r[0] for r in con.execute("describe source").fetchall()}
+    assert "snapshot" in {r[0] for r in con.execute("describe asset").fetchall()}
+    con.execute("insert into place values ('pl_0000000001','site','Petra',null,'JOR',null,30.3,35.4,null,'Icon',null,null,'rich',null,null,null,null,null,null,null,null,'active','b1')")
+    with pytest.raises(duckdb.Error):
+        con.execute("insert into place_season values ('pl_0000000001', 13, 0.5, 'x')")
+    with pytest.raises(duckdb.Error):
+        con.execute("insert into place_text values ('pl_0000000001','en','review','great!',null,null,null)")
+
+
+OWNER_SCHEMA = (PIPELINE / "atlas" / "owner_schema.sql").read_text(encoding="utf-8")
+
+
+def test_owner_store_is_separate_and_enforces_its_constraints():
+    assert "REFERENCES" not in OWNER_SCHEMA.upper().replace("-- THE OWNER'S OWN STATE", "")  # no keys into the shared schema
+    con = duckdb.connect()
+    con.execute(OWNER_SCHEMA)
+    con.execute("insert into visit (visit_id, place_id, date_from, precision, rating) values ('v1','pl_0000000001','2014-07-01','season',2)")
+    with pytest.raises(duckdb.Error):
+        con.execute("insert into visit (visit_id, place_id, precision) values ('v2','pl_0000000001','sometime')")
+    with pytest.raises(duckdb.Error):
+        con.execute("insert into visit (visit_id, place_id, rating) values ('v3','pl_0000000001',9)")
+    with pytest.raises(duckdb.Error):
+        con.execute("insert into visit (visit_id, place_id, date_from, date_to) values ('v4','pl_0000000001','2020-02-01','2020-01-01')")
+    con.execute("insert into visit (visit_id, place_id) values ('v5','pl_0000000001')")   # many visits per place
+    assert con.execute("select count(*) from visit where place_id='pl_0000000001'").fetchone()[0] == 2
+    with pytest.raises(duckdb.Error):
+        con.execute("insert into visit_candidate (candidate_id, place_id, evidence, confidence) values ('c1','pl_0000000001','{}',1.5)")
+
+
 def run(*args):
     return subprocess.run([sys.executable, "-m", "atlas.verify", *args], cwd=ROOT, capture_output=True,
                           text=True, env={"PYTHONPATH": str(PIPELINE), "PATH": "/usr/bin:/bin"})

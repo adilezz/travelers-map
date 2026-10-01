@@ -4,14 +4,17 @@
 
 CREATE TABLE source (
   source_id VARCHAR PRIMARY KEY, name VARCHAR NOT NULL, version VARCHAR, url VARCHAR,
-  sha256 VARCHAR, licence VARCHAR, restricted BOOLEAN DEFAULT FALSE, retrieved DATE
+  sha256 VARCHAR, licence VARCHAR, restricted BOOLEAN DEFAULT FALSE,
+  redistributable BOOLEAN DEFAULT TRUE,  -- a gate keeps non-redistributable sources out of a shareable bundle
+  retrieved DATE
 );
 
 CREATE TABLE asset (          -- one row per source record, with its own provenance
   asset_id VARCHAR PRIMARY KEY, source_id VARCHAR NOT NULL REFERENCES source(source_id),
   source_key VARCHAR NOT NULL, role VARCHAR, class VARCHAR, name VARCHAR,
   geom VARCHAR, lat DOUBLE, lon DOUBLE, attrs JSON,
-  licence VARCHAR, source_url VARCHAR NOT NULL, retrieved DATE NOT NULL
+  licence VARCHAR, source_url VARCHAR NOT NULL, retrieved DATE NOT NULL,
+  snapshot DATE                                          -- date of the source snapshot this row came from
 );
 
 CREATE TABLE place (
@@ -52,13 +55,39 @@ CREATE TABLE place_kind (
 
 CREATE TABLE place_metric (
   place_id VARCHAR PRIMARY KEY REFERENCES place(place_id),
-  sitelinks INTEGER, pageviews_12m BIGINT, recognition DOUBLE, size_term DOUBLE, n_raw DOUBLE
+  sitelinks INTEGER, pageviews_12m BIGINT,
+  pageviews_monthly INTEGER[],          -- the twelve monthly values, for seasonality of interest
+  recognition DOUBLE, size_term DOUBLE, n_raw DOUBLE
 );
 
 CREATE TABLE place_parent (
   place_id VARCHAR NOT NULL REFERENCES place(place_id),
   parent_id VARCHAR NOT NULL REFERENCES place(place_id),
   relation VARCHAR NOT NULL CHECK (relation IN ('part_of','gateway_of'))
+);
+
+-- Reserved for later milestones (document 2 section 4.1); empty until then.
+CREATE TABLE place_crossref (
+  place_id VARCHAR NOT NULL REFERENCES place(place_id), scheme VARCHAR NOT NULL, value VARCHAR NOT NULL,
+  valid_from DATE, valid_to DATE, PRIMARY KEY (place_id, scheme, value)
+);
+CREATE TABLE place_text (
+  place_id VARCHAR NOT NULL REFERENCES place(place_id), lang VARCHAR NOT NULL,
+  kind VARCHAR NOT NULL CHECK (kind IN ('why','tip','summary')), text VARCHAR NOT NULL,
+  source_asset_id VARCHAR REFERENCES asset(asset_id), model VARCHAR, frozen_build VARCHAR,
+  PRIMARY KEY (place_id, lang, kind)
+);
+CREATE TABLE place_season (
+  place_id VARCHAR NOT NULL REFERENCES place(place_id),
+  month INTEGER NOT NULL CHECK (month BETWEEN 1 AND 12), score DOUBLE, source VARCHAR NOT NULL,
+  PRIMARY KEY (place_id, month, source)
+);
+CREATE TABLE travel_effort (
+  place_id VARCHAR NOT NULL REFERENCES place(place_id), from_hub VARCHAR NOT NULL, hours DOUBLE,
+  mode VARCHAR, source VARCHAR NOT NULL
+);
+CREATE TABLE place_stay (
+  place_id VARCHAR PRIMARY KEY REFERENCES place(place_id), typical_stay_hours DOUBLE, source VARCHAR NOT NULL
 );
 
 CREATE TABLE merge_log (build VARCHAR, loser_key VARCHAR, survivor_place_id VARCHAR, method VARCHAR, reason VARCHAR);

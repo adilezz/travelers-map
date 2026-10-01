@@ -70,6 +70,20 @@ Sources considered and **not** used as automated inputs: commercial guidebook an
 - **Redirects and merges.** Wikidata merges items. Each snapshot's redirect table is stored; the registry (3.2) resolves any QID to its current target before matching, so a merged item never mints a second place.
 - **Labels.** Keep English label, label in the country's official language(s), and aliases. A raw QID is never a name (7, gate G-NAMES).
 
+### 2.4 Where the ingest runs
+
+Decided 1 October 2026: **the owner's laptop first, with a SPARQL subset for the prototype; a short-lived rented machine only for the full dump.** Figures are estimates until the first real run replaces them here.
+
+| Step | Where | Why |
+|---|---|---|
+| Prototype, five countries: page Wikidata's public SPARQL endpoint by country; store the results as Parquet with the query text and run date | Laptop, minutes to hours | Small, and enough to pass the golden set |
+| Small sources: WDPA, Ramsar, GeoNames, UNESCO, Natural Earth, Geofabrik extracts | Laptop | Megabytes to a few GB |
+| Pageviews | Laptop, filtered to candidate titles while streaming | Monthly files are large; only candidate titles are kept |
+| Full Wikidata dump, for the world build | A rented machine (about 8 vCPU, 32 GB RAM, 500 GB disk, roughly a day), or the laptop if it has about 300 GB free and can run overnight | Hundreds of GB compressed; the cost is small and one-off; only the filtered Parquet comes back |
+| Optional accelerator: allow the Claude cloud environment to reach named hosts | Environment settings, Network access | Lets Claude run ingest steps itself; bounded by that container's disk and run time, so suited to the prototype subset, not the full dump |
+
+The SPARQL subset and the full dump are **different pinned inputs**. Keys are QIDs, which are stable between them, so ids minted from the subset must be unchanged when the full dump is built; G-ID with the previous bundle checks this. Sitelink counts drift on live SPARQL, so every run records its date and the values it returned.
+
 ## 3. Identity
 
 ### 3.1 `place_id`
@@ -147,6 +161,34 @@ Rules for the schema:
 - `place_kind.evidence_asset_ids` is mandatory; a kind with no evidence cannot be written.
 - `tier` is derived, never edited in place. Owner changes go through `anchors.csv`, `merge_overrides.csv` and `print_override.csv`.
 
+### 4.1 Owner store and reserved tables
+
+Decided 1 October 2026, because identity and schema are the only parts expensive to change later (the app will grow towards state-of-the-art trip planning and management).
+
+**The owner store** holds the owner's own state in a separate file (`owner.duckdb`, or git-tracked CSVs), never inside the rebuilt `atlas.duckdb`. It is keyed to `place_id` and follows `merged_into` chains. Its schema is `pipeline/atlas/owner_schema.sql`:
+
+| Table | Holds |
+|---|---|
+| `visit` | One row per visit: `visit_id, place_id, date_from, date_to, precision (day/month/season/year/unknown), source (manual/photo/takeout/gpx/import), party, rating (1–5, optional), note, photo_refs[], track_ref`. Visits are **events**: many per place, with fuzzy dates |
+| `wishlist` | `place_id, priority, why_note, added` |
+| `visit_candidate` | Visits suggested by photos (EXIF), Google Takeout or GPX tracks, to be accepted or rejected before they become visits: `place_id, evidence, confidence, status` |
+
+Linking a photo or track to a place uses the place's **footprint**, not only its point, so every Icon and Major place needs a footprint polygon (an M2 target) and keeps `near_place_id`. Without it a photo at Machu Picchu snaps to the wrong town: the v1 failure again.
+
+**Reserved shared tables** (in `schema.sql`; empty until their milestones):
+
+| Table | Purpose |
+|---|---|
+| `place_crossref(place_id, scheme, value, valid_from, valid_to)` | Any future key scheme (Who's On First, a mapping provider's id) without a migration. A mapping provider's place content is never stored; only an id for linking out |
+| `place_text(place_id, lang, kind, text, source_asset_id, model, frozen_build)` | Why-go text, tips and summaries, with provenance. Text written by a model is frozen data, never recomputed in a build |
+| `place_season(place_id, month, score, source)` | Best months, from sourced climate and visitor data only |
+| `travel_effort(place_id, from_hub, hours, mode)` | Access effort from a gateway, sourced |
+| `place_stay(place_id, typical_stay_hours, source)` | Typical time needed |
+| `place_metric.pageviews_monthly` | Twelve monthly values, not only their sum, to see seasonality of interest |
+| `asset.snapshot`, `source.redistributable` | The snapshot date on every asset; a flag a gate enforces so a shareable bundle contains no restricted source |
+
+No review, rating or recommendation source feeds any shared table (document 1 §2.2).
+
 ## 5. Determinism
 
 Same inputs and same parameters give byte-identical outputs.
@@ -217,7 +259,7 @@ Makefile                    make test · make lint · make verify
 | Milestone | Delivers | Effort |
 |---|---|---|
 | M0 Docs and gates — **done, 1 Oct 2026** | These documents; golden set; schema DDL; gates as code with 47 tests; `make verify` fails until a bundle passes. Holdout H1 and the kind labels are templates the owner fills | 1 week |
-| M1 Backbone | Snapshot manifest; Wikidata filter to Parquet; registry; `asset` table; WHS/WDPA/Ramsar ingested | 1 week |
+| M1 Backbone | Snapshot manifest; QID resolver for the golden set (run on the owner's laptop); Wikidata prototype subset (SPARQL) to Parquet; registry (no ids minted until the landmark gate passes on real QIDs); `asset` table; WHS/WDPA/Ramsar ingested | 1 week |
 | M2 Places | Candidates, resolution, admission, enrichment, names; landmark gate passes | 1–2 weeks |
 | M3 Rank and kinds | Notability, tiers; kind rules; hand-labelled audit; bias audit | 1–2 weeks |
 | M4 Print | Territories, regions, print selection, overrides, proof | 1–2 weeks |
@@ -236,10 +278,10 @@ The first prototype runs on **five countries — Egypt, Peru, Italy, Jordan, Tan
 | `atlas/matching.py` | One-to-one matching of golden rows to places by ISO3, type, distance and QID or name; duplicate detection |
 | `atlas/gates.py` | 16 gates plus 4 pending; each returns `n` and `skipped`; any exception is a failure |
 | `atlas/verify.py`, `freeze.py` | `make verify`; freezing the holdout by hash |
-| `atlas/schema.sql` | The section 4 schema with CHECK constraints tied to the vocabulary |
+| `atlas/schema.sql`, `owner_schema.sql` | The section 4 schema with CHECK constraints tied to the vocabulary, reserved tables included; and the separate owner store (4.1) |
 | `data/golden/golden.csv` | 106 rows: 97 positive and 9 relational, five countries |
 | `data/rules/tiers.json` | Initial admission, notability and tier parameters; `classes.csv` and `kinds.csv` are headers for M2 and M3 |
 | `data/registry/` | Empty `place_registry.parquet` with its `keys` column |
-| `pipeline/tests/` | 75 tests: an oracle bundle built from the golden set, adversarial fixtures (the v1 Quillabamba failure), a mutation suite, and a test that fails if a gate has no failing test |
+| `pipeline/tests/` | 77 tests: an oracle bundle built from the golden set, adversarial fixtures (the v1 Quillabamba failure), a mutation suite, and a test that fails if a gate has no failing test |
 
 Gates implemented: G-SCHEMA, G-GOLDEN, G-LANDMARK, G-TIER, G-ID, G-IDENT, G-NAMES, G-COUNT, G-KIND, G-KIND-PRECISION, G-COVER, G-EVIDENCE, G-INTEGRITY, G-CHURN, and (with `--release`) G-HOLDOUT and G-PRECISION. **Pending**, counted as failures: G-DETERMINISM (M2), G-REGION, G-DISPUTE, G-PRINT (M4). `make test` must always pass; `make verify` is expected to fail until a bundle passes.

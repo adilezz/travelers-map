@@ -22,6 +22,12 @@ The model on paper was careful; the output was not provable. v2 keeps the good p
 | D8 | Western Sahara dissolves into Morocco; Taiwan, Kosovo, Palestine get their own piece; Northern Cyprus, Somaliland and Crimea dissolve (dotted); Kashmir shows the line of control | Owner rulings (document 04 §7) |
 | D9 | Personal project: licensing does not bound the design, but every record keeps its source and licence so sharing later is a filter, not a rebuild | Owner direction; cheap insurance |
 | D10 | One DuckDB store; bulk dumps processed once; no per-request fees | Cost effectiveness for one person |
+| D12 | Purpose and size: wall map about 1–3k pins (ceiling 3,000); atlas about 15–25k places; the database holds every admitted place including Local, and may pass 100k | Owner agreed, 1 Oct; sizes follow purpose |
+| D13 | A good place is **known, visited and evidenced, not recommended**: no review, rating or "best of" source touches admission, tier, kind or text; the owner's own experience (Metz vs Lille) lives in a personal layer | Owner decision, 1 Oct: the map must never trust someone else's taste |
+| D14 | The owner's state (visits as events with fuzzy dates, wishlist, photo/Takeout/GPX candidates) is a separate store keyed to `place_id`; shared tables are reserved now for crossrefs, text, seasons, travel effort and stay time; footprints required for Icon and Major places | Owner decision, 1 Oct (follow the Expansionist): the app will grow towards state-of-the-art trip planning; identity and schema are the expensive things to change |
+| D15 | Ingest runs on the owner's laptop first (SPARQL subset for the five countries; small sources locally); a rented machine only for the full Wikidata dump; optionally allow the Claude cloud environment to reach named hosts | Speed and cost; the subset and the dump are different pinned inputs |
+| D16 | The holdout H1 is owner-written, disjoint from the golden set and not AI-assisted: 20 rows per prototype country, mixing non-heritage places on purpose | An AI-listed holdout would reintroduce the signals the pipeline uses |
+
 | D11 | A new repository for v2, with only the specs, golden set and re-written gates carried over | The v1 pipeline and app were to be replaced anyway; avoids confusion |
 
 ## M0 review (1 Oct) and what changed

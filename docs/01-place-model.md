@@ -27,6 +27,29 @@ It is a **personal** product. The owner wants to *see physically* where they hav
 
 The test of every decision in this document: **standing in front of the wall, with a pin in hand, does the pin say a place I would recognise, in the right spot?** One wrong famous pin and the whole map loses trust.
 
+### 2.1 Purpose and size
+
+The database serves three uses at three sizes (decided 1 October 2026):
+
+| Use | Size |
+|---|---|
+| The printed wall map | About 1,000 to 3,000 pins, never more than 3,000, chosen from the atlas (document 4) |
+| The web atlas and trip planner | About 15,000 to 25,000 places |
+| The database itself | Every place that clears admission, **including Local-tier places beyond the atlas**; it may grow past 100,000 |
+
+These are targets the admission rules are tuned toward, not quotas. Every build reports the size it reached and why.
+
+### 2.2 What makes a place good
+
+A good place is **known, visited and evidenced. It is not recommended.**
+
+- **Known.** Many independent language communities wrote about it, and institutions recognised it (UNESCO, protected-area designation, national registers).
+- **Visited.** People actually go: official visitor statistics where they exist, and current attention (pageviews).
+- **Evidenced.** Every claim a place makes (why it is here, its tier, its kinds) traces to a stored, checkable source (document 2 §4).
+- **Not recommended.** No review site, rating, blogger ranking or "best of" list is used to admit, rank, tier, tag or describe a place. The map exists so that nobody's taste, including the database's, decides where the owner goes. Whether Metz was awful and Lille wonderful is the owner's own experience: it lives in the personal layer (visits, ratings, notes), never in the shared database.
+
+Attention measures are not opinions, but they are biased; section 6.2 says how that is handled.
+
 ## 3. Principles
 
 | # | Principle | Consequence |
@@ -40,6 +63,8 @@ The test of every decision in this document: **standing in front of the wall, wi
 | P7 | The owner decides | Anchors, vetoes and territory rulings always beat the algorithm. |
 | P8 | Identity is permanent | A `place_id` is minted once and never reused (document 2). |
 | P9 | Nothing ships unproven | Gates in document 3 block publication. |
+| P10 | Evidence, not recommendation | No review, rating or "best of" source touches admission, tier, kind or text. |
+| P11 | The owner's experience is a separate layer | Visits, ratings and notes live in the owner store, keyed to `place_id`; they never alter the shared database (document 2 §4.1). |
 
 ## 4. What a place is
 
@@ -113,6 +138,8 @@ C   settlement size, capped at 0.3:  0.15 · log10(pop / 100,000), pop ≥ 100,0
 ```
 
 Sitelinks count how many separate language communities independently thought the place worth an article, which no single authority controls. Pageviews add current attention and are damped and windowed so a news spike cannot crown a place.
+
+Official **visitor statistics** (annual visitors) are a candidate input. They are measured in M3 and enter *N* only if the bias audit shows they help; reviews and ratings never do (section 2.2).
 
 ### 6.2 Fairness against popularity bias
 

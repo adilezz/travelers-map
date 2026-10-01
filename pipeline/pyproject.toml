@@ -16,7 +16,7 @@ build-backend = "setuptools.build_meta"
 include = ["atlas*"]
 
 [tool.setuptools.package-data]
-atlas = ["schema.sql"]
+atlas = ["*.sql"]
 
 [tool.ruff]
 line-length = 100
