@@ -277,6 +277,9 @@ The first prototype runs on **five countries — Egypt, Peru, Italy, Jordan, Tan
 | `atlas/golden.py` | Loads and validates the golden set (schema, tolerances, kinds, UNESCO ids, relation targets); requires the UNESCO list |
 | `atlas/bundle.py` | Reads a bundle and validates its structure so gates never run on malformed records |
 | `atlas/kinds.py` | Choosing kinds from the rules that fired: noisy-or over distinct sources, pair rules as data, total tie-break order, cut reasons, crowded flag |
+| `atlas/snapshot.py` | Stage 0: pin raw inputs by SHA-256; refuse a build from anything that changed; a required source with no pin is a failure |
+| `atlas/minting.py` | Mint, reuse, retire, merge and split ids by the registry rules; commit only after `G-LANDMARK` passes and every golden place has a real QID |
+| `atlas/wikidata.py`, `qids.py` | A stdlib Wikidata client; proposes QIDs for the golden set and checks the class table against Wikidata labels. A QID is never accepted automatically. Run by the owner locally, tested here on recorded responses |
 | `atlas/registry.py` | The registry reader (CSV or Parquet): key index, merge chains, key conflicts |
 | `atlas/matching.py` | One-to-one matching of golden rows to places by ISO3, type, distance and QID or name; duplicate detection |
 | `atlas/gates.py` | 16 gates plus 4 pending; each returns `n` and `skipped`; any exception is a failure |
@@ -285,6 +288,6 @@ The first prototype runs on **five countries — Egypt, Peru, Italy, Jordan, Tan
 | `data/golden/golden.csv` | 106 rows: 97 positive and 9 relational, five countries |
 | `data/rules/tiers.json` | Initial admission, notability and tier parameters; `kinds.csv` holds 20 draft rules (uncalibrated), `kind_pairs.csv` the overlap rules, `activities.csv` the experience vocabulary; `classes.csv` is a header for M2 |
 | `data/registry/` | Empty `place_registry.parquet` with its `keys` column |
-| `pipeline/tests/` | 95 tests: an oracle bundle built from the golden set, adversarial fixtures (the v1 Quillabamba failure), a mutation suite, and a test that fails if a gate has no failing test |
+| `pipeline/tests/` | 116 tests: an oracle bundle built from the golden set, adversarial fixtures (the v1 Quillabamba failure), a mutation suite, and a test that fails if a gate has no failing test |
 
 Gates implemented: G-SCHEMA, G-GOLDEN, G-LANDMARK, G-TIER, G-ID, G-IDENT, G-NAMES, G-COUNT, G-KIND, G-KIND-PRECISION, G-COVER, G-EVIDENCE, G-INTEGRITY, G-CHURN, and (with `--release`) G-HOLDOUT and G-PRECISION. **Pending**, counted as failures: G-DETERMINISM (M2), G-REGION, G-DISPUTE, G-PRINT (M4). `make test` must always pass; `make verify` is expected to fail until a bundle passes.

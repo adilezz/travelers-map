@@ -1,1 +1,25 @@
-class_qid,label,place_type,default_kinds,note
+class_qid,expected_label,place_type,kind_hint,verified,note
+Q839954,archaeological site,site,ruins,no,Excavated or standing remains
+Q109607,ruins,site,ruins,no,
+Q9259,World Heritage Site,site,,no,UNESCO property; admitted by R1
+Q570116,tourist attraction,site,,no,Generic; admission needs corroboration (R4)
+Q46169,national park,area,wildlife,no,
+Q179049,nature reserve,area,wildlife,no,
+Q8502,mountain,area,mountain,no,
+Q8072,volcano,area,volcanic,no,
+Q23397,lake,area,water,no,
+Q4022,river,area,water,no,
+Q34038,waterfall,site,water,no,
+Q40080,beach,area,seaside,no,
+Q45776,fjord,area,seaside,no,
+Q23442,island,area,seaside,no,Only when within 2 km of the sea
+Q44782,port,settlement,maritime,no,
+Q39715,lighthouse,site,maritime,no,
+Q1370598,place of worship,site,sacred,no,Living worship is tested separately
+Q16970,church building,site,sacred,no,
+Q32815,mosque,site,sacred,no,
+Q44539,temple,site,sacred,no,
+Q515,city,settlement,,no,"R3 admits cities of 100,000 or more"
+Q3957,town,settlement,,no,
+Q532,village,settlement,rural,no,
+Q5119,capital,settlement,capital,no,Current capital of a sovereign state or other political unit
