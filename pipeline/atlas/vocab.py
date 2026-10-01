@@ -4,8 +4,31 @@ from __future__ import annotations
 import re
 
 KINDS = (
-    "capital", "old_town", "coast", "mountain", "desert", "forest", "water",
+    "capital", "old_town", "seaside", "maritime", "mountain", "desert", "forest", "water",
     "volcanic", "wildlife", "sacred", "rural", "metropolis", "ruins",
+)
+# Plain labels shown to travelers (proposed 1 Oct 2026; the slugs are the contract).
+KIND_LABELS = {
+    "capital": "Capital cities, past and present",
+    "old_town": "Historic centres",
+    "seaside": "Beaches & coast",
+    "maritime": "Port & harbour cities",
+    "mountain": "Mountains",
+    "desert": "Desert & dry plains",
+    "forest": "Forest & jungle",
+    "water": "Lakes, rivers & waterfalls",
+    "volcanic": "Volcanic & geothermal",
+    "wildlife": "National parks & wildlife",
+    "sacred": "Holy places & pilgrimage",
+    "rural": "Countryside & villages",
+    "metropolis": "Big modern cities",
+    "ruins": "Ruins & ancient sites",
+}
+# Tie-break order when two kinds are equally strong and equally evidenced (document 1 section 7.3):
+# distinctive character first; political role, urban fabric and general land use last.
+KIND_PRIORITY = (
+    "sacred", "ruins", "volcanic", "desert", "wildlife", "mountain", "seaside", "maritime",
+    "forest", "water", "capital", "old_town", "rural", "metropolis",
 )
 TIERS = ("Local", "Notable", "Major", "Icon")  # ascending
 TIER_RANK = {t: i for i, t in enumerate(TIERS)}

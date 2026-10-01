@@ -55,7 +55,7 @@ Leaderboards, streaks, “most traveled.” Booking engines. A Google Maps repla
 | P6 | The traveler owns the record | Export in one action, readable without this product. |
 | P7 | Selecting never zooms; marking never moves the camera | The only camera move is an explicit “Show on the map.” |
 | P8 | The accent means visited | `#A87B22` / `#DBA83E` on marks only. |
-| P9 | Kinds are shape and label, never colour | Thirteen categorical colours are not accessible and would fight the accent. |
+| P9 | Kinds are shape and label, never colour | Fourteen categorical colours are not accessible and would fight the accent. |
 | P10 | Place identifiers are a migration | A rebuild that reuses an id for a different place fails the build. |
 
 ---
@@ -65,7 +65,7 @@ Leaderboards, streaks, “most traveled.” Booking engines. A Google Maps repla
 The client does not ship until `make verify` (document 3) passes on the **same** bundle it loads. In summary:
 
 1. Manifest totals equal file counts (G-COUNT).
-2. Every place has 1–3 kinds, each with a rule and evidence; all thirteen kinds exist somewhere in the world (G-KIND).
+2. Every place has 1–3 kinds, each with a rule and evidence; all fourteen kinds exist somewhere in the world (G-KIND).
 3. Every place has an opaque permanent `place_id`; none is reused or lost (G-ID, G-IDENT).
 4. Every place has `name_en` and, where the script differs, `name_local`; searchable aliases; no raw identifiers or markup (G-NAMES).
 5. Every place has a tier (Icon / Major / Notable / Local) and a one-line `tier_reason`. **There is no numeric score.**

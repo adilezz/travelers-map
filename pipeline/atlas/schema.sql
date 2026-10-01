@@ -46,7 +46,7 @@ CREATE TABLE place_alias (
 
 CREATE TABLE place_kind (
   place_id VARCHAR NOT NULL REFERENCES place(place_id),
-  kind VARCHAR NOT NULL CHECK (kind IN ('capital','old_town','coast','mountain','desert','forest',
+  kind VARCHAR NOT NULL CHECK (kind IN ('capital','old_town','seaside','maritime','mountain','desert','forest',
     'water','volcanic','wildlife','sacred','rural','metropolis','ruins')),
   rule_id VARCHAR NOT NULL, strength DOUBLE NOT NULL,
   evidence_asset_ids VARCHAR[] NOT NULL CHECK (len(evidence_asset_ids) > 0),
@@ -88,6 +88,38 @@ CREATE TABLE travel_effort (
 );
 CREATE TABLE place_stay (
   place_id VARCHAR PRIMARY KEY REFERENCES place(place_id), typical_stay_hours DOUBLE, source VARCHAR NOT NULL
+);
+
+-- Experiences and facts that never drive admission, tier or the kind cap (document 1 section 7.4).
+CREATE TABLE place_activity (
+  place_id VARCHAR NOT NULL REFERENCES place(place_id), activity VARCHAR NOT NULL,
+  rule_id VARCHAR NOT NULL, strength DOUBLE NOT NULL,
+  evidence_asset_ids VARCHAR[] NOT NULL CHECK (len(evidence_asset_ids) > 0),
+  PRIMARY KEY (place_id, activity)
+);
+CREATE TABLE place_event (
+  place_id VARCHAR NOT NULL REFERENCES place(place_id), event_qid VARCHAR NOT NULL,
+  month_start INTEGER CHECK (month_start BETWEEN 1 AND 12), month_end INTEGER CHECK (month_end BETWEEN 1 AND 12),
+  recurrence VARCHAR, source VARCHAR NOT NULL
+);
+CREATE TABLE place_visitors (
+  place_id VARCHAR NOT NULL REFERENCES place(place_id), year INTEGER NOT NULL, count BIGINT NOT NULL,
+  source VARCHAR NOT NULL, source_url VARCHAR NOT NULL   -- official statistics only; never reviews
+);
+CREATE TABLE place_advisory (
+  place_id VARCHAR, country_iso3 VARCHAR, level VARCHAR NOT NULL, issuer VARCHAR NOT NULL,
+  issued DATE NOT NULL, source_url VARCHAR NOT NULL       -- a dated, sourced fact; never our own score
+);
+CREATE TABLE place_access (
+  place_id VARCHAR PRIMARY KEY REFERENCES place(place_id),
+  effort_class VARCHAR CHECK (effort_class IN ('easy','moderate','demanding','expedition')),
+  elevation_m DOUBLE, ascent_m DOUBLE, trail_distance_km DOUBLE, permit_required BOOLEAN,
+  wheelchair VARCHAR CHECK (wheelchair IN ('yes','limited','no')),   -- absent means unknown, never 'no'
+  source VARCHAR NOT NULL
+);
+CREATE TABLE place_facet (
+  place_id VARCHAR NOT NULL REFERENCES place(place_id), facet VARCHAR NOT NULL, value VARCHAR NOT NULL,
+  source VARCHAR NOT NULL                                  -- escape hatch for any later key/value dimension
 );
 
 CREATE TABLE merge_log (build VARCHAR, loser_key VARCHAR, survivor_place_id VARCHAR, method VARCHAR, reason VARCHAR);

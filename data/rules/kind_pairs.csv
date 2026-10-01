@@ -1,0 +1,8 @@
+keep,drop,condition,rationale
+sacred,ruins,living_worship,"Sacred means a living faith: if the place itself is in worship or pilgrimage use, it is not a ruin"
+ruins,sacred,not_living_worship,"Ruins means a civilisation no longer living there: a temple nobody worships in is `ruins`, not `sacred`"
+maritime,seaside,large_port_no_beach,"A real port city with no beach is a harbour, not a seaside"
+seaside,water,marine_water,"Sea, lagoon and brackish water belong to `seaside`; `water` is freshwater"
+wildlife,rural,protected_dominant,"A strict protected area over half the footprint is wilderness, not farmland"
+forest,rural,tree_dominant,"Half or more tree cover is forest, not countryside"
+metropolis,rural,always,"A big modern city is not the countryside"

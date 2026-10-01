@@ -28,6 +28,10 @@ The model on paper was careful; the output was not provable. v2 keeps the good p
 | D15 | Ingest runs on the owner's laptop first (SPARQL subset for the five countries; small sources locally); a rented machine only for the full Wikidata dump; optionally allow the Claude cloud environment to reach named hosts | Speed and cost; the subset and the dump are different pinned inputs |
 | D16 | The holdout H1 is owner-written, disjoint from the golden set and not AI-assisted: 20 rows per prototype country, mixing non-heritage places on purpose | An AI-listed holdout would reintroduce the signals the pipeline uses |
 
+| D17 | `capital` includes current capitals (Rome) as well as former seats of empires or sovereign states | Owner decision, 1 Oct |
+| D18 | `coast` is split into `seaside` (beaches and scenic coast) and `maritime` (port and harbour cities): 14 kinds | Owner decision, 1 Oct: a beach town and a port are different experiences |
+| D19 | Overlaps and ties are decided by data rules: `sacred` = a living faith, `ruins` = a dead one; seaside/maritime by port-city rule; wildlife over rural when a strict protected area dominates; the cap of three orders by strength (steps of 0.05), then independent sources, then a fixed priority, then slug; cut kinds and reasons are stored | Panel of sub-agents (geographer, data engineer, outsider, expansionist, auditor), 1 Oct; deterministic and auditable |
+| D20 | What you do is a separate dimension (experiences/activities, events, effort and access, season, visitors, advisories); the product sentence stays about kinds | Owner asked to include the Outsider's and Expansionist's lists; kinds say what a place IS |
 | D11 | A new repository for v2, with only the specs, golden set and re-written gates carried over | The v1 pipeline and app were to be replaced anyway; avoids confusion |
 
 ## M0 review (1 Oct) and what changed

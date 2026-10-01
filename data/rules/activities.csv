@@ -1,0 +1,32 @@
+activity,label,group,evidence_sources,status
+dive,Diving,water,"OSM sport=scuba_diving; marine protected area; Wikidata dive site",reserved
+snorkel,Snorkelling,water,"OSM; coral reef within footprint",reserved
+surf,Surfing,water,"OSM sport=surfing",reserved
+sail,Sailing,water,"OSM leisure=marina",reserved
+kayak_raft,Kayaking and rafting,water,"OSM whitewater=*; sport=canoe",reserved
+whale_watch,Whale and dolphin watching,water,"Wikidata; marine protected area",reserved
+trek,Trekking and hiking,mountain,"OSM route=hiking; Wikidata long-distance trail",reserved
+climb,Climbing and mountaineering,mountain,"OSM sport=climbing; summit",reserved
+ski,Skiing and snowboarding,mountain,"OSM piste:type; Wikidata ski resort",reserved
+via_ferrata,Via ferrata,mountain,"OSM via_ferrata=*",reserved
+cycle,Cycling,slow,"OSM route=bicycle; EuroVelo and national routes",reserved
+road_trip,Scenic drives and road trips,slow,"Wikidata scenic route",reserved
+rail_journey,Rail journeys,slow,"Wikidata heritage railway",reserved
+safari,Safari,nature,"IUCN II area with large-mammal fauna",reserved
+birding,Birdwatching,nature,"Important Bird Area; Ramsar",reserved
+stargaze,Stargazing and aurora,nature,"dark-sky reserve; latitude and light-pollution raster",reserved
+caving,Caving,nature,"OSM natural=cave_entrance; show caves",reserved
+canyoning,Canyoning,nature,"OSM; Wikidata canyon",reserved
+wine,Wine and vineyards,food,"Wikidata wine region; protected designation of origin",reserved
+food_heritage,Food and cuisine,food,"UNESCO intangible heritage (cuisine); Wikidata regional cuisine",reserved
+market,Markets and bazaars,food,"OSM amenity=marketplace; Wikidata market",reserved
+festival,Festivals,events,"Wikidata event with day-in-year and location; UNESCO intangible heritage",reserved
+craft,Crafts,culture,"UNESCO intangible heritage (craft); Wikidata",reserved
+hot_spring,Hot springs and spas,body,"OSM natural=hot_spring; geothermal field",reserved
+wellness,Wellness and retreats,body,"OSM leisure=spa; Wikidata spa town",reserved
+museum_art,Museums and art,culture,"Wikidata museum with sitelinks; OSM tourism=museum",reserved
+architecture,Architecture,culture,"Wikidata architectural style and architect; UNESCO",reserved
+dark_tourism,Memorials and dark heritage,culture,"Wikidata memorial; UNESCO criterion vi",reserved
+literary_film,Literary and film places,culture,"Wikidata narrative location and filming location",reserved
+theme_park,Theme parks and zoos,leisure,"Wikidata amusement park; OSM tourism=theme_park",reserved
+cruise,Cruises,leisure,"Wikidata cruise port",reserved

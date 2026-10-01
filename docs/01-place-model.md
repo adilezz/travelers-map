@@ -163,38 +163,78 @@ A tier is shown with a one-line reason ("World Heritage · 140 language editions
 
 ## 7. Kinds of place
 
-The product sentence — *still unseen: desert and steppe, sacred and pilgrimage* — is only true if kinds are true. In v2 a kind is **evidence-linked**: it exists on a place only because a named rule fired on stored evidence, and the rule is shown.
+The product sentence — *still unseen: desert and dry plains, holy places and pilgrimage* — is only true if kinds are true. A kind says **what a place is** (never what you do there, section 7.4). In v2 a kind is **evidence-linked**: it exists on a place only because a named rule fired on stored evidence, and the rule is shown.
 
-### 7.1 The thirteen kinds
+### 7.1 The fourteen kinds
 
-Stored as stable slugs; the interface shows labels.
+Stored as stable slugs; the labels are plain-language proposals for the interface (owner to confirm).
 
 | Slug | Label | A place carries it when… |
 |---|---|---|
-| `capital` | Imperial & historic capital | It is or was the seat of an empire or sovereign state (Wikidata capital statements with dates, class "imperial capital"). Sub-state ducal and provincial seats do not count unless the place is Icon tier |
-| `old_town` | Living old town | Historic urban fabric is protected or inscribed (WHS "historic centre / old town", national historic-district class), and people live in it |
-| `coast` | Coast & sea | The place or its footprint touches the sea (distance to coastline ≤ 2 km) or is an island, reef or lagoon; a river port is not coastal |
-| `mountain` | High mountain | Footprint or anchor in a range with relief ≥ 1,500 m within 15 km, or a named peak or glacier is part of it |
-| `desert` | Desert & steppe | Anchor lies in desert, dune, saltflat or steppe land cover, or the place is classed as such |
-| `forest` | Forest & jungle | Forest or rainforest is the primary setting (protected forest, WHS forest, forest land-cover share ≥ 50 % of footprint) |
-| `water` | Lake & river | A lake, river, delta, wetland or waterfall is the destination or its principal setting (not "a town on a river") |
-| `volcanic` | Volcanic & geothermal | A volcano, caldera, geyser or geothermal field is part of it |
-| `wildlife` | Wildlife & wilderness | The place **is** a protected area (IUCN Ia–IV, national park, reserve) or **contains** one overlapping ≥ 50 % of its footprint. A city beside a park is not wildlife |
-| `sacred` | Sacred & pilgrimage | A pilgrimage destination, or a religious complex that is the reason to go (WHS religious class, major pilgrimage Wikidata classes) |
-| `rural` | Rural vernacular & agrarian | A landscape, village or region valued for agrarian or vernacular life (cultural landscapes, wine/terrace/rice landscapes, vernacular-architecture classes) |
-| `metropolis` | Modern metropolis | Settlement with population ≥ 1,000,000, or recognised as a world city or modern urban icon |
-| `ruins` | Ancient & archaeological sites | The place is, or is centred on, excavated or standing remains of a civilisation no longer living there: Wikidata archaeological site, ruin, necropolis, ancient city, castle or fortification, prehistoric or palaeontological site; WHS cultural criteria (i)–(iv) with no continuing urban fabric. A living historic centre stays `old_town`; a place may carry both when it has both (Luxor) |
+| `capital` | Capital cities, past and present | It is the **current capital** of a sovereign state (Rome, Cairo, Amman), or a **former seat of an empire or sovereign state** (Cusco, Chan Chan, Florence 1865–71, the Republic of Venice). Seats of sub-state provinces and duchies do not count |
+| `old_town` | Historic centres | Historic urban fabric is protected or inscribed (UNESCO "historic centre / old town", national historic-district class), and people live in it |
+| `seaside` | Beaches & coast | A beach, scenic coast, cliff, fjord, island, reef or lagoon: the sea as the setting. Resort coasts (Dahab, Amalfi Coast, Cinque Terre) |
+| `maritime` | Port & harbour cities | A port or harbour is the character: harbour cities, trading ports, lighthouse and quay heritage (Venice, Stone Town, Alexandria, Aqaba) |
+| `mountain` | Mountains | A mountain landscape: relief of 1,000 m or more within 10 km, or a summit of 2,500 m or more in the footprint |
+| `desert` | Desert & dry plains | Desert, dune, salt flat, or steppe and dry grassland (arid climate and sparse cover) |
+| `forest` | Forest & jungle | Forest or rainforest is the primary setting (tree cover over half of a 10 km buffer, or a protected forest) |
+| `water` | Lakes, rivers & waterfalls | **Freshwater**: a lake, river, delta, wetland or waterfall of 5 km² or more is the destination or its principal setting (not "a town on a river"). Sea and lagoons are `seaside` |
+| `volcanic` | Volcanic & geothermal | A volcano, caldera, geyser or geothermal field is part of the place itself |
+| `wildlife` | National parks & wildlife | The place **is** a strict protected area (IUCN Ia, Ib, II, IV, national park, reserve) or one covers 50 % or more of its footprint. A city beside a park is not wildlife |
+| `sacred` | Holy places & pilgrimage | A **living faith**: a pilgrimage destination, or a religious complex in worship use that is the reason to go (Saint Catherine's, Lalibela, Assisi) |
+| `rural` | Countryside & villages | Farmland, vineyards, terraces and villages valued for agrarian or vernacular life (over 60 % cropland or pasture, low density, no city of 50,000 nearby) |
+| `metropolis` | Big modern cities | Population of 1,000,000 or more, or an urban area of 300 km², or a world city |
+| `ruins` | Ruins & ancient sites | Excavated or standing remains of a civilisation **no longer living there**: archaeological site, ruin, necropolis, ancient city, castle, fortification, prehistoric or palaeontological site. A temple nobody worships in is `ruins` (Karnak, Abydos) |
 
 ### 7.2 Rules
 
-- Each kind is derived by **rule rows** in `data/rules/kinds.csv` (rule id → class, tag, criterion or geometry test → kind, strength). Rules read stored assets and geometry; they never read a place's name.
-- A place carries **1 to 3 kinds**: the strongest by rule strength. A place with no firing rule is a **build failure**, not a fallback: it signals an incomplete rule table.
-- A place that has a kind must be able to say why: `place_kind` stores the rule and the evidence assets, and the sheet shows it ("Nature — Ramsar wetland").
+- Each kind is derived by **rule rows** in `data/rules/kinds.csv` (rule id, kind, source, test, strength, role, excludes, rationale). Rules read stored assets and geometry; they never read a place's name.
+- A **strength** is the rule's estimated precision (0–1): the chance that a place firing it is a clean, defining member of the kind. Because every kind uses the same definition, strengths are comparable across kinds. Initial values are guesses (`calibrated = no`); they are calibrated against the hand-labelled sample in M3 (30 or more labelled places per rule, rounded to 0.05).
+- Several rules for one kind combine by **noisy-or over distinct sources**: only the best rule from each source counts, so five correlated Wikidata subclasses cannot inflate a kind. The result is capped at 0.95. A kind needs **at least one core rule** (a support rule adds strength but cannot create a kind alone) and a combined strength of **0.50 or more**.
+- A place that has a kind must be able to say why: `place_kind` stores the rules and the evidence assets, and the sheet shows it ("Nature — Ramsar wetland").
+- A place whose evidence admits it but fires no kind rule is a **build failure**: it signals an incomplete rule table, not a fallback.
 - Kinds are shape and label, never colour, in the interface.
 
-### 7.3 Validation
+### 7.3 Overlaps and ties
 
-Kinds are proven on a **hand-labelled stratified sample** with a second annotator, not by plausibility (document 3). Gates: per-kind precision ≥ 0.90, no kind on more than 25 % of places or fewer than 1 %, every kind present in the world, and no country missing a kind it materially has.
+The overlaps are settled by **rules, as data**, so every decision is reproducible and every cut is recorded.
+
+**Pair rules** (`data/rules/kind_pairs.csv`): when both kinds qualify and a condition holds, one is dropped.
+
+| Overlap | Rule | Example |
+|---|---|---|
+| `sacred` vs `ruins` | `sacred` means a living faith, `ruins` a dead one. If the **place itself** is in worship or pilgrimage use, keep `sacred`; otherwise keep `ruins` | Saint Catherine's Monastery: sacred. Karnak, Abydos, Machu Picchu: ruins |
+| `seaside` vs `maritime` | Both can be true. A real port city (200,000 or more) with **no beach within 2 km** is `maritime` only | Venice: maritime. Aqaba, with a beach and a port: both |
+| `water` vs `seaside` | Sea, lagoon and brackish water belong to `seaside`; `water` is freshwater | Aqaba Marine Reserve: seaside, not water |
+| `wildlife` vs `rural` | A strict protected area over half the footprint with under 30 % farmland is `wildlife` only; with more farmland both stand | Serengeti: wildlife. A park with farms: both |
+| `forest` vs `rural` | Half or more tree cover is `forest` | |
+| `metropolis` vs `rural` | A big modern city is not the countryside | |
+| `capital` vs `old_town` | Independent: political role and urban fabric. Both can apply | Rome, Florence |
+
+**The cap of three** is applied last. Kinds are ordered by, in turn:
+
+1. combined strength, in steps of 0.05 (strengths within 0.05 count as equal);
+2. the number of **independent sources** behind it;
+3. the **priority order** below;
+4. the slug, so the order is total and no two kinds can ever tie completely.
+
+Priority, used only to break ties: `sacred`, `ruins`, `volcanic`, `desert`, `wildlife`, `mountain`, `seaside`, `maritime`, `forest`, `water`, `capital`, `old_town`, `rural`, `metropolis`. The principle: distinctive character first; political role, urban fabric and general land use last, because those describe almost every place. The first three kept are the place's kinds; the rest are stored as **cut kinds with the reason** (`cap`, `pair:…`, `excluded_by:…`, `below_threshold`). A place is flagged `crowded` when its fourth kind was within 0.10 of its third, so such places are reviewed; the order is never changed by hand, the rules are.
+
+Examples (strengths are the initial guesses): **Rome** keeps `capital` (0.90), `old_town` (0.85), `metropolis` (0.85) and cuts `ruins` (0.80) by the cap, flagged crowded. **Kilimanjaro** keeps `volcanic`, `wildlife`, `mountain` (equal strengths, ordered by priority) and cuts `forest`. **Venice** keeps `maritime`, `old_town`, `capital` and drops `seaside` by the port-city rule.
+
+### 7.4 Experiences are not kinds
+
+What you **do** is a separate dimension. The test: if removing the verb leaves a sensible noun (beach, volcano, old town), it is a kind; if it needs a verb or a date (dive, ski, taste, festival), it is an **experience**.
+
+- **Experiences** (`place_activity`) are a controlled vocabulary of about thirty tags, listed in `data/rules/activities.csv`: diving, snorkelling, surfing, sailing, kayaking and rafting, whale watching, trekking, climbing, skiing, via ferrata, cycling, scenic drives, rail journeys, safari, birdwatching, stargazing, caving, canyoning, wine, food and cuisine, markets, festivals, crafts, hot springs, wellness, museums and art, architecture, memorials and dark heritage, literary and film places, theme parks, cruises. They are many-to-many, **never drive admission, tier or the three-kind cap**, and carry evidence like kinds. Free sources: OpenStreetMap tags, Wikidata classes and events, UNESCO intangible heritage, protected-area and bird-area designations. Wikivoyage supplies only the existence of a section, never its prose or ranking. Reviews and ratings never.
+- **Events** (`place_event`): festivals and recurring events with a Wikidata item, a location and a month range.
+- **Effort and access** (`place_access`, `travel_effort`): effort class (easy, moderate, demanding, expedition), elevation, ascent, trail length, permit, wheelchair access (OpenStreetMap; absent means unknown, never "no"). This is what separates Kilimanjaro from a museum in Cairo.
+- **Season** (`place_season`) from sourced climate and visitor-interest data. **Visitor load** (`place_visitors`): official statistics only. **Advisories** (`place_advisory`): a government advisory as a dated, sourced fact with its issuer, never our own score.
+- The product sentence stays **about kinds only**: *still unseen: desert and dry plains, holy places and pilgrimage*. Experiences may get a second, separate sentence ("never yet: diving, skiing") once their evidence is real.
+
+### 7.5 Validation
+
+Kinds are proven on a **hand-labelled stratified sample** with a second annotator, not by plausibility (document 3). Gates: per-kind precision ≥ 0.90 (lower bound ≥ 0.85), no kind on more than 25 % or fewer than 1 % of places, every kind present in the world, and no country missing a kind it materially has.
 
 ## 8. What a place record holds
 

@@ -42,7 +42,7 @@ H1 is the honest recall measure. H2 is a cross-check with a known bias. H3 estim
 
 ### 2.3 Kind labels — `data/golden/kind_labels.csv`
 
-300 places stratified across the thirteen kinds, hand-labelled with 1–3 kinds and a reason by the owner. A **second annotator** — an independent pass, human or model — labels the same sample blind; the disagreements are listed and resolved in writing. Cohen's κ is reported. A model's labels are data frozen in the file; they are never recomputed in a build.
+300 places stratified across the fourteen kinds, hand-labelled with 1–3 kinds and a reason by the owner. A **second annotator** — an independent pass, human or model — labels the same sample blind; the disagreements are listed and resolved in writing. Cohen's κ is reported. A model's labels are data frozen in the file; they are never recomputed in a build.
 
 ### 2.4 Precision review
 

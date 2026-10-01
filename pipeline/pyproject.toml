@@ -29,6 +29,7 @@ select = ["E", "F", "I", "UP", "B", "SIM"]
 "atlas/gates.py" = ["E501"]
 "atlas/bundle.py" = ["E501"]
 "atlas/verify.py" = ["E501"]
+"atlas/kinds.py" = ["E501"]
 "tests/*" = ["E501"]
 
 [tool.pytest.ini_options]

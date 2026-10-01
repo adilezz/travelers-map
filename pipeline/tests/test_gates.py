@@ -352,7 +352,7 @@ def test_kind_precision_needs_labels_for_every_kind(make_ctx):
     assert not gates.g_kind_precision(make_ctx(world, labels=None, name="n")).passed
     only_one = [lab for lab in labels if lab["kinds"] == "ruins"]
     assert not gates.g_kind_precision(make_ctx(world, labels=only_one, name="o")).passed   # unlabelled kinds fail
-    wrong = [dict(lab, kinds="water") if lab["kinds"] == "coast" else lab for lab in labels]
+    wrong = [dict(lab, kinds="water") if lab["kinds"] == "seaside" else lab for lab in labels]
     assert not gates.g_kind_precision(make_ctx(world, labels=wrong, name="w")).passed
 
 

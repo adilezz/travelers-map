@@ -184,6 +184,8 @@ Linking a photo or track to a place uses the place's **footprint**, not only its
 | `place_season(place_id, month, score, source)` | Best months, from sourced climate and visitor data only |
 | `travel_effort(place_id, from_hub, hours, mode)` | Access effort from a gateway, sourced |
 | `place_stay(place_id, typical_stay_hours, source)` | Typical time needed |
+| `place_activity(place_id, activity, rule_id, strength, evidence_asset_ids[])` | Experiences (dive, ski, trek, wine, festival…): what you do there, never a kind, never driving tier (document 1 §7.4) |
+| `place_event`, `place_visitors`, `place_advisory`, `place_access`, `place_facet` | Dated events with a QID; **official** visitor statistics only; government advisories as dated, sourced facts with their issuer; effort class, elevation, ascent, wheelchair access; and an escape hatch for any later key/value dimension |
 | `place_metric.pageviews_monthly` | Twelve monthly values, not only their sum, to see seasonality of interest |
 | `asset.snapshot`, `source.redistributable` | The snapshot date on every asset; a flag a gate enforces so a shareable bundle contains no restricted source |
 
@@ -271,17 +273,18 @@ The first prototype runs on **five countries — Egypt, Peru, Italy, Jordan, Tan
 
 | Path | What it is |
 |---|---|
-| `atlas/vocab.py`, `geo.py` | The 13 kinds, 4 tiers, id and key formats; haversine, Wilson interval, accent folding |
+| `atlas/vocab.py`, `geo.py` | The 14 kinds with labels and tie-break priority, 4 tiers, id and key formats; haversine, Wilson interval, accent folding |
 | `atlas/golden.py` | Loads and validates the golden set (schema, tolerances, kinds, UNESCO ids, relation targets); requires the UNESCO list |
 | `atlas/bundle.py` | Reads a bundle and validates its structure so gates never run on malformed records |
+| `atlas/kinds.py` | Choosing kinds from the rules that fired: noisy-or over distinct sources, pair rules as data, total tie-break order, cut reasons, crowded flag |
 | `atlas/registry.py` | The registry reader (CSV or Parquet): key index, merge chains, key conflicts |
 | `atlas/matching.py` | One-to-one matching of golden rows to places by ISO3, type, distance and QID or name; duplicate detection |
 | `atlas/gates.py` | 16 gates plus 4 pending; each returns `n` and `skipped`; any exception is a failure |
 | `atlas/verify.py`, `freeze.py` | `make verify`; freezing the holdout by hash |
 | `atlas/schema.sql`, `owner_schema.sql` | The section 4 schema with CHECK constraints tied to the vocabulary, reserved tables included; and the separate owner store (4.1) |
 | `data/golden/golden.csv` | 106 rows: 97 positive and 9 relational, five countries |
-| `data/rules/tiers.json` | Initial admission, notability and tier parameters; `classes.csv` and `kinds.csv` are headers for M2 and M3 |
+| `data/rules/tiers.json` | Initial admission, notability and tier parameters; `kinds.csv` holds 20 draft rules (uncalibrated), `kind_pairs.csv` the overlap rules, `activities.csv` the experience vocabulary; `classes.csv` is a header for M2 |
 | `data/registry/` | Empty `place_registry.parquet` with its `keys` column |
-| `pipeline/tests/` | 77 tests: an oracle bundle built from the golden set, adversarial fixtures (the v1 Quillabamba failure), a mutation suite, and a test that fails if a gate has no failing test |
+| `pipeline/tests/` | 95 tests: an oracle bundle built from the golden set, adversarial fixtures (the v1 Quillabamba failure), a mutation suite, and a test that fails if a gate has no failing test |
 
 Gates implemented: G-SCHEMA, G-GOLDEN, G-LANDMARK, G-TIER, G-ID, G-IDENT, G-NAMES, G-COUNT, G-KIND, G-KIND-PRECISION, G-COVER, G-EVIDENCE, G-INTEGRITY, G-CHURN, and (with `--release`) G-HOLDOUT and G-PRECISION. **Pending**, counted as failures: G-DETERMINISM (M2), G-REGION, G-DISPUTE, G-PRINT (M4). `make test` must always pass; `make verify` is expected to fail until a bundle passes.
