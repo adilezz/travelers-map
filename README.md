@@ -14,14 +14,14 @@ Version 2, started 1 October 2026 in this clean repository. The v1 attempt lives
 
 | Milestone | State |
 |---|---|
-| **M0** Specs, ground truth, gates as code | **Done**: 5 specification documents, a 106-row golden set, 16 gates, 116 tests |
+| **M0** Specs, ground truth, gates as code | **Done**: 5 specification documents, a 205-row golden set, 17 gates, 129 tests |
 | M1 Backbone: pinned inputs, Wikidata filter, registry, asset table | **Started.** Built and tested offline: input pinning, id minting, the QID resolver and class checker. Waiting on: the owner's H1 and a local run of `make qids` and `make classes` |
 | M2 Places: candidates, resolution, admission, names | |
 | M3 Rank and kinds | |
 | M4 Printed map | |
 | M5 Web atlas | |
 
-The first prototype covers five countries (Egypt, Peru, Italy, Jordan, Tanzania) and must pass its golden set before the world is built.
+The first prototype covers nine countries (Egypt, Peru, Italy, Jordan, Tanzania, plus Morocco, Spain, France, Türkiye) and must pass its golden set before the world is built.
 
 ## Start here
 

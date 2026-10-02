@@ -2,9 +2,13 @@
   "_note": "Countries in scope for the current build. Committed on purpose: a bundle cannot choose its own scope or exemptions.",
   "sovereign": [
     "EGY",
+    "ESP",
+    "FRA",
     "ITA",
     "JOR",
+    "MAR",
     "PER",
+    "TUR",
     "TZA"
   ],
   "dependencies": [],

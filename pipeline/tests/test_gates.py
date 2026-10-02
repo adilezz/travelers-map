@@ -306,7 +306,7 @@ def test_cover_reads_the_committed_scope_not_the_bundles(oracle, make_ctx):
     assert not r.passed
     assert not gates.g_cover(make_ctx(oracle, scope=None, name="n")).passed
     outside = clone(oracle)
-    outside.append({**oracle[0], "place_id": pid("fr"), "iso3": "FRA", "qid": "Q9"})
+    outside.append({**oracle[0], "place_id": pid("fr"), "iso3": "DEU", "qid": "Q9"})
     assert not gates.g_cover(make_ctx(outside, name="o")).passed
 
 
@@ -324,9 +324,10 @@ def balanced_world(n_per_kind=30):
 
 
 def test_kind_gate_share_checks_are_skipped_loudly_on_small_bundles(oracle, make_ctx):
-    lenient = gates.g_kind(make_ctx(oracle))
+    small = oracle[:60]                      # share bounds apply from 100 places
+    lenient = gates.g_kind(make_ctx(small))
     assert lenient.passed and lenient.skipped == 1
-    strict = gates.g_kind(make_ctx(oracle, strict=True, name="s"))
+    strict = gates.g_kind(make_ctx(small, strict=True, name="s"))
     assert not strict.passed and "prototype" in strict.detail
 
 

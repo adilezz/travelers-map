@@ -16,7 +16,7 @@ def test_validation_requires_the_unesco_list(golden_rows):
 
 def test_every_prototype_country_is_covered(golden_rows):
     countries = Counter(r.iso3 for r in golden_rows if r.row_kind == "positive")
-    assert set(countries) == {"EGY", "PER", "ITA", "JOR", "TZA"}
+    assert set(countries) == {"EGY", "ESP", "FRA", "ITA", "JOR", "MAR", "PER", "TUR", "TZA"}
     assert all(n >= 15 for n in countries.values())
 
 
@@ -37,7 +37,7 @@ def test_relational_rows_have_the_intended_targets(golden_rows):
 
 def test_optional_rows_are_not_negative(golden_rows):
     optional = {r.name for r in golden_rows if r.row_kind == "optional"}
-    assert optional == {"Colosseum", "Uffizi Gallery"}
+    assert optional == {"Colosseum", "Uffizi Gallery", "Sagrada Familia", "Prado Museum", "Mezquita of Cordoba", "Hagia Sophia"}
 
 
 def test_validator_catches_broken_rows(golden_rows, whs):

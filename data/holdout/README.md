@@ -2,7 +2,7 @@
 
 H1 is the one measure of recall that does not come from the same signals the pipeline uses. It only works if it stays independent. Rules:
 
-1. **100 rows for the prototype: 20 each for Egypt, Peru, Italy, Jordan and Tanzania.** The bundle can only be judged on countries it contains.
+1. **100 rows for the prototype: 20 each for Morocco, Spain, France, Italy and Türkiye** (decision D24; Egypt, Peru, Jordan and Tanzania are calibration countries with golden rows only). The bundle can only be judged on countries it contains.
 2. **From your own knowledge.** Places you know, have been to, or would insist someone sees. Do not copy from a guidebook site, a ranking, or Wikipedia lists, and **do not use an AI assistant**: that would reintroduce the signals the pipeline uses.
 3. **Disjoint from the golden set.** Do not open `data/golden/golden.csv` while writing. The gate rejects any H1 row that matches a golden row by name or location (within 1 km), so overlap is caught, but avoiding it by looking is the very thing to avoid.
 4. **Do not look at pipeline output** until H1 is frozen.

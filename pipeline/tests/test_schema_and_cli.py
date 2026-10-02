@@ -94,7 +94,7 @@ def test_verify_never_goes_green_on_the_oracle_and_reports_n(oracle, tmp_path):
     d = write_bundle(tmp_path / "b", oracle)
     r = run("--bundle", str(d), "--prototype", "--json", str(tmp_path / "out.json"))
     assert r.returncode == 1
-    assert "G-LANDMARK" in r.stdout and "PEND" in r.stdout and "[n=97]" in r.stdout
+    assert "G-LANDMARK" in r.stdout and "PEND" in r.stdout and "[n=185]" in r.stdout
     results = json.loads((tmp_path / "out.json").read_text())
     assert {x["gate"] for x in results if x["pending"]} == {"G-DETERMINISM", "G-STRUCT", "G-REGION", "G-DISPUTE", "G-PRINT"}
 
@@ -106,7 +106,7 @@ def test_registry_parquet_is_readable_and_empty():
 
 def test_committed_data_files_are_valid():
     scope = json.loads((ROOT / "data" / "scope.json").read_text(encoding="utf-8"))
-    assert scope["sovereign"] == ["EGY", "ITA", "JOR", "PER", "TZA"]
+    assert scope["sovereign"] == ["EGY", "ESP", "FRA", "ITA", "JOR", "MAR", "PER", "TUR", "TZA"]
     cfg = json.loads((ROOT / "data" / "rules" / "tiers.json").read_text(encoding="utf-8"))
     assert cfg["admission"]["r5_country_floor"] == {"sovereign": 5, "dependency": 2}
     m = json.loads((ROOT / "data" / "inputs" / "MANIFEST.json").read_text(encoding="utf-8"))

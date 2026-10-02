@@ -65,7 +65,7 @@ def registry_for(places: list[dict]) -> Registry:
                      for p in places if isinstance(p, dict) and isinstance(p.get("place_id"), str)})
 
 
-SCOPE = {"sovereign": ["EGY", "ITA", "JOR", "PER", "TZA"], "dependencies": [], "exemptions": []}
+SCOPE = {"sovereign": ["EGY", "ESP", "FRA", "ITA", "JOR", "MAR", "PER", "TUR", "TZA"], "dependencies": [], "exemptions": []}
 
 
 @pytest.fixture(scope="session")

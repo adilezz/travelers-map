@@ -50,7 +50,7 @@ def shared_qid(ps):
 
 
 def outside_scope(ps):
-    ps.append({**ps[0], "place_id": pid("fr"), "iso3": "FRA", "qid": "Q42"})
+    ps.append({**ps[0], "place_id": pid("fr"), "iso3": "DEU", "qid": "Q42"})
     return ps
 
 

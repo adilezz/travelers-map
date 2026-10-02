@@ -76,7 +76,7 @@ Decided 1 October 2026: **the owner's laptop first, with a SPARQL subset for the
 
 | Step | Where | Why |
 |---|---|---|
-| Prototype, five countries: page Wikidata's public SPARQL endpoint by country; store the results as Parquet with the query text and run date | Laptop, minutes to hours | Small, and enough to pass the golden set |
+| Prototype, nine countries: page Wikidata's public SPARQL endpoint by country; store the results as Parquet with the query text and run date | Laptop, minutes to hours | Small, and enough to pass the golden set |
 | Small sources: WDPA, Ramsar, GeoNames, UNESCO, Natural Earth, Geofabrik extracts | Laptop | Megabytes to a few GB |
 | Pageviews | Laptop, filtered to candidate titles while streaming | Monthly files are large; only candidate titles are kept |
 | Full Wikidata dump, for the world build | A rented machine (about 8 vCPU, 32 GB RAM, 500 GB disk, roughly a day), or the laptop if it has about 300 GB free and can run overnight | Hundreds of GB compressed; the cost is small and one-off; only the filtered Parquet comes back |
@@ -285,7 +285,7 @@ Makefile                    make test · make lint · make verify
 | M4 Print | Territories, regions, print selection, overrides, proof | 1–2 weeks |
 | M5 Atlas | Web atlas on the bundle; migration of visits through the crosswalk | per document 5 |
 
-The first prototype runs on **five countries — Egypt, Peru, Italy, Jordan, Tanzania** — and must pass the golden set for them before any other country is built. The world build follows only when the prototype passes.
+The first prototype runs on **nine countries — Egypt, Peru, Italy, Jordan, Tanzania, Morocco, Spain, France, Türkiye** — and must pass the golden set for them before any other country is built. The world build follows only when the prototype passes.
 
 ### M0 as built
 
@@ -303,7 +303,7 @@ The first prototype runs on **five countries — Egypt, Peru, Italy, Jordan, Tan
 | `atlas/gates.py` | 16 gates plus 4 pending; each returns `n` and `skipped`; any exception is a failure |
 | `atlas/verify.py`, `freeze.py` | `make verify`; freezing the holdout by hash |
 | `atlas/schema.sql`, `owner_schema.sql` | The section 4 schema with CHECK constraints tied to the vocabulary, reserved tables included; and the separate owner store (4.1) |
-| `data/golden/golden.csv` | 106 rows: 97 positive and 9 relational, five countries |
+| `data/golden/golden.csv` | 205 rows: 185 positive and 20 relational, nine countries |
 | `data/rules/tiers.json` | Initial admission, notability and tier parameters; `kinds.csv` holds 20 draft rules (uncalibrated), `kind_pairs.csv` the overlap rules, `activities.csv` the experience vocabulary; `classes.csv` is a header for M2 |
 | `data/registry/` | Empty `place_registry.parquet` with its `keys` column |
 | `pipeline/tests/` | 116 tests: an oracle bundle built from the golden set, adversarial fixtures (the v1 Quillabamba failure), a mutation suite, and a test that fails if a gate has no failing test |
