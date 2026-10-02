@@ -60,10 +60,45 @@ CREATE TABLE place_metric (
   recognition DOUBLE, size_term DOUBLE, n_raw DOUBLE
 );
 
-CREATE TABLE place_parent (
+-- Structure layer (document 1 section 4.3, document 2 section 4.2). Typed, sourced, time-valid edges.
+-- part_of      src lies inside dst (Colosseum part_of Rome); a DAG, a place may have more than one parent
+-- gateway_of   src is the town through which dst is reached (Aguas Calientes gateway_of Machu Picchu)
+-- day_trip_from src is a separate destination reached from dst in a day (Versailles day_trip_from Paris); never containment
+-- near         src and dst are neighbours a traveller thinks of together; weakest relation
+CREATE TABLE place_edge (
+  src_id VARCHAR NOT NULL REFERENCES place(place_id),
+  dst_id VARCHAR NOT NULL REFERENCES place(place_id),
+  relation VARCHAR NOT NULL CHECK (relation IN ('part_of','gateway_of','day_trip_from','near')),
+  method VARCHAR NOT NULL CHECK (method IN ('wikidata','osm_containment','footprint','owner','rule')),
+  confidence DOUBLE NOT NULL CHECK (confidence BETWEEN 0 AND 1),
+  source_asset_id VARCHAR REFERENCES asset(asset_id),
+  restricted BOOLEAN NOT NULL DEFAULT FALSE,        -- derived from a restricted source (OSM, WDPA): kept out of a shareable bundle
+  valid_from DATE, valid_to DATE,
+  PRIMARY KEY (src_id, dst_id, relation),
+  CHECK (src_id <> dst_id)
+);
+
+-- Transport nodes are not places and never enter admission or tiers (document 2 section 4.2).
+CREATE TABLE node (
+  node_id VARCHAR PRIMARY KEY CHECK (regexp_matches(node_id, '^nd_[0-9a-hjkmnp-tv-z]{10}$')),  -- permanent, own registry
+  node_type VARCHAR NOT NULL CHECK (node_type IN ('airport','port','ferry_terminal','rail_station','bus_terminal')),
+  name VARCHAR NOT NULL, country_iso3 VARCHAR NOT NULL, lat DOUBLE NOT NULL, lon DOUBLE NOT NULL,
+  iata VARCHAR, icao VARCHAR, station_code VARCHAR, qid VARCHAR, osm_id VARCHAR,
+  importance VARCHAR CHECK (importance IN ('international','national','regional','local')),
+  status VARCHAR NOT NULL DEFAULT 'active', restricted BOOLEAN NOT NULL DEFAULT FALSE,
+  source_asset_id VARCHAR REFERENCES asset(asset_id), snapshot DATE
+);
+-- "serves", never "nearest": the relation names the node a traveller really uses (Petra served by Aqaba, Zanzibar by ZNZ and the Stone Town ferry).
+CREATE TABLE place_node (
   place_id VARCHAR NOT NULL REFERENCES place(place_id),
-  parent_id VARCHAR NOT NULL REFERENCES place(place_id),
-  relation VARCHAR NOT NULL CHECK (relation IN ('part_of','gateway_of'))
+  node_id VARCHAR NOT NULL REFERENCES node(node_id),
+  relation VARCHAR NOT NULL CHECK (relation IN ('in','serves')),   -- in = the node lies inside the place
+  mode VARCHAR NOT NULL CHECK (mode IN ('air','rail','sea','road')),
+  distance_km DOUBLE NOT NULL CHECK (distance_km >= 0),            -- straight line, a floor; road or rail time is never stored
+  method VARCHAR NOT NULL CHECK (method IN ('wikidata','osm_containment','distance_rule','owner')),
+  confidence DOUBLE NOT NULL CHECK (confidence BETWEEN 0 AND 1),
+  restricted BOOLEAN NOT NULL DEFAULT FALSE,
+  PRIMARY KEY (place_id, node_id, mode)
 );
 
 -- Reserved for later milestones (document 2 section 4.1); empty until then.
@@ -86,8 +121,21 @@ CREATE TABLE travel_effort (
   place_id VARCHAR NOT NULL REFERENCES place(place_id), from_hub VARCHAR NOT NULL, hours DOUBLE,
   mode VARCHAR, source VARCHAR NOT NULL
 );
+-- Typical time at a place: a labelled estimate, never advice. A bucket and a range, never minutes; absent means unknown, not short.
+-- Only Icon and Major places get one, and only from the owner or a source's own words (Wikivoyage text); never a sum of children.
 CREATE TABLE place_stay (
-  place_id VARCHAR PRIMARY KEY REFERENCES place(place_id), typical_stay_hours DOUBLE, source VARCHAR NOT NULL
+  place_id VARCHAR PRIMARY KEY REFERENCES place(place_id),
+  stay_bucket VARCHAR NOT NULL CHECK (stay_bucket IN ('hours','half_day','day','multi_day')),
+  hours_min DOUBLE, hours_max DOUBLE CHECK (hours_max IS NULL OR hours_min IS NULL OR hours_max >= hours_min),
+  method VARCHAR NOT NULL CHECK (method IN ('owner','source_text')),
+  confidence VARCHAR NOT NULL CHECK (confidence IN ('high','medium','low')),
+  source VARCHAR NOT NULL, snapshot DATE
+);
+-- Pointers out, never copies: opening hours, tickets and advisories stay with their owners.
+CREATE TABLE place_link (
+  place_id VARCHAR NOT NULL REFERENCES place(place_id),
+  rel VARCHAR NOT NULL CHECK (rel IN ('official','tickets','authority','advisory')),
+  url VARCHAR NOT NULL, retrieved DATE NOT NULL, PRIMARY KEY (place_id, rel, url)
 );
 
 -- Experiences and facts that never drive admission, tier or the kind cap (document 1 section 7.4).

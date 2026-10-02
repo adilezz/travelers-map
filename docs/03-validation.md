@@ -63,6 +63,7 @@ On each release, 100 places from H3 are shown to the owner with name, type, posi
 | **G-NAMES** | No raw QID, markup, control characters, mojibake, or name > 60 characters; every place has `name_en`; `name_local` present where the country's script differs |
 | **G-COUNT** | The manifest's total and per-country counts equal the files exactly |
 | **G-COVER** | Every state in the **committed** `data/scope.json` has ≥ 5 places and every dependency ≥ 2 (R5), or a committed exemption; no place lies outside the scope |
+| **G-STRUCT** (pending, M2) | Against `data/golden/structure.csv`: parent chains correct for every golden place (Machu Picchu never under Quillabamba), known `serves` cases hold, `part_of` is acyclic, no node more than 150 km from every place, stay coverage equals the fraction actually sourced and buckets agree with the owner in ≥ 80 % of rows |
 | **G-REGION** | Every place has exactly one `region_id`; each country's regions union to its land within the documented tolerance; no region or piece crosses an international border |
 | **G-DISPUTE** | Every disputed alias resolves per document 4 §7; no unruled case is silently drawn |
 | **G-PRINT** | The print selection satisfies spacing, quota and override rules (document 4 §6) at the chosen edition |

@@ -89,6 +89,7 @@ The rows the sources provide — a UNESCO inscription, a protected-area polygon,
 
 - **Serial and multi-part properties are one place.** A World Heritage property with forty components is one place with forty asset parts. Parts get pins only if the owner opts in.
 - **Genuine nesting is allowed but never required.** When a part is itself a destination — the Giza plateau contains the Sphinx; Florence contains the Uffizi; Rome contains the Colosseum — it may exist as its own place (if it clears the admission rule by itself) or stay as evidence on its parent. Both are correct, and validation does not test either way (document 3 §2.1). **Only true serial components are never separate:** the parts of a serial or multi-part property (the pyramid fields, the component sites of a World Heritage property) are assets of one place, and a pin on one is an error.
+- **Structure is stored as typed edges, never as a column** (document 2 §4.2): `part_of` (inside), `gateway_of` (the town through which a destination is reached), `day_trip_from` (a separate destination reached in a day: Versailles from Paris, Pompeii from Naples) and `near`. A day trip is **not** containment. Which nested destinations become places is settled by the nested-destination test on the golden set (`data/golden/structure.csv`); until then D5 stands. Sub-destinations are shown in a city's detailed view and are kept out of the printed hole budget unless they are Icons.
 - **A town beside a site is a link, not a merge.** `near_place_id` records that Aguas Calientes is the gateway to Machu Picchu. Both can exist. Neither absorbs the other.
 - **Suburbs are not places.** A suburb is admitted only if it is a destination in its own right.
 
@@ -250,7 +251,9 @@ Kinds are proven on a **hand-labelled stratified sample** with a second annotato
 | `why` | One line a person can read |
 | `evidence[]` | Assets: source, source id, URL, retrieved, role |
 | `qid`, `osm_id`, `geonames_id`, `wdpa_id`, `whs_id`, `wikipedia` | External identity, so links and re-matching never rely on names |
-| `near_place_id` | Gateway settlement or sibling |
+| `near_place_id` | Gateway settlement or sibling (the typed edges in document 2 §4.2 are the full form) |
+| `typical_stay` | Icon and Major only: a bucket (`hours`, `half_day`, `day`, `multi_day`) with an optional hour range, a method (`owner` or `source_text`) and a confidence. A labelled estimate, never a recommendation, never a sum of children; absent means unknown, not short |
+| transport nodes | Airports, ports, ferry terminals and stations that **serve** the place (`serves`, with mode and a straight-line distance). Nodes are not places and never enter admission or tiers |
 | `best_months[]`, `reach` | Present only when sourced; otherwise omitted, never dummy |
 | `evidence_depth` | `rich` or `thin` |
 

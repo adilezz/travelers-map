@@ -41,7 +41,8 @@ def test_reserved_tables_exist_and_enforce_their_constraints():
     con = duckdb.connect()
     con.execute(SCHEMA)
     tables = {r[0] for r in con.execute("show tables").fetchall()}
-    assert {"place_crossref", "place_text", "place_season", "travel_effort", "place_stay"} <= tables
+    assert {"place_crossref", "place_text", "place_season", "travel_effort", "place_stay",
+            "place_edge", "node", "place_node", "place_link"} <= tables
     cols = {r[0] for r in con.execute("describe place_metric").fetchall()}
     assert "pageviews_monthly" in cols
     assert "redistributable" in {r[0] for r in con.execute("describe source").fetchall()}
@@ -95,7 +96,7 @@ def test_verify_never_goes_green_on_the_oracle_and_reports_n(oracle, tmp_path):
     assert r.returncode == 1
     assert "G-LANDMARK" in r.stdout and "PEND" in r.stdout and "[n=97]" in r.stdout
     results = json.loads((tmp_path / "out.json").read_text())
-    assert {x["gate"] for x in results if x["pending"]} == {"G-DETERMINISM", "G-REGION", "G-DISPUTE", "G-PRINT"}
+    assert {x["gate"] for x in results if x["pending"]} == {"G-DETERMINISM", "G-STRUCT", "G-REGION", "G-DISPUTE", "G-PRINT"}
 
 
 def test_registry_parquet_is_readable_and_empty():
@@ -113,3 +114,28 @@ def test_committed_data_files_are_valid():
     assert {"wikidata", "wikipedia_pageviews", "wikivoyage", "unesco_whs", "wdpa", "ramsar", "geonames", "osm", "natural_earth"} <= ids
     assert all(s["licence"] and "restricted" in s for s in m["sources"])
     assert json.loads((ROOT / "data" / "changelog.json").read_text(encoding="utf-8"))["causes"] == []
+
+
+def test_structure_layer_enforces_its_constraints():
+    con = duckdb.connect()
+    con.execute(SCHEMA)
+    for pid, name in (("pl_0000000001", "Rome"), ("pl_0000000002", "Colosseum")):
+        con.execute(f"insert into place values ('{pid}','site','{name}',null,'ITA',null,41.9,12.5,null,'Icon',null,null,'rich',null,null,null,null,null,null,null,null,'active','b1')")
+    ins = "insert into place_edge values ('pl_0000000002','pl_0000000001','{rel}','wikidata',0.9,null,false,null,null)"
+    con.execute(ins.format(rel="part_of"))
+    with pytest.raises(duckdb.Error):
+        con.execute(ins.format(rel="contains"))           # relations are a closed vocabulary
+    with pytest.raises(duckdb.Error):
+        con.execute("insert into place_edge values ('pl_0000000001','pl_0000000001','near','rule',0.5,null,false,null,null)")
+    node = "insert into node values ('{nid}','airport','Fiumicino','ITA',41.8,12.25,'FCO','LIRF',null,null,null,'international','active',false,null,null)"
+    con.execute(node.format(nid="nd_0000000001"))
+    with pytest.raises(duckdb.Error):
+        con.execute(node.format(nid="pl_0000000001"))      # nodes carry their own id family
+    con.execute("insert into place_node values ('pl_0000000001','nd_0000000001','serves','air',30.0,'wikidata',0.9,false)")
+    with pytest.raises(duckdb.Error):
+        con.execute("insert into place_node values ('pl_0000000001','nd_0000000001','nearest','air',30.0,'wikidata',0.9,false)")
+    with pytest.raises(duckdb.Error):                      # minutes are not stored, only buckets
+        con.execute("insert into place_stay values ('pl_0000000001','three_hours',null,null,'owner','high','x',null)")
+    with pytest.raises(duckdb.Error):
+        con.execute("insert into place_stay values ('pl_0000000001','day',9,3,'owner','high','x',null)")
+    con.execute("insert into place_stay values ('pl_0000000001','multi_day',24,72,'source_text','medium','wikivoyage',null)")

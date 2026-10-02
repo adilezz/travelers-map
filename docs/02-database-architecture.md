@@ -139,7 +139,9 @@ place_asset(place_id, asset_id, link_method, confidence, role)
 place_alias(place_id, alias, lang, kind)            -- kind: endonym|exonym|translit|former
 place_kind(place_id, kind, rule_id, strength, evidence_asset_ids[])
 place_metric(place_id, sitelinks, pageviews_12m, recognition, size_term, n_raw)
-place_parent(place_id, parent_id, relation)          -- part_of | gateway_of
+place_edge(src_id, dst_id, relation, method, confidence, ...)   -- part_of | gateway_of | day_trip_from | near
+node(node_id, node_type, name, lat, lon, iata, icao, station_code, ...)   -- not places; own permanent ids (nd_...)
+place_node(place_id, node_id, relation, mode, distance_km, ...)           -- in | serves
 
 merge_log(build, loser_key, survivor_place_id, method, reason)
 split_log(build, place_id, new_place_id, reason)
@@ -183,11 +185,27 @@ Linking a photo or track to a place uses the place's **footprint**, not only its
 | `place_text(place_id, lang, kind, text, source_asset_id, model, frozen_build)` | Why-go text, tips and summaries, with provenance. Text written by a model is frozen data, never recomputed in a build |
 | `place_season(place_id, month, score, source)` | Best months, from sourced climate and visitor data only |
 | `travel_effort(place_id, from_hub, hours, mode)` | Access effort from a gateway, sourced |
-| `place_stay(place_id, typical_stay_hours, source)` | Typical time needed |
+| `place_stay(place_id, stay_bucket, hours_min, hours_max, method, confidence, source)` | Typical time: a bucket and range, from the owner or a source's own words; Icon and Major only |
+| `place_link(place_id, rel, url, retrieved)` | Pointers to the official site, tickets, authority or advisory; opening hours and prices are never stored |
 | `place_activity(place_id, activity, rule_id, strength, evidence_asset_ids[])` | Experiences (dive, ski, trek, wine, festival…): what you do there, never a kind, never driving tier (document 1 §7.4) |
 | `place_event`, `place_visitors`, `place_advisory`, `place_access`, `place_facet` | Dated events with a QID; **official** visitor statistics only; government advisories as dated, sourced facts with their issuer; effort class, elevation, ascent, wheelchair access; and an escape hatch for any later key/value dimension |
 | `place_metric.pageviews_monthly` | Twelve monthly values, not only their sum, to see seasonality of interest |
 | `asset.snapshot`, `source.redistributable` | The snapshot date on every asset; a flag a gate enforces so a shareable bundle contains no restricted source |
+
+### 4.2 Structure layer: contained places, transport nodes, stay time
+
+Decided 2 October 2026 after a five-advisor review, for the web and mobile planner. The atlas stays the **identity-and-evidence layer**; a trip planner is a separate product that consumes it. Everything here is a typed row with a source, a snapshot date, a restricted flag and a validity period, never a wide column on `place`.
+
+- **`place_edge`** holds contained and linked places. Relations are a closed set: `part_of`, `gateway_of`, `day_trip_from`, `near`. Paris holds the Louvre, the Eiffel Tower and the Catacombs (`part_of`); Versailles is `day_trip_from` Paris, 20 km away, and is **not** contained. `part_of` forms a DAG with no cycles. Sources, in order: Wikidata P361/P131, then footprint containment, then the owner.
+- **`node`** holds airports (Wikidata P238/P239, OurAirports), ports and ferry terminals, and rail or bus stations (P296, OSM; major nodes only). Nodes are not places: if they were, the admission rules would swallow every station. They have their own permanent ids (`nd_` + ten characters) under the same append-only rules as places.
+- **`place_node`** links a place to the nodes a traveller really uses: `serves` or `in`, with mode and straight-line distance. It is not "the nearest airport": Petra is served by Aqaba (~130 km) and Amman, Machu Picchu by rail from Ollantaytambo or Cusco, Zanzibar by ZNZ and the Stone Town ferry. Links between nodes, routes and timetables are **not stored**; they are volatile and a different product.
+- **`place_stay`** is a bucket and an honest range, from the owner or a source's own words, for Icon and Major places only. It is never computed from landmark counts times guessed minutes, never a sum of children (a shared ticket would be counted twice), and never called "recommended".
+- **Added now, cheap:** multilingual names (Wikidata labels into `place_alias`), region geometry, an official-site pointer (`place_link`).
+- **Reserved, no data yet:** seasons, cost band, accessibility, lodging areas, media pointers with licence flags. Opening hours, prices, closures and advisories are pointers out, never stored facts.
+- **Refused:** reviews, ratings, best-of lists, live prices, live hours, timetables, routes, safety scores, user itineraries in the shared database (they belong in the owner store).
+- **Restricted data:** an edge or node derived from OSM (ODbL, share-alike) or WDPA carries `restricted = true` and is excluded from a shareable bundle.
+
+Gate `G-STRUCT` (pending, built in M2) checks `data/golden/structure.csv`: every golden place has a correct parent chain and Machu Picchu is never credited to Quillabamba; known `serves` cases hold; no node lies more than 150 km from every place; `part_of` has no cycle; stay coverage reports the fraction actually sourced, and buckets agree with the owner's values in at least 80 % of rows.
 
 No review, rating or recommendation source feeds any shared table (document 1 §2.2).
 

@@ -1,0 +1,41 @@
+row_id,row_type,subject,relation,object,mode,stay_bucket,hours_min,hours_max,basis,status,note
+S001,edge,G003,part_of,Karnak and Luxor Temple (nested destinations),,,,,hierarchy audit,claude_draft,"Luxor holds Karnak, Luxor Temple, West Bank; each may be its own place; decide in the nested-destination test"
+S002,edge,N002,part_of,G003,,,,,hierarchy audit,claude_draft,Valley of the Kings lies on Luxor's west bank
+S003,edge,G011,day_trip_from,G002,,,,,distance,claude_draft,"Saqqara ~30 km from Cairo; Giza is part of the Greater Cairo area but a separate destination, so day_trip_from not part_of"
+S004,edge,G001,day_trip_from,G002,,,,,distance,claude_draft,Giza plateau ~15 km from central Cairo
+S005,edge,G004,day_trip_from,G005,,,,,distance,claude_draft,Abu Simbel ~280 km from Aswan by road; a long day trip
+S006,edge,N003,part_of,G027,,,,,hierarchy audit,claude_draft,"Colosseum inside Rome. The test case for D5: place, or evidence on Rome?"
+S007,edge,N004,part_of,G028,,,,,hierarchy audit,claude_draft,Uffizi inside Florence
+S008,edge,G030,day_trip_from,G032,,,,,distance,claude_draft,Pompeii ~25 km from Naples; must not be merged into Naples
+S009,edge,G080,day_trip_from,G032,,,,,distance,claude_draft,Vesuvius ~12 km from Naples
+S010,edge,G034,day_trip_from,G032,,,,,distance,claude_draft,Amalfi Coast; bases are Sorrento/Salerno
+S011,edge,G014,day_trip_from,G015,,,,,hierarchy audit,claude_draft,Machu Picchu is reached from Cusco via Ollantaytambo or Aguas Calientes; must never be credited to Quillabamba
+S012,edge,G016,near,G015,,,,,distance,claude_draft,Sacred Valley / Ollantaytambo
+S013,edge,G044,near,G045,,,,,distance,claude_draft,Petra and Wadi Rum are ~110 km apart
+S014,edge,G044,day_trip_from,G049,,,,,distance,claude_draft,"Petra is often visited from Aqaba, ~130 km"
+S015,edge,G047,day_trip_from,G046,,,,,distance,claude_draft,Jerash ~50 km from Amman
+S016,edge,G058,part_of,Zanzibar (island place),,,,,hierarchy audit,claude_draft,Stone Town on Unguja; the island itself is not in the golden set
+S017,edge,G056,near,G055,,,,,distance,claude_draft,Ngorongoro and Serengeti are adjacent protected areas
+S018,edge,G098,gateway_of,G057,,,,,distance,claude_draft,Moshi is the usual base for Kilimanjaro
+S101,node,G002,serves,airport CAI (Cairo International),air,,,,wikidata P238,claude_draft,~20 km
+S102,node,G003,serves,airport LXR (Luxor International),air,,,,wikidata P238,claude_draft,
+S103,node,G027,serves,airport FCO (Fiumicino) and CIA,air,,,,wikidata P238,claude_draft,"two airports, both serve"
+S104,node,G027,serves,rail Roma Termini,rail,,,,wikidata P296,claude_draft,
+S105,node,G029,serves,airport VCE (Marco Polo),air,,,,wikidata P238,claude_draft,"the lagoon ferry is a sea node, not a road"
+S106,node,G015,serves,airport CUZ,air,,,,wikidata P238,claude_draft,
+S107,node,G014,serves,rail Machu Picchu / Aguas Calientes station,rail,,,,osm/wikidata,claude_draft,"the real access is by rail from Ollantaytambo or Cusco; CUZ is the air gateway via Cusco, not the nearest airport"
+S108,node,G044,serves,airport AQJ (King Hussein) and AMM (Queen Alia),air,,,,wikidata P238,claude_draft,"AQJ ~130 km, AMM ~230 km; no airport lies near Petra, so the relation is serves not nearest"
+S109,node,G049,serves,airport AQJ and the Aqaba port,sea,,,,wikidata,claude_draft,
+S110,node,G058,serves,airport ZNZ (Abeid Amani Karume),air,,,,wikidata P238,claude_draft,~6 km
+S111,node,G058,serves,ferry terminal Stone Town,sea,,,,osm,claude_draft,Dar es Salaam to Zanzibar ferries; a second serving node on a different mode
+S112,node,G055,serves,airport SEU (Seronera airstrip) and JRO/ARK,air,,,,wikidata,claude_draft,
+S113,node,G057,serves,airport JRO (Kilimanjaro International),air,,,,wikidata P238,claude_draft,
+S201,stay,G001,,,,half_day,3,5,owner expected,claude_draft,estimate; the owner overrides
+S202,stay,G002,,,,multi_day,,,owner expected,claude_draft,
+S203,stay,N003,,,,hours,2,3,source_text,claude_draft,
+S204,stay,G027,,,,multi_day,,,owner expected,claude_draft,
+S205,stay,G044,,,,multi_day,,,source_text,claude_draft,"Petra: one long day minimum; the bucket multi_day means two days or more; owner decides"
+S206,stay,G014,,,,day,,,source_text,claude_draft,
+S207,stay,G003,,,,multi_day,,,owner expected,claude_draft,
+S208,stay,G058,,,,day,,,owner expected,claude_draft,
+S209,stay,G057,,,,multi_day,,,owner expected,claude_draft,summit trek is five to seven days
