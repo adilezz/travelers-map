@@ -29,7 +29,9 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def country_geom(path: str, iso3: str):
-    for f in json.load(open(path, encoding="utf-8"))["features"]:
+    with open(path, encoding="utf-8") as fh:
+        features = json.load(fh)["features"]
+    for f in features:
         if f["properties"].get("iso3") == iso3:
             g = shape(f["geometry"])
             return transform(lambda xs, ys, zs=None: tuple(zip(*(project_mm(y, x) for x, y in zip(xs, ys, strict=True)), strict=True)), g)
