@@ -14,7 +14,7 @@ Version 2, started 1 October 2026 in this clean repository. The v1 attempt lives
 
 | Milestone | State |
 |---|---|
-| **M0** Specs, ground truth, gates as code | **Done**: 5 specification documents, a 205-row golden set, 17 gates, 129 tests |
+| **M0** Specs, ground truth, gates as code | **Done**: 5 specification documents, a 205-row golden set, 16 gates plus 5 pending, 129 tests |
 | M1 Backbone: pinned inputs, Wikidata filter, registry, asset table | **Started.** Built and tested offline: input pinning, id minting, the QID resolver and class checker. Waiting on: the owner's H1 and a local run of `make qids` and `make classes` |
 | M2 Places: candidates, resolution, admission, names | |
 | M3 Rank and kinds | |

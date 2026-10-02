@@ -300,7 +300,7 @@ The first prototype runs on **nine countries — Egypt, Peru, Italy, Jordan, Tan
 | `atlas/wikidata.py`, `qids.py` | A stdlib Wikidata client; proposes QIDs for the golden set and checks the class table against Wikidata labels. A QID is never accepted automatically. Run by the owner locally, tested here on recorded responses |
 | `atlas/registry.py` | The registry reader (CSV or Parquet): key index, merge chains, key conflicts |
 | `atlas/matching.py` | One-to-one matching of golden rows to places by ISO3, type, distance and QID or name; duplicate detection |
-| `atlas/gates.py` | 16 gates plus 4 pending; each returns `n` and `skipped`; any exception is a failure |
+| `atlas/gates.py` | 16 gates plus 5 pending; each returns `n` and `skipped`; any exception is a failure |
 | `atlas/verify.py`, `freeze.py` | `make verify`; freezing the holdout by hash |
 | `atlas/schema.sql`, `owner_schema.sql` | The section 4 schema with CHECK constraints tied to the vocabulary, reserved tables included; and the separate owner store (4.1) |
 | `data/golden/golden.csv` | 205 rows: 185 positive and 20 relational, nine countries |
