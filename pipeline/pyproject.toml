@@ -34,6 +34,8 @@ select = ["E", "F", "I", "UP", "B", "SIM"]
 "atlas/qids.py" = ["E501"]
 "atlas/snapshot.py" = ["E501"]
 "atlas/wikidata.py" = ["E501"]
+"atlas/tiles.py" = ["E501"]
+"scripts/*" = ["E501", "T20"]
 "tests/*" = ["E501"]
 
 [tool.pytest.ini_options]

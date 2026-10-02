@@ -49,6 +49,28 @@ The budget is a **ceiling**. A build reports the count achieved and the reason i
 6. A piece exists only where holes exist; empty land is printed but carries no piece. A wall with gaps is honest. (The web atlas, by contrast, tessellates all land into regions — document 2 §8.)
 7. A piece is **named from the polygon**, never from the merge that made it: the first-level unit containing its centroid; failing that the largest settlement inside it; failing that a compass qualifier on the country. A piece named for a settlement must contain it.
 
+### 4.1a Dynamic cuts: balanced subdivision (proposal under test)
+
+The owner's method: a country's **border is static**; inside it, tiles are separated by **straight cuts along the map's two axes**, placed by counting places. It is a recursive balanced (k-d style) subdivision, implemented and tested in `pipeline/atlas/tiles.py`, with an exploration script (`pipeline/scripts/tiles_demo.py`) that clips the rectangles to real borders.
+
+1. Work in millimetres on the wall (Equal Earth, 3.00 m wide). Each **landmass** of a country is tiled on its own, so a tile is always one connected piece (an island is never glued to the mainland).
+2. Take the tile's places. Cut across its **longer side** first.
+3. Sort the places along that axis. Candidate cuts are the **gaps between two neighbouring places**; the cut is made **midway in the gap**, so no hole lies on an edge.
+4. Choose the cut that splits the places most evenly (optionally within a slack of a place or two, taking the widest gap among them).
+5. Recurse on both sides. If no valid cut exists on the longer axis, try the other.
+
+**The stop rule.** A tile is finished when it holds **6 places or fewer**. A cut is refused, and the tile is kept as it is, when any of these holds:
+
+| Refusal | Why |
+|---|---|
+| A side would have **fewer than 3 places** | A tile carries 3–6 places in the normal case |
+| The gap is **under twice the edge margin** (default 3 mm, about 40 km) | A hole too near an edge is fragile and may foul the magnet |
+| A side would be **under 12 mm** across (about 160 km) | Handling and magnet seating |
+
+A tile that cannot be split yet holds **more than 6** places is flagged with the reason (`cannot_split:…`). It is resolved by an inset (§6.3), by a larger piece, or by the owner dropping a place; it is never forced.
+
+Open points: whether "equal" means equal **count** (assumed here) or equal **distance**; whether **empty land** gets tiles (the subdivision tiles the whole landmass, unlike §4.1 rule 6); a **maximum tile size**; and **freezing** the cuts per edition, because adding a place can move a cut (§8). Tiles are still **named from the polygon** (§4.1 rule 7).
+
 ### 4.2 Small states and islands
 
 Where a state is smaller than the minimum piece (Vatican, Monaco, Singapore, Malta, most Caribbean and Pacific islands):
