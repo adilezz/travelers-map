@@ -9,7 +9,6 @@ G007,Egypt,EGY,Saint Catherine's Monastery and Mount Sinai,Saint Catherine's Mon
 G008,Egypt,EGY,Siwa Oasis,,positive,area,29.203,25.519,10,Major,,desert|rural,,,to_resolve,,,,,
 G009,Egypt,EGY,White Desert,,positive,area,27.33,28.17,25,Notable,,desert|wildlife,,,to_resolve,,,,,Farafra; area anchor tolerance is wide
 G010,Egypt,EGY,Sharm el-Sheikh,,positive,settlement,27.916,34.33,8,Major,,seaside,,,to_resolve,,,,,Ras Mohammed is near; one pin is enough
-G011,Egypt,EGY,Saqqara,,positive,site,29.871,31.216,5,Major,,ruins|desert,86,,to_resolve,,,,whs_id verified by name in whs_expanded.xml,Step Pyramid; ~20 km from Giza
 G012,Egypt,EGY,Edfu,,positive,settlement,24.978,32.873,5,Notable,,ruins,,,to_resolve,,,,,
 G013,Egypt,EGY,Wadi Al-Hitan,Whale Valley|Wadi El-Hitan,positive,area,29.27,30.04,20,Notable,Notable,desert|wildlife,1186,,to_resolve,,,y,whs_id verified by name in whs_expanded.xml,"v1's Egypt #1 was a Faiyum village; this natural WHS must be Notable, not top"
 G014,Peru,PER,Machu Picchu,Machu Pichu|Historic Sanctuary of Machu Picchu,positive,site,-13.163,-72.545,5,Icon,,mountain|ruins,274,,to_resolve,,,y,whs_id verified by name in whs_expanded.xml,"v1 shipped this as 'Quillabamba'; Aguas Calientes is the gateway, linked not merged"
@@ -120,7 +119,7 @@ G119,Morocco,MAR,Tetouan,Medina of Tetouan|Titawin,positive,settlement,35.571,-5
 G120,Morocco,MAR,El Jadida,Mazagan|Portuguese City of Mazagan,positive,settlement,33.257,-8.502,8,Notable,,maritime|ruins,1058,,to_resolve,,,,whs_id verified by name in whs_properties.csv,Portuguese fortified port city on the Atlantic
 G121,Spain,ESP,Madrid,,positive,settlement,40.417,-3.704,8,Icon,,capital|metropolis,,,to_resolve,,,,settlement >=100000 (national capital),Capital of Spain; Escorial and Aranjuez are separate WHS properties
 G122,Spain,ESP,Barcelona,,positive,settlement,41.387,2.170,8,Icon,,metropolis|maritime|old_town,,,to_resolve,,,,settlement >=100000,Gaudi works (WHS 320) are not credited to the city row
-G123,Spain,ESP,Alhambra,Alhambra and Generalife|Alhambra de Granada|Granada,positive,site,37.177,-3.588,4,Icon,,ruins|old_town,314,,to_resolve,,,,whs_id verified by name in whs_properties.csv,"WHS 314 Alhambra, Generalife and Albayzin; Granada city centre is ~1 km away"
+G123,Spain,ESP,Alhambra,Alhambra and Generalife|Alhambra de Granada,positive,site,37.177,-3.588,4,Icon,,ruins|old_town,314,,to_resolve,,,,whs_id verified by name in whs_properties.csv,"WHS 314 Alhambra, Generalife and Albayzin; Granada city centre is ~1 km away"
 G124,Spain,ESP,Seville,Sevilla|Cathedral of Seville|Real Alcazar,positive,settlement,37.389,-5.994,8,Major,,old_town|metropolis,383,,to_resolve,,,,whs_id verified by name in whs_properties.csv,"Cathedral, Alcazar and Archivo de Indias are parts of Seville"
 G125,Spain,ESP,Camino de Santiago,Way of St James|Camino Frances|Routes of Santiago de Compostela,positive,route,42.589,-2.842,60,Major,,sacred|rural,669,,to_resolve,,,,whs_id verified by name in whs_properties.csv,"Camino Frances and northern routes; route anchor is the WHS registry point in La Rioja, match by id"
 G126,Spain,ESP,Santiago de Compostela,Santiago,positive,settlement,42.881,-8.545,6,Major,,sacred|old_town,347,,to_resolve,,,,whs_id verified by name in whs_properties.csv,Pilgrimage end point; distinct from the route row ESP05
@@ -147,7 +146,7 @@ G146,France,FRA,Marseille,,positive,settlement,43.296,5.370,8,Major,,maritime|me
 G147,France,FRA,Loire Valley,Loire Valley Chateaux|Val de Loire,positive,area,47.413,0.984,40,Major,,rural|water|ruins,933,,to_resolve,,,,whs_id verified by name in whs_properties.csv,Anchor near Amboise; WHS stretches Sully-sur-Loire to Chalonnes
 G148,France,FRA,Chamonix and Mont Blanc,Chamonix|Mont Blanc|Chamonix-Mont-Blanc,positive,area,45.924,6.869,15,Major,,mountain,,,to_resolve,,,,Wikidata item with >=40 sitelinks (to confirm at qid resolution),Alps hub; area anchor is the Chamonix valley
 G149,France,FRA,Provence (Luberon),Luberon|Provence,positive,area,43.911,5.200,40,Major,,rural,,,to_resolve,,,,Wikidata item with >=40 sitelinks (to confirm at qid resolution),Anchor near Gordes; Luberon regional park villages and lavender country
-G150,France,FRA,French Riviera,Cote d'Azur|Riviera|Cannes,positive,area,43.553,7.017,30,Major,,seaside|maritime,,,to_resolve,,,,Wikidata item with >=40 sitelinks (to confirm at qid resolution),Anchor at Cannes; Nice is a separate settlement
+G150,France,FRA,French Riviera,Cote d'Azur|Riviera,positive,area,43.553,7.017,30,Major,,seaside|maritime,,,to_resolve,,,,Wikidata item with >=40 sitelinks (to confirm at qid resolution),Anchor at Cannes; Nice is a separate settlement
 G151,France,FRA,Corsica,Corse|Corsica Island,positive,area,42.200,9.100,60,Major,,seaside|mountain|rural,,,to_resolve,,,,Wikidata item with >=40 sitelinks (to confirm at qid resolution),Whole island; Gulf of Porto (WHS 258) is a part and not separately listed here
 G152,France,FRA,Normandy D-Day Beaches,D-Day Beaches|Normandy Landing Beaches|Omaha Beach,positive,area,49.339,-0.623,40,Major,,seaside|ruins,1581,,to_resolve,,,,whs_id verified by name in whs_properties.csv,Anchor at Arromanches; beaches run Utah to Sword
 G153,France,FRA,Lourdes,,positive,settlement,43.095,-0.046,8,Major,,sacred,,,to_resolve,,,y,Wikidata item with >=40 sitelinks (to confirm at qid resolution),Pilgrimage town; must stay below Paris
@@ -175,7 +174,7 @@ G174,Türkiye,TUR,Antalya,Kaleiçi|Turquoise Coast|Turkish Riviera,positive,sett
 G175,Türkiye,TUR,Mount Ararat,Ağrı Dağı|Agri Dagi|Ararat,positive,area,39.702,44.298,30,Major,,mountain|volcanic,,,to_resolve,,,,Wikidata item expected >= 40 sitelinks (to_resolve),"Dormant volcano, 5,137 m, near Iran and Armenia borders; Ağrı Dağı National Park"
 G176,Türkiye,TUR,Bodrum,Halicarnassus,positive,settlement,37.034,27.430,8,Major,,seaside|maritime|ruins,,,to_resolve,,,,Wikidata item expected >= 40 sitelinks (to_resolve),Resort and castle town on the Aegean; site of ancient Halicarnassus
 G177,Türkiye,TUR,Ankara,Angora,positive,settlement,39.934,32.860,10,Major,,capital|metropolis,,,to_resolve,,,,"settlement >= 100,000",Current capital of Türkiye; must rank below Istanbul
-G178,Türkiye,TUR,Sumela Monastery,Sümela|Sumela|Trabzon,positive,site,40.690,39.658,6,Notable,,sacred|mountain|forest,,,to_resolve,,,,Wikidata item expected >= 40 sitelinks (to_resolve),"Cliff-face monastery in the Altındere valley, ~45 km south of Trabzon"
+G178,Türkiye,TUR,Sumela Monastery,Sümela|Sumela,positive,site,40.690,39.658,6,Notable,,sacred|mountain|forest,,,to_resolve,,,,Wikidata item expected >= 40 sitelinks (to_resolve),"Cliff-face monastery in the Altındere valley, ~45 km south of Trabzon"
 G179,Türkiye,TUR,Izmir,İzmir|Smyrna,positive,settlement,38.423,27.143,10,Notable,,metropolis|maritime,,,to_resolve,,,,"settlement >= 100,000","Aegean port city, population over 4 million in the metro area"
 G180,Türkiye,TUR,Ölüdeniz,Oludeniz|Blue Lagoon,positive,site,36.550,29.116,6,Notable,,seaside,,,to_resolve,,,,Wikidata item expected >= 40 sitelinks (to_resolve),Lagoon and beach near Fethiye; Fethiye is not a separate row
 G181,Türkiye,TUR,Lake Van,Van Gölü|Van Golu,positive,area,38.650,42.900,40,Notable,,water|mountain,,,to_resolve,,,,Wikidata item expected >= 40 sitelinks (to_resolve),Largest lake in Türkiye (soda lake); anchor is mid-lake
@@ -186,8 +185,8 @@ G185,Türkiye,TUR,Şanlıurfa,Sanliurfa|Urfa|Edessa,positive,settlement,37.159,3
 G186,Türkiye,TUR,Gaziantep,Antep|Gaziantep Castle,positive,settlement,37.066,37.383,10,Notable,,metropolis|old_town,,,to_resolve,,,,"settlement >= 100,000","Large southeast city, historic bazaar quarter"
 N001,Egypt,EGY,Great Pyramid of Khufu,,negative,,,,,,,,,,n/a,component_of,G001,,,True serial component of WHS 86: must not be a separate pin
 N002,Egypt,EGY,Valley of the Kings,,negative,,,,,,,,,,n/a,component_of,G003,,,Component of the Ancient Thebes property (WHS 87): must not be a separate pin
-N003,Italy,ITA,Colosseum,,optional,,,,,,,,,,n/a,part_of,G027,,,Nested destination: may exist as its own place or as evidence on Rome; both pass
-N004,Italy,ITA,Uffizi Gallery,,optional,,,,,,,,,,n/a,part_of,G028,,,Nested destination: either is fine
+N003,Italy,ITA,Colosseum,,negative,,,,,,,,,,n/a,component_of,G027,,,"Asset of the parent place (D25): evidence on G027, never its own place or pin"
+N004,Italy,ITA,Uffizi Gallery,,negative,,,,,,,,,,n/a,component_of,G028,,,"Asset of the parent place (D25): evidence on G028, never its own place or pin"
 N005,Italy,ITA,Belluno,,negative,,,,,,,,,,n/a,not_above,G028,y,,Must not outrank Florence (v1: Belluno 90 > Florence 77)
 N006,Peru,PER,Quillabamba,,negative,,,,,,,,,,n/a,not_credited,G014,y,,Must not carry Machu Picchu's World Heritage evidence
 N007,Jordan,JOR,Ma'an,,negative,,,,,,,,,,n/a,not_credited,G044,y,,Must not carry Petra's World Heritage evidence
@@ -196,11 +195,12 @@ N009,Egypt,EGY,Yusuf as-Siddiq,,negative,,,,,,,,,,n/a,not_above,G001|G002|G003|G
 N010,Morocco,MAR,Imlil,,negative,,,,,,,,,,n/a,not_above,G099,,,Village must not outrank Marrakech
 N011,Morocco,MAR,Ifrane,,negative,,,,,,,,,,n/a,not_above,G100,,,Hill town must not outrank Fez
 N012,Morocco,MAR,Ouarzazate,,negative,,,,,,,,,,n/a,not_credited,G105,,,Must not carry Ait Benhaddou's World Heritage evidence (separate property about 30 km away)
-N013,Spain,ESP,Sagrada Familia,,optional,,,,,,,,,,n/a,part_of,G122,,,"Nested destination (Gaudi works, WHS 320): may exist as its own place or as evidence on Barcelona; both pass"
-N014,Spain,ESP,Prado Museum,,optional,,,,,,,,,,n/a,part_of,G121,,,Nested destination: either is fine
-N015,Spain,ESP,Mezquita of Cordoba,,optional,,,,,,,,,,n/a,part_of,G134,,,Nested destination inside the Historic Centre of Cordoba (WHS 313): either is fine
+N013,Spain,ESP,Sagrada Familia,,negative,,,,,,,,,,n/a,component_of,G122,,,"Asset of the parent place (D25): evidence on G122, never its own place or pin"
+N014,Spain,ESP,Prado Museum,,negative,,,,,,,,,,n/a,component_of,G121,,,"Asset of the parent place (D25): evidence on G121, never its own place or pin"
+N015,Spain,ESP,Mezquita of Cordoba,,negative,,,,,,,,,,n/a,component_of,G134,,,"Asset of the parent place (D25): evidence on G134, never its own place or pin"
 N016,France,FRA,Lourdes,,negative,,,,,,,,,,n/a,not_above,G143,y,,Must not outrank Paris (v1: Lourdes above Paris)
 N017,France,FRA,Biarritz,,negative,,,,,,,,,,n/a,not_above,G145,,,Small resort town must not outrank Lyon
 N018,France,FRA,Dune du Pilat,,negative,,,,,,,,,,n/a,not_above,G144,,,A single dune must not outrank Mont-Saint-Michel
-N019,Türkiye,TUR,Hagia Sophia,,optional,,,,,,,,,,n/a,part_of,G165,,,Nested destination: may exist as its own place or as evidence on Istanbul; both pass
+N019,Türkiye,TUR,Hagia Sophia,,negative,,,,,,,,,,n/a,component_of,G165,,,"Asset of the parent place (D25): evidence on G165, never its own place or pin"
 N020,Türkiye,TUR,Selçuk,,negative,,,,,,,,,,n/a,not_credited,G168,,,Town beside Ephesus; must not carry Ephesus's World Heritage evidence
+N021,Egypt,EGY,Saqqara,,negative,,,,,,,,,,n/a,component_of,G001,y,,"Absorbed into Giza (D25, structure S003): same kind and same Memphis property, ~15-17 km; the merged place keeps the Giza name and pin"

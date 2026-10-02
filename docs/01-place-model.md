@@ -88,7 +88,8 @@ The rows the sources provide — a UNESCO inscription, a protected-area polygon,
 ### 4.3 Hubs, parts and nesting
 
 - **Serial and multi-part properties are one place.** A World Heritage property with forty components is one place with forty asset parts. Parts get pins only if the owner opts in.
-- **Genuine nesting is allowed but never required.** When a part is itself a destination — the Giza plateau contains the Sphinx; Florence contains the Uffizi; Rome contains the Colosseum — it may exist as its own place (if it clears the admission rule by itself) or stay as evidence on its parent. Both are correct, and validation does not test either way (document 3 §2.1). **Only true serial components are never separate:** the parts of a serial or multi-part property (the pyramid fields, the component sites of a World Heritage property) are assets of one place, and a pin on one is an error.
+- **A monument inside a place is an asset of that place, never a place.** Decided 2 October 2026 (D25), replacing the earlier "either is fine" ruling. The Colosseum is evidence on Rome, the Uffizi on Florence, Karnak, Luxor Temple and the Valley of the Kings on Luxor. An asset has no pin and no stay row; its time counts inside its parent's stay. The same holds for the parts of a serial or multi-part property (the pyramid fields, the component sites of a World Heritage property).
+- **Nearby places of the same kind are absorbed** into the more famous one (§5.2). Places whose kind differs stay separate and are linked by a typed edge.
 - **Structure is stored as typed edges, never as a column** (document 2 §4.2): `part_of` (inside), `gateway_of` (the town through which a destination is reached), `day_trip_from` (a separate destination reached in a day: Versailles from Paris, Pompeii from Naples) and `near`. A day trip is **not** containment. Which nested destinations become places is settled by the nested-destination test on the golden set (`data/golden/structure.csv`); until then D5 stands. Sub-destinations are shown in a city's detailed view and are kept out of the printed hole budget unless they are Icons.
 - **A town beside a site is a link, not a merge.** `near_place_id` records that Aguas Calientes is the gateway to Machu Picchu. Both can exist. Neither absorbs the other.
 - **Suburbs are not places.** A suburb is admitted only if it is a destination in its own right.
@@ -120,6 +121,15 @@ One real destination often exists as several records. Resolution runs in this or
 4. Owner decision (`merge_overrides.csv`).
 
 The survivor is the record with the most sitelinks. Merges are reversible: a `split_log` records every unmerge, and neither changes a `place_id` except by the rules in document 2.
+
+### 5.2 Absorption
+
+Merging (5.1) joins records of one destination. Absorption joins *neighbouring destinations that a traveller treats as one*. Decided 2 October 2026 (D25), from the owner's verification of the structure table (`data/golden/structure.csv`):
+
+- A candidate within about 25 km of a more famous place, **of the same kind** (and, where one exists, of the same World Heritage property), becomes an asset of that place. The merged place keeps the famous name and pin. Examples: Saqqara and Memphis into Giza; Herculaneum into Pompeii; Ostia Antica into Rome; Aguas Calientes into Machu Picchu; Wadi Musa into Petra.
+- A neighbour whose **kind diverges** stays a separate place and is linked: Giza is a day trip from Cairo (desert necropolis against megacity); Pompeii is a day trip from Naples (buried Roman town against living city); Tivoli from Rome; the Dead Sea from Amman.
+- Typed edges are for places within about 60 km. A longer link needs a stated transport basis in its note (Abu Simbel from Aswan, a convoy or a flight). Where the ruling is not obvious it is logged in the structure table with its reason.
+- A town that is only a gateway on the real access path is a `gateway_of` edge, never credited with the destination's evidence (Moshi for Kilimanjaro, Arusha and Karatu for the northern parks). Quillabamba is on no access path to Machu Picchu: a negative row.
 
 ## 6. Notability and tiers
 

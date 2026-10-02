@@ -303,7 +303,7 @@ The first prototype runs on **nine countries — Egypt, Peru, Italy, Jordan, Tan
 | `atlas/gates.py` | 16 gates plus 5 pending; each returns `n` and `skipped`; any exception is a failure |
 | `atlas/verify.py`, `freeze.py` | `make verify`; freezing the holdout by hash |
 | `atlas/schema.sql`, `owner_schema.sql` | The section 4 schema with CHECK constraints tied to the vocabulary, reserved tables included; and the separate owner store (4.1) |
-| `data/golden/golden.csv` | 205 rows: 185 positive and 20 relational, nine countries |
+| `data/golden/golden.csv` | 205 rows: 184 positive and 21 relational, nine countries |
 | `data/rules/tiers.json` | Initial admission, notability and tier parameters; `kinds.csv` holds 20 draft rules (uncalibrated), `kind_pairs.csv` the overlap rules, `activities.csv` the experience vocabulary; `classes.csv` is a header for M2 |
 | `data/registry/` | Empty `place_registry.parquet` with its `keys` column |
 | `pipeline/tests/` | 116 tests: an oracle bundle built from the golden set, adversarial fixtures (the v1 Quillabamba failure), a mutation suite, and a test that fails if a gate has no failing test |

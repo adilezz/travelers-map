@@ -35,9 +35,10 @@ def test_relational_rows_have_the_intended_targets(golden_rows):
     assert {by[t].name for t in nine.targets} == {"Giza Pyramids", "Cairo", "Luxor (Thebes)", "Abu Simbel"}
 
 
-def test_optional_rows_are_not_negative(golden_rows):
-    optional = {r.name for r in golden_rows if r.row_kind == "optional"}
-    assert optional == {"Colosseum", "Uffizi Gallery", "Sagrada Familia", "Prado Museum", "Mezquita of Cordoba", "Hagia Sophia"}
+def test_nested_monuments_are_negative_component_rows(golden_rows):
+    assert not [r for r in golden_rows if r.row_kind == "optional"]
+    comps = {r.name for r in golden_rows if r.row_kind == "negative" and r.relation == "component_of"}
+    assert {"Colosseum", "Uffizi Gallery", "Saqqara", "Hagia Sophia"} <= comps
 
 
 def test_validator_catches_broken_rows(golden_rows, whs):
@@ -55,3 +56,25 @@ def test_loading_tolerates_non_numeric_values(tmp_path):
     p.write_text(",".join(G.COLUMNS) + "\nG1,Egypt,EGY,X,,positive,site,abc,,,Icon,,ruins,,,,,,,,\n", encoding="utf-8")
     rows = G.load(p)
     assert rows[0].lat is None and any("coordinates" in x for x in G.validate(rows, set()))
+
+
+def test_structure_table_is_well_formed(golden_rows):
+    import csv
+    from pathlib import Path
+    path = Path(__file__).resolve().parents[2] / "data" / "golden" / "structure.csv"
+    rows = list(csv.DictReader(path.open(encoding="utf-8")))
+    ids = {r.golden_id for r in golden_rows}
+    retired = {"G011"}                       # Saqqara, absorbed into Giza (D25)
+    assert len({r["row_id"] for r in rows}) == len(rows)
+    for r in rows:
+        assert r["row_type"] in {"edge", "node", "stay"}, r["row_id"]
+        assert r["status"] in {"confirmed", "rejected"}, r["row_id"]
+        if r["row_type"] == "edge":
+            assert r["relation"] in {"part_of", "gateway_of", "day_trip_from", "near"}, r["row_id"]
+        if r["row_type"] == "node":
+            assert r["relation"] in {"in", "serves"} and r["mode"] in {"air", "rail", "sea", "road"}, r["row_id"]
+        if r["row_type"] == "stay":
+            assert r["stay_bucket"] in {"hours", "half_day", "day", "multi_day"}, r["row_id"]
+        for ref in (r["subject"], r["object"]):
+            if len(ref) == 4 and ref[0] in "GN" and ref[1:].isdigit():
+                assert ref in ids | retired or ref in {"N002", "N003", "N004"}, (r["row_id"], ref)

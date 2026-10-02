@@ -100,12 +100,13 @@ def test_relational_row_fails_closed_when_the_country_has_no_places(oracle, make
     assert not r.passed and "no places in EGY" in r.detail
 
 
-def test_nested_destinations_may_exist_or_not(oracle, make_ctx):
-    """Colosseum and Uffizi are optional rows: both outcomes pass."""
+def test_nested_monuments_must_not_be_separate_places(oracle, make_ctx):
+    """D25: the Colosseum is an asset of Rome; a separate Colosseum place fails."""
     rome = named(oracle, "Rome")
     with_nested = clone(oracle) + [{**rome, "place_id": pid("colosseum"), "name_en": "Colosseum",
                                     "aliases": [], "type": "site", "qid": "Q4"}]
-    assert gates.g_landmark(make_ctx(with_nested, name="n1")).passed
+    r = gates.g_landmark(make_ctx(with_nested, name="n1"))
+    assert not r.passed and "Colosseum" in r.detail
     assert gates.g_landmark(make_ctx(oracle, name="n2")).passed
 
 

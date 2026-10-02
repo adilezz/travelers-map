@@ -94,7 +94,7 @@ def test_verify_never_goes_green_on_the_oracle_and_reports_n(oracle, tmp_path):
     d = write_bundle(tmp_path / "b", oracle)
     r = run("--bundle", str(d), "--prototype", "--json", str(tmp_path / "out.json"))
     assert r.returncode == 1
-    assert "G-LANDMARK" in r.stdout and "PEND" in r.stdout and "[n=185]" in r.stdout
+    assert "G-LANDMARK" in r.stdout and "PEND" in r.stdout and "[n=184]" in r.stdout
     results = json.loads((tmp_path / "out.json").read_text())
     assert {x["gate"] for x in results if x["pending"]} == {"G-DETERMINISM", "G-STRUCT", "G-REGION", "G-DISPUTE", "G-PRINT"}
 

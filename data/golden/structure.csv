@@ -1,41 +1,111 @@
 row_id,row_type,subject,relation,object,mode,stay_bucket,hours_min,hours_max,basis,status,note
-S001,edge,G003,part_of,Karnak and Luxor Temple (nested destinations),,,,,hierarchy audit,owner_verified_2oct_no_corrections_received,"Luxor holds Karnak, Luxor Temple, West Bank; each may be its own place; decide in the nested-destination test"
-S002,edge,N002,part_of,G003,,,,,hierarchy audit,owner_verified_2oct_no_corrections_received,Valley of the Kings lies on Luxor's west bank
-S003,edge,G011,day_trip_from,G002,,,,,distance,owner_verified_2oct_no_corrections_received,"Saqqara ~30 km from Cairo; Giza is part of the Greater Cairo area but a separate destination, so day_trip_from not part_of"
-S004,edge,G001,day_trip_from,G002,,,,,distance,owner_verified_2oct_no_corrections_received,Giza plateau ~15 km from central Cairo
-S005,edge,G004,day_trip_from,G005,,,,,distance,owner_verified_2oct_no_corrections_received,Abu Simbel ~280 km from Aswan by road; a long day trip
-S006,edge,N003,part_of,G027,,,,,hierarchy audit,owner_verified_2oct_no_corrections_received,"Colosseum inside Rome. The test case for D5: place, or evidence on Rome?"
-S007,edge,N004,part_of,G028,,,,,hierarchy audit,owner_verified_2oct_no_corrections_received,Uffizi inside Florence
-S008,edge,G030,day_trip_from,G032,,,,,distance,owner_verified_2oct_no_corrections_received,Pompeii ~25 km from Naples; must not be merged into Naples
-S009,edge,G080,day_trip_from,G032,,,,,distance,owner_verified_2oct_no_corrections_received,Vesuvius ~12 km from Naples
-S010,edge,G034,day_trip_from,G032,,,,,distance,owner_verified_2oct_no_corrections_received,Amalfi Coast; bases are Sorrento/Salerno
-S011,edge,G014,day_trip_from,G015,,,,,hierarchy audit,owner_verified_2oct_no_corrections_received,Machu Picchu is reached from Cusco via Ollantaytambo or Aguas Calientes; must never be credited to Quillabamba
-S012,edge,G016,near,G015,,,,,distance,owner_verified_2oct_no_corrections_received,Sacred Valley / Ollantaytambo
-S013,edge,G044,near,G045,,,,,distance,owner_verified_2oct_no_corrections_received,Petra and Wadi Rum are ~110 km apart
-S014,edge,G044,day_trip_from,G049,,,,,distance,owner_verified_2oct_no_corrections_received,"Petra is often visited from Aqaba, ~130 km"
-S015,edge,G047,day_trip_from,G046,,,,,distance,owner_verified_2oct_no_corrections_received,Jerash ~50 km from Amman
-S016,edge,G058,part_of,Zanzibar (island place),,,,,hierarchy audit,owner_verified_2oct_no_corrections_received,Stone Town on Unguja; the island itself is not in the golden set
-S017,edge,G056,near,G055,,,,,distance,owner_verified_2oct_no_corrections_received,Ngorongoro and Serengeti are adjacent protected areas
-S018,edge,G098,gateway_of,G057,,,,,distance,owner_verified_2oct_no_corrections_received,Moshi is the usual base for Kilimanjaro
-S101,node,G002,serves,airport CAI (Cairo International),air,,,,wikidata P238,owner_verified_2oct_no_corrections_received,~20 km
-S102,node,G003,serves,airport LXR (Luxor International),air,,,,wikidata P238,owner_verified_2oct_no_corrections_received,
-S103,node,G027,serves,airport FCO (Fiumicino) and CIA,air,,,,wikidata P238,owner_verified_2oct_no_corrections_received,"two airports, both serve"
-S104,node,G027,serves,rail Roma Termini,rail,,,,wikidata P296,owner_verified_2oct_no_corrections_received,
-S105,node,G029,serves,airport VCE (Marco Polo),air,,,,wikidata P238,owner_verified_2oct_no_corrections_received,"the lagoon ferry is a sea node, not a road"
-S106,node,G015,serves,airport CUZ,air,,,,wikidata P238,owner_verified_2oct_no_corrections_received,
-S107,node,G014,serves,rail Machu Picchu / Aguas Calientes station,rail,,,,osm/wikidata,owner_verified_2oct_no_corrections_received,"the real access is by rail from Ollantaytambo or Cusco; CUZ is the air gateway via Cusco, not the nearest airport"
-S108,node,G044,serves,airport AQJ (King Hussein) and AMM (Queen Alia),air,,,,wikidata P238,owner_verified_2oct_no_corrections_received,"AQJ ~130 km, AMM ~230 km; no airport lies near Petra, so the relation is serves not nearest"
-S109,node,G049,serves,airport AQJ and the Aqaba port,sea,,,,wikidata,owner_verified_2oct_no_corrections_received,
-S110,node,G058,serves,airport ZNZ (Abeid Amani Karume),air,,,,wikidata P238,owner_verified_2oct_no_corrections_received,~6 km
-S111,node,G058,serves,ferry terminal Stone Town,sea,,,,osm,owner_verified_2oct_no_corrections_received,Dar es Salaam to Zanzibar ferries; a second serving node on a different mode
-S112,node,G055,serves,airport SEU (Seronera airstrip) and JRO/ARK,air,,,,wikidata,owner_verified_2oct_no_corrections_received,
-S113,node,G057,serves,airport JRO (Kilimanjaro International),air,,,,wikidata P238,owner_verified_2oct_no_corrections_received,
-S201,stay,G001,,,,half_day,3,5,owner expected,owner_verified_2oct_no_corrections_received,estimate; the owner overrides
-S202,stay,G002,,,,multi_day,,,owner expected,owner_verified_2oct_no_corrections_received,
-S203,stay,N003,,,,hours,2,3,source_text,owner_verified_2oct_no_corrections_received,
-S204,stay,G027,,,,multi_day,,,owner expected,owner_verified_2oct_no_corrections_received,
-S205,stay,G044,,,,multi_day,,,source_text,owner_verified_2oct_no_corrections_received,"Petra: one long day minimum; the bucket multi_day means two days or more; owner decides"
-S206,stay,G014,,,,day,,,source_text,owner_verified_2oct_no_corrections_received,
-S207,stay,G003,,,,multi_day,,,owner expected,owner_verified_2oct_no_corrections_received,
-S208,stay,G058,,,,day,,,owner expected,owner_verified_2oct_no_corrections_received,
-S209,stay,G057,,,,multi_day,,,owner expected,owner_verified_2oct_no_corrections_received,summit trek is five to seven days
+S001,edge,G003,part_of,Karnak and Luxor Temple (nested destinations),,,,,hierarchy audit,rejected,"SUPERSEDED_BY:S019,S020. Reversed (Luxor is not inside Karnak) and two objects in one cell. D5: Karnak and Luxor Temple are assets of Luxor, not places"
+S002,edge,N002,part_of,G003,,,,,hierarchy audit,confirmed,"ASSET: Valley of the Kings is evidence on Luxor (same pharaonic kind, same Ancient Thebes WHS, ~5 km across the Nile). No hole, no stay row; retire the N id"
+S003,edge,G011,part_of,G001,,,,,council 5.1/5.2,confirmed,"ASSET: relation and object changed (was day_trip_from G002). Saqqara's nearest candidate is Giza (~15-17 km), not Cairo (~30 km); same kind (Old Kingdom pyramid necropolis) and same Memphis WHS, so it is absorbed. The merged place keeps the Giza name and pin. Old note confused Saqqara with Giza"
+S004,edge,G001,day_trip_from,G002,,,,,distance,confirmed,"Giza plateau ~15 km from central Cairo. It stays a separate place only because its kind diverges (desert necropolis vs megacity), not because of distance"
+S005,edge,G004,day_trip_from,G005,,,,,distance,confirmed,"~280 km by road (~3.5 h each way, pre-dawn convoy) or 45 min by air via ABS; Aswan is the base"
+S006,edge,N003,part_of,G027,,,,,council D5,confirmed,"ASSET: D5 ruling, the Colosseum is evidence on Rome. ~1.5 km from Rome's pin, same kind; a separate hole would turn Rome into a monument checklist. No hole, no stay row"
+S007,edge,N004,part_of,G028,,,,,council D5,confirmed,"ASSET: D5 ruling, the Uffizi is evidence on Florence (it is the Renaissance city's defining asset). No hole, no stay row"
+S008,edge,G030,day_trip_from,G032,,,,,distance,confirmed,"~25 km; kind diverges (buried Roman town vs living city), so never merged into Naples"
+S009,edge,G080,day_trip_from,G032,,,,,distance,confirmed,crater ~12-15 km from Naples; usually combined with Pompeii (see S026)
+S010,edge,G034,near,G032,,,,,distance,confirmed,"relation changed (was day_trip_from). The Amalfi Coast is a multi-day base in its own right; travellers stay on the coast. Gateways are Salerno and Sorrento (S027, S028)"
+S011,edge,G014,day_trip_from,G015,,,,,hierarchy audit,rejected,"SUPERSEDED_BY:S021,S022,S023. A Cusco day trip is ~3.5 h of train each way; Cusco is the place you pass through, not the base. Quillabamba guard moved to the NEGATIVE row S024"
+S012,edge,G016,day_trip_from,G015,,,,,distance,confirmed,"relation changed (was near). The full-day Sacred Valley tour from Cusco is the standard visit (Pisac ~33 km, Ollantaytambo ~70 km by road). Owner: G016 names a region and a town; pin it at Ollantaytambo"
+S013,edge,G044,near,G045,,,,,distance,confirmed,"~110 km by road, ~1.5-2 h; routinely combined"
+S014,edge,G044,near,G049,,,,,distance,confirmed,"relation changed (was day_trip_from). ~125 km, ~2 h. A day trip from Aqaba is cruise traffic and contradicts Petra's multi_day stay; the real base is Wadi Musa, absorbed into Petra (S025)"
+S015,edge,G047,day_trip_from,G046,,,,,distance,confirmed,"~48 km north of Amman, ~1 h"
+S016,edge,G058,part_of,Zanzibar (island place),,,,,hierarchy audit,rejected,"An island is a region, not a place; this creates a phantom container. Stone Town and the north-coast beaches are two places of different kinds (S035)"
+S017,edge,G056,near,G055,,,,,distance,confirmed,Ngorongoro Conservation Area borders the Serengeti at Naabi Hill; combined on almost every northern-circuit safari
+S018,edge,G098,gateway_of,G057,,,,,distance,confirmed,Moshi is the base; Marangu and Machame gates ~40-45 km
+S101,node,G002,serves,airport CAI (Cairo International),air,,,,wikidata P238,confirmed,~20 km from downtown
+S102,node,G003,serves,airport LXR (Luxor International),air,,,,wikidata P238,confirmed,~7 km
+S103,node,G027,serves,airport FCO (Fiumicino),air,,,,wikidata P238,confirmed,object split: one node per row; Ciampino moved to S114
+S104,node,G027,serves,rail Roma Termini,rail,,,,wikidata P296,confirmed,
+S105,node,G029,serves,airport VCE (Marco Polo),air,,,,wikidata P238,confirmed,"last leg is by water (Alilaguna, S119) or road (bus to Piazzale Roma). The ferry note referred to a row that did not exist; added as S119"
+S106,node,G015,serves,airport CUZ (Alejandro Velasco Astete),air,,,,wikidata P238,confirmed,"as-of 2026-10: Chinchero (CJR) not yet open, expected ~2027; add a row when it opens"
+S107,node,G014,serves,rail Machu Picchu station (Aguas Calientes),rail,,,,osm/wikidata,confirmed,PeruRail and Inca Rail terminus; trains from Ollantaytambo (main) or Poroy near Cusco. Then the Consettur bus (25 min) inside the place; no node for the bus
+S108,node,G044,serves,"airport AQJ (King Hussein, Aqaba)",air,,,,wikidata P238,confirmed,"object split; AMM moved to S115. Road leg ~125 km, ~2 h to Wadi Musa; nearest but fewer flights"
+S109,node,G049,serves,"airport AQJ (King Hussein, Aqaba)",air,,,,wikidata,confirmed,mode corrected (was sea) and object split; the port moved to S116
+S110,node,G058,serves,airport ZNZ (Abeid Amani Karume),air,,,,wikidata P238,confirmed,~6 km from Stone Town; also serves the north-coast beaches by road
+S111,node,G058,serves,"port Zanzibar (Malindi ferry terminal, Stone Town)",sea,,,,osm,confirmed,"object made specific. Fast ferries from Dar es Salaam (Azam Marine, Zan Fast Ferries), ~2 h; the origin is Dar (S036). A second serving node on a different mode"
+S112,node,G055,serves,airport SEU (Seronera airstrip),air,,,,wikidata,confirmed,"object split; JRO and ARK moved to S117, S118. In-park strip, scheduled light-aircraft hops from ARK/JRO; seasonal northern strips (Kogatende) not listed"
+S113,node,G057,serves,airport JRO (Kilimanjaro International),air,,,,wikidata P238,confirmed,~45 km to Moshi
+S201,stay,G001,,,,day,,,council,confirmed,"bucket changed (was half_day 3-5). With the Grand Egyptian Museum (open since Nov 2025) and Saqqara absorbed, Giza is a full day; plateau alone would be half_day 3-5"
+S202,stay,G002,,,,multi_day,,,council,confirmed,"Islamic Cairo, Egyptian Museum, Coptic Cairo: 2-3 days"
+S203,stay,N003,,,,hours,2,3,source_text,rejected,ASSET: under D5 an asset has no stay row; its 2-3 h (3-4 with Forum and Palatine) count inside Rome's stay
+S204,stay,G027,,,,multi_day,,,council,confirmed,3-4 days
+S205,stay,G044,,,,multi_day,,,council,confirmed,"2 days: Siq and Treasury, then Monastery and High Place; sold as a 2-day pass. One day is possible but rushed"
+S206,stay,G014,,,,half_day,3,5,council,confirmed,bucket changed (was day). Stay = time on site; entry is by timed circuit (add ~2 h for Huayna Picchu). The access day lives in the edges (S021-S023)
+S207,stay,G003,,,,multi_day,,,council,confirmed,"one day per bank, 2-3 days"
+S208,stay,G058,,,,day,,,council,confirmed,"the old town walk, Forodhani, Old Fort and a spice farm fill one day; the beaches are a separate place (S035)"
+S209,stay,G057,,,,multi_day,,,council,confirmed,"summit routes take 5-9 days (Marangu 5-6, Machame 6-7, Lemosho 7-8, Northern Circuit 8-9)"
+S019,edge,Karnak,part_of,G003,,,,,council D5,confirmed,"ASSET: new asset (needs an A id). ~3 km north of Luxor Temple, inside the city"
+S020,edge,Luxor Temple,part_of,G003,,,,,council D5,confirmed,"ASSET: new asset (needs an A id). On the corniche, in the city centre"
+S021,edge,G015,gateway_of,G014,,,,,transport,confirmed,"everyone passes through Cusco (CUZ, acclimatisation) on the way to Machu Picchu"
+S022,edge,G016,gateway_of,G014,,,,,transport,confirmed,"Ollantaytambo is the main train origin, ~1.5-2 h to Aguas Calientes"
+S023,edge,Aguas Calientes,part_of,G014,,,,,council 5.2,confirmed,ASSET: new place absorbed into the site (5.2: the famous ruin keeps the name and pin). The overnight base
+S024,edge,Quillabamba,gateway_of,G014,,,,,council,rejected,NEGATIVE: the pipeline must never credit Machu Picchu to Quillabamba; it is not on any access path. New place
+S025,edge,Wadi Musa,part_of,G044,,,,,council 5.2,confirmed,"ASSET: new place absorbed into Petra; the town at the Visitor Centre, where everyone sleeps"
+S026,edge,G080,near,G030,,,,,distance,confirmed,~10 km apart and different kinds (volcano vs ruin); both stay places
+S027,edge,Salerno,gateway_of,G034,,,,,transport,confirmed,new place: ferries to Amalfi and Positano; airport QSR (S121)
+S028,edge,Sorrento,gateway_of,G034,,,,,transport,confirmed,new place: SITA buses and ferries along the coast
+S029,edge,Herculaneum,part_of,G030,,,,,council 5.2,confirmed,"ASSET: new asset. Same kind and same WHS as Pompeii (buried Roman towns), ~16 km; site-to-site merge keeps the stronger name, Pompeii. Owner check: this is the hardest absorption in the set"
+S030,edge,Grand Egyptian Museum,part_of,G001,,,,,council 5.1,confirmed,"ASSET: new asset, ~2 km from the pyramids. Trap: must not be credited to Cairo (~15 km)"
+S031,edge,Egyptian Museum (Tahrir),part_of,G002,,,,,council 5.1,confirmed,ASSET: new asset; pairs with S030 to test the two museums go to different parents
+S032,edge,Memphis and Dahshur,part_of,G001,,,,,council 5.2,confirmed,"ASSET: new assets, same Memphis WHS as Saqqara (S003). Owner may split into two rows"
+S033,edge,Vatican City,near,G027,,,,,council,confirmed,"new place, a sovereign state enclaved in Rome. Trap: never part_of Rome; the Vatican Museums are its asset, not Rome's"
+S034,edge,Philae,part_of,G005,,,,,council 5.1,confirmed,"ASSET: new asset, temple island ~10 km from Aswan"
+S035,edge,Zanzibar north-coast beaches (Nungwi/Kendwa),near,G058,,,,,distance,confirmed,"new place, ~55-60 km north of Stone Town at the 60 km edge, and a different kind (beach vs historic town). Replaces S016"
+S036,edge,Dar es Salaam,gateway_of,G058,,,,,transport,confirmed,"new place: ferry origin for S111, ~2 h crossing"
+S037,edge,Arusha,gateway_of,G055,,,,,transport,confirmed,new place: safari base; ARK airport; road to Serengeti ~6-8 h
+S038,edge,Arusha,gateway_of,G056,,,,,transport,confirmed,new place: ~3 h by road to the crater rim
+S039,edge,Karatu,gateway_of,G056,,,,,transport,confirmed,new place: the lodge town below the Ngorongoro rim
+S040,edge,Santa Teresa / Hidroeléctrica,gateway_of,G014,,,,,transport,confirmed,"new place: real budget route (road to Hidroeléctrica, then ~2.5 h walk along the tracks). Santa Teresa is in the same province as Quillabamba; that is the trap S024 tests"
+S041,edge,G045,day_trip_from,G049,,,,,distance,confirmed,"~60 km, ~1 h; kind diverges (desert vs port town) so not absorbed into Aqaba"
+S042,edge,Dead Sea,day_trip_from,G046,,,,,distance,confirmed,"new place, ~50 km, ~1 h; kind diverges from Amman"
+S043,edge,Ostia Antica,part_of,G027,,,,,council 5.2,confirmed,"ASSET: new asset, ~25 km; same kind as Rome (Roman ruins), so absorbed rather than a day trip"
+S044,edge,Tivoli,day_trip_from,G027,,,,,distance,confirmed,"new place, ~30 km; Villa d'Este and Hadrian's Villa (villa-and-garden kind diverges)"
+S045,edge,Dendera,day_trip_from,G003,,,,,distance,confirmed,"new place, ~60 km north, right at the catchment edge"
+S046,edge,G004,day_trip_from,G003,,,,,distance,rejected,NEGATIVE: Abu Simbel is ~500 km from Luxor; Aswan is the base (S005)
+S114,node,G027,serves,airport CIA (Ciampino),air,,,,wikidata P238,confirmed,split from S103; low-cost carriers
+S115,node,G044,serves,airport AMM (Queen Alia),air,,,,wikidata P238,confirmed,"split from S108; the main international entry. Road leg ~230 km, ~3 h on the Desert Highway"
+S116,node,G049,serves,port Aqaba (passenger terminal),sea,,,,osm,confirmed,split from S109; ferries to Nuweiba (Egypt) and cruise calls
+S117,node,G055,serves,airport JRO (Kilimanjaro International),air,,,,wikidata P238,confirmed,"split from S112; international entry, then road via Arusha or a hop to SEU"
+S118,node,G055,serves,airport ARK (Arusha),air,,,,wikidata P238,confirmed,split from S112; domestic hub for Serengeti flights
+S119,node,G029,serves,water bus Alilaguna (VCE airport dock),sea,,,,osm,confirmed,the lagoon ferry from the S105 note; last leg from VCE
+S120,node,G029,serves,rail Venezia Santa Lucia,rail,,,,wikidata P296,confirmed,most visitors arrive by train; not Mestre
+S121,node,G034,serves,airport QSR (Salerno Costa d'Amalfi),air,,,,wikidata P238,confirmed,as-of 2026-10: reopened to scheduled flights in 2024; limited routes
+S122,node,G034,serves,airport NAP (Naples Capodichino),air,,,,wikidata P238,confirmed,the airport most Amalfi visitors use; then road or ferry
+S123,node,G032,serves,airport NAP (Naples Capodichino),air,,,,wikidata P238,confirmed,
+S124,node,G032,serves,rail Napoli Centrale,rail,,,,wikidata P296,confirmed,
+S125,node,G030,serves,rail Pompei Scavi - Villa dei Misteri (Circumvesuviana),rail,,,,osm,confirmed,trap: not the FS mainline station Pompei
+S126,node,G001,serves,airport SPX (Sphinx International),air,,,,wikidata P238,confirmed,as-of 2026-10: few routes; CAI is still the airport most Giza visitors use
+S127,node,G001,serves,airport CAI (Cairo International),air,,,,wikidata P238,confirmed,~40 km by road to the plateau
+S128,node,G002,serves,rail Ramses station (Cairo),rail,,,,wikidata P296,confirmed,sleeper and day trains to Luxor and Aswan
+S129,node,G003,serves,rail Luxor station,rail,,,,wikidata P296,confirmed,Cairo-Aswan line
+S130,node,G004,serves,airport ABS (Abu Simbel),air,,,,wikidata P238,confirmed,flights from Aswan and Cairo; the road convoy from Aswan is the other access (S005)
+S131,node,G005,serves,airport ASW (Aswan International),air,,,,wikidata P238,confirmed,
+S132,node,G014,serves,airport CUZ (Alejandro Velasco Astete),air,,,,wikidata P238,confirmed,"the air gateway: CUZ, then road to Ollantaytambo, then rail. Not the nearest airport on a map"
+S133,node,G016,serves,rail Ollantaytambo station,rail,,,,osm,confirmed,
+S134,node,G028,serves,airport FLR (Florence Peretola),air,,,,wikidata P238,confirmed,
+S135,node,G028,serves,airport PSA (Pisa),air,,,,wikidata P238,confirmed,~1 h by train; a common real alternative to FLR
+S136,node,G028,serves,rail Firenze Santa Maria Novella,rail,,,,wikidata P296,confirmed,
+S137,node,G046,serves,airport AMM (Queen Alia),air,,,,wikidata P238,confirmed,~35 km
+S138,node,G098,serves,airport JRO (Kilimanjaro International),air,,,,wikidata P238,confirmed,~45 km
+S139,node,G056,serves,airport ARK (Arusha),air,,,,wikidata P238,confirmed,then road ~3 h; Lake Manyara strip (LKY) is the closer fly-in option
+S140,node,G044,serves,"road JETT bus station, Wadi Musa",road,,,,osm,confirmed,daily coach from Amman; the last leg for most independent travellers
+S210,stay,G004,,,,hours,2,3,council,confirmed,time on site; the access is a full day from Aswan (S005)
+S211,stay,G005,,,,multi_day,,,council,confirmed,"Philae, the Nubian villages and a felucca, and the base for Abu Simbel"
+S212,stay,G015,,,,multi_day,,,council,confirmed,"2-3 days, partly for acclimatisation at 3,400 m"
+S213,stay,G016,,,,day,,,council,confirmed,
+S214,stay,G028,,,,multi_day,,,council,confirmed,
+S215,stay,G029,,,,multi_day,,,council,confirmed,
+S216,stay,G030,,,,half_day,3,5,council,confirmed,
+S217,stay,G032,,,,multi_day,,,council,confirmed,"historic centre, Archaeological Museum, underground: 2 days"
+S218,stay,G034,,,,multi_day,,,council,confirmed,
+S219,stay,G045,,,,multi_day,,,council,confirmed,the overnight desert camp is the experience; a 4-6 h jeep tour alone would be half_day
+S220,stay,G046,,,,day,,,council,confirmed,
+S221,stay,G047,,,,half_day,3,4,council,confirmed,
+S222,stay,G055,,,,multi_day,,,council,confirmed,3+ days; the park is much larger than one pin
+S223,stay,G056,,,,day,,,council,confirmed,crater-floor visits are capped at about 6 h
+S224,stay,G080,,,,hours,2,3,council,confirmed,shuttle from the car park and the crater-rim walk

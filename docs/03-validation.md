@@ -28,7 +28,7 @@ Composition (stratified, so no region or kind dominates):
 - The hard cases from the v1 review, as permanent regression tests: Machu Picchu, Petra, Wadi Rum, Delphi, Santorini, Mont-Saint-Michel, Torres del Paine, Salar de Uyuni, Cairo, Johannesburg, Kyoto, Kathmandu Valley, Florence above Belluno, Paris above Lourdes, Giza / Luxor / Abu Simbel at the top of Egypt.
 - Microstates and island nations (Maldives, Vanuatu, Luxembourg, Seychelles, Singapore, Bhutan, Fiji).
 - Serial sites, routes and large areas (Dolomites, Camino de Santiago, Great Barrier Reef, Great Wall).
-- Negative and relational rows (`row_kind`): `negative` rows state what must not happen — a **true serial component** of a property is not a separate pin (`component_of`), a place must not outrank another (`not_above`, tier strictly lower), a town must not carry a landmark's evidence (`not_credited`); `optional` rows (`part_of`) mark nested destinations such as the Colosseum or the Uffizi, which may exist as their own place or as evidence on the parent, and are **not tested**.
+- Negative and relational rows (`row_kind`): `negative` rows state what must not happen — a **true serial component** of a property is not a separate pin (`component_of`), a place must not outrank another (`not_above`, tier strictly lower), a town must not carry a landmark's evidence (`not_credited`); nested monuments (the Colosseum, the Uffizi, Sagrada Familia, Hagia Sophia) and absorbed neighbours (Saqqara into Giza) are `negative` `component_of` rows: they must not exist as separate places (D25).
 
 ### 2.2 Holdout — `data/holdout/` (≈ 300 rows)
 
