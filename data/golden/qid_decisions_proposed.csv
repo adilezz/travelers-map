@@ -5,7 +5,7 @@ G003,Q130514,accept,Luxor the city; Thebes (Q101583) is the ancient city,manual,
 G004,Q134140,accept,best name match and most sitelinks,auto,Abu Simbel,Abu Simbel,93
 G005,Q29888,accept,best name match and most sitelinks,auto,Aswan,Aswan,101
 G006,Q87,accept,best name match and most sitelinks,auto,Alexandria,Alexandria,176
-G007,Q377485,review,the best match is Mount Sinai only; the row is the monastery and the mountain together,auto-flagged,Saint Catherine's Monastery and Mount Sinai,Mount Sinai,87
+G007,Q2468771,accept,council vote 4/5 from web-search evidence on wikidata.org result pages; alt Q185362 monastery only,council 3 Oct (web search) 4/5,Saint Catherine's Monastery and Mount Sinai,Mount Sinai,87
 G008,Q2008735,accept,best name match and most sitelinks,auto,Siwa Oasis,Siwa Oasis,61
 G009,Q2556953,accept,best name match and most sitelinks,auto,White Desert,White Desert,25
 G010,Q644,accept,best name match and most sitelinks,auto,Sharm el-Sheikh,Sharm el-Sheikh,87
@@ -13,15 +13,15 @@ G012,Q239107,accept,best name match and most sitelinks,auto,Edfu,Edfu,59
 G013,Q501833,accept,best name match and most sitelinks,auto,Wadi Al-Hitan,Wadi Al-Hitan,47
 G014,Q676203,accept,best name match and most sitelinks,auto,Machu Picchu,Machu Picchu,150
 G015,Q5582862,accept,best name match and most sitelinks,auto,Cusco,Cusco,115
-G016,,review,no candidate: Sacred Valley is a region; give its QID or choose Ollantaytambo the town,manual,Sacred Valley (Ollantaytambo),,
+G016,Q2237464,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Sacred Valley (Ollantaytambo),,
 G017,Q2868,accept,best name match and most sitelinks,auto,Lima,Lima,219
-G018,,review,no candidate near the anchor: Lake Titicaca (give QID) or Puno the city,manual,Lake Titicaca (Puno),,
+G018,Q35342,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Lake Titicaca (Puno),,
 G019,Q1107685,accept,best name match and most sitelinks,auto,Colca Canyon,Colca Canyon,28
 G020,Q159273,accept,best name match and most sitelinks,auto,Arequipa,Arequipa,105
 G021,Q2620036,accept,best name match and most sitelinks,auto,Nazca Lines,Nazca Lines,69
 G022,Q390264,accept,best name match and most sitelinks,auto,Manu National Park,Manu National Park,46
-G023,,review,nothing found for Iquitos (the search may have failed): re-run or give the QID,manual,Iquitos,,
-G024,Q793809,review,the best match is the town Huaraz; the row is Huascarán National Park,auto-flagged,Huascarán National Park (Huaraz),Huaraz,52
+G023,Q193289,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Iquitos,,
+G024,Q917369,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Huascarán National Park (Huaraz),Huaraz,52
 G025,Q277540,accept,best name match and most sitelinks,auto,Chan Chan,Chan Chan,52
 G026,Q1641076,accept,best name match and most sitelinks,auto,Paracas,Paracas,11
 G027,Q220,accept,best name match and most sitelinks,auto,Rome,Rome,344
@@ -33,7 +33,7 @@ G032,Q2634,accept,best name match and most sitelinks,auto,Naples,Naples,207
 G033,Q2751,accept,best name match and most sitelinks,auto,Siena,Siena,129
 G034,Q212214,accept,Amalfi Coast; Q80563 is the town,manual,Amalfi Coast,Amalfi Coast,58
 G035,Q275639,accept,,manual,Cinque Terre,Cinque Terre,67
-G036,Q1283,review,"modelling choice: Dolomites (mountains, 79 sitelinks) or Cortina d'Ampezzo (the anchor town, Q41158)",manual,Dolomites (Cortina d'Ampezzo),Dolomites,79
+G036,Q1283,accept,council vote 4/5 from web-search evidence on wikidata.org result pages; alt Q65028346 the UNESCO property item,council 3 Oct (web search) 4/5,Dolomites (Cortina d'Ampezzo),Dolomites,79
 G037,Q15523,accept,best name match and most sitelinks,auto,Lake Como,Lake Como,86
 G038,Q13375,accept,best name match and most sitelinks,auto,Pisa,Pisa,156
 G039,Q16990,accept,best name match and most sitelinks,auto,Mount Etna,Mount Etna,125
@@ -45,22 +45,22 @@ G044,Q5788,accept,best name match and most sitelinks,auto,Petra,Petra,117
 G045,Q40729,accept,best name match and most sitelinks,auto,Wadi Rum,Wadi Rum,60
 G046,Q3805,accept,best name match and most sitelinks,auto,Amman,Amman,194
 G047,Q31565,accept,best name match and most sitelinks,auto,Jerash,Jerash,54
-G048,,review,no candidate: Dead Sea (give QID) or its Jordanian shore as a different item,manual,Dead Sea (Jordan shore),,
+G048,Q23883,accept,council vote 5/5 from web-search evidence on wikidata.org result pages; whole Dead Sea; no Jordan-shore item found (alt Q50362107 'Jordanian Dead Sea'),council 3 Oct (web search) 5/5,Dead Sea (Jordan shore),,
 G049,Q180522,accept,best name match and most sitelinks,auto,Aqaba,Aqaba,88
 G050,Q680161,accept,best name match and most sitelinks,auto,Mount Nebo,Mount Nebo,43
 G051,Q12193567,accept,Al Maghtas = Bethany Beyond the Jordan,manual,Bethany Beyond the Jordan,Al Maghtas,41
 G052,Q864750,accept,best name match and most sitelinks,auto,Dana Biosphere Reserve,Dana Biosphere Reserve,25
-G053,,review,only a journal article found; give the QID of Karak Castle,manual,Karak Castle,,
+G053,Q844694,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Karak Castle,,
 G054,Q131955,accept,best name match and most sitelinks,auto,Umm Qais,Umm Qais,26
 G055,Q11812902,accept,best name match and most sitelinks,auto,Serengeti National Park,Serengeti National Park,76
 G056,Q1217726,accept,"Ngorongoro Conservation Area, 14 km from the anchor",manual,Ngorongoro Crater,Ngorongoro Conservation Area,68
 G057,Q7296,accept,best name match and most sitelinks,auto,Mount Kilimanjaro,Mount Kilimanjaro,188
 G058,Q844417,accept,Stone Town; Q2222874 is the Zanzibar City municipality,manual,"Stone Town, Zanzibar",Stone Town,55
 G059,Q1960,accept,best name match and most sitelinks,auto,Dar es Salaam,Dar es Salaam,142
-G060,Q2268839,review,Selous Game Reserve is the older reserve; Nyerere National Park is the newer one inside it,auto-flagged,Nyerere National Park (Selous),Selous Game Reserve,55
+G060,Q104873228,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Nyerere National Park (Selous),Selous Game Reserve,55
 G061,Q1432744,accept,best name match and most sitelinks,auto,Tarangire National Park,Tarangire National Park,28
 G062,Q607533,accept,best name match and most sitelinks,auto,Lake Manyara National Park,Lake Manyara National Park,25
-G063,Q716801,review,"modelling choice: Arusha National Park or Mount Meru (Q309098, 4 km away)",manual,Mount Meru (Arusha National Park),Arusha National Park,31
+G063,Q309098,accept,council vote 3/5 from web-search evidence on wikidata.org result pages; alt Q716801 Arusha National Park,council 3 Oct (web search) 3/5,Mount Meru (Arusha National Park),Arusha National Park,31
 G065,Q1741475,accept,best name match and most sitelinks,auto,Kilwa Kisiwani,Kilwa Kisiwani,50
 G066,Q856665,accept,Gombe National Park,manual,Gombe Stream National Park,Gombe National Park,39
 G067,Q656363,accept,best name match and most sitelinks,auto,Ruaha National Park,Ruaha National Park,25
@@ -69,9 +69,9 @@ G069,Q3866,accept,best name match and most sitelinks,auto,Dodoma,Dodoma,159
 G070,Q370495,accept,best name match and most sitelinks,auto,Dahab,Dahab,46
 G071,Q203299,accept,best name match and most sitelinks,auto,Faiyum,Faiyum,64
 G072,Q192268,accept,best name match and most sitelinks,auto,Abydos,Abydos,57
-G073,Q6562520,accept,15 km from the anchor; check it is the protected area,manual,Wadi El Rayan,Wadi Elrayan,13
+G073,Q6562520,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Wadi El Rayan,Wadi Elrayan,13
 G074,Q6247,accept,best name match and most sitelinks,auto,Mantua,Mantua,119
-G075,,review,Pienza and Montalcino are towns; Val d'Orcia has its own item not in the list: give its QID,manual,Val d'Orcia,,
+G075,Q217449,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Val d'Orcia,,
 G076,Q253241,accept,the site; Q287398 is the village Barumini,manual,Su Nuraxi di Barumini,Su Nuraxi di Barumini,38
 G077,Q329967,accept,best name match and most sitelinks,auto,Paestum,Paestum,57
 G078,Q179883,accept,Aeolian Islands; Q131148 is Stromboli,manual,Aeolian Islands,Aeolian Islands,75
@@ -85,9 +85,9 @@ G085,Q31866622,accept,best name match and most sitelinks,auto,Aqaba Marine Reser
 G086,Q2120208,accept,best name match and most sitelinks,auto,Mujib Nature Reserve,Wadi Mujib,29
 G087,Q11202572,accept,,manual,Azraq Wetland Reserve,Azraq Wetland Reserve,16
 G088,Q1141858,accept,best name match and most sitelinks,auto,Ajloun,Ajloun,42
-G089,Q219279,accept,"no English label; 0.2 km from the anchor and 46 sitelinks, very likely Caral: open the item to confirm",manual,Caral-Supe,,46
+G089,Q219279,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Caral-Supe,,46
 G090,Q732554,accept,best name match and most sitelinks,auto,Chavín de Huántar,Chavin de Huantar,43
-G091,Q977740,accept,20 km from the anchor; park is large,manual,Cerros de Amotape National Park,Amotape Hills National Park,16
+G091,Q977740,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Cerros de Amotape National Park,Amotape Hills National Park,16
 G092,Q6062202,accept,best name match and most sitelinks,auto,Megantoni National Sanctuary,Megantoni National Sanctuary,7
 G093,Q1404282,accept,,manual,Kondoa Rock-Art Sites,Kondoa Rock Art Sites,34
 G094,Q110218,accept,best name match and most sitelinks,auto,Mwanza,Mwanza,67
@@ -121,10 +121,10 @@ G121,Q2807,accept,best name match and most sitelinks,auto,Madrid,Madrid,305
 G122,Q1492,accept,best name match and most sitelinks,auto,Barcelona,Barcelona,246
 G123,Q47476,accept,best name match and most sitelinks,auto,Alhambra,Alhambra,96
 G124,Q8717,accept,best name match and most sitelinks,auto,Seville,Seville,180
-G125,,review,only tiny route items (2 and 0 sitelinks); give the QID of the Camino de Santiago,manual,Camino de Santiago,,
+G125,Q41150,accept,council vote 4/5 from web-search evidence on wikidata.org result pages; alt Q475699,council 3 Oct (web search) 4/5,Camino de Santiago,,
 G126,Q14314,accept,best name match and most sitelinks,auto,Santiago de Compostela,Santiago de Compostela,150
 G127,Q5836,accept,best name match and most sitelinks,auto,Toledo,Toledo,129
-G128,,review,only Tenerife and the Teide volcano found; the Teide National Park item is missing from the list,manual,Teide National Park,,
+G128,Q715124,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Teide National Park,,
 G129,Q8826,accept,best name match and most sitelinks,auto,Palma de Mallorca,Palma,119
 G130,Q48567,accept,Picos de Europa National Park,manual,Picos de Europa,Picos de Europa National Park,35
 G131,Q741610,accept,best name match and most sitelinks,auto,Ordesa and Monte Perdido,Ordesa y Monte Perdido National Park,38
@@ -134,28 +134,28 @@ G134,Q5818,accept,Córdoba the city; the Mosque-Cathedral is a separate item,man
 G135,Q463141,accept,best name match and most sitelinks,auto,Donana National Park,Doñana National Park,52
 G136,Q1480521,accept,Timanfaya National Park; Q182432 is the island,manual,Timanfaya National Park,Timanfaya National Park,34
 G137,Q8851,accept,best name match and most sitelinks,auto,Malaga,Málaga,148
-G138,Q26955,review,Sierra Nevada (range) or the national park: choose,manual,Sierra Nevada,Sierra Nevada,63
+G138,Q26955,accept,council vote 5/5 from web-search evidence on wikidata.org result pages; the range; alt Q1969050 the national park,council 3 Oct (web search) 5/5,Sierra Nevada,Sierra Nevada,63
 G139,Q8692,accept,best name match and most sitelinks,auto,Bilbao,Bilbao,149
 G140,Q15682,accept,best name match and most sitelinks,auto,Cadiz,Cádiz,114
-G141,Q473914,review,"the best match is the island Ibiza; the row is Dalt Vila, the old town",auto-flagged,Ibiza Dalt Vila,Ibiza,68
+G141,Q15958616,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Ibiza Dalt Vila,Ibiza,68
 G142,Q10282,accept,best name match and most sitelinks,auto,Pamplona,Pamplona,111
 G143,Q90,accept,best name match and most sitelinks,auto,Paris,Paris,366
 G144,Q20892,accept,Mont-Saint-Michel,manual,Mont-Saint-Michel,Le Mont Saint-Michel,97
 G145,Q456,accept,best name match and most sitelinks,auto,Lyon,Lyon,197
 G146,Q23482,accept,best name match and most sitelinks,auto,Marseille,Marseille,192
 G147,Q1050483,accept,"Loire Valley (43 sitelinks); the nearer Q13947 is the region Centre-Val de Loire, wrong",manual,Loire Valley,Loire Valley,43
-G148,Q83236,review,"modelling choice: Chamonix-Mont-Blanc (commune) or Mont Blanc (Q583, the mountain)",manual,Chamonix and Mont Blanc,Chamonix-Mont-Blanc,104
-G149,Q1780121,review,Luberon is part of Provence; the row is Provence (Luberon),auto-flagged,Provence (Luberon),Luberon,21
+G148,Q83236,accept,council vote 5/5 from web-search evidence on wikidata.org result pages; the commune; alt Q583 the mountain,council 3 Oct (web search) 5/5,Chamonix and Mont Blanc,Chamonix-Mont-Blanc,104
+G149,Q101081,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Provence (Luberon),Luberon,21
 G150,Q182822,accept,best name match and most sitelinks,auto,French Riviera,French Riviera,72
 G151,Q14112,accept,best name match and most sitelinks,auto,Corsica,Corsica,186
-G152,Q464257,review,Omaha Beach is one of several D-Day beaches,auto-flagged,Normandy D-Day Beaches,Omaha Beach,42
+G152,Q3390891,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Normandy D-Day Beaches,Omaha Beach,42
 G153,Q3327,accept,best name match and most sitelinks,auto,Lourdes,Lourdes,87
 G154,Q6602,accept,best name match and most sitelinks,auto,Strasbourg,Strasbourg,194
-G155,Q148959,review,Riquewihr is one village on the Alsace Wine Route,auto-flagged,Alsace Wine Route,Riquewihr,62
+G155,Q1334019,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Alsace Wine Route,Riquewihr,62
 G156,Q1479,accept,best name match and most sitelinks,auto,Bordeaux,Bordeaux,184
 G157,Q218151,accept,best name match and most sitelinks,auto,Camargue,Camargue,50
 G158,Q2600427,accept,best name match and most sitelinks,auto,Calanques National Park,Calanques National Park,24
-G159,Q917894,review,Gavarnie is the village; the row is the Cirque de Gavarnie,auto-flagged,Cirque de Gavarnie,Gavarnie,31
+G159,Q1093112,accept,council vote 5/5 from web-search evidence on wikidata.org result pages,council 3 Oct (web search) 5/5,Cirque de Gavarnie,Gavarnie,31
 G160,Q6582,accept,Carcassonne; the Cité (Q389269) is the walled part,manual,Carcassonne,Carcassonne,107
 G161,Q132790,accept,best name match and most sitelinks,auto,Biarritz,Biarritz,95
 G162,Q501726,accept,,manual,Dune du Pilat,Dune of Pilat,35
@@ -163,7 +163,7 @@ G163,Q2946,accept,Palace of Versailles; Q621 is the town,manual,Palace of Versai
 G164,Q7880,accept,best name match and most sitelinks,auto,Toulouse,Toulouse,174
 G165,Q406,accept,,manual,Istanbul,Istanbul,290
 G166,Q217265,accept,Cappadocia,manual,Cappadocia,Cappadocia,106
-G167,Q105893254,review,Pamukkale item is unusual (a recent id); alternative Hierapolis Q7428276: check,manual,Pamukkale,Pamukkale,67
+G167,Q15924669,accept,council vote 4/5 from web-search evidence on wikidata.org result pages; alt Q105893254 hot springs only; Q7428276 Hierapolis,council 3 Oct (web search) 4/5,Pamukkale,Pamukkale,67
 G168,Q47611,accept,best name match and most sitelinks,auto,Ephesus,Ephesus,96
 G169,Q22647,accept,best name match and most sitelinks,auto,Troy,Troy,121
 G170,Q214944,accept,best name match and most sitelinks,auto,Göbekli Tepe,Göbekli Tepe,78

@@ -89,6 +89,11 @@ def test_apply_decisions_sets_qids_and_refuses_duplicates_and_bad_values(tmp_pat
     from pathlib import Path
     gp = tmp_path / "golden.csv"
     shutil.copy(Path(G.__file__).resolve().parents[2] / "data" / "golden" / "golden.csv", gp)
+    blanked = [dict(r, qid="", qid_status="to_resolve") for r in csv.DictReader(gp.open(encoding="utf-8"))]
+    with open(gp, "w", encoding="utf-8", newline="") as fh:      # the real file now carries QIDs; test from a blank copy
+        w0 = csv.DictWriter(fh, fieldnames=list(blanked[0].keys()), lineterminator="\n")
+        w0.writeheader()
+        w0.writerows(blanked)
     petra = row(golden_rows, "Petra").golden_id
     rum = row(golden_rows, "Wadi Rum").golden_id
     dp = tmp_path / "d.csv"

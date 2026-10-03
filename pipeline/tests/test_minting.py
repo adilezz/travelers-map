@@ -118,8 +118,9 @@ def test_rule_6_commit_needs_a_passing_landmark_gate_and_real_qids(tmp_path, gol
         M.commit(r, tmp_path / "r.parquet", bad, golden_rows)
     with pytest.raises(M.MintingError, match="has not passed"):
         M.commit(r, tmp_path / "r.parquet", [], golden_rows)
+    blank = [type(row)(**{**row.__dict__, "qid": ""}) if i == 0 and row.row_kind == "positive" else row
+             for i, row in enumerate(golden_rows)]
     with pytest.raises(M.MintingError, match="no QID"):
-        M.commit(r, tmp_path / "r.parquet", ok, golden_rows)          # the real golden set has blank QIDs today
-    filled = [type(row)(**{**row.__dict__, "qid": row.qid or "Q1"}) for row in golden_rows]
-    M.commit(r, tmp_path / "r.parquet", ok, filled)
+        M.commit(r, tmp_path / "r.parquet", ok, blank)                # one positive without a QID blocks the commit
+    M.commit(r, tmp_path / "r.parquet", ok, golden_rows)
     assert (tmp_path / "r.parquet").is_file()

@@ -51,7 +51,7 @@ def oracle_places(rows) -> list[dict]:
             "place_id": pid(r.golden_id), "type": r.type, "name_en": r.name,
             "aliases": r.raw["aliases"].split("|") if r.raw["aliases"] else [],
             "iso3": r.iso3, "lat": r.lat, "lon": r.lon, "tier": r.min_tier,
-            "qid": f"Q{900000 + n}", "status": "active", "whs_id": r.whs_id,
+            "qid": r.qid or f"Q{900000 + n}", "status": "active", "whs_id": r.whs_id,
             "kinds": [{"kind": k, "rule": "oracle", "evidence": ["a1"]} for k in r.kinds],
             "evidence": [{"asset_id": "a1", "source": "oracle", "url": "https://example.org/oracle",
                           "retrieved": "2026-10-01",

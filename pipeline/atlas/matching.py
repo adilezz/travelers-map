@@ -25,9 +25,10 @@ def place_names(p: dict) -> set[str]:
     return names
 
 
-def candidates(row: G.Row, places: list[dict]) -> list[tuple[float, dict]]:
+def candidates(row: G.Row, places: list[dict], loose: bool = False) -> list[tuple[float, dict]]:
     """Places that could be this row: same country (ISO3), type, within tol_km, and the QID
-    when the row has one, otherwise a listed name."""
+    when the row has one, otherwise a listed name. `loose` accepts either (for duplicate
+    detection: a second Florence under another QID is still a duplicate)."""
     out = []
     for p in places:
         if not usable(p) or p["iso3"] != row.iso3 or p["type"] != row.type:
@@ -37,10 +38,15 @@ def candidates(row: G.Row, places: list[dict]) -> list[tuple[float, dict]]:
         d = haversine_km(row.lat, row.lon, p["lat"], p["lon"])
         if d > row.tol_km:
             continue
-        if row.qid:
-            if p.get("qid") != row.qid:
+        by_qid = bool(row.qid) and p.get("qid") == row.qid
+        by_name = bool(row.names & place_names(p))
+        if loose:
+            if not (by_qid or by_name):
                 continue
-        elif not (row.names & place_names(p)):
+        elif row.qid:
+            if not by_qid:
+                continue
+        elif not by_name:
             continue
         out.append((d, p))
     return out
@@ -70,7 +76,7 @@ def assign(rows: list[G.Row], places: list[dict]) -> Assignment:
         if r.golden_id not in out.matched:
             out.missed.append(r)
             continue
-        extra = [p for _d, p in cand[r.golden_id] if id(p) not in used]
+        extra = [p for _d, p in candidates(r, places, loose=True) if id(p) not in used]
         if extra:
             out.duplicates[r.golden_id] = extra
     return out
