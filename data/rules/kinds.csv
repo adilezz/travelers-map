@@ -19,3 +19,4 @@ R17,old_town,unesco,"historic centre or old town property, and people live in it
 R18,water,wikidata,"freshwater lake, river, delta, wetland or waterfall of 5 km2 or more is the destination or its main setting",0.80,core,,no,"Lakes, rivers and waterfalls"
 R19,forest,landcover,"tree cover over 50 % of a 10 km buffer, or a protected forest",0.80,core,,no,"Forest and jungle"
 R20,rural,landcover,"cropland or pasture over 60 % of a 10 km buffer, density under 100/km2, no city of 50k within 10 km",0.65,core,,no,"Countryside and villages"
+R21,metropolis,pop,"fallback: population 100,000 or more, used only when no other kind survives (an ordinary modern city: Lille, Nantes, Murcia, Eskişehir)",0.60,fallback,,no,"D26: every ordinary city carries a kind"

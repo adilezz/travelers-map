@@ -32,7 +32,7 @@ def test_every_pair_condition_has_a_predicate_and_every_kind_rule_is_valid():
     ids = [r["rule_id"] for r in rows]
     assert len(ids) == len(set(ids))
     for r in rows:
-        assert r["kind"] in KINDS and r["role"] in ("core", "support")
+        assert r["kind"] in KINDS and r["role"] in ("core", "support", "fallback")
         assert 0 < float(r["strength"]) <= 1 and r["calibrated"] in ("yes", "no")
         assert all(x in KINDS for x in r["excludes"].split("|") if x)
     assert {r["kind"] for r in rows} == set(KINDS) - {"sacred"} | {"sacred"}   # every kind has a rule
@@ -155,3 +155,12 @@ def test_unknown_conditions_and_kinds_are_rejected(tmp_path):
     bad.write_text("keep,drop,condition,rationale\ncoast,ruins,always,x\n", encoding="utf-8")
     with pytest.raises(ValueError):
         load_pairs(bad)
+
+
+def test_fallback_rule_applies_only_when_nothing_else_survives():
+    only = select_kinds([f("R21", "metropolis", "pop", 0.60, role="fallback")])
+    assert only.kinds() == ["metropolis"]
+    with_other = select_kinds([f("R21", "metropolis", "pop", 0.60, role="fallback"),
+                               f("R17", "old_town", "unesco", 0.85)])
+    assert with_other.kinds() == ["old_town"]
+    assert select_kinds([f("R21", "metropolis", "pop", 0.40, role="fallback")]).kinds() == []

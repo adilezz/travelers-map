@@ -27,7 +27,7 @@ class Fired:
     kind: str
     source: str            # wikidata, unesco, iucn, osm, landcover, relief, coast, pop, footprint
     strength: float        # the rule's estimated precision, 0..1
-    role: str = "core"     # a 'support' rule adds strength but cannot create a kind alone
+    role: str = "core"     # 'support' adds strength but cannot create a kind alone; 'fallback' applies only if no kind survives
     excludes: tuple[str, ...] = ()
 
 
@@ -111,6 +111,8 @@ def select_kinds(fired: list[Fired], facts: dict | None = None,
     facts = facts or {}
     pairs = pairs or []
     sel = Selection()
+    fallback = [f for f in fired if f.role == "fallback"]   # D26: used only when nothing else survives
+    fired = [f for f in fired if f.role != "fallback"]
     choices = combine(fired)
     core_kinds = {f.kind for f in fired if f.role == "core"}
     live: dict[str, Choice] = {}
@@ -131,6 +133,9 @@ def select_kinds(fired: list[Fired], facts: dict | None = None,
                             "reason": f"pair:{p.keep}>{p.drop}:{p.condition}"})
     order = sorted(live.values(), key=lambda c: (-_bucket(c.strength), -c.sources,
                                                  KIND_PRIORITY.index(c.kind), c.kind))
+    if not order and fallback:
+        order = sorted(combine(fallback).values(), key=lambda c: (-_bucket(c.strength), KIND_PRIORITY.index(c.kind)))
+        order = [c for c in order if c.strength >= MIN_STRENGTH]
     sel.kept = order[:MAX_KINDS_PER_PLACE]
     for c in order[MAX_KINDS_PER_PLACE:]:
         sel.cut.append({"kind": c.kind, "strength": c.strength, "reason": "cap"})

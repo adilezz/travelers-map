@@ -21,6 +21,7 @@ from atlas.registry import Registry, place_keys
 from atlas.vocab import KINDS, MAX_KINDS_PER_PLACE, MAX_NAME_LENGTH, PLACE_ID_RE, TIER_RANK
 
 MIN_PLACES_FOR_SHARE = 100
+MAX_BLANK_KIND_SHARE = 0.02   # places allowed to carry no kind, each with a stated reason (D26)
 MIN_HOLDOUT_ROWS = 100
 MIN_PRECISION_ROWS = 100
 REVIEW_VERDICTS = ("right", "wrong_entity", "wrong_place", "wrong_name", "should_not_exist")
@@ -300,8 +301,12 @@ def g_kind(ctx: Context) -> GateResult:
         return _res("G-KIND", False, "no places", n=0)
     problems: list[str] = []
     counts: Counter[str] = Counter()
+    blank = 0
     for p in places:
         ks = p.get("kinds")
+        if isinstance(ks, list) and not ks and p.get("no_kind_reason"):
+            blank += 1                      # D26: rare, stated, counted
+            continue
         if not isinstance(ks, list) or not 1 <= len(ks) <= MAX_KINDS_PER_PLACE:
             problems.append(f"{p.get('place_id')} has {len(ks) if isinstance(ks, list) else 'no'} kinds")
             continue
@@ -316,6 +321,8 @@ def g_kind(ctx: Context) -> GateResult:
                 problems.append(f"{p.get('place_id')} kind {kind} lacks rule or evidence")
             else:
                 counts[kind] += 1
+    if blank > MAX_BLANK_KIND_SHARE * len(places):
+        problems.append(f"{blank} places without a kind (more than {MAX_BLANK_KIND_SHARE:.0%} of the bundle)")
     missing = [k for k in KINDS if counts[k] == 0]
     if missing:
         problems.append(f"kinds absent from the world: {missing}")

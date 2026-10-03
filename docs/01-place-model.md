@@ -203,7 +203,8 @@ Stored as stable slugs; the labels are plain-language proposals for the interfac
 - A **strength** is the rule's estimated precision (0–1): the chance that a place firing it is a clean, defining member of the kind. Because every kind uses the same definition, strengths are comparable across kinds. Initial values are guesses (`calibrated = no`); they are calibrated against the hand-labelled sample in M3 (30 or more labelled places per rule, rounded to 0.05).
 - Several rules for one kind combine by **noisy-or over distinct sources**: only the best rule from each source counts, so five correlated Wikidata subclasses cannot inflate a kind. The result is capped at 0.95. A kind needs **at least one core rule** (a support rule adds strength but cannot create a kind alone) and a combined strength of **0.50 or more**.
 - A place that has a kind must be able to say why: `place_kind` stores the rules and the evidence assets, and the sheet shows it ("Nature — Ramsar wetland").
-- A place whose evidence admits it but fires no kind rule is a **build failure**: it signals an incomplete rule table, not a fallback.
+- Every ordinary city carries a kind: a **fallback rule** (R21, `metropolis`, population 100,000 or more) applies only when no other kind survives, so Lille, Nantes, Murcia or Eskişehir are not left blank (D26).
+- A place whose evidence admits it but fires no kind rule at all is rare and allowed only with a stated `no_kind_reason`; `G-KIND` counts them and fails above 2 % of the bundle. Anything more signals an incomplete rule table.
 - Kinds are shape and label, never colour, in the interface.
 
 ### 7.3 Overlaps and ties

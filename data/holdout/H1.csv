@@ -96,3 +96,9 @@ H094,Türkiye,TUR,Maltepe,,positive,settlement,40.925,29.131,5,Local,,,,,to_reso
 H095,Türkiye,TUR,Bursa,,positive,settlement,40.183,29.067,8,Local,,old_town|capital,,,to_resolve,,,,owner knowledge,"First Ottoman capital below Uludağ; a city, not a monument."
 H096,Türkiye,TUR,Ürgüp,Urgup,positive,settlement,38.630,34.912,5,Local,,volcanic|rural,,,to_resolve,,,,owner knowledge,"Cappadocian town among volcanic-tuff fairy chimneys; a town, not a monument."
 H097,Türkiye,TUR,Eskişehir,Eskisehir,positive,settlement,39.774,30.519,8,Local,,,,,to_resolve,,,,owner knowledge,"Central Anatolian university city (input 'Eski?ehir'); a city, not a monument."
+H098,Morocco,MAR,Boumalne Dades,Boumalne-Dades|Boumalne du Dades|Boumalne,positive,settlement,31.376,-5.998,5,Local,,,,,to_resolve,,,,owner knowledge,"owner list 3 Oct: gateway town of the Dades valley; coordinates approximate (Claude), owner to confirm on the map"
+H099,Morocco,MAR,Debdou,,positive,settlement,33.99,-3.05,8,Local,,,,,to_resolve,,,,owner knowledge,"owner list 3 Oct: small eastern Morocco town; coordinates approximate (Claude), owner to confirm"
+H100,Spain,ESP,Gijón,Gijon|Xixón,positive,settlement,43.532,-5.661,8,Local,,,,,to_resolve,,,,owner knowledge,owner list 3 Oct: Asturian coastal city
+H101,Spain,ESP,Mombeltrán,Mombeltran,positive,settlement,40.25,-5.08,8,Local,,,,,to_resolve,,,,owner knowledge,"owner list 3 Oct: village below the Sierra de Gredos; coordinates approximate (Claude), owner to confirm"
+H102,Spain,ESP,Formigal,,positive,settlement,42.775,-0.38,8,Local,,,,,to_resolve,,,,owner knowledge,"owner list 3 Oct: Pyrenean ski resort in the Tena valley; coordinates approximate (Claude), owner to confirm"
+H103,Türkiye,TUR,Amasra,,positive,settlement,41.747,32.386,5,Local,,,,,to_resolve,,,,owner knowledge,owner list 3 Oct: Black Sea port town

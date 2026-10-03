@@ -433,3 +433,19 @@ def test_empty_bundle_passes_nothing_that_depends_on_it(make_ctx):
     results = {r.gate: r for r in gates.run_all(make_ctx([]))}
     passing = {g for g, r in results.items() if r.passed}
     assert passing <= {"G-GOLDEN", "G-CHURN"}, passing
+
+
+def test_blank_kinds_need_a_reason_and_stay_rare(oracle, make_ctx):
+    """D26: a place may carry no kind only with a stated reason, and under 2 % of the bundle."""
+    small = clone(oracle)[:60]               # share bounds apply from 100 places
+    one = clone(small)
+    one[0]["kinds"] = []
+    assert not gates.g_kind(make_ctx(one, name="k1")).passed             # no reason
+    one[0]["no_kind_reason"] = "no rule fires; reviewed"
+    assert gates.g_kind(make_ctx(one, name="k2")).passed                 # 1 of 60 is under 2 %
+    many = clone(small)
+    for p in many[:10]:
+        p["kinds"] = []
+        p["no_kind_reason"] = "x"
+    r = gates.g_kind(make_ctx(many, name="k3"))
+    assert not r.passed and "without a kind" in r.detail
