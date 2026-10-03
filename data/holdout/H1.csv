@@ -102,3 +102,6 @@ H100,Spain,ESP,Gijón,Gijon|Xixón,positive,settlement,43.532,-5.661,8,Local,,,,
 H101,Spain,ESP,Mombeltrán,Mombeltran,positive,settlement,40.25,-5.08,8,Local,,,,,to_resolve,,,,owner knowledge,"owner list 3 Oct: village below the Sierra de Gredos; coordinates approximate (Claude), owner to confirm"
 H102,Spain,ESP,Formigal,,positive,settlement,42.775,-0.38,8,Local,,,,,to_resolve,,,,owner knowledge,"owner list 3 Oct: Pyrenean ski resort in the Tena valley; coordinates approximate (Claude), owner to confirm"
 H103,Türkiye,TUR,Amasra,,positive,settlement,41.747,32.386,5,Local,,,,,to_resolve,,,,owner knowledge,owner list 3 Oct: Black Sea port town
+H104,Morocco,MAR,Bhalil,,positive,settlement,33.815,-4.835,8,Local,,,,,to_resolve,,,,owner knowledge,"owner list 3 Oct: cave-house village near Sefrou; coordinates approximate (Claude), owner to confirm"
+H105,Morocco,MAR,Skoura,Skoura Ahl El Oust,positive,settlement,31.06,-6.55,8,Local,,,,,to_resolve,,,,owner knowledge,"owner list 3 Oct: palm-grove oasis with kasbahs; coordinates approximate (Claude), owner to confirm"
+H106,Türkiye,TUR,Kekova,Kekova Island|Üçağız|Ucagiz,positive,area,36.19,29.86,15,Local,,,,,to_resolve,,,,owner knowledge,"owner list 3 Oct: sunken-city bay and island on the Lycian coast; coordinates approximate (Claude), owner to confirm"
