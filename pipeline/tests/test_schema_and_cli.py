@@ -96,7 +96,7 @@ def test_verify_never_goes_green_on_the_oracle_and_reports_n(oracle, tmp_path):
     assert r.returncode == 1
     assert "G-LANDMARK" in r.stdout and "PEND" in r.stdout and "[n=184]" in r.stdout
     results = json.loads((tmp_path / "out.json").read_text())
-    assert {x["gate"] for x in results if x["pending"]} == {"G-DETERMINISM", "G-STRUCT", "G-REGION", "G-DISPUTE", "G-PRINT"}
+    assert {x["gate"] for x in results if x["pending"]} == {"G-DETERMINISM", "G-STRUCT", "G-PAIRS", "G-REGION", "G-DISPUTE", "G-PRINT"}
 
 
 def test_registry_parquet_is_readable_and_empty():

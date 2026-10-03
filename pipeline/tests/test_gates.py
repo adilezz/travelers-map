@@ -31,7 +31,7 @@ def test_oracle_passes_every_gate_that_can_run(oracle, make_ctx):
 def test_run_all_is_never_green_before_m4(oracle, make_ctx):
     results = gates.run_all(make_ctx(oracle))
     assert any(not r.passed for r in results)
-    assert {r.gate for r in results if r.pending} == {"G-DETERMINISM", "G-STRUCT", "G-REGION", "G-DISPUTE", "G-PRINT"}
+    assert {r.gate for r in results if r.pending} == {"G-DETERMINISM", "G-STRUCT", "G-PAIRS", "G-REGION", "G-DISPUTE", "G-PRINT"}
     assert all(not r.passed for r in results if r.pending)
 
 

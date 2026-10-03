@@ -469,6 +469,7 @@ def pending_gates() -> list[GateResult]:
     return [
         GateResult("G-DETERMINISM", False, "pending: a rebuild from the same manifest must reproduce every hash; built in M2", True),
         GateResult("G-STRUCT", False, "pending: parent chains, serving nodes and stay buckets against data/golden/structure.csv; built in M2", True),
+        GateResult("G-PAIRS", False, "pending: pairwise agreement of the ranking with data/holdout/pairs.csv (confirmed pairs); built in M3", True),
         GateResult("G-REGION", False, "pending: needs geometry; built in M4", True),
         GateResult("G-DISPUTE", False, "pending: needs territories; built in M4", True),
         GateResult("G-PRINT", False, "pending: needs the print selection; built in M4", True),
