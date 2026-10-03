@@ -49,6 +49,8 @@ The budget is a **ceiling**. A build reports the count achieved and the reason i
 6. A piece exists only where holes exist; empty land is printed but carries no piece. A wall with gaps is honest. (The web atlas, by contrast, tessellates all land into regions — document 2 §8.)
 7. A piece is **named from the polygon**, never from the merge that made it: the first-level unit containing its centroid; failing that the largest settlement inside it; failing that a compass qualifier on the country. A piece named for a settlement must contain it.
 
+> **Deferred (D29, 3 October 2026).** Tile construction waits until the places are defined, so that several methods can be compared on real data. What follows stays a proposal.
+
 ### 4.1a Dynamic cuts: balanced subdivision (proposal under test)
 
 The owner's method: a country's **border is static**; inside it, tiles are separated by **straight cuts along the map's two axes**, placed by counting places. It is a recursive balanced (k-d style) subdivision, implemented and tested in `pipeline/atlas/tiles.py`, with an exploration script (`pipeline/scripts/tiles_demo.py`) that clips the rectangles to real borders.

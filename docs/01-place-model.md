@@ -133,6 +133,10 @@ Merging (5.1) joins records of one destination. Absorption joins *neighbouring d
 
 ## 6. Notability and tiers
 
+### 6.0 What the user sees: a renown order
+
+Decided 3 October 2026 (D28). The list for a country is ordered by tier, then by *N*, then by a stable id. It is called "most renowned first"; it is a statement about how widely a place is known and documented, never about how good it is. The page shows the tier and a short reason ("World Heritage · described in 140 languages"), never *N*, a score or a rank number. Filters (kinds, and later experiences) only remove rows: they do not re-rank, and tiers are computed once on the whole country so a place keeps its tier under any filter. The 0–100 score and the pillar scores of v1 are retired; the pillars survive only as kinds. A "Start here" view that favours unseen kinds, reach and the owner's visited state is a separate, labelled toggle, off by default.
+
 ### 6.1 Notability *N*
 
 *N* is an absolute, internal quantity used to order places. It is never shown as a number and never ranks the world for display.
