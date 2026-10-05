@@ -5,7 +5,7 @@ BUNDLE ?=
 PREVIOUS ?=
 ARGS ?=
 
-.PHONY: help test lint verify release-verify freeze qids qids-apply classes pin-check extract-plan extract extract-pack
+.PHONY: help test lint verify release-verify freeze qids qids-apply classes pin-check extract-plan extract extract-pack recall details details-pack
 OUT ?= data/raw/wikidata/$(shell date -u +%F)
 
 help:
@@ -20,6 +20,9 @@ help:
 	@echo "make extract-plan     show the Wikidata queries M1 would send (nothing is sent)"
 	@echo "make extract OUT=    run the Wikidata prototype extraction for the nine countries (resumable)"
 	@echo "make extract-pack OUT=  convert to Parquet and pin in data/inputs/MANIFEST.json"
+	@echo "make recall           how many golden places the extraction found (data/golden/s1_recall.md)"
+	@echo "make details         (owner, laptop) fetch labels, aliases, part-of and dates for the candidates; resumable"
+	@echo "make details-pack    convert the details to Parquet and pin them"
 	@echo "make pin-check       check that every pinned input is present and unchanged"
 	@echo "make freeze          freeze the owner-written holdout by hash (see data/holdout/README.md)"
 	@echo "ARGS=--prototype     accept skipped checks for a declared prototype build"
@@ -59,3 +62,12 @@ extract:
 
 extract-pack:
 	$(PY) -m atlas.extract check --out $(OUT) && $(PY) -m atlas.extract parquet --out $(OUT) && $(PY) -m atlas.extract pin --out $(OUT)
+
+recall:
+	$(PY) -m atlas.recall --report data/golden/s1_recall.md
+
+details:
+	$(PY) -m atlas.details run
+
+details-pack:
+	$(PY) -m atlas.details parquet && $(PY) -m atlas.details pin

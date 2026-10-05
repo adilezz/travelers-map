@@ -62,12 +62,26 @@ SELECT ?item ?coord ?sl ?pop ?country ?label_en ?label_loc WHERE {{
 POP_QUERY = """\
 SELECT ?item ?coord ?sl ?pop ?country ?label_en ?label_loc WHERE {{
   VALUES ?country {{ {countries} }}
-  ?item wdt:P17 ?country ; wdt:P31/wdt:P279* wd:Q486972 ; wdt:P625 ?coord ; wdt:P1082 ?pop ; wikibase:sitelinks ?sl .
+  ?item wdt:P17 ?country ; wdt:P625 ?coord ; wdt:P1082 ?pop ; wikibase:sitelinks ?sl .
   FILTER(?pop >= 100000)
   OPTIONAL {{ ?item rdfs:label ?label_en FILTER(lang(?label_en) = "en") }}
   OPTIONAL {{ ?item rdfs:label ?label_loc FILTER(lang(?label_loc) = "{lang}") }}
 }} ORDER BY ?item LIMIT {limit} OFFSET {offset}
 """
+# R2 admits on attention alone, whatever the class: municipalities, regions, valleys and oases are not all
+# in the class table, so this family asks for every item with 40 or more sitelinks and keeps its classes.
+ATTENTION_QUERY = """\
+SELECT ?item ?coord ?sl ?country ?label_en ?label_loc
+       (GROUP_CONCAT(DISTINCT STRAFTER(STR(?inst), "/entity/"); separator = "|") AS ?insts) WHERE {{
+  VALUES ?country {{ {countries} }}
+  ?item wdt:P17 ?country ; wdt:P625 ?coord ; wikibase:sitelinks ?sl .
+  FILTER(?sl >= {lo}{hi})
+  OPTIONAL {{ ?item wdt:P31 ?inst }}
+  OPTIONAL {{ ?item rdfs:label ?label_en FILTER(lang(?label_en) = "en") }}
+  OPTIONAL {{ ?item rdfs:label ?label_loc FILTER(lang(?label_loc) = "{lang}") }}
+}} GROUP BY ?item ?coord ?sl ?country ?label_en ?label_loc ORDER BY ?item LIMIT {limit} OFFSET {offset}
+"""
+ATTENTION_BANDS: list[tuple[int, int | None]] = [(100, None), (60, 99), (40, 59)]
 INSTITUTIONAL_QUERY = """\
 SELECT ?item ?coord ?sl ?whs ?wdpa ?country ?label_en ?label_loc WHERE {{
   VALUES ?country {{ {countries} }}
@@ -120,7 +134,10 @@ def jobs(countries: list[str] | None = None, class_qids: list[str] | None = None
             for lo, hi in BANDS:
                 p = dict(base, cls=cls, lo=lo, hi="" if hi is None else f" && ?sl <= {hi}")
                 out.append(Job(iso, f"class:{cls}:{lo}-{hi or 'up'}", CLASS_QUERY, tuple(sorted(p.items()))))
-        out.append(Job(iso, "pop", POP_QUERY, tuple(sorted(base.items()))))
+        out.append(Job(iso, "popall", POP_QUERY, tuple(sorted(base.items()))))
+        for lo, hi in ATTENTION_BANDS:
+            p = dict(base, lo=lo, hi="" if hi is None else f" && ?sl <= {hi}")
+            out.append(Job(iso, f"attention:{lo}-{hi or 'up'}", ATTENTION_QUERY, tuple(sorted(p.items()))))
         out.append(Job(iso, "institutional", INSTITUTIONAL_QUERY, tuple(sorted(base.items()))))
         for kind, (cls, lo) in NODE_CLASSES.items():
             out.append(Job(iso, f"node:{kind}", NODE_QUERY, tuple(sorted(dict(base, cls=cls, lo=lo).items()))))
@@ -143,6 +160,8 @@ def parse(binding: dict, disputed: dict[str, str] | None = None) -> dict:
     for k in ("sl", "pop"):
         if v.get(k) not in (None, ""):
             row["sitelinks" if k == "sl" else "population"] = int(float(v[k]))
+    if v.get("insts"):
+        row["instance_of"] = v["insts"].split("|")
     for k in ("whs", "wdpa", "iata", "icao", "code", "label_en", "label_loc"):
         if v.get(k):
             row[k] = v[k]
@@ -249,13 +268,15 @@ def iter_rows(path: Path) -> Iterator[dict]:
             yield json.loads(line)
 
 
-def to_parquet(out: Path) -> dict[str, int]:
+def to_parquet(out: Path, only: set[str] | None = None) -> dict[str, int]:
     """One Parquet file per family group (class, pop, institutional, node), via DuckDB."""
     import duckdb
     con = duckdb.connect()
     counts: dict[str, int] = {}
     groups: dict[str, list[Path]] = {}
-    for f in sorted(out.glob("*.jsonl")):
+    for f in sorted(out.glob("*__*.jsonl")):
+        if only is not None and f.name not in only:
+            continue
         fam = f.stem.split("__", 1)[1].split("_", 1)[0]
         groups.setdefault(fam, []).append(f)
     for fam, files in groups.items():
@@ -306,11 +327,11 @@ def main(argv: list[str] | None = None) -> int:
     if a.cmd == "pin":
         from atlas import snapshot
         snap = a.out.name
-        for f in sorted(a.out.glob("*.jsonl")) + sorted(a.out.glob("*.parquet")):
+        for f in sorted(a.out.glob("*.parquet")):          # the JSONL files are local intermediates
             snapshot.pin("wikidata_sparql", f, ROOT / "data" / "raw", snap)
         print("pinned", a.out)
         return 0
-    print(to_parquet(a.out))
+    print(to_parquet(a.out, {j.filename for j in todo}))
     return 0
 
 

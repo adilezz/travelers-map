@@ -11,6 +11,9 @@ ROOT = Path(__file__).resolve().parents[2]
 @pytest.fixture()
 def manifest(tmp_path):
     m = json.loads((ROOT / "data" / "inputs" / "MANIFEST.json").read_text(encoding="utf-8"))
+    for src in m["sources"]:                       # a clean copy: the real manifest pins real files
+        src.pop("files", None)
+        src["snapshot"] = None
     p = tmp_path / "MANIFEST.json"
     p.write_text(json.dumps(m), encoding="utf-8")
     return p

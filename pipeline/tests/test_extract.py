@@ -30,7 +30,7 @@ def test_western_sahara_items_carry_the_disputed_marker_under_morocco():
 
 def test_plan_covers_every_country_class_band_and_extra_family():
     todo = X.jobs(class_qids=["Q515", "Q8502"])
-    per_country = 2 * len(X.BANDS) + 2 + len(X.NODE_CLASSES)
+    per_country = 2 * len(X.BANDS) + 2 + len(X.ATTENTION_BANDS) + len(X.NODE_CLASSES)
     assert len(todo) == 9 * per_country
     assert len({j.filename for j in todo}) == len(todo)                        # no two jobs share a file
     q = [j for j in todo if j.country == "MAR"][0].query(0)
@@ -42,7 +42,7 @@ def test_plan_covers_every_country_class_band_and_extra_family():
 
 
 def test_the_real_class_table_expands_to_all_its_classes():
-    assert len(X.jobs(["ITA"])) == len(X.classes()) * len(X.BANDS) + 2 + len(X.NODE_CLASSES)
+    assert len(X.jobs(["ITA"])) == len(X.classes()) * len(X.BANDS) + 2 + len(X.ATTENTION_BANDS) + len(X.NODE_CLASSES)
 
 
 def test_run_pages_writes_a_self_describing_file_and_resumes(tmp_path, monkeypatch):
@@ -95,3 +95,23 @@ def test_parquet_groups_by_family(tmp_path):
     assert counts == {"class": 3}
     assert (tmp_path / "class.parquet").is_file() and not list(tmp_path.glob("*.rows.jsonl"))
     assert json.loads(json.dumps(counts)) == counts
+
+
+def test_attention_family_is_class_free_and_keeps_the_classes():
+    att = [j for j in X.jobs(["ESP"], ["Q515"]) if j.family.startswith("attention")]
+    assert [j.family for j in att] == ["attention:100-up", "attention:60-99", "attention:40-59"]
+    q = att[1].query(0)
+    assert "FILTER(?sl >= 60 && ?sl <= 99)" in q and "wdt:P279" not in q and "GROUP_CONCAT" in q
+    pop = [j for j in X.jobs(["ESP"], ["Q515"]) if j.family == "popall"][0].query(0)
+    assert "wdt:P279" not in pop and "FILTER(?pop >= 100000)" in pop      # municipalities are not all 'city'
+    row = X.parse(b("Q2807", insts="Q2074737|Q1549591"))
+    assert row["instance_of"] == ["Q2074737", "Q1549591"]
+
+
+def test_parquet_ignores_files_of_jobs_no_longer_in_the_plan(tmp_path):
+    pytest.importorskip("duckdb")
+    old = X.Job("ITA", "pop", "{countries}", ())
+    X._write(tmp_path / old.filename, {"complete": True, "rows": 1}, [X.parse(b("Q9"))])
+    keep = X.jobs(["ITA"], ["Q515"])[0]
+    X.run_job(keep, tmp_path, lambda q: [b("Q1")], delay=0)
+    assert X.to_parquet(tmp_path, {keep.filename}) == {"class": 1}

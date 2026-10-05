@@ -24,6 +24,16 @@ Written 5 October 2026. M1 is the backbone: pinned inputs, the Wikidata prototyp
 | S5 | Admission R1 to R6, notability *N*, tiers, kinds, edges, nodes | pipeline stages (M2) | anywhere | first bundle | build manifest |
 | S6 | Registry: mint ids for the admitted places | `atlas.minting` after `G-LANDMARK` passes | anywhere | `place_registry.parquet`, committed | git |
 
+## First result (5 October)
+
+The owner's first S1 run produced 35,642 distinct QIDs (class 88,485 rows, institutional 13,755, nodes 7,580, big cities 1,468) in 2.4 MB of Parquet. Measured against the golden set, **145 of 184 golden QIDs (79 %) were found**; the floor is 95 % (`make recall`, report in `data/golden/s1_recall.md`). The misses showed one defect in the queries, not in the data: most Spanish and French cities (Madrid, Seville, Valencia, Marseille...) and several Italian towns were missing because their Wikidata classes ("municipality of Spain", "commune of France") are not subclasses of the classes in `classes.csv`, so a class-bound query never saw them. Fix, already in `atlas.extract`: two class-free families (`popall`, every item with 100,000 inhabitants; `attention`, every item with 40 or more sitelinks, keeping its classes) so that rule R2 and R3 are not limited by the class table. The extraction must be re-run for these 36 new queries (the old ones are skipped); then `make recall` again. A golden place still missing after that is a finding about the golden evidence (for example Imlil, which probably has fewer than 15 sitelinks) and is recorded, not patched.
+
+Only the Parquet files are pinned; the JSONL files are local intermediates.
+
+## S2: details (built 5 October)
+
+`atlas.details` selects the QIDs worth describing (15 or more sitelinks, 100,000 or more inhabitants, a World Heritage or protected-area id, a transport node, or a golden place): 24,875 QIDs, about 500 requests of 50. For each it keeps English and local labels and aliases, the English description, instance-of, located-in, part-of, heritage designations, capital-of with an "ended" flag (current against former capital), inception and dissolution years, the official site, the English Wikipedia title (the key to pageviews), and `redirected_to` when Wikidata has merged the item since the extraction. Resumable; failed batches are listed. Commands: `make details`, then `make details-pack`.
+
 ## Order and effort
 
 1. **S1 first, today.** It is the only stage that decides what the golden set can be matched against. About 693 queries at a polite one or two seconds each; I estimate 30 to 90 minutes if the public endpoint behaves, and the run is resumable.
