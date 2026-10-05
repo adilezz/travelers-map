@@ -14,10 +14,3497 @@
       "source_id": "wikidata_sparql",
       "name": "Wikidata SPARQL subset for the nine prototype countries (a different pinned input from the full dump; QIDs are shared)",
       "url": "https://query.wikidata.org/",
-      "snapshot": null,
+      "snapshot": "2026-10-05",
       "sha256": null,
       "licence": "CC0",
-      "restricted": false
+      "restricted": false,
+      "files": [
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q109607_15-39.jsonl",
+          "bytes": 1692,
+          "sha256": "bca0eac077cbc1f5ffcfff68e188530318129c869be9804e729bdf2cd576fefd"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q109607_40-up.jsonl",
+          "bytes": 824,
+          "sha256": "f2a2b3c880350087db9b1f3c3428a753e689934092a456da0b3531e2e5390a30"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q109607_8-14.jsonl",
+          "bytes": 1476,
+          "sha256": "b4fddf204e74677ff7b3918c8447caf290f311d0f493d3004313b7922f8b1a3b"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q1370598_15-39.jsonl",
+          "bytes": 10624,
+          "sha256": "9afa4179ec59f893949835c71f6fd4cb2c0227608c3e22e13609a6014179d661"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q1370598_40-up.jsonl",
+          "bytes": 2662,
+          "sha256": "2d3d32541456a29d38f04e160a28854a9251738a894d98aa920190d7516c41a3"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q1370598_8-14.jsonl",
+          "bytes": 23021,
+          "sha256": "69eeea13f1cc0ac9ba2cc52fe162c02681a06d11846b38c0b95066bba59e2c06"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q16970_15-39.jsonl",
+          "bytes": 1875,
+          "sha256": "7e77c91655a503ec9b07bc46f9654f11a2cf2d00ffe13fe8e9359b1c152f31a1"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q16970_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "a8578423c618506bfd15327cda28e30a882f1eec9ad3c2bcc3f7c6d36a63a5f0"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q16970_8-14.jsonl",
+          "bytes": 4009,
+          "sha256": "ba7c31dc29da4b487d909a2861736c0584d50020b683e7630ccd00f30e2a307f"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q179049_15-39.jsonl",
+          "bytes": 672,
+          "sha256": "47a21da39021b0366fefd6a1f2f0c7d0ceb7ed7875c1c17974d1274ab5011aa2"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q179049_40-up.jsonl",
+          "bytes": 659,
+          "sha256": "4be57199f2f37d5db50662523ef896e17d7dd6bb2a7f521b2cb11a8cd33842e3"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q179049_8-14.jsonl",
+          "bytes": 1000,
+          "sha256": "4f470e47c8ba6c4ec3781631b15c7d559bba2c36905cf2e913d76cc44bf5a804"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q23397_15-39.jsonl",
+          "bytes": 2344,
+          "sha256": "a6d83254d2b9e3814008ef9c919bfce5fbb24a4bdf7325e6b3a5663299d2d5b6"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q23397_40-up.jsonl",
+          "bytes": 806,
+          "sha256": "092a5be6fe64a94dd9e0fff3a8b79753d12bad31b326719375263156520891e1"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q23397_8-14.jsonl",
+          "bytes": 1774,
+          "sha256": "5ac9c1b39b68c54fc9a9307ff40756a5443c100b6fc2d07701cd5041e47debcb"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q23442_15-39.jsonl",
+          "bytes": 3544,
+          "sha256": "75867d7fdac0fe17d00029629c0d5ee0f20a8bdb93cf4de4e410bc07aed7464f"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q23442_40-up.jsonl",
+          "bytes": 1098,
+          "sha256": "3abf888e4e6f3aa49aed44989fd073ede4790dfed6ba3a3723f351c6261c5198"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q23442_8-14.jsonl",
+          "bytes": 2527,
+          "sha256": "6660cec9717b43ec0d4bc8d2e0dd8348bb5da42b94a8e3b780250929337979d0"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q32815_15-39.jsonl",
+          "bytes": 3096,
+          "sha256": "adde2855c9eb4deed416be4bb60e787caff3462fcb86aa5684c1b19ae53d4927"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q32815_40-up.jsonl",
+          "bytes": 1172,
+          "sha256": "2e0e698efa40862d6c8ec6c32851cf884934bd5c0e857057aae8ce8cd017ce9f"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q32815_8-14.jsonl",
+          "bytes": 10640,
+          "sha256": "711f62dbf96278124923c9bee8368fb6e0fcd6ef8e8e7f9065da353a11e8e663"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q34038_15-39.jsonl",
+          "bytes": 670,
+          "sha256": "9c0dd45b27c38232a75cf4bd14d358374b8c9c850939157c147fb6d30197c896"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q34038_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "bcc3489df029faaf6e3d84a3eac425b6daa76f5ff42894ccf5514b9ad3ebab89"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q34038_8-14.jsonl",
+          "bytes": 668,
+          "sha256": "26df9b72dd28a2c9ef56995fcf70488a8c259e63e63421bc4d532d872aa53ef9"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q3957_15-39.jsonl",
+          "bytes": 2368,
+          "sha256": "60f01525f53ef6dc5c797a24addd01bbca1339bf461ce58182447298602abe6f"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q3957_40-up.jsonl",
+          "bytes": 1677,
+          "sha256": "ec79522b97f8f2654245740914e0664f7122d9a092c39be8a8d9ed3ad9d530a7"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q3957_8-14.jsonl",
+          "bytes": 2906,
+          "sha256": "d90568e73ac84c9d08233d7024a5402ddebb59b2b2733e9ab876a648a84f0376"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q39715_15-39.jsonl",
+          "bytes": 670,
+          "sha256": "ff2ebe619a16134e6d686a6d68940a5b97fc6c17b3bb5d5c234842e753d0e287"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q39715_40-up.jsonl",
+          "bytes": 834,
+          "sha256": "43165a55108d390ff31549af4f9ab0984ac5cc1ab21afe7237623ead60d7f9b7"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q39715_8-14.jsonl",
+          "bytes": 857,
+          "sha256": "c271c373dcf1f8510b218f83efa4cf3ec1b3728d6ce41cff20ca3e37dad20375"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q40080_15-39.jsonl",
+          "bytes": 670,
+          "sha256": "ac8c91d92b52a95546480475ba61fb455ea698c009195c9f18d5cc57b6422454"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q40080_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "fe8f481face04111e75404cc83588fc161b0042726c97d15c40900e71b958dca"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q40080_8-14.jsonl",
+          "bytes": 668,
+          "sha256": "1b66a5267ddb79dd9babd091dc2cd7b65987aa96d4558cd801d22ef47572074e"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q4022_15-39.jsonl",
+          "bytes": 1021,
+          "sha256": "47ff07f6b81a2b8d6be6a3167cb7a3a41ad2c986317f2fa17b8ceb774201f96e"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q4022_40-up.jsonl",
+          "bytes": 1120,
+          "sha256": "9e2708fd0b5bde758b62e6f239c82ec60ff8e77188364f110885f678f987fc4f"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q4022_8-14.jsonl",
+          "bytes": 2081,
+          "sha256": "894c5ddcde01d61bacf9b4749799ef62b13596eb3cc784d38d8b10864d471596"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q44539_15-39.jsonl",
+          "bytes": 7058,
+          "sha256": "fc8bae3f2bb1715c588318a50b8518cb37fc8fc35cb6427e70c66ab138d1f533"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q44539_40-up.jsonl",
+          "bytes": 1955,
+          "sha256": "13632a228ef9db853fb4a244bdbcb6491d6c76e02d154b2c3670602df78ec2cf"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q44539_8-14.jsonl",
+          "bytes": 10880,
+          "sha256": "6b599ba177cd6039bc46c01980035e781bd582cdf481e92e39a0c69a2c4d153f"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q44782_15-39.jsonl",
+          "bytes": 1027,
+          "sha256": "75e8c685189799a2f8a20dde94095bf1e4ff4fd4dad4b93662bc713c5a3a97bc"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q44782_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "65c02143de5f837e763c6faa724e9b4a2558768e162a56c9a0baa496fc473b16"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q44782_8-14.jsonl",
+          "bytes": 968,
+          "sha256": "d2907c3ea0dd971de2134c038e060573c12e42706a2af9d30c65ec0f596d5901"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q45776_15-39.jsonl",
+          "bytes": 670,
+          "sha256": "6c9dc7d8bc16189736306352eff20fc68f98d562d6ef9bf6563e05d0a363145e"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q45776_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "98588ba238e237938b1082ab3b2de7154577f0998bce70a6e7491462d4bd9367"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q45776_8-14.jsonl",
+          "bytes": 668,
+          "sha256": "dccdfe57a1211b47a886e283c3d915a4824e895935a0e1de0b13fbdf6ccf9d5d"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q46169_15-39.jsonl",
+          "bytes": 1248,
+          "sha256": "c157f6800b12a57e559bbd2c81d8389af7c9ff78b23e5f4d29b06fdf4b1afb0c"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q46169_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "a253f0283ffb27d5e7d66983b4e597ba0faa5baa3f419e8cc8179f847aa433a0"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q46169_8-14.jsonl",
+          "bytes": 1221,
+          "sha256": "8f71b663c205c97928bfd780b8fe169c34538f4978a21c72c39a83fe8933e978"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q5119_15-39.jsonl",
+          "bytes": 668,
+          "sha256": "dec481efb887832919cabb1f715855a4b760e493a35384682adb95660b591065"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q5119_40-up.jsonl",
+          "bytes": 1176,
+          "sha256": "08fcefb35d98db6f57db9be315323511a0a11b70c880d24245b68ce0f07ab204"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q5119_8-14.jsonl",
+          "bytes": 666,
+          "sha256": "f6f6a3c862629782339ced658b4b66512cb8082e7acfc97bc45973fe478a25c1"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q515_15-39.jsonl",
+          "bytes": 16851,
+          "sha256": "c62bb2f9c7d1e4895c4e1e7624c4587613f8ec1890e2037799da0c4d34d4c276"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q515_40-up.jsonl",
+          "bytes": 19862,
+          "sha256": "c2da45e04b9480ace0a7c61640c8acd4da2fc1ffcbc895c26ac15c825b9d16c3"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q515_8-14.jsonl",
+          "bytes": 11428,
+          "sha256": "6b85657700b5d956776f541cd44ba956aa4cd776b4cebff1a4638645b36e8d96"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q532_15-39.jsonl",
+          "bytes": 3941,
+          "sha256": "cab48fc790fd9bbde507de1de8bb9456dae6ce3851ed0b42ce2ff7643d341014"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q532_40-up.jsonl",
+          "bytes": 1620,
+          "sha256": "c1b25b93192e7c1af5be3667eeac6c9c869bf91ef64e7b4605a3591d95c517ae"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q532_8-14.jsonl",
+          "bytes": 2745,
+          "sha256": "82a669cd917b5d142a0c6e8337b39ade9a132803b736031e63c448d471d163c9"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q570116_15-39.jsonl",
+          "bytes": 672,
+          "sha256": "514c51fc3f08e146823205ba7f624de3641b7b49085b5492dafcd4974edc4201"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q570116_40-up.jsonl",
+          "bytes": 659,
+          "sha256": "514b1f307a6de39af1fa448cb70eb3566a71fa999af11f47825de782e5e575ef"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q570116_8-14.jsonl",
+          "bytes": 1181,
+          "sha256": "a41c173dec239af32e49c73afd6e14dbe9df531aae46ebadeb60f229741a5a0b"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q8072_15-39.jsonl",
+          "bytes": 668,
+          "sha256": "e8034ee88ae2ae8132a098bcd4bd634161a5ac449a6b85ef15eacc33bd30981f"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q8072_40-up.jsonl",
+          "bytes": 655,
+          "sha256": "600f584c71189aebccc9d5912dcec98832222c41f36c629b1c674b67f8c02a08"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q8072_8-14.jsonl",
+          "bytes": 666,
+          "sha256": "6a7d839cbca645d50e86f3dd5fedc60464830e1b43887fa00c0f1c438c0ece57"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q839954_15-39.jsonl",
+          "bytes": 32328,
+          "sha256": "e5d42b8e7e174c9fa5b27d76a38f5e9d0896b07d6c57850d31f8b2b0bad6e8fb"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q839954_40-up.jsonl",
+          "bytes": 12135,
+          "sha256": "e9648efb36a091e7facc1fecdb546dd1f9e8a8e44838b7ccd42eb1f6b620bcbe"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q839954_8-14.jsonl",
+          "bytes": 23323,
+          "sha256": "e59aeea23c43099ffbc248b7ab63200e03e26854802e06dd55ac0c2b20883cf6"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q8502_15-39.jsonl",
+          "bytes": 1477,
+          "sha256": "9aad8ae05578cb7a26f7ba17397be1198e8875bb2c04d0e65a1f23f70b289ca6"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q8502_40-up.jsonl",
+          "bytes": 807,
+          "sha256": "b7bfacc97fdd2dda1ca8d93bac577094710ef2f3e4365a064d52618e0292f631"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q8502_8-14.jsonl",
+          "bytes": 2001,
+          "sha256": "021a72173ebeb5495b3d6a9b27a5595e4c4f1115246f5eef9d19b24efff021bf"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q9259_15-39.jsonl",
+          "bytes": 668,
+          "sha256": "37d6c8d506d4ead77bbd99218bf6d37a991be3521ade5de807f9974e92c8b43f"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q9259_40-up.jsonl",
+          "bytes": 655,
+          "sha256": "f646537dcace7f6ebb58de5af4e187c30250bbeaaeba0622e5d286bdc5f3a692"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__class_Q9259_8-14.jsonl",
+          "bytes": 666,
+          "sha256": "ddaf986192244fdbdc6c045b04839ff8ed4d9dac34805be9841b598473979ddb"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__institutional.jsonl",
+          "bytes": 15623,
+          "sha256": "94440de28cd8e3a0cb5fc2c672bd456cef3a7808660c24ed3f0f66535accfb85"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__node_airport.jsonl",
+          "bytes": 9000,
+          "sha256": "05ae89ab6b45f4d821490ee637a629b9ef0d9e4979d5a971dc0747a807abf61d"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__node_ferry_terminal.jsonl",
+          "bytes": 651,
+          "sha256": "a50acc74e181833d6c13d8e0e201929ab8c04ee8c591d4bfaa5d3cd65b2b125b"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__node_rail_station.jsonl",
+          "bytes": 2521,
+          "sha256": "98a8a853e5be7dedc194ea50d08f85f6f4e00e31dc965e10d3ffc6d72ba06e08"
+        },
+        {
+          "path": "wikidata/2026-10-05/EGY__pop.jsonl",
+          "bytes": 26949,
+          "sha256": "768e6a1bd9401e65cce102de17ab06601bd360bf62b5655eca5ffebdc68dee0b"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q109607_15-39.jsonl",
+          "bytes": 1016,
+          "sha256": "08c0f3c8f8180569707fa2e7c0cc0c4e00f62b7362057ff56e83e90513d46c00"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q109607_40-up.jsonl",
+          "bytes": 659,
+          "sha256": "4e4af0a7a75ec15c53f5941d24fd34a6ffa07f8225e19881c9533e8242074bef"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q109607_8-14.jsonl",
+          "bytes": 1980,
+          "sha256": "096c4030d9e3aebf261fd7c66a6e5ba9dae5b7387d293346764950fa0f4ce3be"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q1370598_15-39.jsonl",
+          "bytes": 33753,
+          "sha256": "556a49872c1574dce9d18a58e7eee4f8ed0ebbfaa19429a3934b0196f06040be"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q1370598_40-up.jsonl",
+          "bytes": 4459,
+          "sha256": "2a385e311e12f58d9819aaebdcbea684ab493aebb06261908698da8738dc317c"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q1370598_8-14.jsonl",
+          "bytes": 57386,
+          "sha256": "112435927ed9ccc5b410feda880531486c89a1692cdb708618a973acf70a0659"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q16970_15-39.jsonl",
+          "bytes": 27160,
+          "sha256": "433fb2eab24a6c8a88ce2af8f2746e94c5b97a6d6954daa30ddf5036c9ae5438"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q16970_40-up.jsonl",
+          "bytes": 3696,
+          "sha256": "7f47d24a0ce023dfdf60e32c6b48055b14e49f0f95ad89fb7ba93aa380dd3c0f"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q16970_8-14.jsonl",
+          "bytes": 40667,
+          "sha256": "f70f856bc86aa598d2ae18310891cabc87e3f01f93058a1ede7299e87fd7a8dc"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q179049_15-39.jsonl",
+          "bytes": 2803,
+          "sha256": "9529495c4ff66cafc7d11590b32800bb6526c93c2452249c28c4a56507e13b78"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q179049_40-up.jsonl",
+          "bytes": 826,
+          "sha256": "83bc2abdd297710020b6948cba14e08830f157b6725deb0befaee9ebc0b45da6"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q179049_8-14.jsonl",
+          "bytes": 3588,
+          "sha256": "25957aba4fe12c8de614ca34e50b8d7c43f450489bfb3db04eab9f1f4a0926bf"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q23397_15-39.jsonl",
+          "bytes": 1140,
+          "sha256": "8b262b7298e33977ca1725bb21891fef28d44173339912f89eef2bad3e0c1768"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q23397_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "1fb02c42e386892dbc48ef9e4a1de8ff8a66ed825db04599b8af0e6e449e7f9b"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q23397_8-14.jsonl",
+          "bytes": 9186,
+          "sha256": "f9706f215c8aaf66cf566622f078dca681e769ed7212361b1d517bf4abddc533"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q23442_15-39.jsonl",
+          "bytes": 3837,
+          "sha256": "77bcb7c39448e5a88f97cf1e6a3cf6d7e58a3429f79d8ff1f8c67a0d46d774a0"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q23442_40-up.jsonl",
+          "bytes": 3580,
+          "sha256": "99df66ca306bb79a3a4da6459015d93378e88aaa7f051603553c9728dc060769"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q23442_8-14.jsonl",
+          "bytes": 7664,
+          "sha256": "f809a03346ddc8d7ae644d7d3f54b4c9e19e33de3b42d69f5811b0a6ba3c19c2"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q32815_15-39.jsonl",
+          "bytes": 1372,
+          "sha256": "7b78bd54581e47416a5fe21cee6d5042c1d6beff9a4094747b9511765493309e"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q32815_40-up.jsonl",
+          "bytes": 1035,
+          "sha256": "c0f0ae75cc743459d5337496229937d18daee0fca99f7696157c3adc81b22998"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q32815_8-14.jsonl",
+          "bytes": 2406,
+          "sha256": "52a22baaa8e64cc350a963c003b41b5b05c4462c4ca59840b9fb1fdc5cc0ce26"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q34038_15-39.jsonl",
+          "bytes": 670,
+          "sha256": "9fa50fef5ab202314c0cec37763b3eee902b0287f2afc003a84ae65347959aca"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q34038_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "1b2b46002288b3493bb9c74d2cc3a3b7026ca238550a1ec43edc986e36f9e40a"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q34038_8-14.jsonl",
+          "bytes": 998,
+          "sha256": "b89a3a42934c30b9d85c06c624935a58e202116c6d55cf66ecb2a0ae620e68c7"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q3957_15-39.jsonl",
+          "bytes": 18382,
+          "sha256": "c7d035067fc2f89813013a75bf256c0660731d78b05bfafa384aec25fa83016f"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q3957_40-up.jsonl",
+          "bytes": 7096,
+          "sha256": "ed932c7cd7fe7946cc1a75ae0f94062923aa58111ffe139f88923abe8f4a955b"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q3957_8-14.jsonl",
+          "bytes": 1723,
+          "sha256": "4f1cd2549e23f6da9e1ed58de425d25fd6ae9f9782a6d7dd804b6cc535ec79df"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q39715_15-39.jsonl",
+          "bytes": 838,
+          "sha256": "b31a63862e3cf1276b96af14d76f90c8ceda2891b269315b592d0e006a0da644"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q39715_40-up.jsonl",
+          "bytes": 995,
+          "sha256": "ad584049e9767ba81df66bd28c675b962cff69ba1824fd1642b74d928b2621c0"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q39715_8-14.jsonl",
+          "bytes": 1669,
+          "sha256": "624c4d5d093af997bc59d90fc1d23b19cf6ff23af3d0cc88e7edb59716cb0a73"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q40080_15-39.jsonl",
+          "bytes": 2180,
+          "sha256": "8b466c97909b516ff42befb56e59ffbbf1435128d5fe7a58c204593f45d166ff"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q40080_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "7e8329a493a8c5e35e4676a037d49dca807de5750782eaeee51bf6111294820d"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q40080_8-14.jsonl",
+          "bytes": 8668,
+          "sha256": "eaf2a6c4fd61a6f7b888ccbc8cc1ffe2f081581086b4e53b58e20d5f4630ae4b"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q4022_15-39.jsonl",
+          "bytes": 27190,
+          "sha256": "29ddfcd85172c5bf8bb1a8bf3e341b460ff7c3dca5de3d34c82b8e2fa79a265a"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q4022_40-up.jsonl",
+          "bytes": 5733,
+          "sha256": "25a678633880c7dfc45aba3e7c75e398ca87f0ceeb344a92bf363f56635b5105"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q4022_8-14.jsonl",
+          "bytes": 28018,
+          "sha256": "4c994acae6c1ad5e6fb320d52a5b00f1701ec5c3ad0ed8477c74bec8e3eae74f"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q44539_15-39.jsonl",
+          "bytes": 27325,
+          "sha256": "b47595dc67a8a6da01a579c37ea48894094fc1af9f1687515934b06762031626"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q44539_40-up.jsonl",
+          "bytes": 3696,
+          "sha256": "d5b7462762d276d4f55cd6d51e384b8f53a6b56aed5f0cfbf53f9ea38770243f"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q44539_8-14.jsonl",
+          "bytes": 41534,
+          "sha256": "572469055e41455bb7a32c5f7a79ca274d312f55c3c1f45b83c6172017c25409"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q44782_15-39.jsonl",
+          "bytes": 1820,
+          "sha256": "d61563aa9604db9aa2481ec530db96456ebe24b0a06dd45017f710259155acb1"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q44782_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "450911d3816c9b0a85c2ae602100bc4c176f8818ea1abfb6950eb476fe6b04e0"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q44782_8-14.jsonl",
+          "bytes": 4532,
+          "sha256": "0ec22308743017dd10ee7f1c47203d5b51c05ca9c0fc005ea23b5564356fc613"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q45776_15-39.jsonl",
+          "bytes": 670,
+          "sha256": "ec60d18f5405609f69a0812e6b8846635101df03542a0f83312a97f5771ff9a1"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q45776_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "41006655d1149a75c38a136c55133beb7394d34dbbf2f8988ef564681549d3e1"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q45776_8-14.jsonl",
+          "bytes": 668,
+          "sha256": "70dd3186b09557d2426277431986854a55608674833b2ff26d3811011411171e"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q46169_15-39.jsonl",
+          "bytes": 5922,
+          "sha256": "591e61fb88c3c5614407b73f6d849b393e4bf478277b0dc21eef1891b715fbc2"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q46169_40-up.jsonl",
+          "bytes": 2047,
+          "sha256": "7f42a914d9c8f64a70227a6ee61900bea2e4231ad722c6cfd6913ab276c4a5c4"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q46169_8-14.jsonl",
+          "bytes": 865,
+          "sha256": "c436df58b38efc6313225da423bb3f0f6e8e0b7005da609a31e32dba5c36f3a4"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q5119_15-39.jsonl",
+          "bytes": 668,
+          "sha256": "d52ddad7fbcfedb5f6820b3f1507513df44cf32a91faf2bddb09fbc6e970619e"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q5119_40-up.jsonl",
+          "bytes": 655,
+          "sha256": "d177b04e1469d67c05fa97856776c9ddd62f44a89d46a35b39616acee8624515"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q5119_8-14.jsonl",
+          "bytes": 986,
+          "sha256": "a4215965120b777cf17fa29d0ab0036009e61bbdaead5c7720a4518789be3436"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q515_15-39.jsonl",
+          "bytes": 4130,
+          "sha256": "56673b2b16a02be40e1329704fd7dde2831be0bad253a5be81f53bc22d2bb9c0"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q515_40-up.jsonl",
+          "bytes": 9622,
+          "sha256": "17f0e637971ffe1d80497738ed7165a44c941dbf6ffaeacabdfddaf826187254"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q515_8-14.jsonl",
+          "bytes": 6719,
+          "sha256": "a3ddc37c562aa25bb8e19e6fe0e0f9c6dcbef22768ba7cd68a1dc3d54a50e114"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q532_15-39.jsonl",
+          "bytes": 1387,
+          "sha256": "5cb12858b2f0a127c42558736d9b0ed9b8b732b20afa557c9a6113004a098273"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q532_40-up.jsonl",
+          "bytes": 821,
+          "sha256": "091971fa62465292e7b48e53757c24e35006266eeb8407a4e3ba2c5776a6a902"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q532_8-14.jsonl",
+          "bytes": 2805,
+          "sha256": "3276d2d993959fbc3b130848faeeb2cbfdb2d00e4e9c1e4d40253acdf1271d66"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q570116_15-39.jsonl",
+          "bytes": 3330,
+          "sha256": "334f673da1d0fc886b2227ec8994b93aa825a5e4e204db9cf9684ae87d5a62ca"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q570116_40-up.jsonl",
+          "bytes": 1366,
+          "sha256": "e19a1f5d6c288030564a7f3b103e47370fdd9e1d13b3068cb18ca55ca7b72e39"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q570116_8-14.jsonl",
+          "bytes": 5959,
+          "sha256": "5a7a5cd1281dc7cfdc5de667dcb6c365d1faf1365c69d688fe8e818b3d311f56"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q8072_15-39.jsonl",
+          "bytes": 1312,
+          "sha256": "ca7eee84d2a17734d57a261cd047585dd4b0501c33b628273fe34e830ecb62cb"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q8072_40-up.jsonl",
+          "bytes": 945,
+          "sha256": "6fcb7276c30d8f37916e8fe4d8125aa73a3a2e1d7683d3011ce2cdf01681b498"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q8072_8-14.jsonl",
+          "bytes": 1489,
+          "sha256": "4e85c31be378d98fa17b94aa8965e5f8db531073dbcbdc79100bcdc24ed5b365"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q839954_15-39.jsonl",
+          "bytes": 10730,
+          "sha256": "689f39ef7251ea31d699cc6bce2fb9e6a8ff1cb710b1de547d4daef5a8d50fce"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q839954_40-up.jsonl",
+          "bytes": 1398,
+          "sha256": "eef072b3dda91280a32fe6e800c8308950fadf5dbdd3fedb85523f93d74566d4"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q839954_8-14.jsonl",
+          "bytes": 26861,
+          "sha256": "39cf9f099473765fc08c7fcddbdd7fdb69c02f12143054314d81f3f7e95e8843"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q8502_15-39.jsonl",
+          "bytes": 9012,
+          "sha256": "319a26bd8a20f5b12034a95e0df3f1d48bc0022adaea06e5bce85999d7a36f06"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q8502_40-up.jsonl",
+          "bytes": 1561,
+          "sha256": "26108cdaa8ed6dd689b9bfdb4398f830f823a9e991bb7db248f62a1061dbcac7"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q8502_8-14.jsonl",
+          "bytes": 30053,
+          "sha256": "c008ea3c5d52800b1bd7c7cf1a11421241824e04996067489379209d292c821b"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q9259_15-39.jsonl",
+          "bytes": 828,
+          "sha256": "7d37d522534675b30130c0daefde26884db12a9eadfe5555bf4e65c5b119d22f"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q9259_40-up.jsonl",
+          "bytes": 935,
+          "sha256": "bcd45034b4d9d5bc788ef8a3d5747c843caa7128db3bd8313265c9b5de3f8045"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__class_Q9259_8-14.jsonl",
+          "bytes": 666,
+          "sha256": "d624123ec5a7cb2bdbd0b80cc34043dc41c4ac9f63a966dcd46b15726e1c269e"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__institutional.jsonl",
+          "bytes": 597948,
+          "sha256": "d472f87397704ecb8fd2e8f5d39a4d247f35aa3de191bb15b1c1aa99698cec1d"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__node_airport.jsonl",
+          "bytes": 17392,
+          "sha256": "7c8837f081907f64633446e0f447c3cb28210782d23c4b296c329d901f5b1f06"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__node_ferry_terminal.jsonl",
+          "bytes": 3097,
+          "sha256": "232684ee768638d46ade675e7787ae660af3c6d7d91a8c848edbd8902ba534a6"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__node_rail_station.jsonl",
+          "bytes": 166588,
+          "sha256": "bdd9c7b293082a1ddf455a26d9664fe61fe56325311103badd8217791b940b31"
+        },
+        {
+          "path": "wikidata/2026-10-05/ESP__pop.jsonl",
+          "bytes": 56891,
+          "sha256": "5b5287b5d24e8e3be1752a8fee776c1f654b405d14562c9c69f52c0cb9026a86"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q109607_15-39.jsonl",
+          "bytes": 1888,
+          "sha256": "59ed08960d608183dab10440d8716f652d688462acb8950536bf81321055c484"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q109607_40-up.jsonl",
+          "bytes": 660,
+          "sha256": "d1e33a5f0753586a922b542a70e16a039cd299e293cddfdb97dfaebff108553d"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q109607_8-14.jsonl",
+          "bytes": 2436,
+          "sha256": "0553937301ec51c926d608d9d67df6ed1ee43f3863aa90b9bfabcd155e2dba40"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q1370598_15-39.jsonl",
+          "bytes": 32869,
+          "sha256": "43633d88e59ad7d4d0472e24937936e21768de64ffbd8d2350f7dce55fb345c4"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q1370598_40-up.jsonl",
+          "bytes": 4977,
+          "sha256": "3371657c1171fe6f950e144e36daa989ff33773576ba516e6678164dc75b7ae7"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q1370598_8-14.jsonl",
+          "bytes": 78891,
+          "sha256": "923398b85be4e8767ee6a5a16c7c58723f6c0e57d6a0b9ac88dc2a23123134bc"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q16970_15-39.jsonl",
+          "bytes": 23291,
+          "sha256": "de7d9f389f25b0cf2a8c5f48c638178682cf374e425f27e726d26e0f75d29e15"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q16970_40-up.jsonl",
+          "bytes": 4156,
+          "sha256": "e5a8b10393e4a61e654f5c5579b8086ec04673adc57671f245573efe19a0cc58"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q16970_8-14.jsonl",
+          "bytes": 57487,
+          "sha256": "2cb0d0a2849ac2aacfb6bae771ca97ea7bae866d1742f6ecb780211f74106835"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q179049_15-39.jsonl",
+          "bytes": 1886,
+          "sha256": "504c07e86b7637d8fcd1179340eb389afe198196acce4d88485b5abf8918403d"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q179049_40-up.jsonl",
+          "bytes": 660,
+          "sha256": "e75fab78aabcc895b5cbcdb5db654f10ca6cb74df788284cfb6742dba8af862a"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q179049_8-14.jsonl",
+          "bytes": 838,
+          "sha256": "49ad48c4ebbd6fcfb496d261d59a5642cd6339c6d909f54fdc990e29711bb698"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q23397_15-39.jsonl",
+          "bytes": 1940,
+          "sha256": "b6e75e8088e3ab3ed73925fe7312e65a1c976ea374a7d294cec610b09bd96aeb"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q23397_40-up.jsonl",
+          "bytes": 794,
+          "sha256": "4e93f46dfa431e4f60e87eb93795461abc1d0ad78609a138796c6f2ecbbae712"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q23397_8-14.jsonl",
+          "bytes": 7685,
+          "sha256": "a79f3ab979de6390dff67bcd1a2de0e04761cafca0afd6ed517a1124c246d3cd"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q23442_15-39.jsonl",
+          "bytes": 48313,
+          "sha256": "eddaca079712599254caf3dce4a5ef35137f160f30819bcfebb20fdacf55e2ca"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q23442_40-up.jsonl",
+          "bytes": 6932,
+          "sha256": "1436670f36ba3848a6c60fc2b1d0a7c8e801929fd606996f93fd54b368f902aa"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q23442_8-14.jsonl",
+          "bytes": 11406,
+          "sha256": "aa02b719fc9909eb2c57fd7315a998df74c933dfa79df65d22813d6002d88e8d"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q32815_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "eacd070ac7b3154960a1f5290b6ee173dc73cc42f9fc926747485c0beb3b8388"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q32815_40-up.jsonl",
+          "bytes": 831,
+          "sha256": "fc3ca2c5b08dbb1feaead2d5bfa7d9e2cf43e126ba0b55b26eda26613af0a3f8"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q32815_8-14.jsonl",
+          "bytes": 1690,
+          "sha256": "f63d68189042538001e42461a2e37b84dd564fa9d2377647fa834a87145fbaff"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q34038_15-39.jsonl",
+          "bytes": 998,
+          "sha256": "06318f5bdbf8292387f11708acae293bee2a7c3c224d28f518bc7122d30e1dd1"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q34038_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "c08fc351b078bde8c81a084b8e6d5cb735fc5afcca462432c459550fc320ca5d"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q34038_8-14.jsonl",
+          "bytes": 1140,
+          "sha256": "8a34d3fe4eeae92e726548d7f253363c0a494997641ed124ac4e71268c465284"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q3957_15-39.jsonl",
+          "bytes": 2151,
+          "sha256": "33df7073814569c63db78c2b0769a72da3bcf011ffc4c7792514421644e8bcb8"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q3957_40-up.jsonl",
+          "bytes": 2579,
+          "sha256": "927404a94b1543073ce4fa3e136b7a919d4b778b810489fb28b8148334df28e8"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q3957_8-14.jsonl",
+          "bytes": 667,
+          "sha256": "9f7b7d8729a915d6bc0a662b9559513f200268dd20039db4ae8b3ddea3414c62"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q39715_15-39.jsonl",
+          "bytes": 1004,
+          "sha256": "9f7e3ee209f4ac9d1b19e16b01fdcdc3b5bc4b72611da8f44e18788b26ed465c"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q39715_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "daf608ebfbd32adc7e4bec5c2e0442d745b7224be9214815856bc1b938ac6c9f"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q39715_8-14.jsonl",
+          "bytes": 2311,
+          "sha256": "9851738a8f72d4c5606511e893a27fd31471d2817f0ba63b797969f1d4cf4732"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q40080_15-39.jsonl",
+          "bytes": 1461,
+          "sha256": "8bd798cc08279574ce26169c4f6381783ccc24a94943a1b11223126e0d673e48"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q40080_40-up.jsonl",
+          "bytes": 815,
+          "sha256": "1f2121a1cbadec8810db00fb6e4288bf755cbc75371b56ecce346a7f11ec7256"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q40080_8-14.jsonl",
+          "bytes": 999,
+          "sha256": "ba882e04d44ce32839ccb405f0685bb87f9d7183fb946259e944c28a6c294362"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q4022_15-39.jsonl",
+          "bytes": 36886,
+          "sha256": "5f622910de6beaa94a37bb02d9ee765532f7653449722d02e9b4410e7d43ffa8"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q4022_40-up.jsonl",
+          "bytes": 12812,
+          "sha256": "d17a24592574c4940de2d47b9475cd1531825d9b6da4ce435b9df98f0a0d167c"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q4022_8-14.jsonl",
+          "bytes": 72045,
+          "sha256": "597a9a9e909c454acbeb50af2ac953c353a2a71ffea2eb064ac6ca315d0c5706"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q44539_15-39.jsonl",
+          "bytes": 23291,
+          "sha256": "00fae06787e72ef1fe9b79c447bedfe1244f68487a3ebfa2f6c5543eb8c1dbb0"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q44539_40-up.jsonl",
+          "bytes": 4156,
+          "sha256": "e82ce5573ab502ae54ead0b065415c145051a08522717cb7dca3a59468c0113a"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q44539_8-14.jsonl",
+          "bytes": 58380,
+          "sha256": "8751f0289f9e7c48d239340bc14b92bb71ef3cc5336f0756e9083952c0d1de15"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q44782_15-39.jsonl",
+          "bytes": 1008,
+          "sha256": "f863bb48ab55fca23e4c36d5ca22279276877cd082287aad535724d7ecadfaeb"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q44782_40-up.jsonl",
+          "bytes": 834,
+          "sha256": "8d71e0a4ed060b4cf3d98a2290ff5eb224102ec85e444161ec7ef78cd95af676"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q44782_8-14.jsonl",
+          "bytes": 2558,
+          "sha256": "58dd31c71b531776dbb93a0f789c0ca208de871b6c8d9d6198e6ad4ae71c6f3a"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q45776_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "8cde7c0090b687dc1c21acc7f6a4ee0b68d7b3a65d28db5210c2ed259c055806"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q45776_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "4aa88e0a67730d52e6eeb6c684c6f4c00aa6791561344fb5a4cee956b3de593e"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q45776_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "5cf52d25caaa3f1e1dd79ba31c0ade1c941c3eac934860a0b38d41cd822acd86"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q46169_15-39.jsonl",
+          "bytes": 4260,
+          "sha256": "ec071220654479b7db7be78e3692808e4550ed6606753f1bf22192c24d1c719c"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q46169_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "e3a1cdf6e656bb22b866ffe838fe1417a7ed5918af61a7854e52ac13d3479122"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q46169_8-14.jsonl",
+          "bytes": 834,
+          "sha256": "d43db476828b6f52a40f2d95e4eca76b3f043546487a7699a4f074653ada3f84"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q5119_15-39.jsonl",
+          "bytes": 669,
+          "sha256": "74def3fcce2bf45dc526990ebe617c708ce5ce7caffa336cdc714188254b1d2e"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q5119_40-up.jsonl",
+          "bytes": 1146,
+          "sha256": "5eb29cf1d84fbe20e04a8c59c05c19644d3e47a711db2c61260cb70ff890db6b"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q5119_8-14.jsonl",
+          "bytes": 667,
+          "sha256": "8ae773e428fe8b1155d7f10c0dae3f70bcafc6d8d363b4f2b98246928e9ca3f7"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q515_15-39.jsonl",
+          "bytes": 12450,
+          "sha256": "227dc40a37f143fe29c18c60513424e27f094a796b2d9c66a6841413a31c5591"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q515_40-up.jsonl",
+          "bytes": 40952,
+          "sha256": "61b0db3068d797a4d8a8256fda6c7048e2e2fe6c8c13b2e1530cec05b2fe07b8"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q515_8-14.jsonl",
+          "bytes": 3681,
+          "sha256": "20f3aa9ef08c0c9f0fc777ac48f344fbdc6ed8d921d1551bf2f7f9dd239b597c"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q532_15-39.jsonl",
+          "bytes": 5658,
+          "sha256": "92075af7560033cccae7625cb1d229a7264bbf05d20e70f69737825b91249a7f"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q532_40-up.jsonl",
+          "bytes": 1539,
+          "sha256": "b5e99179d50410ab9ffc7bb040db6c7909bcaefefbe0e34a91941717542d5b28"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q532_8-14.jsonl",
+          "bytes": 3009,
+          "sha256": "6b9ea3c3ff60d10234c484b97ad321b28700505061aec1effd965c9b08dfc3be"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q570116_15-39.jsonl",
+          "bytes": 4054,
+          "sha256": "08fb519f9980ad5c08c1b6984b93adb40c8b31d9b95ea64c1bb630d7d75f1e4f"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q570116_40-up.jsonl",
+          "bytes": 1629,
+          "sha256": "a01c8f147d71bacc26c785526f89a23b7b1703e3f628746001f684ab7fbfa804"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q570116_8-14.jsonl",
+          "bytes": 6775,
+          "sha256": "f2d73e4f2f086d76ba5eee543a99a91d2e394f7b484d94491ea684ba3654bad2"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q8072_15-39.jsonl",
+          "bytes": 1778,
+          "sha256": "023b298b30bd8100a6bf083d5ac26891bfc45944ad2cc2302ed90c5a1edae983"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q8072_40-up.jsonl",
+          "bytes": 1814,
+          "sha256": "f59d88f68843a738ef40c85f717dd59813ad9f75e4dda831ee459a56ad07229e"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q8072_8-14.jsonl",
+          "bytes": 1878,
+          "sha256": "b444e77b64420a4c031b68b9e4a156aaf273ebd14be5e79b1893534f9c6cd4d7"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q839954_15-39.jsonl",
+          "bytes": 9560,
+          "sha256": "6cb9769da46e76c4549cdee9569a12137d19d19921f5b87237e8f9e49d7675ae"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q839954_40-up.jsonl",
+          "bytes": 2051,
+          "sha256": "2a687427859ee0011e912aad41f04a6ac211d479c4af65a88197f8dceed3e54b"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q839954_8-14.jsonl",
+          "bytes": 20883,
+          "sha256": "973e9283d4264a8abf2d65dfa821beeb3f7e244660c30076a2242324aa4313b4"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q8502_15-39.jsonl",
+          "bytes": 11875,
+          "sha256": "0bca4b3306171e5e3a198e3a58005bbb59e9ba5fc254895bdd80fd705be58405"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q8502_40-up.jsonl",
+          "bytes": 2588,
+          "sha256": "1fede80e2fbda1dc78162ea81c012d4630d45671f4f77412fb9ba6aa5455e692"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q8502_8-14.jsonl",
+          "bytes": 43438,
+          "sha256": "797b6bf5bc3bd6b80508a82f77a966a617af063217a4f1d6e8ee3408dd3f3374"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q9259_15-39.jsonl",
+          "bytes": 873,
+          "sha256": "0d442af9ff8f80784aac44479abb03bbccdff3ede892df65d4eb05eb5383c52a"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q9259_40-up.jsonl",
+          "bytes": 943,
+          "sha256": "0129b6e25e404d7011f966c1d30d6256a9388accf01a346408dc522bd22d3eb9"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__class_Q9259_8-14.jsonl",
+          "bytes": 667,
+          "sha256": "f7aaa03f6c0689bcdc067ad27bfc6b02af6385086ec637e6fcf9b202efef2012"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__institutional.jsonl",
+          "bytes": 871781,
+          "sha256": "ddf2fda3d4cadd7d80a32270bef4cd0d2c4270e6e6ae81ff77bd477faf347068"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__node_airport.jsonl",
+          "bytes": 37914,
+          "sha256": "7e459e69f1e3a817b320fb1392f4d121455181e15ff6e6ff60ff6952c450cd9c"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__node_ferry_terminal.jsonl",
+          "bytes": 4992,
+          "sha256": "4528b3f39dfd8f63320491ee900c2c870a17d146120d4f3d6fa6dae4d58abd4a"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__node_rail_station.jsonl",
+          "bytes": 492638,
+          "sha256": "e7af8dca96ef0b8830c14f4f90034d045fe33db4111257f4c71dc5cec909b5e7"
+        },
+        {
+          "path": "wikidata/2026-10-05/FRA__pop.jsonl",
+          "bytes": 17914,
+          "sha256": "0fd9eceb6b859867ffef9f138e3368e0d143d2d9282535a770763415074c731f"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q109607_15-39.jsonl",
+          "bytes": 3640,
+          "sha256": "a915adb36c714947cc9b7fcea083d91b1fe9573eb4da6c94c58d7b43507b688b"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q109607_40-up.jsonl",
+          "bytes": 1123,
+          "sha256": "2655d16fe85776f44b5ca95a552f9248f3dce43ac303ad78ea9950c6b53dac75"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q109607_8-14.jsonl",
+          "bytes": 6003,
+          "sha256": "c4d2b66bd67af67f8e0f657f592452f7e5f47e72eb836722b988c9186a98cd77"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q1370598_15-39.jsonl",
+          "bytes": 85852,
+          "sha256": "63c42051c5ffd0f9f1c4f9e47e38721f6d83da9d304d57edf3cd37b8e8c947cb"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q1370598_40-up.jsonl",
+          "bytes": 9334,
+          "sha256": "2d456719ac6efcd42c151edb0246d8cdcfc99c0172250ca0158bf25157414fc1"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q1370598_8-14.jsonl",
+          "bytes": 216328,
+          "sha256": "97295c8e32a94046cc69f466cf4ecfffc04d0eb40b814ba35591c7ed83f8347f"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q16970_15-39.jsonl",
+          "bytes": 72585,
+          "sha256": "93941a669405c94e588ca4133e4501d982feef7e1ecf6dfb895041a5d52e2052"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q16970_40-up.jsonl",
+          "bytes": 8218,
+          "sha256": "601fcfbbb3ea5fd3aa6002e346cb01b86db35e183771d2ba5ccc8a13250ecb9f"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q16970_8-14.jsonl",
+          "bytes": 182653,
+          "sha256": "3632651f6780df02427406cf130aabcd4a1cd6b4477727544d349941163b9bf0"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q179049_15-39.jsonl",
+          "bytes": 1400,
+          "sha256": "3d020bb440df0803b4691fb0ae3ed67c31a7d319fc9faf56bc29c3e60a2f8a8e"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q179049_40-up.jsonl",
+          "bytes": 659,
+          "sha256": "c239110d0f0441f0f39a2a957a96ccfc423c12039e64f05c323fd2a787eebcb3"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q179049_8-14.jsonl",
+          "bytes": 1758,
+          "sha256": "bb778489ab1d13cf9ca0f998d0441a9fb9b746127b2c3b7d1ca3859dac00c48f"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q23397_15-39.jsonl",
+          "bytes": 3580,
+          "sha256": "e5bbee8c9c0c23b6b8fe0fc7fef5bb47df21ab0d71dd060e21c5b2c3df2db0f6"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q23397_40-up.jsonl",
+          "bytes": 2016,
+          "sha256": "0ccaec35d08d04348d0fd86176a6395763cd7b900d68275fed3f023bfa9b7fd4"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q23397_8-14.jsonl",
+          "bytes": 11997,
+          "sha256": "eab78bef93f9b2c12f027ab09a272fd40caf8036c4acf536121afd1ac31b9da6"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q23442_15-39.jsonl",
+          "bytes": 12374,
+          "sha256": "2bd28b8be0e194e19fcbc892bcaa3f83400861dcbd24e6d3a51336385bc791ef"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q23442_40-up.jsonl",
+          "bytes": 3828,
+          "sha256": "ef766224245e0968a2ddbd703947e02fa2ae4adddfc2c847a5c37a84f8cbce87"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q23442_8-14.jsonl",
+          "bytes": 9005,
+          "sha256": "e9540fe78f0c5133b589d0727252519987157e0d0467f12af5e5f88deed912b2"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q32815_15-39.jsonl",
+          "bytes": 829,
+          "sha256": "253a901a6b0750a7860c9e578d092c575f9f3845b400c2e5f9b1958a22ebc130"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q32815_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "63c645de6b429d571c21573a59ad2ada5b09aeab8e66724e07ca25cd952127ae"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q32815_8-14.jsonl",
+          "bytes": 836,
+          "sha256": "458e8c2cc2585a608a6bf2870eb9b3fa7c6d73e7530917c8854fd3e7684223c1"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q34038_15-39.jsonl",
+          "bytes": 845,
+          "sha256": "60b1a187f335bad039bec98117ac0ec3a339605ec45680a858d196f29ae69249"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q34038_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "03f15099a8b4f1e56121371391edf2e9a6d0673ed9de30d388c56248fe1e7171"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q34038_8-14.jsonl",
+          "bytes": 1154,
+          "sha256": "6185bcd48db3fc4a1f5fe4db307bd79a4170a02077e619ae051298313950f05f"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q3957_15-39.jsonl",
+          "bytes": 816,
+          "sha256": "1c68ba210f3023741a9f8892e2454f83ffb27f7f1d0a8dba8e86ff5f5902948c"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q3957_40-up.jsonl",
+          "bytes": 8102,
+          "sha256": "f2024ee29029631b44ef3aaaeb099660c3f08b650653c9a51944e08a427317dc"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q3957_8-14.jsonl",
+          "bytes": 666,
+          "sha256": "b5bcaa3e91abb89cdefea388d32536ba362f5ec7e3c9e4cc0df0a0ffedff4af7"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q39715_15-39.jsonl",
+          "bytes": 833,
+          "sha256": "8a56b4fc7f1b496d5b7157ddd7f815f685d5599c4f9fa1b3b6d37841cd304671"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q39715_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "33f204b827a2b6da50d44de68ab195157f024a9a02492a58af1db18349b4d2a5"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q39715_8-14.jsonl",
+          "bytes": 1178,
+          "sha256": "8f74bc3e7c2fadf6ee231e53d642811f89030d06b80dd0ba8ab1749889716729"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q40080_15-39.jsonl",
+          "bytes": 670,
+          "sha256": "f587aa97654a84ebe33f7b423211dde4113b9bd4178cbda9c90b87f0f10f76cd"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q40080_40-up.jsonl",
+          "bytes": 835,
+          "sha256": "7006be03c76265e7b67794d573c4abc497184536d23b31d52d7587312bbf4a83"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q40080_8-14.jsonl",
+          "bytes": 1455,
+          "sha256": "e11df2479ca8e827fd6eefc7b08ff1262e5963451e5c93b2f54da668d5d82c88"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q4022_15-39.jsonl",
+          "bytes": 22043,
+          "sha256": "6b91937e6b46a6f04a1e0c004487358e1018d16ddca6628b1432eb54ca89b198"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q4022_40-up.jsonl",
+          "bytes": 4884,
+          "sha256": "62cd5578632ab68c1ab5c40df0ba36fb0b1de9bc2c431be46029f73bfc0b14b4"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q4022_8-14.jsonl",
+          "bytes": 23244,
+          "sha256": "b4b63d1a58edcea1643615dcc4f79a3faf4621f1bc4ebca755e8fcfdcf7dd54f"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q44539_15-39.jsonl",
+          "bytes": 79222,
+          "sha256": "496e6dcc91cd4ba10c53afa190edc4e4cb85c65489136e43cbb053d2537560ac"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q44539_40-up.jsonl",
+          "bytes": 8868,
+          "sha256": "0c3d5c7c2b3a9c0bc49494f05be707ccac0a28aac7d74993ff88418627f31960"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q44539_8-14.jsonl",
+          "bytes": 193501,
+          "sha256": "5f95215df52798c7f93d4cc59940141f1085289ef82b0ce02eaf6e8440de0566"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q44782_15-39.jsonl",
+          "bytes": 1463,
+          "sha256": "cd9b98ebb59129c1f4780b8f981d0bbae50c5d037b9d39a9ecc8c67781cf44f2"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q44782_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "46b44cedb8ac97fbc923704d2337622923d53808df283ea7b5c1a44d63ab952c"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q44782_8-14.jsonl",
+          "bytes": 2681,
+          "sha256": "15578579f698923293fd3994b795f791874c98a4feda6fdc06cbeca22431d839"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q45776_15-39.jsonl",
+          "bytes": 670,
+          "sha256": "3cdf2c4334e000c0feaf34b584e9a1f68d14c9e2e9c633060df476623665b450"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q45776_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "da147c60854a16fb282f922da3935be167337ea655d25e4e0aa0982f3f6dc854"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q45776_8-14.jsonl",
+          "bytes": 668,
+          "sha256": "edd97adeb43778e5ad094c09be4597407c6c2c911dcbacc5a917878a9b501461"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q46169_15-39.jsonl",
+          "bytes": 4917,
+          "sha256": "3b1c8187029214fe1b505866c67f5c91f4d7888f1c132ae3b6cff67ec4374e4d"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q46169_40-up.jsonl",
+          "bytes": 843,
+          "sha256": "b0114be7639cbb5aaa59cb8224bf57d1d3408d165771d4c8089491a99a9d9629"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q46169_8-14.jsonl",
+          "bytes": 1127,
+          "sha256": "8a85299cee348ef986ceb856d20f883ed95d469e7f9264bfee57ce209a14b1dd"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q5119_15-39.jsonl",
+          "bytes": 668,
+          "sha256": "0121c54dd2c4c774efc4829b93d6875aee52fe58154b1fbe33f91a9deefe2a37"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q5119_40-up.jsonl",
+          "bytes": 1489,
+          "sha256": "70c5e6706709aa361387f6eb2416635455f9cc243f40050974d47aa547a33707"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q5119_8-14.jsonl",
+          "bytes": 666,
+          "sha256": "c473e6553d014332d970f7c067985b79cb7fd2bc5d9238e405d3ae19bcaca7f2"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q515_15-39.jsonl",
+          "bytes": 8702,
+          "sha256": "48ec72e5b83f01a83fdfcb447c913f2d3749289976bf113891c5ccf3ca5ee1fc"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q515_40-up.jsonl",
+          "bytes": 29399,
+          "sha256": "0909d37d6e913de797255ece417ac407068d700ab09ed1267d67d49a9579315d"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q515_8-14.jsonl",
+          "bytes": 17267,
+          "sha256": "19700740017f441f3d9c336612b9a9da55395896823b8acc07c95972a070abf3"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q532_15-39.jsonl",
+          "bytes": 15389,
+          "sha256": "e69aa3d8f3021188401d795680a0937ae5cc046333197d203fec50331c5dd149"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q532_40-up.jsonl",
+          "bytes": 28386,
+          "sha256": "cf1bacd0457e628125a51ddb12a1592484a9193064ebf1b0800906eeb8a60526"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q532_8-14.jsonl",
+          "bytes": 344622,
+          "sha256": "816c7f272d4360fbd5685e3aed43f1c5a595820e13e9ff09c3f2b7196c9247f5"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q570116_15-39.jsonl",
+          "bytes": 2599,
+          "sha256": "c3ebaac007d3e9f29ba892686453d4bf8ffdd0424da5fa17f0416ff0a726e427"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q570116_40-up.jsonl",
+          "bytes": 659,
+          "sha256": "caf00776fd1a008cce8038d34aaec9bd9aa694943e856f96f959935c8f86d6a2"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q570116_8-14.jsonl",
+          "bytes": 3489,
+          "sha256": "b61559119e5d8d27ccbcabfb035a8ef7ba626916fc08976a7dca786abe79b206"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q8072_15-39.jsonl",
+          "bytes": 1298,
+          "sha256": "95ff681a95344a7be4e4311e5d9e6987c2290502b98d47837ecfefb5bddbdfc2"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q8072_40-up.jsonl",
+          "bytes": 1387,
+          "sha256": "5e49fa11221058d87001c228dfb200256dacce9ac8483e26afad10a655e5b1b2"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q8072_8-14.jsonl",
+          "bytes": 1707,
+          "sha256": "356ebd2007e31020467f9d67dd2785ec76760c38422f8380f923df28e2182033"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q839954_15-39.jsonl",
+          "bytes": 55534,
+          "sha256": "05c07ac8158210cd34f4f1b5f8ff81317dabf6307e58601f952382831dabf574"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q839954_40-up.jsonl",
+          "bytes": 12714,
+          "sha256": "5e876bb1125500869655298171b67449819b5f3430a396f727b1e05b41858c6b"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q839954_8-14.jsonl",
+          "bytes": 84987,
+          "sha256": "13b04741b63f682e0958a6ca473da1570c81022129f055576a8ac8bb20ceb289"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q8502_15-39.jsonl",
+          "bytes": 20411,
+          "sha256": "ed22c5a5628660e6ce3ed5c1849be2ecdf0d8536f7ab02c1b5981338b2de57bd"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q8502_40-up.jsonl",
+          "bytes": 2431,
+          "sha256": "35e213859429a67d0b66d1ce24469d4e7341cc8eba3664514f130038a12429f3"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q8502_8-14.jsonl",
+          "bytes": 75246,
+          "sha256": "081f57359aaffc7e27a27099be0ca9c0e9141d5a28c0b85e495aa9dbd4b392ac"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q9259_15-39.jsonl",
+          "bytes": 1071,
+          "sha256": "66706897aec5ae7ed39ce2d30312ba7380c58837a793eb8a8ee37b290d3fe55a"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q9259_40-up.jsonl",
+          "bytes": 921,
+          "sha256": "1fddb81e49afc4ae6be38c4dfa37b69143882951a527d30d347abdf2ae68ad9b"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__class_Q9259_8-14.jsonl",
+          "bytes": 1412,
+          "sha256": "0fccafdd7808d14c9c23470b63852533a56e870041bd1997acc61aeb7ab65541"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__institutional.jsonl",
+          "bytes": 682889,
+          "sha256": "42ee69fffe8df7887326c9036e44edbcaddafe590c58b1fa13567fc64a438521"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__node_airport.jsonl",
+          "bytes": 22176,
+          "sha256": "169025fd6edfbbdf576e3d00443ee7153ca0bb73cc17fe671747e2e1d43b327d"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__node_ferry_terminal.jsonl",
+          "bytes": 5534,
+          "sha256": "e99e099a4956cde0e4dc6d266b6e938e179dc67051028dfcbd1da8a0817bf6bb"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__node_rail_station.jsonl",
+          "bytes": 192502,
+          "sha256": "7a4af351ecf0af12d97ee5da76953ca9562094101de31193843e0a3487c666dc"
+        },
+        {
+          "path": "wikidata/2026-10-05/ITA__pop.jsonl",
+          "bytes": 26008,
+          "sha256": "3e874818eeabb2abc7c8ff4acbf92767ea36fde8dd681cfac43937049c548cdb"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q109607_15-39.jsonl",
+          "bytes": 1001,
+          "sha256": "7c56bc89c593df092233d659a562b5c95e5d87fce8bcf39a1d41b7c83956a4d6"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q109607_40-up.jsonl",
+          "bytes": 660,
+          "sha256": "5b6790025d44d6186cfdd00626b92bc6e1c6888e89940eaa088677e209667926"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q109607_8-14.jsonl",
+          "bytes": 671,
+          "sha256": "b7f0345c5229bb105ee95c675c15152e589f65e9b4a3b4889a413216cb58f576"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q1370598_15-39.jsonl",
+          "bytes": 1892,
+          "sha256": "7aba6b4beb5cccd164999f80220d2bc78bf724d00b5701c5b407875cf19c790a"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q1370598_40-up.jsonl",
+          "bytes": 662,
+          "sha256": "ada01f32dd63dcc08fc3fc8598b8315d1e37255b569f7accc0c32c4cbdb20825"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q1370598_8-14.jsonl",
+          "bytes": 2924,
+          "sha256": "e8d52ac5da4b7ca52135c02c185fcc1c38b5fd5676453ab53943969fb0a12ce6"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q16970_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "6f75526ba5c1cb3aeac1be577a886b9ae29039a8b667a7ad358722a107ac605b"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q16970_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "1eb3f0b97c8d1db7658b724287ff7532cbd9f5d0e3ce1699fece9d3eb4d410a9"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q16970_8-14.jsonl",
+          "bytes": 1003,
+          "sha256": "1e8e187f6248f56665054f4dd4ab8dacd7e1e1b03467d43b12264497caeff087"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q179049_15-39.jsonl",
+          "bytes": 1049,
+          "sha256": "88639fd771f034a99811629ed64f5721b89f4cccf5e5f4020b33ea73f6ed0f17"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q179049_40-up.jsonl",
+          "bytes": 660,
+          "sha256": "9652c219b2721b2e546321e4c0652cbd284e92278e240226e421a31b964ebe78"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q179049_8-14.jsonl",
+          "bytes": 1010,
+          "sha256": "c006640153a3944db7fb32f5a321a7107b737f1e03b43d3e6dcf492b6d200b06"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q23397_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "40b2365e656af4c3ebf786af28fae7c4582a1cd08417fa6d731f3813c48fe1ff"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q23397_40-up.jsonl",
+          "bytes": 966,
+          "sha256": "d22b7ff0842b2c21d803012e428edd3979c77eca5ccc7f31273b5aaf34f1af91"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q23397_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "be0eda4b4c42854ae65383285c4fd79d03d59125a94e06e7dbf5bec86023f299"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q23442_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "4901f1be7f131550276adf714a790bd86d09973f6a9a55cfaadc3b6e497c09e9"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q23442_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "63ffdcb5bef096527ced8a8090d3e1946f211ad0395938f76a5cbf7a0dd8f046"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q23442_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "e71c4815f886680d96111267a3e38f2e5dfea540886a1346fd888abcbfd25621"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q32815_15-39.jsonl",
+          "bytes": 1232,
+          "sha256": "8122def1256b34e1365da35038beca3cd47dd8dc04f0fbbf6388f6ffa3313497"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q32815_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "d2a9c56b94d93f825a7cad9e91eef866ede77a74074f207df4d2580c8c9dd062"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q32815_8-14.jsonl",
+          "bytes": 1204,
+          "sha256": "f35500b6665b99f88548ec72645fe5925c75e1545ccb37efe14f40cd908abe33"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q34038_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "771b9cca02420b5f7188f1ff1dc52bbec094e2ef6feeb7bb35f6921876c30023"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q34038_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "4fff2d9f43c861f597794cedd489fa2161810cfe247c245dea5cdde3638565b1"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q34038_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "95d905d60fe4d59277a683343d104fbc5c4f832fe6f541538eaedabfde95c029"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q3957_15-39.jsonl",
+          "bytes": 857,
+          "sha256": "1eaf51e242b03f46fd76b280b6e2fc9894ea4a35d6cd1a187eaceed398ee017e"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q3957_40-up.jsonl",
+          "bytes": 656,
+          "sha256": "444da69e45cfc2d21c266af8c4f05adc6c5d61b99bd4528148d69eb99f74c61d"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q3957_8-14.jsonl",
+          "bytes": 1180,
+          "sha256": "54bbcfbb3f395d085d0a43562814c4df434bcf0109b7e7a268b65e6b4a78d0c8"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q39715_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "c9c58c2c0c9db1f95caa988252cc87a4502a9376c1a345872f8b391bf28f4ad3"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q39715_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "09878e3347962e7819c97484b0a2ce37b5137cc5213fa17e97b1263e2aefc18d"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q39715_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "0630e510c968209ad1eedc0f916620a5128972dcfbe266dbaf61635a693266bc"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q40080_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "f2393e59537267c4ea6ff179140e14fce217ed86f45a873ebf63b8a90dd88fee"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q40080_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "7d1cbe501d76c3b25b61873135f0634f86afd98029a937a421e33b29cb62a045"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q40080_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "411468388ef5601ad8130a3b3a0c18abb1060adb88292345bc1580de997911c1"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q4022_15-39.jsonl",
+          "bytes": 1327,
+          "sha256": "9c7c6df7635f169c30dd0a339afbd51398faa62ffcff6d9b370fab51817a114a"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q4022_40-up.jsonl",
+          "bytes": 2727,
+          "sha256": "509b56e4c9bc2e26786f5ac4b799cf8e67d8f48fc9536acc6d9ca9d25c421427"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q4022_8-14.jsonl",
+          "bytes": 978,
+          "sha256": "065ccecf3e6e009b56cfe7063264705950ad43d87b72c1efc7103d6644e94a6d"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q44539_15-39.jsonl",
+          "bytes": 1327,
+          "sha256": "2fc0801a4410a7251ef5e26825c1983cb7fb6949432075c366da16ce9cc36ae4"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q44539_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "50b6dcb72d1e28d3b71e7974fe02c2a33a8b01c3850245ff08446948ce968fe7"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q44539_8-14.jsonl",
+          "bytes": 1844,
+          "sha256": "a3eb2fdc28137b0fa8e46d14d5cc51a700c13df0af1a06ec471fc39d5f8409a8"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q44782_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "19e8bee86f73192c008969056797adb45829f0d3578f320808e73cd860ce6e7b"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q44782_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "3e7bae257cb509818c5279d8183691c8a133faebd3a59018f2c39e8b00e947c4"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q44782_8-14.jsonl",
+          "bytes": 1165,
+          "sha256": "079309fcaa6cdc48875b4ea54d4b68695a7b8ccc221b7c3f8a464753df8e78f2"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q45776_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "681e71f76518b1942f9f52879bea7a206a1882a4aaf6f9540182914cb7041d30"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q45776_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "838b89934be158fbdaed092b9d702876c1ecaabc6f6c1ad4f38d073d88503544"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q45776_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "4ac4f1c3cf58a4d3a8e033bb7b207b34fc222a47ff0acd6b2392275eb005526c"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q46169_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "18dabd44baf10e1c27640cf2c50428a6efdad015809d8d1d013c35838179c5f0"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q46169_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "48fd7c05691a4720f87c56e27e7e868feeb574b4d1c3e559ec93b6efa04a43f5"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q46169_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "84af4371d8ffaf5b42675edcf088ec0a70b393b8a60e264ec7d0d0d425bf17e3"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q5119_15-39.jsonl",
+          "bytes": 669,
+          "sha256": "2f1978775c1944a70cc5d97dc3f4993a9781aeb5b990e22d8aa3a049024c1931"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q5119_40-up.jsonl",
+          "bytes": 656,
+          "sha256": "19f45f9e309529bf7991c46a9bb3a096855027db9e2bb1ee440a64139cd313a6"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q5119_8-14.jsonl",
+          "bytes": 667,
+          "sha256": "793c073bd66c73b5f85719a6e20a9e8c390c0b59bf38c7724983f957870dfc07"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q515_15-39.jsonl",
+          "bytes": 3472,
+          "sha256": "6fc9c765b330fe17f31f6413a174afd47cf2970df1a201dcb0ad6b90eebd249b"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q515_40-up.jsonl",
+          "bytes": 4459,
+          "sha256": "13d6ef1a596d4765c618914b104ad45ec839a1af924a48f042af29c900a0137c"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q515_8-14.jsonl",
+          "bytes": 2811,
+          "sha256": "9b52abb72bebfcfc1b063c21408a4652d2fc2a7d1f144be17c42bb20fc84edc4"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q532_15-39.jsonl",
+          "bytes": 1871,
+          "sha256": "ffba42c8cfa70f233c263021505bc611016157ceb49258ac92e70552b36fb716"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q532_40-up.jsonl",
+          "bytes": 654,
+          "sha256": "4608e6b22954de629e29303103a973c71f15145d3feb74e0edc4e18d8e2e19f8"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q532_8-14.jsonl",
+          "bytes": 4650,
+          "sha256": "ccf98adb7f7f74211d32fe2505adeaab9868225cb9725950ee9d47391041a36d"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q570116_15-39.jsonl",
+          "bytes": 673,
+          "sha256": "0ba904404709708882822d8d5f2b5216b6007c3501432af0140c4911e22b49c5"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q570116_40-up.jsonl",
+          "bytes": 660,
+          "sha256": "ad0d76730d67d0d6ea93e8b679bf835345886932ff09cc4d0e04eb5b1b7e477c"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q570116_8-14.jsonl",
+          "bytes": 671,
+          "sha256": "7820426463f872eede8bd87c3bffb6fc8197ee1cc42eb1da574a08d3d5928f33"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q8072_15-39.jsonl",
+          "bytes": 669,
+          "sha256": "51b29fa6ea5b2f9a41fd66a5f26c6a8d61f13314e546998e5d69cbadf9b90bdb"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q8072_40-up.jsonl",
+          "bytes": 656,
+          "sha256": "2cec773b387ef2319aadc12187719c9004ab5a092e0fba0acd8fa90831bb3c7c"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q8072_8-14.jsonl",
+          "bytes": 667,
+          "sha256": "47015c29e48acdcd3167df8ca8ddf033da2cb9f747e74f34ea819cfcfff8982f"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q839954_15-39.jsonl",
+          "bytes": 5027,
+          "sha256": "8447a3739007e75d82f25226659949d90ead285060cadb459d1a97754a1a7e29"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q839954_40-up.jsonl",
+          "bytes": 2091,
+          "sha256": "663ed76c376a8679e9ca81374e9634582e2c2e3f56caaae4706a732d6e715f76"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q839954_8-14.jsonl",
+          "bytes": 5374,
+          "sha256": "dda531d61b15d4a36992c08ba8f362dca36de133e9c1d740ed1048a277cce9e6"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q8502_15-39.jsonl",
+          "bytes": 1190,
+          "sha256": "062652ad379f22772f5023c05a04572f84fcf19a8fd3db92428bcdf4d2d22330"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q8502_40-up.jsonl",
+          "bytes": 816,
+          "sha256": "75301b3a1261e8f348c96955fe4b0b5293950b095aef720378f7699a2e4374c3"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q8502_8-14.jsonl",
+          "bytes": 1444,
+          "sha256": "e7972b97f70fcbe2f65949e677342e7faf213d0a6da2033865f3b32766dcd92c"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q9259_15-39.jsonl",
+          "bytes": 669,
+          "sha256": "f8ba362631832b456e8943815e3d8a30d5c029715a7b40dd9fe4ac9b177ee9ca"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q9259_40-up.jsonl",
+          "bytes": 656,
+          "sha256": "8c52be7fc7617b1fe85a62297c29d73e66ff59be36b6ae53e27cd25bb316b79e"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__class_Q9259_8-14.jsonl",
+          "bytes": 667,
+          "sha256": "7ac81ab713c47ba86032c5d2f5c511bb5d6a53013bb758d8d1fd93d4451bcbf2"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__institutional.jsonl",
+          "bytes": 5316,
+          "sha256": "6ec6bb677390133ac33f308380cf0bc38e83818411d79c786cc73f693c63c714"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__node_airport.jsonl",
+          "bytes": 1619,
+          "sha256": "81030538bbd6f75f4220b4efcd99a5f37a01dccc591b1637e9d8923a5e100e1f"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__node_ferry_terminal.jsonl",
+          "bytes": 652,
+          "sha256": "e39720461e1ab8563eaa1584d4d978ca760afa10b4a20b9d6b718145f33ef327"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__node_rail_station.jsonl",
+          "bytes": 795,
+          "sha256": "77e8f36f19dc63d7f6f11909fe8a027232dc893deaf3f63202c89beaf13588c5"
+        },
+        {
+          "path": "wikidata/2026-10-05/JOR__pop.jsonl",
+          "bytes": 3375,
+          "sha256": "9234f16c23f66e43b708b54cffef943380f6764b939915fabe496ecc30b1fe80"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q109607_15-39.jsonl",
+          "bytes": 683,
+          "sha256": "d128979509101042684429c230a35c59931233f3f09ffdfd61a0744c7c88e8ce"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q109607_40-up.jsonl",
+          "bytes": 670,
+          "sha256": "48bd18cd741d3ade6aa3a7045d74d07107da30b9e3e4271bd8aeea3a4805c001"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q109607_8-14.jsonl",
+          "bytes": 834,
+          "sha256": "edbc69e3da992c39a50efda2e386609c0e9f7be98f4ec90227c60155727b5a01"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q1370598_15-39.jsonl",
+          "bytes": 2907,
+          "sha256": "1f5c507f8b019df009a1943cd5880ec4fd49ce408df78e077d55cb2ab83315d6"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q1370598_40-up.jsonl",
+          "bytes": 1025,
+          "sha256": "8cdedaaa013d3a561f19432c757b00f61c52bff62b4ce794e03d7e5f2a373dd1"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q1370598_8-14.jsonl",
+          "bytes": 10237,
+          "sha256": "97d59ddf6b9a8c59abda0bb6a968bea17c54c8dd1eb1d0447d488fdc248aa6a4"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q16970_15-39.jsonl",
+          "bytes": 1117,
+          "sha256": "fcbdeb07e2b32f8f863753d2d6f2190ea202121393d0c977761bea318284c0da"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q16970_40-up.jsonl",
+          "bytes": 668,
+          "sha256": "a6b32dffc210be3c8ef18e0fef2ebbd6c94763c49c5e107fe875dedbafe0a6e2"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q16970_8-14.jsonl",
+          "bytes": 2759,
+          "sha256": "8cee3f67690aae27e914b7cbe5936f377d31e337fc439db9f1ccbf7c06602641"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q179049_15-39.jsonl",
+          "bytes": 843,
+          "sha256": "3adaee69b20b6becdf6bc94b12213d843a266154023629a3d61ee3b55652895c"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q179049_40-up.jsonl",
+          "bytes": 670,
+          "sha256": "f42e875864e42b70d1f1c82772c81b1e9c8e39fd05f19b366e4ec88de44bf19a"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q179049_8-14.jsonl",
+          "bytes": 681,
+          "sha256": "fd070253aaa4e01bb3e08a8ab9ab849ef3735445c77ab75ff7fd383fe6ffa10e"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q23397_15-39.jsonl",
+          "bytes": 681,
+          "sha256": "6cc6a8041a25d1c4a5e45d4e5a974e42a88c49fc957dab29bd6b1206dbe446c3"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q23397_40-up.jsonl",
+          "bytes": 668,
+          "sha256": "2bb5f0a1f69305a30c9dd2a2ae81f48f96617b64052f885eb820a21254556955"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q23397_8-14.jsonl",
+          "bytes": 3192,
+          "sha256": "208ae87abd4ba9c12988479dfd3ad97ca870bb12e11a870a72c55fe3316e539c"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q23442_15-39.jsonl",
+          "bytes": 681,
+          "sha256": "b8d8ccb46c89b72ccf1587c59b42a7f0d3973bc4aea55cda59d0f826be3bce83"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q23442_40-up.jsonl",
+          "bytes": 668,
+          "sha256": "ad28e5e3380a197a99db9948ac3523743eff0c5166475493ce7d9e16175db9e8"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q23442_8-14.jsonl",
+          "bytes": 1016,
+          "sha256": "2dc4936447f4e02da5c6e71edf8ba221fd505a11073864b14c69ceaa82cc8b00"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q32815_15-39.jsonl",
+          "bytes": 2308,
+          "sha256": "f865013d2ffbfdc5ae1a8fb4e881bd5e5e3d136512f59c520a04de22a54eb8f8"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q32815_40-up.jsonl",
+          "bytes": 1021,
+          "sha256": "762dd7dfbb089b862a155257f1cdbb5efced0588fd530a981a61001cddd64275"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q32815_8-14.jsonl",
+          "bytes": 6872,
+          "sha256": "16fc5ac94d8c6c3ba50ff825a6552829b5ad344b5f8ed62ca5391b84e3fc1c70"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q34038_15-39.jsonl",
+          "bytes": 851,
+          "sha256": "f34ea557f2aacfdc3bce12881faaa8f749d70abdbc52f162f4c53bdf3660bdac"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q34038_40-up.jsonl",
+          "bytes": 668,
+          "sha256": "8e0c3f9dc9d8ea60871c3ca4fd459dcbddfb563b484639c8d6f2d5b97d9a6174"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q34038_8-14.jsonl",
+          "bytes": 679,
+          "sha256": "c3ae482987a2f8383719d85fa7aadbaa689fa9ae2cefb2596d3aeceb9d00be17"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q3957_15-39.jsonl",
+          "bytes": 2077,
+          "sha256": "35e911a9bd016fb0609c9ee915987c988c0b32c9e75fa40f48f0040bcd2762f5"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q3957_40-up.jsonl",
+          "bytes": 847,
+          "sha256": "175c822946d7bab56bb72863a0ca0794bfc856433c2bacc6ab0ffbecc1af8e6d"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q3957_8-14.jsonl",
+          "bytes": 1434,
+          "sha256": "2825b35de1dc04268591d7e38cdf0b0e81f6f2aad3b1248e0ec137253a758181"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q39715_15-39.jsonl",
+          "bytes": 681,
+          "sha256": "8166cd08c09b7579ca8db8ee1c1148126c3c0007494e4496b52633b24e203456"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q39715_40-up.jsonl",
+          "bytes": 668,
+          "sha256": "ab32109f2f2dac6209c396bb5643355624309b3107e13db62087bb8b8d1f7dbd"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q39715_8-14.jsonl",
+          "bytes": 679,
+          "sha256": "18eef8c55e2898ece61f5b92377d8b9d329642d626f6426cf794ef1e4c097da0"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q40080_15-39.jsonl",
+          "bytes": 681,
+          "sha256": "f368cbe24de17d6b6a4e9969f8c328be66d9627b41f9817b506dc937fcd99bf6"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q40080_40-up.jsonl",
+          "bytes": 668,
+          "sha256": "0cf1c7d58361b726b68ce8370bf284aa6aa84f3e7a5e01bcd38d2a124c516cc0"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q40080_8-14.jsonl",
+          "bytes": 679,
+          "sha256": "efef224d7a5c9888b0a15e5a548f8f3d5476dd161c1fecd12fcd0f21078c65a3"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q4022_15-39.jsonl",
+          "bytes": 5071,
+          "sha256": "19a47648252eb84a6c46acb26e0c9e7785c39b1adfa15f89059c86280ebdbd2b"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q4022_40-up.jsonl",
+          "bytes": 1333,
+          "sha256": "623d842bcf74ef4163d8c6f945f8d3779e430e1a7d32491b98ebad860fd4f698"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q4022_8-14.jsonl",
+          "bytes": 3070,
+          "sha256": "759032a8d09c3b96ab9b1c09c2290b9f9031d79fce7de0b30b4fdd44d5fc1439"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q44539_15-39.jsonl",
+          "bytes": 1117,
+          "sha256": "9971b0dfef3bd6cfa162bedc99ac3f216ddb713bd522fdc73b60448e835d131d"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q44539_40-up.jsonl",
+          "bytes": 668,
+          "sha256": "6839c9496ac67af99a83f822352c206e5660bea6a7fe47d5b2d96bb3d5fd7b25"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q44539_8-14.jsonl",
+          "bytes": 2759,
+          "sha256": "dbbc918cf2279f33e318fa945e54421c30bdf7b944473d2e87e711b594dce42d"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q44782_15-39.jsonl",
+          "bytes": 1043,
+          "sha256": "8f7c30db710c96dc731ac312f1ef57fc89aec1b8a101b7e966971dcafca4baa2"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q44782_40-up.jsonl",
+          "bytes": 668,
+          "sha256": "d3298444f2a5f6d38a6066c1f887928e9a2cede8713bb49bbf26b8d441f73789"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q44782_8-14.jsonl",
+          "bytes": 1379,
+          "sha256": "e7e7f6032556262e44204d9bdd3865d09efc149a69f85480d230ed6b50c98a31"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q45776_15-39.jsonl",
+          "bytes": 681,
+          "sha256": "04e2a78e7616984f179b515783b2d66750d6e8e7fbc82331bbbe987ba55a7702"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q45776_40-up.jsonl",
+          "bytes": 668,
+          "sha256": "495bad726a53447f9556620b458a653e9188a1f303b6d9488ecaa39b5d93b27a"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q45776_8-14.jsonl",
+          "bytes": 679,
+          "sha256": "245f52882e85300ce9306f1c042aeb2a4982cb258fad176133bb053215ec76b5"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q46169_15-39.jsonl",
+          "bytes": 2174,
+          "sha256": "8cd3209c3b50981d2a131c718fa2045212c2255861a92dfaca8db8292cfc6e09"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q46169_40-up.jsonl",
+          "bytes": 668,
+          "sha256": "65211e995687bcb3888376b71261eefa9a6bc1cfe67a871894ff63a7d4bcfa2c"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q46169_8-14.jsonl",
+          "bytes": 1093,
+          "sha256": "5d08fc63fa43ef2c37f02cef6bcb66987c1168ecbf3b44f9990517f3923c9f11"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q5119_15-39.jsonl",
+          "bytes": 679,
+          "sha256": "89d4fa5b7ed1d0f6a455410f99dbbc44cdab0805b6ee35c333c62eaf6038e3a2"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q5119_40-up.jsonl",
+          "bytes": 840,
+          "sha256": "20ffa1cad01990d43d6698ad1a1e1681568766d2253e852ae2b7111ff894a6a6"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q5119_8-14.jsonl",
+          "bytes": 677,
+          "sha256": "5e301a0727ec27b6070a750a1a58aecbad1e7d446785f23aa6840a9fbcd62b48"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q515_15-39.jsonl",
+          "bytes": 19711,
+          "sha256": "991783760b478b2beaa6f0dc65d23a1da29680119a4fb83cdb6c20646dee72e6"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q515_40-up.jsonl",
+          "bytes": 9290,
+          "sha256": "5e9cc3f18c572c0c48f8ad4d1b5e27a85c9dd656e5cf5c08388f6826cbf8390f"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q515_8-14.jsonl",
+          "bytes": 7599,
+          "sha256": "40f5795c299509317eeaf70d00bebbd5f908cb14251c54d818a73a7696e2df60"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q532_15-39.jsonl",
+          "bytes": 2855,
+          "sha256": "81cd0d9725cd2f0e4503c8ea09fdff579ce9a03a22eef3e83e2881de2bda95eb"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q532_40-up.jsonl",
+          "bytes": 1016,
+          "sha256": "655b7e5ccbf19f06e1e6343b1a92588df43e0840eeb7f1e28696636837335dae"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q532_8-14.jsonl",
+          "bytes": 4907,
+          "sha256": "ee22cb237ddce67b5c701295e98d2ed0fb5e008bf2eee2b4d107dbdaf77597b6"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q570116_15-39.jsonl",
+          "bytes": 683,
+          "sha256": "0700bbeb398f97d76c613e08ff8804de7b7aea09b6d2caa76accef3032f454d4"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q570116_40-up.jsonl",
+          "bytes": 670,
+          "sha256": "e39f9a4c80b1bcadec3d8521d34c538fa709b6329ecb2a6762a5ce538dcac767"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q570116_8-14.jsonl",
+          "bytes": 864,
+          "sha256": "9fd9038574d7195d863966331c54c71019f75f11f1dfdd4dfdf5e9aa7a6db6af"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q8072_15-39.jsonl",
+          "bytes": 679,
+          "sha256": "19623a8bb07f4bed2b16eac8dad453a6086f0508c54b2d5fd317310bc165660d"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q8072_40-up.jsonl",
+          "bytes": 666,
+          "sha256": "17541dfee3f7b7c9611ee1b66400b2f62e4b0d2b641ea726f39c352f7db59af0"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q8072_8-14.jsonl",
+          "bytes": 830,
+          "sha256": "59c60bcebd16782b3712e59e10310e1c9686759ba7e3c37b4725644f56a25cf1"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q839954_15-39.jsonl",
+          "bytes": 2549,
+          "sha256": "ce0129dce292dc3bbefbd6739b2dbb7df2c3f43b1735c26d4f619d3c32c1c605"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q839954_40-up.jsonl",
+          "bytes": 1570,
+          "sha256": "6d372b56f42f5b9832fba9996f4fdf360db286629f7df2f54f97e4f1f7866277"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q839954_8-14.jsonl",
+          "bytes": 2291,
+          "sha256": "ca5472ffb3e272ed8597e0dd081664c1e21e9160519138098bc2119676f94fa8"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q8502_15-39.jsonl",
+          "bytes": 1791,
+          "sha256": "4f13ec65b738e8276a38d6538d5fc843b7b8c1c8b564bfb393fdb059166c47c7"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q8502_40-up.jsonl",
+          "bytes": 826,
+          "sha256": "307fd4ef4c00bb4fc658314862eadbfc025201f4fa1f0c5e9bdf5261b22f284f"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q8502_8-14.jsonl",
+          "bytes": 4557,
+          "sha256": "66196361e24a2a1f0d40467efc943d792cb084ef252e60e37aece02ad2173d43"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q9259_15-39.jsonl",
+          "bytes": 679,
+          "sha256": "5481b7d4f59373e04d1d608642a10fa8e6109e41e93fda2f1c3076d6c8877bd6"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q9259_40-up.jsonl",
+          "bytes": 666,
+          "sha256": "1faee977d265ba663be16e63ed8e94225998f30268c3951a0c4c28a82b081bdd"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__class_Q9259_8-14.jsonl",
+          "bytes": 677,
+          "sha256": "2245576159eabeff3c7405d9ed43716c41875e214f911349ff0fe0dda8572cdc"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__institutional.jsonl",
+          "bytes": 7330,
+          "sha256": "e06bf75f6554075e36f789553eb9774bf8b51711717b13aaffc9993d6dc41495"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__node_airport.jsonl",
+          "bytes": 9750,
+          "sha256": "3f0e8a43687a98465d67c1cf3ed7704a2717d5d7502c062ababe0f28866b2f92"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__node_ferry_terminal.jsonl",
+          "bytes": 662,
+          "sha256": "985357356841c853d891301ee750f0b7f9b3033bbe953a9e8d82fb7f73f304f6"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__node_rail_station.jsonl",
+          "bytes": 2958,
+          "sha256": "e123f2d0309c24ace8c641c947fa7851538460379a35dceb0bf34c98aba4b8b1"
+        },
+        {
+          "path": "wikidata/2026-10-05/MAR__pop.jsonl",
+          "bytes": 15060,
+          "sha256": "71a0062a2e9e0e486ab0dfe369b0541399e5a318d6478d053704c4165d7780c2"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q109607_15-39.jsonl",
+          "bytes": 673,
+          "sha256": "25103bcbaea61abdebdbb7236cc6bcaecde6e41bbe494b0acf32e96ea225c1ed"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q109607_40-up.jsonl",
+          "bytes": 660,
+          "sha256": "7a783562d58458f11a9bced1d7cc487b31b6bda19cdf11d102cb84f00049c675"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q109607_8-14.jsonl",
+          "bytes": 671,
+          "sha256": "64ad29e4f83e387d2654f5b605fb8d6b244d640ba5f6b5c75bf31c10d448146c"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q1370598_15-39.jsonl",
+          "bytes": 997,
+          "sha256": "6535d03b8d901134c578802b4f9c6e58cbf8ecd499295f0782d41d279950d4fe"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q1370598_40-up.jsonl",
+          "bytes": 662,
+          "sha256": "20245927d406f8f19b68960fb00ec239e787450e7eb1a2108bb7ea1bb7508691"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q1370598_8-14.jsonl",
+          "bytes": 4070,
+          "sha256": "04f49969bea1e18f41643d8aba551519e466461c259c507dad7198e7e160233a"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q16970_15-39.jsonl",
+          "bytes": 842,
+          "sha256": "04637d4d68250036bea2027bbb508c5048744a99c205a5769c998e34a1acb03b"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q16970_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "e01b205bbe17ba6c8e01a4d3c6e04b4746cb348816772187347c5cbdc64b1b0c"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q16970_8-14.jsonl",
+          "bytes": 3306,
+          "sha256": "8b72735db72ef8a34985d9c7f3ff2c7be6655c1e4254590d57b684685b6f411e"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q179049_15-39.jsonl",
+          "bytes": 673,
+          "sha256": "56309d17b804ef833da23ab2af0515488a16ac6aa22f63d233f1e20393d27bf8"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q179049_40-up.jsonl",
+          "bytes": 660,
+          "sha256": "f6d9c809eeea00de2c2e46e319f8d74ba188ed806f4abc8f8338d868af2dd8bb"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q179049_8-14.jsonl",
+          "bytes": 671,
+          "sha256": "56f968ae5f3f5411ab548534645d057a7d661489dafcd441f37d624bf92f779d"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q23397_15-39.jsonl",
+          "bytes": 1318,
+          "sha256": "a2273324f98316108ac8a2545d1b57297bbea00e19b1c18b8939da58a3046cbf"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q23397_40-up.jsonl",
+          "bytes": 1081,
+          "sha256": "9ac0481a42435e2790b857ee581ff5157f959fd867a7903094adc5f54742cf69"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q23397_8-14.jsonl",
+          "bytes": 4395,
+          "sha256": "3730d358e4be3f6bf58afa9d97cb1889b3b4a831ec9b1396162d305f05662e9f"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q23442_15-39.jsonl",
+          "bytes": 1018,
+          "sha256": "a8ab54a75920a1dfb0d7635840926b0257875d428e718e4de31d898a14c33fee"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q23442_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "5b9c654a00da6477f32533d96d67501b4adafc7d4f25428bf9084db116795b29"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q23442_8-14.jsonl",
+          "bytes": 1383,
+          "sha256": "907b6879dd2f8816293b7978b4432e3014e525edfe19d7b154608840b3def417"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q32815_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "95a977ac8fd70b822efb8f8a909f92002dd4d1221c6f9cfd9f62c5658dd32cba"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q32815_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "ed5b06e3f71a4643f4aa838d7fe330e180de15649952696a33d805951e9b7901"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q32815_8-14.jsonl",
+          "bytes": 847,
+          "sha256": "2979978ad02922290d8e4008ea4f4aa4f2adb2b7bb3d3abc5caf5ea3d8ee8072"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q34038_15-39.jsonl",
+          "bytes": 974,
+          "sha256": "18f1237d9a89f9d78dad101a21995a42ff19b92e3f78041c6eca245ed3c4965a"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q34038_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "31f8db6a2bb55789f25a791be0459798e399333a8d7b0a6a501218c9ced7778b"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q34038_8-14.jsonl",
+          "bytes": 853,
+          "sha256": "67e24046e3ec25ac3042464125fa69a03f16e20b2231ea515bc167959199989c"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q3957_15-39.jsonl",
+          "bytes": 1501,
+          "sha256": "4e3c966575c885c18caa59be679434b1443be2d430029c279505b394a47d415d"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q3957_40-up.jsonl",
+          "bytes": 656,
+          "sha256": "6d623e7f6d9a6e72cfca4868f91df358a23683bbc963334e643c72473b97d17c"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q3957_8-14.jsonl",
+          "bytes": 3050,
+          "sha256": "6a19f1221fe945c9131966c21cc01255733708afb461b998b98e033d2316282b"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q39715_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "bf7854bb1316fc72dbfcca534dfac72111bf603e2149418f5038a8411c11fcfb"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q39715_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "71f0b5dc69b34a2b1835d6c2b1627d5f9cba8c90af158dbb6f9530881090ab72"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q39715_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "1108a437a08fba157eb556f83c6fef16dc5709f97d525fc29bc0274a9413649c"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q40080_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "63ca7ff6283f018636aaf10719d4bac64c444a3c9b9680cb510d0e80442130cb"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q40080_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "575d8bdd5969a47f03edc68eb0862437040382df64ac49b8d45b64184af8dd81"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q40080_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "df99e18e475a1b7581efe3e4ba3b8a10878542c2cd0401168d1c736a6bc84027"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q4022_15-39.jsonl",
+          "bytes": 6046,
+          "sha256": "a715520fd503ad96bf9860ede75da69085b5845d2424301b803756008c065443"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q4022_40-up.jsonl",
+          "bytes": 3833,
+          "sha256": "501217f4c6fa431c1d2295ce59274ba6aba3ac6c5c7a16e03ad2dc0529d8021a"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q4022_8-14.jsonl",
+          "bytes": 6481,
+          "sha256": "e3b43b598ea10c7b634301e0dc32e10dbb24dd32ee3821d60feb7ed4f8f505cc"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q44539_15-39.jsonl",
+          "bytes": 993,
+          "sha256": "86115f6560fc47ee952cc8964411b71b874fe0e4f86f69f2b40be2803fc38ad1"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q44539_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "593fdb54b0919ce8111ad556f1f9b7e1d4e2993e6611e30b090fa2eff10d0a98"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q44539_8-14.jsonl",
+          "bytes": 3306,
+          "sha256": "f3cc2428ef1ac2f2665084d934a036628e340315cdefdc43e9953e92b6e52e96"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q44782_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "b4a3aa0a0b5e1daf3b24978d711c5f0864a65756060c331df347d4effddc79ec"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q44782_40-up.jsonl",
+          "bytes": 1171,
+          "sha256": "432cbaa00f6d478614278f9570e98e5746f9b612d0dc365199a7d6585209ce81"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q44782_8-14.jsonl",
+          "bytes": 1011,
+          "sha256": "1f25547a4935bf9027056e2c977f51bbe2d2fa4546a4c93f373de59c32e251d0"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q45776_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "410df4987012842f282aa9df3663046e0e13d4e31c406131cafda13e2f80ca16"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q45776_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "89d52b4e1a91e3bb6f7ecc1dbb4b800247807b80960a0577bced1d18d3c38cb3"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q45776_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "98d93e9ca7c0d9e230f8c320846b342c611a0d09cb163e7887da88c1c9047788"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q46169_15-39.jsonl",
+          "bytes": 1786,
+          "sha256": "16ea57ff2d9ed421d6b5bf9d4e76eae3ee8b3b6d7011705cf7596866619d5740"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q46169_40-up.jsonl",
+          "bytes": 993,
+          "sha256": "1a18af3439e8e9597da93ead9c5061a6299a718974cc5a80fe0830cc0d28966f"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q46169_8-14.jsonl",
+          "bytes": 2005,
+          "sha256": "20f9392537a0d747f571e9e7c0c5ced90b369e72eb5dfb2c07a593e0993b761b"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q5119_15-39.jsonl",
+          "bytes": 669,
+          "sha256": "5c9d1385332dbe9f5d178963807e42bc8a484ec3e8b6eeb9db2d8a86cf35cb5c"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q5119_40-up.jsonl",
+          "bytes": 656,
+          "sha256": "e033e9ee42b2ca29f8109c870c7a9ddebe46ee1d3b9bf104308f2ddc6b1eab94"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q5119_8-14.jsonl",
+          "bytes": 667,
+          "sha256": "3ff065478d836fd4110e0a47bea5ebbd049b275830581d42582911a5e74307db"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q515_15-39.jsonl",
+          "bytes": 11525,
+          "sha256": "b96d5c20b48349b95b1ce98f966c37f37775f4a8c180c3b80eeac87a59f91bca"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q515_40-up.jsonl",
+          "bytes": 9131,
+          "sha256": "136dcfa81b71b7afb22aa38ccd3fbb363bb04b9fcd635a2ea5a5f1c7c6a19dcb"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q515_8-14.jsonl",
+          "bytes": 17414,
+          "sha256": "0798073f9d45fc138d34f7ba5657b1f5dee7e960d69a5409aea6531b780d36ea"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q532_15-39.jsonl",
+          "bytes": 1643,
+          "sha256": "d9a5f1a2ac938fe58fd0a2df547d2b35f984f29b5ad4d0b0aba0843643b59395"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q532_40-up.jsonl",
+          "bytes": 654,
+          "sha256": "715ab8d777736d11cf77995948d185249acddc7b6d25e7bbcb6fade21f9de07c"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q532_8-14.jsonl",
+          "bytes": 2648,
+          "sha256": "30fbf824e92febd1fbf00c4bb1eea7e780dedcd7965279691093433cff3c6097"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q570116_15-39.jsonl",
+          "bytes": 845,
+          "sha256": "0cabe14bef710566145d2bcbfdc493807b0f439911feeb4b052452ffdb6dc296"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q570116_40-up.jsonl",
+          "bytes": 660,
+          "sha256": "c6cf16318220d8bed876c4f1d177883f99d79efa89acb5777bc38aafca26f352"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q570116_8-14.jsonl",
+          "bytes": 981,
+          "sha256": "7e2c51086377913590bdd479592c1b655eb872a0f1e8019e0f2147179003aa12"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q8072_15-39.jsonl",
+          "bytes": 2652,
+          "sha256": "37caedd298d946bb89ea972f829b5db34f9d8cedb86e094dddbed3dc59b67d83"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q8072_40-up.jsonl",
+          "bytes": 656,
+          "sha256": "eb50405f3181076bc1edd8dba28f4549e2532649db8f6456e3f71fdf0dbd1d77"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q8072_8-14.jsonl",
+          "bytes": 1910,
+          "sha256": "637f263f08e1894e279db06522492480e928bb0417002e553bfdba5898165cfe"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q839954_15-39.jsonl",
+          "bytes": 3914,
+          "sha256": "4230d22d7923d6f9e4e81a3155c59f286207cf34ca3278048bd4823def5aa479"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q839954_40-up.jsonl",
+          "bytes": 1559,
+          "sha256": "15b472d5ac64ecdc724a5bc0f6a648bcb812637039b49a953b6632de04d71dd5"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q839954_8-14.jsonl",
+          "bytes": 7239,
+          "sha256": "5b6f43e4f6fffd67b6219cfcfa6f61387d6c401336fa0765b375ba7ddfd18af1"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q8502_15-39.jsonl",
+          "bytes": 6943,
+          "sha256": "0e8cf28548401ca28fae7c9530e39a45e0668ad4596fe3b454e49bab44d30866"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q8502_40-up.jsonl",
+          "bytes": 804,
+          "sha256": "33a29472c26734f9e1a6399aea9ca4cd0d2fcff325b3bb34972e561160ec73ce"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q8502_8-14.jsonl",
+          "bytes": 10860,
+          "sha256": "9a88b90859897bcd9a86e56de1df9108392a0037d45318ba5fa7cd80feea6232"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q9259_15-39.jsonl",
+          "bytes": 669,
+          "sha256": "019cb9f82d992e1284393e2df71e6f4246878d41d7be358c0e44b030c36e55ba"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q9259_40-up.jsonl",
+          "bytes": 987,
+          "sha256": "2608be92e4c6d35ba64b8c22c38d98a370e525944553898a766de201bfaf17bd"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__class_Q9259_8-14.jsonl",
+          "bytes": 667,
+          "sha256": "478647ae729edd7bbfe479820bd3632a0921d8352d4f0f6a2895efbea84ea598"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__institutional.jsonl",
+          "bytes": 78275,
+          "sha256": "d3108ad4762aa4707d81f64e1d9e5dabd829357ee0aab0e877a7419860e7efc2"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__node_airport.jsonl",
+          "bytes": 14128,
+          "sha256": "c13bd6a0aea6d7d97fd92ea70204ae68bd4bcf97b73a9d758a92d96fdd8c2da8"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__node_ferry_terminal.jsonl",
+          "bytes": 652,
+          "sha256": "80b988ff34b218f6462e9d329839fe5e3d063f69b4bd472a03729320ffe7fe16"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__node_rail_station.jsonl",
+          "bytes": 1323,
+          "sha256": "75ca8789fd161c3139f655aef270691ca288d923748d00f005b1f42570e6bed3"
+        },
+        {
+          "path": "wikidata/2026-10-05/PER__pop.jsonl",
+          "bytes": 12481,
+          "sha256": "ce6c074be767413bbbaf361097301c831d63d4941de80bb6994ea4d3873db520"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q109607_15-39.jsonl",
+          "bytes": 2383,
+          "sha256": "f192c1e41e019a374c87f9fce0023c51f9e1872ab0cd3f021ad42ec09bb881a1"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q109607_40-up.jsonl",
+          "bytes": 831,
+          "sha256": "74d5a79aeb5ef65182058b4d477672bc6c14d34daa9d161ac1213ea22c327739"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q109607_8-14.jsonl",
+          "bytes": 3476,
+          "sha256": "cb4968808d50025c02eb42fa590ea5ec277159600df78415757fe4255e1dfffb"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q1370598_15-39.jsonl",
+          "bytes": 23329,
+          "sha256": "83ac632d25b4e498e987e24bcb7a777d43a9f0579b9ec14f07df7c17e261894e"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q1370598_40-up.jsonl",
+          "bytes": 2453,
+          "sha256": "6f77651db7675bb44b36e043f3c32d93584c761e76d019d450da503db41b6e79"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q1370598_8-14.jsonl",
+          "bytes": 34563,
+          "sha256": "6049df2e3a6c04faf6dd04317b304505677aaa82317e9cfd61dd926e19d98527"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q16970_15-39.jsonl",
+          "bytes": 6537,
+          "sha256": "39f27c31c3e361e111b317ceae82c27dbe5186a03a7732310d9c190a8f9c77c4"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q16970_40-up.jsonl",
+          "bytes": 809,
+          "sha256": "3af2ba2161d3aff08e03f769382acae0f68c0dce7bb74f358bdf2e438d7243e1"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q16970_8-14.jsonl",
+          "bytes": 8880,
+          "sha256": "a9276fe00656f86b13349bc8fabab397ffb2a0fbd0b469a8a2790eac670fa809"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q179049_15-39.jsonl",
+          "bytes": 672,
+          "sha256": "db7331e4b8ece111972d6b6493c7ee344e3031c07903d9762903bbb93882c73c"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q179049_40-up.jsonl",
+          "bytes": 659,
+          "sha256": "5df6cedee5f31f044abfaf7c99534f5049adcaa0a8f83f1827362e8b6eac8e67"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q179049_8-14.jsonl",
+          "bytes": 670,
+          "sha256": "11c4ae76329e7bcdbee7741ccc6bee73b924f3d969fee7e90e2c4a164e5ae096"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q23397_15-39.jsonl",
+          "bytes": 3865,
+          "sha256": "3f616be2d27692c60b69a06eca64db5554b05a463a6d65a78691e10da4ab6adc"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q23397_40-up.jsonl",
+          "bytes": 1568,
+          "sha256": "4ceadcdcd759f52513781ed0467ca435022f169f5df7a73e193ff499d68689c0"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q23397_8-14.jsonl",
+          "bytes": 4598,
+          "sha256": "132b8141abf35130ef2688745a460c7de2976af15f555e47a8ec29abe00166eb"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q23442_15-39.jsonl",
+          "bytes": 10875,
+          "sha256": "1a7e9a8eade7af84f031cffc0da6e1e81903ee1451049f36bcaf3d88702aae2c"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q23442_40-up.jsonl",
+          "bytes": 1476,
+          "sha256": "8b11d04b3e74a34ea35cc1394fcd04ca0049f3cd92256d78050d137628964a3a"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q23442_8-14.jsonl",
+          "bytes": 3717,
+          "sha256": "0ecf68b278cb431106e1f5d9f2ed3502bd4941763e5feb4d527a2394223be6b0"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q32815_15-39.jsonl",
+          "bytes": 13791,
+          "sha256": "257e6e2716a061c91adcf6e94f0307f3d79cdd9529b4ce2dd035112e95b4094c"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q32815_40-up.jsonl",
+          "bytes": 2124,
+          "sha256": "1b792c3851ebd0834819ab72840b488ef4527a445ebce300791cce0b3a3d354c"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q32815_8-14.jsonl",
+          "bytes": 19960,
+          "sha256": "807b39e271dbb8a9e82a4200c139ee3cc97abe4c90e6a41845e47ff078e512d7"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q34038_15-39.jsonl",
+          "bytes": 988,
+          "sha256": "410b35e7ddff10c5a7f9cb0b00fa44e27d398f7d5e468459ea4b8ff2f5f67453"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q34038_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "2b8e227ce4d53d610a1863a685c0b131a893a403f6f638cc662dbfb07180baf1"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q34038_8-14.jsonl",
+          "bytes": 1153,
+          "sha256": "784ae93b60914d2109d537b2959f74ab1b248625f8afd0deb5ee095fce759bc5"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q3957_15-39.jsonl",
+          "bytes": 148087,
+          "sha256": "cb1dfe729fa5184650b7f53f894d24c4d65e8c2e7d7050e3e341a259fc784494"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q3957_40-up.jsonl",
+          "bytes": 20440,
+          "sha256": "0add69c9469ca18d895e2431d4444aec5152bb53347079062609c3a62a0f101c"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q3957_8-14.jsonl",
+          "bytes": 9015,
+          "sha256": "0f004e66d3421b9fe52eee75d73d406d8e5f198f9aac3eb3b015eb2fccd95d8e"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q39715_15-39.jsonl",
+          "bytes": 670,
+          "sha256": "a3c97e0966aed7814507212f630c8dd44163048c184ee30bf819be3abab201b7"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q39715_40-up.jsonl",
+          "bytes": 814,
+          "sha256": "dd054482a3c120843cf900a2641db3baff9fceb970411e7b91989962f96c31a2"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q39715_8-14.jsonl",
+          "bytes": 1651,
+          "sha256": "1fef2180d88867e9306aa9a31240daf88bcaf37388a4d4f7624627a4720fbf38"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q40080_15-39.jsonl",
+          "bytes": 670,
+          "sha256": "2f458a1b1c7b702e6e0b8148df4093f63c1f320797a935b3b942997f9271b3ff"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q40080_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "b67a2e9aeba0cf56a8a1316d52621f9f376574aca370cfa525a31976a40e0e1b"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q40080_8-14.jsonl",
+          "bytes": 1136,
+          "sha256": "7bd4f8a638eb3d9df49b25ad6f10c35d3af0dcbfe7386a4836cf99470fdc3faa"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q4022_15-39.jsonl",
+          "bytes": 10440,
+          "sha256": "1728aca00bd7ef0f0964abef0b2f6d8e95e3362588a914033753480943e84aca"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q4022_40-up.jsonl",
+          "bytes": 3958,
+          "sha256": "1468c88eeee61bd652eee62ac352af6119b9480e9ec3706a252714f467b4e3b9"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q4022_8-14.jsonl",
+          "bytes": 8602,
+          "sha256": "d2226c39ba6742ba34bad99b08bb266a0bb9ab7c05a43f335292e8facd2eaade"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q44539_15-39.jsonl",
+          "bytes": 6720,
+          "sha256": "d5eedf2ecc00c1f8bbd3d5897816b8357f070206d64818c3fc4b58f69ebc75a6"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q44539_40-up.jsonl",
+          "bytes": 981,
+          "sha256": "c667b866f6d1131d187c7629206f9a119ab60a3c4fec2c18ee1cf195ecbd6a22"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q44539_8-14.jsonl",
+          "bytes": 9557,
+          "sha256": "65b7efdc775812b61cd9e9d8a76d6c42e120fa8b8664735759b334b324bfa337"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q44782_15-39.jsonl",
+          "bytes": 825,
+          "sha256": "d00e4553eb5513ddfe545977213659d0ff34841afa7a494fd3a8e4d3e3f83f67"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q44782_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "0fd1b53f7667932a9966231beb7434fe3002fa4097184ac4d753a757c349a4db"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q44782_8-14.jsonl",
+          "bytes": 1635,
+          "sha256": "8b12e879cb9927ea67b025eccd50cd30d2960c241542c6bb6dd8c83acf4d6319"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q45776_15-39.jsonl",
+          "bytes": 670,
+          "sha256": "1dad4538b0a78007cb2c9bfe9cc78e10012ab4ed1bd31e0db782fc3a854662f1"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q45776_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "fb9c53b4d325162cf5c9a5fa7d6e5dff32a1a319e9eab44425f95f70c39c285c"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q45776_8-14.jsonl",
+          "bytes": 668,
+          "sha256": "d61b7887a3353865e4202c37aabd2cff3b194104fea347e74e2f9e7303f96404"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q46169_15-39.jsonl",
+          "bytes": 1613,
+          "sha256": "a559f5495d92c1639b31a33a94001bd1313a33e0f98355e164d01d463d3bb881"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q46169_40-up.jsonl",
+          "bytes": 657,
+          "sha256": "16be5621af328f8f4d3fef38dd05392d78107566b77f7bc986945f5911fe1d83"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q46169_8-14.jsonl",
+          "bytes": 5366,
+          "sha256": "3ca645f5ba6ba7ed7b5924a5213e064050f5ba2adb9e6842329dbafde6ab3421"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q5119_15-39.jsonl",
+          "bytes": 668,
+          "sha256": "8ddeaf1e9613aedac04b58114ca5f232b0dda611ff075a08e329298557aca476"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q5119_40-up.jsonl",
+          "bytes": 655,
+          "sha256": "d0ef544189d2359ce15d758daf82b113e558cf05dfe9f1bc661546ca4cc01047"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q5119_8-14.jsonl",
+          "bytes": 666,
+          "sha256": "9093faa9a8e49c36319ac7bff3faeb281de1ad818696259ddcda3e0684512b0b"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q515_15-39.jsonl",
+          "bytes": 35462,
+          "sha256": "12982d8b6598c82440a134648bcc6b2212704db93972d977d62924984604e3b6"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q515_40-up.jsonl",
+          "bytes": 76802,
+          "sha256": "088a173d6e7e7ec74dfdae0df4c702d562c6b88dc56a7f589723bfaf1141c2ce"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q515_8-14.jsonl",
+          "bytes": 35673,
+          "sha256": "45f14c66c733966777f91f617abf36991ba00e56fd3d90c0967c04b4f91d06f6"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q532_15-39.jsonl",
+          "bytes": 19581,
+          "sha256": "f9c364acf2c50638bae1d3b62df1545101be8074e9310a3e809248d8a6cbd191"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q532_40-up.jsonl",
+          "bytes": 824,
+          "sha256": "6ac9db5d6d95c79debd7254a5f39c7f3edf813850fac721ca49dccf03c855b38"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q532_8-14.jsonl",
+          "bytes": 10923572,
+          "sha256": "3c1b8d719c7092ad72fc6d799d06dd235f12d3c214d7e45aa2876ff74c369873"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q570116_15-39.jsonl",
+          "bytes": 1129,
+          "sha256": "56285e51e51e16e27f4900599dfb643e08e6743fa85c0d10e2b32d56f1aaf19b"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q570116_40-up.jsonl",
+          "bytes": 976,
+          "sha256": "5230dacaa205f909ff2465b332d08bd36c2871c9b5ef6c0a36d0e3a3c5341498"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q570116_8-14.jsonl",
+          "bytes": 1790,
+          "sha256": "d41e7740c7d01e7bdd24f314ddac5268b9f6691f9b5fe742311b918d7b892168"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q8072_15-39.jsonl",
+          "bytes": 1725,
+          "sha256": "fce61c00a4667727214f376c468b6dc3224cc096f03610fdad203319e5aa9494"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q8072_40-up.jsonl",
+          "bytes": 1281,
+          "sha256": "81ad1e7fcb185512849ecab40f722da11789c8cce1014e8d82a6963cb57b3319"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q8072_8-14.jsonl",
+          "bytes": 987,
+          "sha256": "c32953a1900008851712b90b066352098d6331533dff025bf2fafc1a10d2e4bf"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q839954_15-39.jsonl",
+          "bytes": 47638,
+          "sha256": "92eb272619fd352409ec764ce642a5e14ffae3d82d6e769b17ed09e47822f84c"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q839954_40-up.jsonl",
+          "bytes": 15721,
+          "sha256": "412511ec02102751b58b76203a4a2f5427106a1ce252ec2ca54e67be55dcca75"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q839954_8-14.jsonl",
+          "bytes": 52500,
+          "sha256": "2df9d63a11dcb48614f8c7024c773fb621207b65dc1ac35ffba6562940047c86"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q8502_15-39.jsonl",
+          "bytes": 5075,
+          "sha256": "ffb96d485ee7c13721fb9ae3e8f768eaee9c591a57e7f1097c8ad8220f50da8f"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q8502_40-up.jsonl",
+          "bytes": 1753,
+          "sha256": "23d595b3d5a13e7ff849318f6fb832130c56d1b2a841d4f173643b80ad8e0423"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q8502_8-14.jsonl",
+          "bytes": 4702,
+          "sha256": "a19e12a4d189977d4870e1ba6f19a96dd8988cefcf9f55b429eedc5baf2c2b70"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q9259_15-39.jsonl",
+          "bytes": 668,
+          "sha256": "1099209cec527593d3bdf40698f15fa3cc04d02a6c4274f07a6ff37cf8e24c04"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q9259_40-up.jsonl",
+          "bytes": 655,
+          "sha256": "294e46c66039e954821043f9712693ffa6afd4c3c4dad4f17d3d5a44c29fd241"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__class_Q9259_8-14.jsonl",
+          "bytes": 812,
+          "sha256": "74f87e9909e97fefc4757805b5229cd2e85c7070a08ca98280edb3918f549f31"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__institutional.jsonl",
+          "bytes": 346692,
+          "sha256": "4d5df86c316b6c06ec5a199ced483dd81d5698f1343de376492a514b28f187d6"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__node_airport.jsonl",
+          "bytes": 15524,
+          "sha256": "4e0360183b75b2fc570231773d06797b23774e7162183cfa795f9628a8884d78"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__node_ferry_terminal.jsonl",
+          "bytes": 651,
+          "sha256": "050a9337ab9e31b13a4fcf78a88398a049efd8f7a16b9ff4f8f0d33eade53246"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__node_rail_station.jsonl",
+          "bytes": 38715,
+          "sha256": "495d288f6f5d30346b4a5ee0cccc30a45b733626bdd554e06bf782d69adfec4b"
+        },
+        {
+          "path": "wikidata/2026-10-05/TUR__pop.jsonl",
+          "bytes": 90237,
+          "sha256": "590335c5297644f3ae21740344f0d98df570e81ae4cc202ce29d1e4dd280c68d"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q109607_15-39.jsonl",
+          "bytes": 673,
+          "sha256": "81ea6c4ffdea1891722f4a1dd77d72065868039d0e781f73a87e3857d55dcc05"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q109607_40-up.jsonl",
+          "bytes": 660,
+          "sha256": "feabe6ff9834626728e59c5e499aebbb31cb5d635c6859fd8ad2008f535cd2bd"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q109607_8-14.jsonl",
+          "bytes": 671,
+          "sha256": "577f27bdd414c21c8b15c7129a1fda480329ab8382524c6bae32baddf4b41f17"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q1370598_15-39.jsonl",
+          "bytes": 675,
+          "sha256": "2b9e278d51fced1b8f3c337ee7bdcf73e0f96d0d5b5c0668d1d14a900eb726d5"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q1370598_40-up.jsonl",
+          "bytes": 662,
+          "sha256": "5f4388cc3038e29be3e822db76ef8c08e87104b3fe65360020a01e86a0445747"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q1370598_8-14.jsonl",
+          "bytes": 1690,
+          "sha256": "3d4d4a6e9218d266280df56a8d40ad744227ee79ab8e058d55879542bdbfb406"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q16970_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "da8a7a5d3840e98f5f4f1153de00b04e318daf67520875080c5dfd04dfe32864"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q16970_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "8dbf1a4ed23703b75d92f6f8b7c8578b506fd547eb240ebd084039e9da601295"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q16970_8-14.jsonl",
+          "bytes": 1060,
+          "sha256": "89f953dd47a8610d9a40ecc2736be6e1ad9ad8ae059cc160c687376524b902e3"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q179049_15-39.jsonl",
+          "bytes": 673,
+          "sha256": "cb01c1d82c5f793bda833dbcf80ac5cfaf21ed783ff9b846f0e07f5b80a979ea"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q179049_40-up.jsonl",
+          "bytes": 660,
+          "sha256": "bf0562019f0fc54db34e71525de23054a284e7cbe4996f8fdd5e31abc9a866e2"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q179049_8-14.jsonl",
+          "bytes": 671,
+          "sha256": "0a5beb42da24e3d91b0c1d72e4d80031bb979e766e7c3bcde9be09dfb3771257"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q23397_15-39.jsonl",
+          "bytes": 2006,
+          "sha256": "ffc9ded6e2375a37a8f85d03966db94b74b81819b124c0fba9fb99e5f1828041"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q23397_40-up.jsonl",
+          "bytes": 1530,
+          "sha256": "2c58eb7b4d024b26439dcc977284ce045f67f29ff56e37c3a53ccafbf5f65c25"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q23397_8-14.jsonl",
+          "bytes": 1280,
+          "sha256": "54e202bbc5131e7b81686349d116b60779d8f56294cfbc29eb9da71a882ac0da"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q23442_15-39.jsonl",
+          "bytes": 827,
+          "sha256": "0c248de4d9e50b61dc033278345cc16bd99418b0cb02fab189836d74cfa280f1"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q23442_40-up.jsonl",
+          "bytes": 1335,
+          "sha256": "235eaa9fee10cf7e8258c3181f78539e3e0530b864eafa0b73b4e858f7919f9b"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q23442_8-14.jsonl",
+          "bytes": 3438,
+          "sha256": "bcc19ff6db73a71eb62b8fc980358b72bf96cfefc6276db5f7b44e3128b7c03d"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q32815_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "50ea885bb67ea7e4844c92db65e2d6294717b1f70df2e111a4da0d5beb3d76ef"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q32815_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "2fc3262ed77d5e8a33bc9f188cff16099519249aab6f72d3cd437c7ac9a53faf"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q32815_8-14.jsonl",
+          "bytes": 1295,
+          "sha256": "664d729179911455d73ac60b4742cfff665e6edb9a9ab4cf9e0dbb88748c7d32"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q34038_15-39.jsonl",
+          "bytes": 994,
+          "sha256": "d1884b5d4f8d1204bc1718822473624b8dabf45261fba2b653f4a01435a3ce9a"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q34038_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "2eda1c8dfd209507d2e631843f46ba1f3c0a6cc7d1b57cd340fb18fe047000f0"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q34038_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "7c25df2e1a90bde68aa1475609f776aa8561152d2791c3dbc5ec156fdc535a1e"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q3957_15-39.jsonl",
+          "bytes": 839,
+          "sha256": "96288e39f329ee0492f5dac1e03b082e5955e99dd579e49ea6b6f91bf09dee4a"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q3957_40-up.jsonl",
+          "bytes": 656,
+          "sha256": "9441fbbbf81873ca5f14a47aa379f663d4b875292d79db2ae8d365ad87b01598"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q3957_8-14.jsonl",
+          "bytes": 1244,
+          "sha256": "2c863479076cabc8aaf2eea8fbd6287167ec004b84bf5f8a54a294b5b5d3c0d1"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q39715_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "3e9f16b16a9ac046a1c6df8a11659362fc9d7e0212608fc65b1d9bb2c021fc3a"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q39715_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "068e2e7a6621391d7a01456006b7b469d88b82517dec9a82fe01d8a528d16cf1"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q39715_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "7911fd4daf84faff4ec54a8c162bb4fd5b0f8266ec0df4f70a1418316274e0f2"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q40080_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "5d9bbea3694e1eec9b40c17a3665ebf793d530ebd4b8c2e5e967cb8359dd0f31"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q40080_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "9b15c25e5335e5ae896974c3baf8cff18012db4cd54a335922a9b14e768d3c8b"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q40080_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "28d8a5e05ffe750a3d0968c8394ff9784cd8319adcd72643e8068ee3cd5b91b0"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q4022_15-39.jsonl",
+          "bytes": 3273,
+          "sha256": "067bf11fe0451180ac8e82ac91e48c21aa7aee057a96f589fed88d8c6762a3b0"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q4022_40-up.jsonl",
+          "bytes": 2449,
+          "sha256": "302f6b79a43583dadfe360929d5fffe1c57bf69f9b2afb410d28a8388bf6d593"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q4022_8-14.jsonl",
+          "bytes": 3997,
+          "sha256": "efb607cc495f10c76cc07c2c38603c89b5c39df1b3912709da186aaec0ebdb6f"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q44539_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "ce5db5121a73ab6cdfebffb9a6bc42fb2ad4e871aab20a08bb29762bb7276ede"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q44539_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "04511cfad50c952185675ca31704bfe2f3387b5df13fef5e81ec1ead4b251665"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q44539_8-14.jsonl",
+          "bytes": 1060,
+          "sha256": "f06dcc9912533f963972f1d6c89caf226798843f0fb53c6c92660f50c0d29e8d"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q44782_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "83d45b9bb6f3e91d08d835b593a6a8a412ac933626d9dfd2ef4bcc934ccc2f2e"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q44782_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "21b2d4441d172685552ceba3bc92e55c87e685e2ffd48f6f44f795ffaa4a165b"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q44782_8-14.jsonl",
+          "bytes": 996,
+          "sha256": "07893932a1d1dc4923b76a869e902ed5b69b0dab0e1248e4c16eb1fc055bfa4f"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q45776_15-39.jsonl",
+          "bytes": 671,
+          "sha256": "b4f14833891e2cffff575846b961a9887ae6a7caa138432820c02b68bc0c4bb9"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q45776_40-up.jsonl",
+          "bytes": 658,
+          "sha256": "868ce5d24a9146dc770a0bb34baccfc8324f4dedf96ea009ffccaa31ed0e435a"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q45776_8-14.jsonl",
+          "bytes": 669,
+          "sha256": "c4da5d87faa2b2e402eaa4f7af885267dad9d2977964e0c9bcda205a172fe7bc"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q46169_15-39.jsonl",
+          "bytes": 3315,
+          "sha256": "6ec83a7a0014da8646407b6076decc9abba24de630b1d280c01481427412fb47"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q46169_40-up.jsonl",
+          "bytes": 846,
+          "sha256": "c6977ec8f5db549ad35c9d95ccf7300388d8d2c140b54ac51ce471d9b7a1192b"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q46169_8-14.jsonl",
+          "bytes": 990,
+          "sha256": "4a0530fa02b85c76cbdaf9d40c7f627732b2a8a80423faa966696115c315c1d5"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q5119_15-39.jsonl",
+          "bytes": 669,
+          "sha256": "afde7c5c4023d040e14cced36efb5c055212185df2950e13d617db65a4635767"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q5119_40-up.jsonl",
+          "bytes": 1309,
+          "sha256": "f094b50824668f43d248559d5eedf558a8686a73270e5fad7186c7e6957e6002"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q5119_8-14.jsonl",
+          "bytes": 667,
+          "sha256": "7c56be4f104f103635b596818d2596ef40a71b01f90e6ce8b52e8b9db8b991fb"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q515_15-39.jsonl",
+          "bytes": 6071,
+          "sha256": "c3ae9df66e6e5cfbf69d0f3e405312088d28a99672f97c88a4471d7849180000"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q515_40-up.jsonl",
+          "bytes": 8000,
+          "sha256": "1c03fa3c8d519a91394736b91c9f17f56376a59307f6aa4cdd0677ba512496dd"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q515_8-14.jsonl",
+          "bytes": 1620,
+          "sha256": "0a8aef49fe73d413f4f2eaca1c83b405fb40b556a9d4f14817cd472df7024459"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q532_15-39.jsonl",
+          "bytes": 667,
+          "sha256": "620e69b2208353627ff8e5ae702f55ebdb0a103eee076aeaf73bac2afe71d5cc"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q532_40-up.jsonl",
+          "bytes": 654,
+          "sha256": "747804f793ac89de62b10fb245805a194f816080d632a46e9a348d15347e3eab"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q532_8-14.jsonl",
+          "bytes": 817,
+          "sha256": "457d6dffcac9282530a1efa3b153bf552c671f8deae6a212c1eb456b5163d8d0"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q570116_15-39.jsonl",
+          "bytes": 673,
+          "sha256": "91450b74a917029ad0e95db27ee0baa05b31d5b30dd7f328fd6a2fec831474dd"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q570116_40-up.jsonl",
+          "bytes": 660,
+          "sha256": "9792b2ba8bb47a28c7deb5ae2098ad92d86d4c32338cca3350c855b535dc00b7"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q570116_8-14.jsonl",
+          "bytes": 671,
+          "sha256": "8b3a7704accece8dc596bb44d120c4173b97fdf6dc73ba0e3f4f046c6853bae3"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q8072_15-39.jsonl",
+          "bytes": 669,
+          "sha256": "6dab9f232b795c8f2c2aab9fff511e4f584f5f0ba8e6dd28cab795aa9e4a7e19"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q8072_40-up.jsonl",
+          "bytes": 818,
+          "sha256": "03b9c5b0fb2a0e2989ad71afa31758394be05644624313280347cd8edc2c7bca"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q8072_8-14.jsonl",
+          "bytes": 793,
+          "sha256": "8098a6529098a296daca08c3aee62424503c20f5dc648357a93d707f10ce4ba7"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q839954_15-39.jsonl",
+          "bytes": 1312,
+          "sha256": "5d989377ca2ae86072d557a670ea8a310d2b0aa18b7b483f9502c8000e56ccc1"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q839954_40-up.jsonl",
+          "bytes": 810,
+          "sha256": "639d019aae7d9ed6e5e9d80bfbc8b81ce77e13f3324f12cf31bb204ee77761b9"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q839954_8-14.jsonl",
+          "bytes": 671,
+          "sha256": "be9a766585ca53dcf123296f331e8e2fd0a1250240c250420d28bd0d7e9e1d05"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q8502_15-39.jsonl",
+          "bytes": 1104,
+          "sha256": "25cc20983b7aef0c9318b0a3634b67d24a6a1e602d04d5828d85881c4c9ebc71"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q8502_40-up.jsonl",
+          "bytes": 1136,
+          "sha256": "75685a833dc2f17852f5b9873aa83ec9477005e842c96a8fb363e96cc376d675"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q8502_8-14.jsonl",
+          "bytes": 2460,
+          "sha256": "a0b6185de880dfa01f9c165b4e9e9edbf203685706e10e4ec53c0b93322a8f45"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q9259_15-39.jsonl",
+          "bytes": 669,
+          "sha256": "80aead037672e71d11fc082ea4a2042591b013d3d3af58ce30b17b49a38e0dc1"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q9259_40-up.jsonl",
+          "bytes": 656,
+          "sha256": "a862bdc5b69239855de9c0ebe83c3bcd582122169f54f6e035ac331f8fa96b9a"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__class_Q9259_8-14.jsonl",
+          "bytes": 667,
+          "sha256": "80218a644d7fe4b05525b08153666f1a9b61071b68fe8c217ecf20eada2f5b8c"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__institutional.jsonl",
+          "bytes": 7802,
+          "sha256": "b26bdc73272b15fb4dcbc9d933682ee242ac2bf6bf0f99d97109ee3e540c26a5"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__node_airport.jsonl",
+          "bytes": 12020,
+          "sha256": "030262dc9dc986a6937494df852fc3dabc315ce4306abb0c0f343e5126d24a72"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__node_ferry_terminal.jsonl",
+          "bytes": 918,
+          "sha256": "63c72f27746cfaae592d6776e6837b8208f0cb00f83fbc70c09e1490accf9a32"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__node_rail_station.jsonl",
+          "bytes": 648,
+          "sha256": "bfe0db023bfa8995ad464b382b68cd62e88ba09a55ed7d7edc6d618b8bc92f3c"
+        },
+        {
+          "path": "wikidata/2026-10-05/TZA__pop.jsonl",
+          "bytes": 11224,
+          "sha256": "bda16e5b62fddbe4cd2494386482bb190c12e9a0209c6d0ad248120e271cf40a"
+        },
+        {
+          "path": "wikidata/2026-10-05/class.parquet",
+          "bytes": 1422039,
+          "sha256": "6ba9342a29cc00da8cba48cbd121af7edf1bead2450c6374b7b890763d38f8a5"
+        },
+        {
+          "path": "wikidata/2026-10-05/institutional.parquet",
+          "bytes": 676590,
+          "sha256": "9fe543172c1bf8feeed6f255588a18479f583e09383f862963530ec956c3b4ae"
+        },
+        {
+          "path": "wikidata/2026-10-05/node.parquet",
+          "bytes": 266917,
+          "sha256": "b7bc463caa13a97c71cda9a2f9f33b63b4abd0c9950147939dd9512bdd35540d"
+        },
+        {
+          "path": "wikidata/2026-10-05/pop.parquet",
+          "bytes": 44010,
+          "sha256": "b77db8f24279d9c9575793b0734bcdd98d6f164758419329127a083ea9b6a98a"
+        }
+      ]
     },
     {
       "source_id": "wikipedia_pageviews",
