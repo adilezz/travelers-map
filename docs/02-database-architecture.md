@@ -79,7 +79,7 @@ Decided 1 October 2026: **the owner's laptop first, with a SPARQL subset for the
 | Prototype, nine countries: page Wikidata's public SPARQL endpoint by country; store the results as Parquet with the query text and run date | Laptop, minutes to hours | Small, and enough to pass the golden set |
 | Small sources: WDPA, Ramsar, GeoNames, UNESCO, Natural Earth, Geofabrik extracts | Laptop | Megabytes to a few GB |
 | Pageviews | Laptop, filtered to candidate titles while streaming | Monthly files are large; only candidate titles are kept |
-| Full Wikidata dump, for the world build | A rented machine (about 8 vCPU, 32 GB RAM, 500 GB disk, roughly a day), or the laptop if it has about 300 GB free and can run overnight | Hundreds of GB compressed; the cost is small and one-off; only the filtered Parquet comes back |
+| Full Wikidata dump, for the world build | A Hetzner Cloud CAX41 (16 ARM vCPU, 32 GB RAM) rented by the hour and deleted after the job; the dump is streamed, so 100 GB of disk is enough (D30) | Hundreds of GB compressed; the cost is small and one-off; only the filtered Parquet comes back |
 | Optional accelerator: allow the Claude cloud environment to reach named hosts | Environment settings, Network access | Lets Claude run ingest steps itself; bounded by that container's disk and run time, so suited to the prototype subset, not the full dump |
 
 The SPARQL subset and the full dump are **different pinned inputs**. Keys are QIDs, which are stable between them, so ids minted from the subset must be unchanged when the full dump is built; G-ID with the previous bundle checks this. Sitelink counts drift on live SPARQL, so every run records its date and the values it returned.
