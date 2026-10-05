@@ -5,7 +5,8 @@ BUNDLE ?=
 PREVIOUS ?=
 ARGS ?=
 
-.PHONY: help test lint verify release-verify freeze qids qids-apply classes pin-check
+.PHONY: help test lint verify release-verify freeze qids qids-apply classes pin-check extract-plan extract extract-pack
+OUT ?= data/raw/wikidata/$(shell date -u +%F)
 
 help:
 	@echo "make test            unit and mutation tests for the gates (must always pass)"
@@ -16,6 +17,9 @@ help:
 	@echo "make qids             (owner, on the laptop) propose QIDs for the golden set -> data/golden/qid_candidates.csv"
 	@echo "make qids-apply      apply the owner decisions in data/golden/qid_decisions.csv"
 	@echo "make classes         (owner, on the laptop) check data/rules/classes.csv against Wikidata"
+	@echo "make extract-plan     show the Wikidata queries M1 would send (nothing is sent)"
+	@echo "make extract OUT=    run the Wikidata prototype extraction for the nine countries (resumable)"
+	@echo "make extract-pack OUT=  convert to Parquet and pin in data/inputs/MANIFEST.json"
 	@echo "make pin-check       check that every pinned input is present and unchanged"
 	@echo "make freeze          freeze the owner-written holdout by hash (see data/holdout/README.md)"
 	@echo "ARGS=--prototype     accept skipped checks for a declared prototype build"
@@ -46,3 +50,12 @@ classes:
 
 pin-check:
 	$(PY) -m atlas.snapshot check $(ARGS)
+
+extract-plan:
+	$(PY) -m atlas.extract plan
+
+extract:
+	$(PY) -m atlas.extract run --out $(OUT)
+
+extract-pack:
+	$(PY) -m atlas.extract check --out $(OUT) && $(PY) -m atlas.extract parquet --out $(OUT) && $(PY) -m atlas.extract pin --out $(OUT)

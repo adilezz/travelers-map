@@ -1,17 +1,125 @@
 {
   "_note": "Pinned inputs (document 6 section 2.1). sha256 and snapshot are filled in by M1 when each file is downloaded; a build refuses to start if a pinned hash differs.",
   "sources": [
-    {"source_id": "wikidata", "name": "Wikidata full dump", "url": "https://dumps.wikimedia.org/wikidatawiki/entities/", "snapshot": null, "sha256": null, "licence": "CC0", "restricted": false},
-    {"source_id": "wikipedia_pageviews", "name": "Wikipedia pageview dumps, 12 months", "url": "https://dumps.wikimedia.org/other/pageview_complete/", "snapshot": null, "sha256": null, "licence": "CC0", "restricted": false},
-    {"source_id": "wikivoyage", "name": "Wikivoyage dump", "url": "https://dumps.wikimedia.org/enwikivoyage/", "snapshot": null, "sha256": null, "licence": "CC BY-SA", "restricted": true},
-    {"source_id": "unesco_whs", "name": "UNESCO World Heritage List", "url": "https://whc.unesco.org/en/list/", "snapshot": null, "sha256": null, "licence": "attribution", "restricted": false, "local_seed": null},
-    {"source_id": "unesco_ich", "name": "UNESCO intangible heritage, biosphere reserves, geoparks", "url": "https://ich.unesco.org/", "snapshot": null, "sha256": null, "licence": "attribution", "restricted": false},
-    {"source_id": "wdpa", "name": "World Database on Protected Areas (with polygons, IUCN I-VI)", "url": "https://www.protectedplanet.net/", "snapshot": null, "sha256": null, "licence": "non-commercial", "restricted": true, "local_seed": null},
-    {"source_id": "ramsar", "name": "Ramsar Sites Information Service", "url": "https://rsis.ramsar.org/", "snapshot": null, "sha256": null, "licence": "attribution", "restricted": false},
-    {"source_id": "geonames", "name": "GeoNames cities and alternateNamesV2", "url": "https://download.geonames.org/export/dump/", "snapshot": null, "sha256": null, "licence": "CC BY", "restricted": false, "local_seed": null},
-    {"source_id": "osm", "name": "OpenStreetMap regional extracts", "url": "https://download.geofabrik.de/", "snapshot": null, "sha256": null, "licence": "ODbL", "restricted": true},
-    {"source_id": "natural_earth", "name": "Natural Earth", "url": "https://www.naturalearthdata.com/", "snapshot": null, "sha256": null, "licence": "public domain", "restricted": false},
-    {"source_id": "geoboundaries", "name": "geoBoundaries", "url": "https://www.geoboundaries.org/", "snapshot": null, "sha256": null, "licence": "CC BY", "restricted": false},
-    {"source_id": "overture", "name": "Overture Places (second opinion only)", "url": "https://overturemaps.org/", "snapshot": null, "sha256": null, "licence": "CDLA / varies", "restricted": true}
+    {
+      "source_id": "wikidata",
+      "name": "Wikidata full dump",
+      "url": "https://dumps.wikimedia.org/wikidatawiki/entities/",
+      "snapshot": null,
+      "sha256": null,
+      "licence": "CC0",
+      "restricted": false
+    },
+    {
+      "source_id": "wikidata_sparql",
+      "name": "Wikidata SPARQL subset for the nine prototype countries (a different pinned input from the full dump; QIDs are shared)",
+      "url": "https://query.wikidata.org/",
+      "snapshot": null,
+      "sha256": null,
+      "licence": "CC0",
+      "restricted": false
+    },
+    {
+      "source_id": "wikipedia_pageviews",
+      "name": "Wikipedia pageview dumps, 12 months",
+      "url": "https://dumps.wikimedia.org/other/pageview_complete/",
+      "snapshot": null,
+      "sha256": null,
+      "licence": "CC0",
+      "restricted": false
+    },
+    {
+      "source_id": "wikivoyage",
+      "name": "Wikivoyage dump",
+      "url": "https://dumps.wikimedia.org/enwikivoyage/",
+      "snapshot": null,
+      "sha256": null,
+      "licence": "CC BY-SA",
+      "restricted": true
+    },
+    {
+      "source_id": "unesco_whs",
+      "name": "UNESCO World Heritage List",
+      "url": "https://whc.unesco.org/en/list/",
+      "snapshot": null,
+      "sha256": null,
+      "licence": "attribution",
+      "restricted": false,
+      "local_seed": null
+    },
+    {
+      "source_id": "unesco_ich",
+      "name": "UNESCO intangible heritage, biosphere reserves, geoparks",
+      "url": "https://ich.unesco.org/",
+      "snapshot": null,
+      "sha256": null,
+      "licence": "attribution",
+      "restricted": false
+    },
+    {
+      "source_id": "wdpa",
+      "name": "World Database on Protected Areas (with polygons, IUCN I-VI)",
+      "url": "https://www.protectedplanet.net/",
+      "snapshot": null,
+      "sha256": null,
+      "licence": "non-commercial",
+      "restricted": true,
+      "local_seed": null
+    },
+    {
+      "source_id": "ramsar",
+      "name": "Ramsar Sites Information Service",
+      "url": "https://rsis.ramsar.org/",
+      "snapshot": null,
+      "sha256": null,
+      "licence": "attribution",
+      "restricted": false
+    },
+    {
+      "source_id": "geonames",
+      "name": "GeoNames cities and alternateNamesV2",
+      "url": "https://download.geonames.org/export/dump/",
+      "snapshot": null,
+      "sha256": null,
+      "licence": "CC BY",
+      "restricted": false,
+      "local_seed": null
+    },
+    {
+      "source_id": "osm",
+      "name": "OpenStreetMap regional extracts",
+      "url": "https://download.geofabrik.de/",
+      "snapshot": null,
+      "sha256": null,
+      "licence": "ODbL",
+      "restricted": true
+    },
+    {
+      "source_id": "natural_earth",
+      "name": "Natural Earth",
+      "url": "https://www.naturalearthdata.com/",
+      "snapshot": null,
+      "sha256": null,
+      "licence": "public domain",
+      "restricted": false
+    },
+    {
+      "source_id": "geoboundaries",
+      "name": "geoBoundaries",
+      "url": "https://www.geoboundaries.org/",
+      "snapshot": null,
+      "sha256": null,
+      "licence": "CC BY",
+      "restricted": false
+    },
+    {
+      "source_id": "overture",
+      "name": "Overture Places (second opinion only)",
+      "url": "https://overturemaps.org/",
+      "snapshot": null,
+      "sha256": null,
+      "licence": "CDLA / varies",
+      "restricted": true
+    }
   ]
 }
