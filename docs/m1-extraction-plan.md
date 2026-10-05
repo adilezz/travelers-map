@@ -30,6 +30,10 @@ The owner's first S1 run produced 35,642 distinct QIDs (class 88,485 rows, insti
 
 Only the Parquet files are pinned; the JSONL files are local intermediates.
 
+### Second result and the second fix
+
+After the class-free families, 174 of 184 golden QIDs were found (94.6 %, just under the 95 % floor). The ten misses (Sacred Valley, Colca Canyon, Kerak Castle, Umm Qais, Erg Chebbi, Todgha Gorge, Imlil, Dalt Vila, the Cirque de Gavarnie, Ölüdeniz) all share one trait: the S2 details show each has a "located in" parent but evidently no country of its own, which the queries required. New family `locatedin` (items with 15 or more sitelinks, no country, and a located-in parent one or two hops up that has one): 18 more queries. Re-run, then `make recall`.
+
 ## S2: details (built 5 October)
 
 `atlas.details` selects the QIDs worth describing (15 or more sitelinks, 100,000 or more inhabitants, a World Heritage or protected-area id, a transport node, or a golden place): 24,875 QIDs, about 500 requests of 50. For each it keeps English and local labels and aliases, the English description, instance-of, located-in, part-of, heritage designations, capital-of with an "ended" flag (current against former capital), inception and dissolution years, the official site, the English Wikipedia title (the key to pageviews), and `redirected_to` when Wikidata has merged the item since the extraction. Resumable; failed batches are listed. Commands: `make details`, then `make details-pack`.

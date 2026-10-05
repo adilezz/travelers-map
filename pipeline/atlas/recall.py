@@ -16,7 +16,7 @@ from pathlib import Path
 from atlas import golden as G
 
 ROOT = Path(__file__).resolve().parents[2]
-FAMILIES = ("class", "popall", "pop", "attention", "institutional", "node")
+FAMILIES = ("class", "popall", "pop", "attention", "locatedin", "institutional", "node")
 
 
 def load_index(raw: Path) -> dict[str, dict]:

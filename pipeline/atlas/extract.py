@@ -82,6 +82,25 @@ SELECT ?item ?coord ?sl ?country ?label_en ?label_loc
 }} GROUP BY ?item ?coord ?sl ?country ?label_en ?label_loc ORDER BY ?item LIMIT {limit} OFFSET {offset}
 """
 ATTENTION_BANDS: list[tuple[int, int | None]] = [(100, None), (60, 99), (40, 59)]
+# Many sites carry no country of their own and get it only through "located in" (Kerak Castle sits in
+# Al-Karak, the Sacred Valley in the Cusco Region). The first run missed about 5 % of the golden places
+# for this reason, so this family asks for items with 15 or more sitelinks, no country, and an
+# administrative parent (one or two hops up) that has one.
+LOCATED_QUERY = """\
+SELECT ?item ?coord ?sl ?country ?label_en ?label_loc
+       (GROUP_CONCAT(DISTINCT STRAFTER(STR(?inst), "/entity/"); separator = "|") AS ?insts) WHERE {{
+  VALUES ?country {{ {countries} }}
+  ?item wdt:P625 ?coord ; wikibase:sitelinks ?sl .
+  FILTER(?sl >= {lo}{hi})
+  FILTER NOT EXISTS {{ ?item wdt:P17 [] }}
+  ?item wdt:P131/wdt:P131? ?admin .
+  ?admin wdt:P17 ?country .
+  OPTIONAL {{ ?item wdt:P31 ?inst }}
+  OPTIONAL {{ ?item rdfs:label ?label_en FILTER(lang(?label_en) = "en") }}
+  OPTIONAL {{ ?item rdfs:label ?label_loc FILTER(lang(?label_loc) = "{lang}") }}
+}} GROUP BY ?item ?coord ?sl ?country ?label_en ?label_loc ORDER BY ?item LIMIT {limit} OFFSET {offset}
+"""
+LOCATED_BANDS: list[tuple[int, int | None]] = [(40, None), (15, 39)]
 INSTITUTIONAL_QUERY = """\
 SELECT ?item ?coord ?sl ?whs ?wdpa ?country ?label_en ?label_loc WHERE {{
   VALUES ?country {{ {countries} }}
@@ -138,6 +157,9 @@ def jobs(countries: list[str] | None = None, class_qids: list[str] | None = None
         for lo, hi in ATTENTION_BANDS:
             p = dict(base, lo=lo, hi="" if hi is None else f" && ?sl <= {hi}")
             out.append(Job(iso, f"attention:{lo}-{hi or 'up'}", ATTENTION_QUERY, tuple(sorted(p.items()))))
+        for lo, hi in LOCATED_BANDS:
+            p = dict(base, lo=lo, hi="" if hi is None else f" && ?sl <= {hi}")
+            out.append(Job(iso, f"locatedin:{lo}-{hi or 'up'}", LOCATED_QUERY, tuple(sorted(p.items()))))
         out.append(Job(iso, "institutional", INSTITUTIONAL_QUERY, tuple(sorted(base.items()))))
         for kind, (cls, lo) in NODE_CLASSES.items():
             out.append(Job(iso, f"node:{kind}", NODE_QUERY, tuple(sorted(dict(base, cls=cls, lo=lo).items()))))

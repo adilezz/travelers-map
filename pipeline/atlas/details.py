@@ -43,6 +43,8 @@ def select(raw: Path, golden_path: Path | None = None) -> dict[str, set[str]]:
         chosen.setdefault(qid, set()).add(why)
 
     for f in sorted(raw.glob("*.parquet")):
+        if f.stem == "details":
+            continue
         cols = {r[0] for r in con.execute(f"DESCRIBE SELECT * FROM read_parquet('{f.as_posix()}')").fetchall()}
         q = f"SELECT qid, {'sitelinks' if 'sitelinks' in cols else 'NULL'}, {'population' if 'population' in cols else 'NULL'}, " \
             f"{'whs' if 'whs' in cols else 'NULL'}, {'wdpa' if 'wdpa' in cols else 'NULL'} FROM read_parquet('{f.as_posix()}')"
