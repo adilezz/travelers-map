@@ -30,9 +30,16 @@ The owner's first S1 run produced 35,642 distinct QIDs (class 88,485 rows, insti
 
 Only the Parquet files are pinned; the JSONL files are local intermediates.
 
-### Second result and the second fix
+### Second result, a wrong diagnosis, and the real cause
 
-After the class-free families, 174 of 184 golden QIDs were found (94.6 %, just under the 95 % floor). The ten misses (Sacred Valley, Colca Canyon, Kerak Castle, Umm Qais, Erg Chebbi, Todgha Gorge, Imlil, Dalt Vila, the Cirque de Gavarnie, Ölüdeniz) all share one trait: the S2 details show each has a "located in" parent but evidently no country of its own, which the queries required. New family `locatedin` (items with 15 or more sitelinks, no country, and a located-in parent one or two hops up that has one): 18 more queries. Re-run, then `make recall`.
+After the class-free families, 174 of 184 golden QIDs were found (94.6 %, just under the 95 % floor). I first blamed a missing country (`P17`) on the ten misses and wrote a `locatedin` family. **That diagnosis was wrong**: I had inferred it from the S2 details, which show "located in" parents, without reading the items' country claims. The owner's check of the ten items in Wikidata showed every one has a country and a coordinate, and the `locatedin` queries timed out on France, Spain and Italy and added about one row. The family is removed.
+
+The real cause is the sitelink floor. The ten misses have 6 to 32 sitelinks (Dalt Vila 6; Todgha Gorge 15; Imlil 15; Kerak Castle 20; Erg Chebbi 23; Gavarnie 24; Ölüdeniz 25; Umm Qais 26; Colca Canyon 28; Sacred Valley 32), below the attention floor of 40, and their classes (castle, canyon, cirque, oasis) are not in the class table. Admission rule R4 admits an item with 15 or more sitelinks plus one independent signal, so the extraction must reach 15 whatever the class: `attention` now has two more bands, 25 to 39 and 15 to 24 (18 more queries; volume is larger, so France, Spain and Italy may need the paging to run longer).
+
+Two findings are about the golden set, not the queries, and are left for the owner to decide (a golden row is not changed to make a build pass):
+
+- **Dalt Vila (G141)** has 6 sitelinks, and its World Heritage item is the island item `Q52631` ("Ibiza", property 417, 104 sitelinks). A pipeline that admits World Heritage properties by id (R1) will produce a place for Ibiza, not for Dalt Vila. Either the row should name the property, or it is a known miss.
+- **Gavarnie (G159)**: the cirque (`Q1093112`, 24 sitelinks) will now be found, but the World Heritage property it belongs to is `Q3411434` ("Pyrénées – Mont Perdu", property 773), which Wikidata lists under both France and Spain. Under D25 a part of a serial property is an asset of the property's place; which of the two is the golden place needs a ruling.
 
 ## S2: details (built 5 October)
 

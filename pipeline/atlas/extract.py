@@ -68,8 +68,8 @@ SELECT ?item ?coord ?sl ?pop ?country ?label_en ?label_loc WHERE {{
   OPTIONAL {{ ?item rdfs:label ?label_loc FILTER(lang(?label_loc) = "{lang}") }}
 }} ORDER BY ?item LIMIT {limit} OFFSET {offset}
 """
-# R2 admits on attention alone, whatever the class: municipalities, regions, valleys and oases are not all
-# in the class table, so this family asks for every item with 40 or more sitelinks and keeps its classes.
+# R2 admits on attention alone, whatever the class: municipalities, regions, valleys, oases and castles are
+# not all in the class table, so this family asks for every item with 15 or more sitelinks and keeps its classes.
 ATTENTION_QUERY = """\
 SELECT ?item ?coord ?sl ?country ?label_en ?label_loc
        (GROUP_CONCAT(DISTINCT STRAFTER(STR(?inst), "/entity/"); separator = "|") AS ?insts) WHERE {{
@@ -81,26 +81,12 @@ SELECT ?item ?coord ?sl ?country ?label_en ?label_loc
   OPTIONAL {{ ?item rdfs:label ?label_loc FILTER(lang(?label_loc) = "{lang}") }}
 }} GROUP BY ?item ?coord ?sl ?country ?label_en ?label_loc ORDER BY ?item LIMIT {limit} OFFSET {offset}
 """
-ATTENTION_BANDS: list[tuple[int, int | None]] = [(100, None), (60, 99), (40, 59)]
-# Many sites carry no country of their own and get it only through "located in" (Kerak Castle sits in
-# Al-Karak, the Sacred Valley in the Cusco Region). The first run missed about 5 % of the golden places
-# for this reason, so this family asks for items with 15 or more sitelinks, no country, and an
-# administrative parent (one or two hops up) that has one.
-LOCATED_QUERY = """\
-SELECT ?item ?coord ?sl ?country ?label_en ?label_loc
-       (GROUP_CONCAT(DISTINCT STRAFTER(STR(?inst), "/entity/"); separator = "|") AS ?insts) WHERE {{
-  VALUES ?country {{ {countries} }}
-  ?item wdt:P625 ?coord ; wikibase:sitelinks ?sl .
-  FILTER(?sl >= {lo}{hi})
-  FILTER NOT EXISTS {{ ?item wdt:P17 [] }}
-  ?item wdt:P131/wdt:P131? ?admin .
-  ?admin wdt:P17 ?country .
-  OPTIONAL {{ ?item wdt:P31 ?inst }}
-  OPTIONAL {{ ?item rdfs:label ?label_en FILTER(lang(?label_en) = "en") }}
-  OPTIONAL {{ ?item rdfs:label ?label_loc FILTER(lang(?label_loc) = "{lang}") }}
-}} GROUP BY ?item ?coord ?sl ?country ?label_en ?label_loc ORDER BY ?item LIMIT {limit} OFFSET {offset}
-"""
-LOCATED_BANDS: list[tuple[int, int | None]] = [(40, None), (15, 39)]
+ATTENTION_BANDS: list[tuple[int, int | None]] = [(100, None), (60, 99), (40, 59), (25, 39), (15, 24)]
+# The lower bands reach R4's floor of 15 sitelinks (R4 admits an item with 15 or more sitelinks and one
+# independent signal). The first runs stopped at 40 and missed ten golden places (Sacred Valley 32, Colca
+# Canyon 28, Umm Qais 26, Kerak Castle 20 and others), all of which have a country and a coordinate. An
+# earlier "located-in" family written for the wrong diagnosis was dropped: it timed out on France, Spain
+# and Italy and found nothing the plain families did not.
 INSTITUTIONAL_QUERY = """\
 SELECT ?item ?coord ?sl ?whs ?wdpa ?country ?label_en ?label_loc WHERE {{
   VALUES ?country {{ {countries} }}
@@ -157,9 +143,6 @@ def jobs(countries: list[str] | None = None, class_qids: list[str] | None = None
         for lo, hi in ATTENTION_BANDS:
             p = dict(base, lo=lo, hi="" if hi is None else f" && ?sl <= {hi}")
             out.append(Job(iso, f"attention:{lo}-{hi or 'up'}", ATTENTION_QUERY, tuple(sorted(p.items()))))
-        for lo, hi in LOCATED_BANDS:
-            p = dict(base, lo=lo, hi="" if hi is None else f" && ?sl <= {hi}")
-            out.append(Job(iso, f"locatedin:{lo}-{hi or 'up'}", LOCATED_QUERY, tuple(sorted(p.items()))))
         out.append(Job(iso, "institutional", INSTITUTIONAL_QUERY, tuple(sorted(base.items()))))
         for kind, (cls, lo) in NODE_CLASSES.items():
             out.append(Job(iso, f"node:{kind}", NODE_QUERY, tuple(sorted(dict(base, cls=cls, lo=lo).items()))))
