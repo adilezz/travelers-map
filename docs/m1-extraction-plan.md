@@ -41,6 +41,12 @@ Two findings were about the golden set, not the queries. The owner ruled on 6 Oc
 - **Dalt Vila (G141)** has 6 sitelinks, and its World Heritage item is the island item `Q52631` ("Ibiza", property 417, 104 sitelinks). A pipeline that admits World Heritage properties by id (R1) will produce a place for Ibiza, not for Dalt Vila. Either the row should name the property, or it is a known miss.
 - **Gavarnie (G159)**: the cirque (`Q1093112`, 24 sitelinks) will now be found, but the World Heritage property it belongs to is `Q3411434` ("Pyrénées – Mont Perdu", property 773), which Wikidata lists under both France and Spain. Under D25 a part of a serial property is an asset of the property's place; which of the two is the golden place needs a ruling.
 
+### The France split (6 October)
+
+The public endpoint cuts a query at 60 seconds. France's `attention` band 25 to 39 returned a 504 whole, and again for its 35 to 39 part, so the owner assembled the file from the slices 25 to 29, 30 to 34 and 35 to 39 by hand. That is now in the code (`SPLITS` in `atlas.extract`): the job keeps the same file name and is asked as three slices that are joined into it, with the slice queries recorded in the file's header. A fresh run elsewhere therefore no longer fails the same way, and the Parquet and the pins do not change. If another band times out, add it to `SPLITS`.
+
+After the second run the recall is **184 of 184** (`data/golden/s1_recall.md`).
+
 ## S2: details (built 5 October)
 
 `atlas.details` selects the QIDs worth describing (15 or more sitelinks, 100,000 or more inhabitants, a World Heritage or protected-area id, a transport node, or a golden place): 24,875 QIDs, about 500 requests of 50. For each it keeps English and local labels and aliases, the English description, instance-of, located-in, part-of, heritage designations, capital-of with an "ended" flag (current against former capital), inception and dissolution years, the official site, the English Wikipedia title (the key to pageviews), and `redirected_to` when Wikidata has merged the item since the extraction. Resumable; failed batches are listed. Commands: `make details`, then `make details-pack`.

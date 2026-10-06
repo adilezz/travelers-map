@@ -115,3 +115,22 @@ def test_parquet_ignores_files_of_jobs_no_longer_in_the_plan(tmp_path):
     keep = X.jobs(["ITA"], ["Q515"])[0]
     X.run_job(keep, tmp_path, lambda q: [b("Q1")], delay=0)
     assert X.to_parquet(tmp_path, {keep.filename}) == {"class": 1}
+
+
+def test_frances_wide_band_is_asked_in_slices_and_joined_into_the_same_file(tmp_path):
+    plan = {(j.country, j.family): j for j in X.jobs(class_qids=["Q515"])}
+    fra = plan[("FRA", "attention:25-39")]
+    assert len(fra.slices) == 3 and plan[("ESP", "attention:25-39")].slices == ()
+    assert fra.filename == "FRA__attention_25-39.jsonl"                     # same file as before the split
+    asked = []
+
+    def run(q):
+        asked.append(q)
+        hi = int(q.split("?sl <= ")[1].split(")")[0])
+        return [b(f"Q{hi}"), b("Q1")]                                        # Q1 shows up in every slice
+
+    r = X.run_job(fra, tmp_path, run, delay=0)
+    assert r["rows"] == 4 and len(asked) == 3                              # Q1 once, plus one per slice
+    assert [x["qid"] for x in X.iter_rows(tmp_path / fra.filename)] == ["Q29", "Q1", "Q34", "Q39"]
+    meta = X.read_meta(tmp_path / fra.filename)
+    assert len(meta["slices"]) == 3 and "?sl >= 35 && ?sl <= 39" in meta["slices"][2]

@@ -109,19 +109,28 @@ SELECT ?item ?coord ?sl ?iata ?icao ?code ?country ?label_en WHERE {{
 NODE_CLASSES = {"airport": ("Q1248784", 1), "rail_station": ("Q55488", 5), "ferry_terminal": ("Q1061151", 1)}
 
 
+# Bands that the public endpoint cannot answer in one piece (it cuts every query at 60 seconds). They are
+# asked as slices and joined into the same file, so the file name, the Parquet and the pins do not change.
+# France's attention band 25-39 returned 504 whole and in its 35-39 part (found 6 October 2026).
+SPLITS: dict[tuple[str, str], list[tuple[int, int]]] = {
+    ("FRA", "attention:25-39"): [(25, 29), (30, 34), (35, 39)],
+}
+
+
 @dataclass(frozen=True)
 class Job:
     country: str
     family: str          # class:<qid>:<lo>-<hi> | pop | institutional | node:<kind>
     template: str
     params: tuple        # sorted (key, value) pairs, for the file name hash and the query
+    slices: tuple = ()   # extra parameter sets (sorted pairs); each is asked on its own and the rows are joined
 
     @property
     def filename(self) -> str:
         return f"{self.country}__{self.family.replace(':', '_')}.jsonl"
 
-    def query(self, offset: int) -> str:
-        return self.template.format(**dict(self.params), limit=PAGE, offset=offset)
+    def query(self, offset: int, params: tuple | None = None) -> str:
+        return self.template.format(**dict(params or self.params), limit=PAGE, offset=offset)
 
 
 def classes(path: Path | None = None) -> list[str]:
@@ -142,7 +151,10 @@ def jobs(countries: list[str] | None = None, class_qids: list[str] | None = None
         out.append(Job(iso, "popall", POP_QUERY, tuple(sorted(base.items()))))
         for lo, hi in ATTENTION_BANDS:
             p = dict(base, lo=lo, hi="" if hi is None else f" && ?sl <= {hi}")
-            out.append(Job(iso, f"attention:{lo}-{hi or 'up'}", ATTENTION_QUERY, tuple(sorted(p.items()))))
+            fam = f"attention:{lo}-{hi or 'up'}"
+            cuts = tuple(tuple(sorted(dict(base, lo=a, hi=f" && ?sl <= {b}").items()))
+                         for a, b in SPLITS.get((iso, fam), []))
+            out.append(Job(iso, fam, ATTENTION_QUERY, tuple(sorted(p.items())), cuts))
         out.append(Job(iso, "institutional", INSTITUTIONAL_QUERY, tuple(sorted(base.items()))))
         for kind, (cls, lo) in NODE_CLASSES.items():
             out.append(Job(iso, f"node:{kind}", NODE_QUERY, tuple(sorted(dict(base, cls=cls, lo=lo).items()))))
@@ -219,17 +231,22 @@ def run_job(job: Job, out: Path, run: Callable[[str], list[dict]], delay: float 
         return {"job": job.filename, "status": "skipped", "rows": done["rows"]}
     c = COUNTRIES[job.country]
     rows: list[dict] = []
-    offset = 0
-    while True:
-        page = run(job.query(offset))
-        rows += [parse(b, c.get("disputed")) for b in page]
-        if len(page) < PAGE:
-            break
-        offset += PAGE
-        time.sleep(delay)
-    meta = {"country": job.country, "family": job.family, "query": job.query(0), "page": PAGE,
-            "run_utc": datetime.now(UTC).isoformat(timespec="seconds"), "endpoint": SPARQL,
+    for params in job.slices or (job.params,):
+        offset = 0
+        while True:
+            page = run(job.query(offset, params))
+            rows += [parse(b, c.get("disputed")) for b in page]
+            if len(page) < PAGE:
+                break
+            offset += PAGE
+            time.sleep(delay)
+    seen: set[str] = set()
+    rows = [r for r in rows if not (r["qid"] in seen or seen.add(r["qid"]))]    # slices never overlap; belt and braces
+    meta = {"country": job.country, "family": job.family, "query": job.query(0, (job.slices or (job.params,))[0]),
+            "page": PAGE, "run_utc": datetime.now(UTC).isoformat(timespec="seconds"), "endpoint": SPARQL,
             "rows": len(rows), "complete": True}
+    if job.slices:
+        meta["slices"] = [job.query(0, p) for p in job.slices]
     _write(path, meta, rows)
     return {"job": job.filename, "status": "ok", "rows": len(rows)}
 
