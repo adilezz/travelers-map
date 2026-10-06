@@ -90,3 +90,21 @@ def test_parquet_round_trip(tmp_path):
                                                                           "claims": {}, "sitelinks": {}}}}, delay=0,
           log=lambda s: None)
     assert D.to_parquet(tmp_path) == 1 and (tmp_path / "details.parquet").is_file()
+
+
+def test_profile_lists_the_wikis_and_resumes(tmp_path, monkeypatch):
+    monkeypatch.setattr(D, "BATCH", 2)
+    calls = []
+
+    def get(url, params):
+        calls.append(params["ids"])
+        assert params["props"] == "sitelinks"
+        if len(calls) == 2:
+            raise OSError("timeout")
+        return {"entities": {q: {"id": q, "sitelinks": {"enwiki": {}, "cebwiki": {}}} for q in params["ids"].split("|")}}
+    res = D.run_profiles(["Q1", "Q2", "Q3", "Q4", "Q5"], tmp_path, get, delay=0, log=lambda s: None)
+    assert res["failed"] == ["Q3", "Q4"] and res["fetched"] == 3
+    res2 = D.run_profiles(["Q1", "Q2", "Q3", "Q4", "Q5"], tmp_path, get, delay=0, log=lambda s: None)
+    assert res2["already"] == 3 and res2["failed"] == []
+    rows = [json.loads(line) for line in (tmp_path / "profile.jsonl").read_text().splitlines()]
+    assert sorted(r["qid"] for r in rows) == ["Q1", "Q2", "Q3", "Q4", "Q5"] and rows[0]["wikis"] == ["cebwiki", "enwiki"]

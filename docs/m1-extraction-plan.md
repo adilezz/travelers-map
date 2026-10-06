@@ -47,6 +47,12 @@ The public endpoint cuts a query at 60 seconds. France's `attention` band 25 to 
 
 After the second run the recall is **184 of 184** (`data/golden/s1_recall.md`).
 
+### Finding: ordinary municipalities clear R2 (6 October)
+
+With the attention floor at 15, the S1 files hold 13,729 French communes, 7,727 Italian comuni and 3,075 Spanish municipalities **with 40 or more sitelinks**, the threshold of admission rule R2. An ordinary French commune has 33 to 45 sitelinks (the count peaks at 36 to 38): bot-generated Wikipedias (Cebuano, Swedish, Waray and others) give almost every municipality a baseline of about 35 articles. So R2 as written would admit about 24,000 ordinary municipalities from three countries, which is exactly the v1 failure (towns as places), and the sitelink term in the notability value *N* is dominated by that baseline. Paris has about 300; the real discriminating range is above 60 (734 in France), where Mont-Saint-Michel and Chamonix sit.
+
+The fix cannot be a bigger threshold alone. Next step, built and waiting for the owner's run: `make profile` fetches **which** Wikipedias carry each of the 85,776 candidates (about 1,700 requests), so the signal can be recomputed from the editions that humans actually write (for example the 20 to 30 largest, non-bot editions) and calibrated against the golden set, H1 and the pairs file. Decisions that follow (the R2 threshold, the form of the sitelink term in *N*, whether R2 should look at class-relative rank) wait for that evidence.
+
 ## S2: details (built 5 October)
 
 `atlas.details` selects the QIDs worth describing (15 or more sitelinks, 100,000 or more inhabitants, a World Heritage or protected-area id, a transport node, or a golden place): 24,875 QIDs, about 500 requests of 50. For each it keeps English and local labels and aliases, the English description, instance-of, located-in, part-of, heritage designations, capital-of with an "ended" flag (current against former capital), inception and dissolution years, the official site, the English Wikipedia title (the key to pageviews), and `redirected_to` when Wikidata has merged the item since the extraction. Resumable; failed batches are listed. Commands: `make details`, then `make details-pack`.

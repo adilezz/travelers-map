@@ -43,7 +43,7 @@ def select(raw: Path, golden_path: Path | None = None) -> dict[str, set[str]]:
         chosen.setdefault(qid, set()).add(why)
 
     for f in sorted(raw.glob("*.parquet")):
-        if f.stem == "details":
+        if f.stem in ("details", "profile"):
             continue
         cols = {r[0] for r in con.execute(f"DESCRIBE SELECT * FROM read_parquet('{f.as_posix()}')").fetchall()}
         q = f"SELECT qid, {'sitelinks' if 'sitelinks' in cols else 'NULL'}, {'population' if 'population' in cols else 'NULL'}, " \
@@ -203,9 +203,59 @@ def to_parquet(out: Path) -> int:
     return n
 
 
+def fetch_profiles(qids: list[str], get: Callable[[str, dict], dict]) -> list[dict]:
+    """Which Wikipedias (and sister projects) carry each item, not only how many."""
+    d = get(API, {"action": "wbgetentities", "ids": "|".join(qids), "format": "json", "redirects": "yes",
+                  "props": "sitelinks"})
+    entities = d.get("entities", {})
+    by_target = {e.get("id"): e for e in entities.values() if isinstance(e, dict)}
+    rows = []
+    for qid in qids:
+        e = entities.get(qid) or by_target.get(qid)
+        if e is None or "missing" in e:
+            rows.append({"qid": qid, "missing": True})
+            continue
+        rows.append({"qid": qid, "wikis": sorted(e.get("sitelinks", {}))})
+    return rows
+
+
+def run_profiles(qids: list[str], out: Path, get: Callable[[str, dict], dict] = http_get,
+                 delay: float = 0.3, log: Callable[[str], None] = print) -> dict:
+    """Fetch the sitelink profile of every QID once; resumable like `run`."""
+    import time
+    path = out / "profile.jsonl"
+    done: set[str] = set()
+    if path.is_file():
+        with open(path, encoding="utf-8") as fh:
+            done = {json.loads(line)["qid"] for line in fh if line.strip()}
+    todo = [q for q in sorted(set(qids)) if q not in done]
+    failed: list[str] = []
+    with open(path, "a", encoding="utf-8") as fh:
+        for i in range(0, len(todo), BATCH):
+            batch = todo[i:i + BATCH]
+            try:
+                rows = fetch_profiles(batch, get)
+            except Exception as e:
+                failed += batch
+                log(f"batch {i // BATCH + 1}: failed ({type(e).__name__}: {str(e)[:80]})")
+                continue
+            for r in rows:
+                fh.write(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n")
+            fh.flush()
+            if (i // BATCH) % 40 == 0:
+                log(f"{min(i + BATCH, len(todo))}/{len(todo)}")
+            time.sleep(delay)
+    return {"requested": len(set(qids)), "already": len(done), "fetched": len(todo) - len(failed), "failed": failed}
+
+
+def profile_targets(raw: Path) -> list[str]:
+    """Every QID the S1 files carry with 15 or more sitelinks, a population, or an institutional id."""
+    return sorted(select(raw))
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("cmd", choices=["select", "run", "parquet", "pin"])
+    ap.add_argument("cmd", choices=["select", "run", "parquet", "pin", "profile", "profile-parquet"])
     ap.add_argument("--raw", type=Path, default=sorted((ROOT / "data" / "raw" / "wikidata").glob("*"))[-1])
     ap.add_argument("--golden", type=Path, default=ROOT / "data" / "golden" / "golden.csv")
     ap.add_argument("--delay", type=float, default=0.3)
@@ -222,6 +272,19 @@ def main(argv: list[str] | None = None) -> int:
         res = run(select(a.raw, a.golden), a.raw, delay=a.delay)
         print(res["selected"], "selected,", res["already"], "already done,", res["fetched"], "fetched,", len(res["failed"]), "failed")
         return 1 if res["failed"] else 0
+    if a.cmd == "profile":
+        res = run_profiles(profile_targets(a.raw), a.raw, delay=a.delay)
+        print(res["requested"], "requested,", res["already"], "already done,", res["fetched"], "fetched,", len(res["failed"]), "failed")
+        return 1 if res["failed"] else 0
+    if a.cmd == "profile-parquet":
+        import duckdb
+        con = duckdb.connect()
+        con.execute(f"COPY (SELECT * FROM read_json_auto('{(a.raw / 'profile.jsonl').as_posix()}', sample_size=-1)) "
+                    f"TO '{(a.raw / 'profile.parquet').as_posix()}' (FORMAT PARQUET)")
+        from atlas import snapshot
+        snapshot.pin("wikidata_sparql", a.raw / "profile.parquet", ROOT / "data" / "raw", a.raw.name)
+        print("profile.parquet written and pinned")
+        return 0
     if a.cmd == "parquet":
         print(to_parquet(a.raw), "rows")
         return 0
