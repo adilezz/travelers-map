@@ -21,8 +21,8 @@
       "files": [
         {
           "path": "wikidata/2026-10-05/attention.parquet",
-          "bytes": 1108241,
-          "sha256": "b21a2228145c028cd32fb6463a93412663b5ba10d1d3cca7178c6902905e25e4"
+          "bytes": 2781560,
+          "sha256": "d96d8d1be6c7cbfbdc1ac02e6e5b1f97629e5e7673488743616e96d15a751626"
         },
         {
           "path": "wikidata/2026-10-05/class.parquet",
@@ -31,8 +31,8 @@
         },
         {
           "path": "wikidata/2026-10-05/details.parquet",
-          "bytes": 4349690,
-          "sha256": "ea93d857ec86571cbc4f745d2294d001d6cd3112af37dc0e30b66de24fec5513"
+          "bytes": 6887738,
+          "sha256": "d12bed59a09d8988b1f26f8f061812b88e76336128456d5c143f4587279ed348"
         },
         {
           "path": "wikidata/2026-10-05/institutional.parquet",
