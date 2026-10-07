@@ -63,8 +63,8 @@
     },
     {
       "source_id": "wikipedia_pageviews",
-      "name": "Wikipedia pageview dumps, 12 months",
-      "url": "https://dumps.wikimedia.org/other/pageview_complete/",
+      "name": "Wikipedia per-article pageviews (REST API), 12 months, English edition",
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/",
       "snapshot": null,
       "sha256": null,
       "licence": "CC0",

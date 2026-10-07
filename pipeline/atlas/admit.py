@@ -22,6 +22,7 @@ from collections import defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
 
+from atlas import pageviews as PV
 from atlas import signal as S
 from atlas import wdpa as W
 from atlas.geo import fold, haversine_km
@@ -57,26 +58,37 @@ def load_types(path: Path) -> list[dict]:
         return list(csv.DictReader(fh))
 
 
+# A living city that was also a polis or has an archaeological site inside it is a city, not a ruin
+# (Cairo, Alexandria, Syracuse): these classes make the settlement rows win over the site rows.
+LIVING_CITY = {"Q1549591", "Q5119", "Q108178728", "Q174844", "Q200250"}
+
+
+def _rows(classes: list[str], types: list[dict]) -> list[dict]:
+    have = set(classes)
+    hit = [t for t in types if t["class_qid"] in have and t["place_like"] == "yes"]
+    if have & LIVING_CITY and any(t["place_type"] == "settlement" for t in hit):
+        hit = [t for t in hit if t["place_type"] == "settlement"]
+    return hit
+
+
 def classify(classes: list[str], types: list[dict]) -> dict | None:
     """The first row of the types table (specific before general, in file order) that the item's classes hit."""
-    have = set(classes)
-    for t in types:
-        if t["class_qid"] in have and t["place_like"] == "yes":
-            return t
-    return None
+    hit = _rows(classes, types)
+    return hit[0] if hit else None
 
 
 def kind_hints(classes: list[str], types: list[dict]) -> list[str]:
     have = set(classes)
+    allowed = {id(t) for t in _rows(classes, types)}
     seen: list[str] = []
     for t in types:
-        if t["class_qid"] in have and t["kind_hint"] and t["kind_hint"] not in seen:
+        if t["class_qid"] in have and t["kind_hint"] and t["kind_hint"] not in seen and (id(t) in allowed or t["place_like"] != "yes"):
             seen.append(t["kind_hint"])
     return seen[:3]
 
 
 def notability(c: dict, cfg: dict) -> float:
-    """N without a pageview term (pageviews arrive with S4). Sitelinks enter as D, the discrimination score."""
+    """N = log10(1+SL) + 0.5 log10(1+PV/1000) + R + C. Sitelinks enter as D, the discrimination score; PV is absent until S4 has run."""
     n = cfg["notability"]
     sl = c.get("D") if c.get("D") is not None else c.get("sitelinks", 0)
     r = 0.0
@@ -85,11 +97,22 @@ def notability(c: dict, cfg: dict) -> float:
     if c.get("heritage"):
         r += n["recognition"]["national_top"]
     r = min(r, n["recognition_cap"])
+    pv = c.get("pv") or 0                                                   # S4: twelve-month English pageviews, the best of the merged items
     pop = c.get("population") or 0
     size = 0.0
     if pop >= n["size_term_reference_population"]:
         size = min(n["size_term_cap"], n["size_term_coefficient"] * math.log10(pop / n["size_term_reference_population"]))
-    return math.log10(1 + max(sl, 0)) + r + size
+    return math.log10(1 + max(sl, 0)) + n.get("pageview_weight", 0.5) * math.log10(1 + pv / 1000.0) + r + size
+
+
+def attach_pageviews(places: list[dict], pv: dict[str, int]) -> int:
+    """A place carries the most-viewed article among its merged items. Returns how many places got a figure."""
+    n = 0
+    for c in places:
+        vals = [pv[q] for q in [c["qid"], *c.get("alt_qids", [])] if q in pv]
+        c["pv"] = max(vals) if vals else None
+        n += bool(vals)
+    return n
 
 
 def assign_tiers(places: list[dict], cfg: dict) -> None:
@@ -186,6 +209,14 @@ def candidates(raw: Path, overrides: dict[str, str]) -> dict[str, dict]:
         if qid in cands and any(w.endswith("wikivoyage") for w in wikis or []):
             cands[qid]["voyage"] = True                                       # S3: a travel-guide article is an independent signal
     return cands
+
+
+def load_admin_classes(path: Path) -> set[str]:
+    """Classes of administrative units that are records of a place, not destinations (data/rules/admin_classes.csv)."""
+    if not path.is_file():
+        return set()
+    with open(path, encoding="utf-8", newline="") as fh:
+        return {r["class_qid"] for r in csv.DictReader(fh) if r.get("class_qid")}
 
 
 def norm_whs(value: object) -> str:
@@ -286,8 +317,18 @@ def merge_duplicates(places: list[dict], same_name_km: float) -> list[dict]:
 
 
 COLOCATED_KM = 5.0
+SEAT_KM = 10.0
 STUB_SITELINKS = 15                                                  # a World Heritage record this thin is a stub, not a destination
 SAME_KIND_KM = 25.0
+
+
+_NAME_STOP = {"mount", "mt", "mountain", "monte", "mont", "jbel", "djebel", "national", "park", "parc", "parque", "parco", "reserve",
+              "nature", "natural", "area", "the", "of", "de", "del", "di", "la", "le", "el", "and", "y", "et", "islands", "island"}
+
+
+def _core(p: dict) -> set[str]:
+    """Distinctive words of a place's name: the word that makes Kilimanjaro National Park and Mount Kilimanjaro one name."""
+    return {w for w in fold(p.get("label_en") or p.get("name_en") or "").split() if w not in _NAME_STOP}
 
 
 def _holds(p: dict) -> bool:
@@ -302,7 +343,7 @@ def _ruins(p: dict) -> bool:
 SERIAL_ID = re.compile(r"^(\d+)-")
 
 
-def absorb(places: list[dict], overrides: list[dict] | None = None) -> tuple[list[dict], list[dict]]:
+def absorb(places: list[dict], overrides: list[dict] | None = None, admin: set[str] | None = None) -> tuple[list[dict], list[dict]]:
     """D25 / document 1 section 5.2: nested monuments and same-property neighbours become assets of the parent.
 
     1. Items sharing one World Heritage property id: the most cited keeps the place.
@@ -346,7 +387,7 @@ def absorb(places: list[dict], overrides: list[dict] | None = None) -> tuple[lis
             continue
         for a in held:
             if (a.get("_type") or {}).get("place_type") == "area" and a["qid"] not in gone and a["iso3"] == p["iso3"] \
-                    and a["sitelinks"] < p["sitelinks"] and haversine_km(a["lat"], a["lon"], p["lat"], p["lon"]) <= COLOCATED_KM:
+                    and _core(a) & _core(p) and a["sitelinks"] < p["sitelinks"] and haversine_km(a["lat"], a["lon"], p["lat"], p["lon"]) <= COLOCATED_KM:
                 gone[a["qid"]] = (p["qid"], f"protected area of {p['qid']} (areas within {COLOCATED_KM:g} km)")
                 p["whs"] = a["whs"]
                 break
@@ -359,6 +400,14 @@ def absorb(places: list[dict], overrides: list[dict] | None = None) -> tuple[lis
         if near:
             top = max(near, key=lambda a: (a["sitelinks"], a["qid"]))
             gone[p["qid"]] = (top["qid"], f"ruins within {SAME_KIND_KM:g} km of World Heritage ruin {top['qid']}")
+    for p in places:                                                        # 6. a province record folds into its seat
+        if p["qid"] in gone or not (set(p.get("classes", ())) & (admin or set())):
+            continue
+        seats = [a for a in places if a is not p and a["qid"] not in gone and a["iso3"] == p["iso3"] and not (set(a.get("classes", ())) & (admin or set()))
+                 and (a.get("_type") or {}).get("place_type") == "settlement" and haversine_km(a["lat"], a["lon"], p["lat"], p["lon"]) <= SEAT_KM]
+        if seats:
+            top = max(seats, key=lambda a: (a["sitelinks"], a["qid"]))
+            gone[p["qid"]] = (top["qid"], f"administrative province of its seat {top['qid']} (within {SEAT_KM:g} km)")
     index = {}
     for p in places:
         for q in [p["qid"], *p.get("alt_qids", [])]:
@@ -463,7 +512,12 @@ def run(raw: Path, out: Path, top_share: float = S.TOP_SHARE) -> dict:
     for c in places:
         c["_n"] = notability(c, cfg)
         c["name_en"] = c.get("label_en") or c.get("label_loc")
-    places, absorbed = absorb(places, load_overrides(ROOT / "data" / "anchors" / "merge_overrides.csv"))
+    places, absorbed = absorb(places, load_overrides(ROOT / "data" / "anchors" / "merge_overrides.csv"),
+                              load_admin_classes(ROOT / "data" / "rules" / "admin_classes.csv"))
+    pv = PV.load(raw.parent.parent / "pageviews" / raw.name / "pageviews.parquet")
+    with_pv = attach_pageviews(places, pv)
+    for c in places:
+        c["_n"] = notability(c, cfg)
     out.mkdir(parents=True, exist_ok=True)
     with open(out / "absorbed.csv", "w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, ["child", "child_name", "parent", "parent_name", "reason", "child_type", "parent_type", "child_hint", "parent_hint"], lineterminator="\n")
@@ -477,7 +531,7 @@ def run(raw: Path, out: Path, top_share: float = S.TOP_SHARE) -> dict:
         pid = mint_or_reuse(reg, [f"qid:{c['qid']}"], "first-pass", rng)
         recs.append(record(c, pid, c["_type"], types))
     notes = {"first_pass": True, "provisional_ids": True, "scope": "nine prototype countries",
-             "missing": ["pageviews (N has no pageview term)", "WDPA categories (when data/raw/wdpa/wdpa_reduced.csv is absent) and Ramsar", "landcover and relief for kinds", "registry"],
+             "missing": ([] if with_pv else ["pageviews (N has no pageview term)"]) + [ "WDPA categories (when data/raw/wdpa/wdpa_reduced.csv is absent) and Ramsar", "landcover and relief for kinds", "registry"],
              "top_share": top_share, "built_utc": datetime.now(UTC).isoformat(timespec="seconds"), "raw": raw.name}
     write_bundle(recs, out, f"first-pass-{raw.name}", notes)
     return {"places": len(recs), "candidates": len(cands), "by_rule": {r: sum(1 for p in recs if r in p["rules"]) for r in ("R1", "R2", "R3", "R4", "R5", "R6")}}

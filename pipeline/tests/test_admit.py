@@ -91,8 +91,8 @@ def test_absorption_resolves_chains_to_the_final_parent():
 
 
 def test_a_protected_area_and_its_mountain_are_one_destination():
-    mount, park = _p("Mount", 2.0, "area", sitelinks=188, lat=-3.06, lon=37.36, iso3="TZA"), \
-        _p("Park", 2.5, "area", sitelinks=47, lat=-3.07, lon=37.37, iso3="TZA", whs="403")
+    mount = _p("Mount", 2.0, "area", sitelinks=188, lat=-3.06, lon=37.36, iso3="TZA", label_en="Mount Kilimanjaro")
+    park = _p("Park", 2.5, "area", sitelinks=47, lat=-3.07, lon=37.37, iso3="TZA", whs="403", label_en="Kilimanjaro National Park")
     kept, log = A.absorb([mount, park])
     assert [p["qid"] for p in kept] == ["Mount"] and mount["whs"] == "403" and log[0]["child"] == "Park"
 
@@ -125,3 +125,21 @@ def test_a_site_inside_a_world_heritage_place_is_its_asset_even_if_better_cited(
 def test_descriptors_do_not_make_a_second_name():
     assert A.base_name("Historic City of Toledo") == A.base_name("Toledo") and A.base_name("Konya Province") == "konya"
     assert A.base_name("Essaouira Ramparts") == "essaouira"
+
+
+def test_a_living_big_city_is_a_settlement_even_with_an_archaeological_class():
+    types = [{"class_qid": "Qarch", "label": "archaeological site", "place_type": "site", "kind_hint": "ruins", "place_like": "yes"},
+             {"class_qid": "Q1549591", "label": "big city", "place_type": "settlement", "kind_hint": "metropolis", "place_like": "yes"}]
+    assert A.classify(["Qarch", "Q1549591"], types)["place_type"] == "settlement"
+    assert A.kind_hints(["Qarch", "Q1549591"], types) == ["metropolis"]
+    assert A.classify(["Qarch"], types)["place_type"] == "site"
+
+
+def test_a_province_record_folds_into_its_seat_and_a_park_does_not_fold_into_its_island():
+    seat = {**_p("Izmit", 2.0, "settlement", classes=set()), "lat": 40.77, "lon": 29.94, "sitelinks": 90}
+    prov = {**_p("Kocaeli", 1.9, "settlement", classes={"Qprov"}), "lat": 40.76, "lon": 29.93, "sitelinks": 80}
+    kept, log = A.absorb([seat, prov], admin={"Qprov"})
+    assert [p["qid"] for p in kept] == ["Izmit"] and "province" in log[0]["reason"]
+    island = {**_p("Isle", 2.0, "area", whs="380", label_en="La Gomera"), "sitelinks": 40}
+    park = {**_p("Park", 2.0, "area", label_en="Garajonay National Park"), "sitelinks": 90}
+    assert len(A.absorb([island, park])[0]) == 2

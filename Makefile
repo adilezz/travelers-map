@@ -5,7 +5,7 @@ BUNDLE ?=
 PREVIOUS ?=
 ARGS ?=
 
-.PHONY: help test lint verify release-verify freeze qids qids-apply classes pin-check extract-plan extract extract-pack recall details details-pack profile signal classlabels
+.PHONY: admit help test lint verify release-verify freeze qids qids-apply classes pin-check extract-plan extract extract-pack recall details details-pack profile signal classlabels pageviews pageviews-pack
 OUT ?= data/raw/wikidata/$(shell date -u +%F)
 
 help:
@@ -22,6 +22,9 @@ help:
 	@echo "make extract-pack OUT=  convert to Parquet and pin in data/inputs/MANIFEST.json"
 	@echo "make recall           how many golden places the extraction found (data/golden/s1_recall.md)"
 	@echo "make details         (owner, laptop) fetch labels, aliases, part-of and dates for the candidates; resumable"
+	@echo "make admit            build the first bundle in build/first and the review lists in data/review"
+	@echo "make pageviews       (owner, laptop) twelve months of English pageviews for the places in build/first; resumable"
+	@echo "make pageviews-pack  convert the pageviews to Parquet and pin them"
 	@echo "make details-pack    convert the details to Parquet and pin them"
 	@echo "make profile         (owner, laptop) fetch which Wikipedias carry each candidate (about 1,700 requests; resumable), then pack"
 	@echo "make signal          calibrate the attention signal against the golden set (data/golden/s1_signal.md)"
@@ -77,6 +80,15 @@ details-pack:
 
 profile:
 	$(PY) -m atlas.details profile && $(PY) -m atlas.details profile-parquet
+
+admit:
+	$(PY) -m atlas.admit && $(PY) -m atlas.review
+
+pageviews:
+	$(PY) -m atlas.pageviews run
+
+pageviews-pack:
+	$(PY) -m atlas.pageviews parquet && $(PY) -m atlas.pageviews pin
 
 signal:
 	$(PY) -m atlas.signal --report data/golden/s1_signal.md

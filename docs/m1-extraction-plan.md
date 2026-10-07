@@ -20,7 +20,7 @@ Written 5 October 2026. M1 is the backbone: pinned inputs, the Wikidata prototyp
 | S3b | Protected areas (IUCN, polygons) | WDPA download for the nine countries (login and terms on the site, so the owner downloads) | owner | asset rows, restricted | `wdpa` |
 | S3c | Ramsar, GeoNames, Natural Earth, geoBoundaries | direct downloads, megabytes | `rsis.ramsar.org`, `download.geonames.org`, Natural Earth and geoBoundaries hosts | asset rows and the land and admin-1 polygons | one entry each |
 | S3d | OpenStreetMap regional extracts for the nine countries | Geofabrik, a few GB, filtered to tourism, historic, natural, place and transport tags | `download.geofabrik.de` | asset rows, restricted (ODbL) | `osm` |
-| S4 | Pageviews: 12 monthly files, kept only for candidate titles | stream and filter | `dumps.wikimedia.org` (large files, so the laptop or a rented machine) | 12 monthly values per title | `wikipedia_pageviews` |
+| S4 | Pageviews: 12 monthly values per article, only for the titles of the places in the bundle (about 5,400) | `atlas.pageviews`: Wikimedia REST per-article endpoint, about 10 requests a second, 20 to 25 minutes, resumable | `wikimedia.org/api/rest_v1` | `pageviews.parquet` (qid, title, 12 months, total) | `wikipedia_pageviews` |
 | S5 | Admission R1 to R6, notability *N*, tiers, kinds, edges, nodes | pipeline stages (M2) | anywhere | first bundle | build manifest |
 | S6 | Registry: mint ids for the admitted places | `atlas.minting` after `G-LANDMARK` passes | anywhere | `place_registry.parquet`, committed | git |
 
@@ -153,3 +153,13 @@ Open: ancestors are only as deep as the S2 details. 3,390 parents of well-docume
 ## Rebuild after the parent closure, anchors and rulings (7 October)
 
 `python -m atlas.admit` now gives 4,580 places (R1 147, R2 3,467, R3 545, R4 1,181, R5 19, R6 3). G-LANDMARK: **176 of 184 (95.7 %) with the three owner anchors, 173 of 184 (94.0 %) by the rules alone** (D34); no duplicates, no relational failure. 965 places were absorbed (`python -m atlas.review` writes `data/review/absorption_summary.md` and `data/review/same_kind_neighbours.csv`, 108 pairs awaiting the owner's verdict). The remaining eight misses are Paracas, Karak Castle, Umm Qais, Todra Gorge, Imlil, the Camino de Santiago, Cirque de Gavarnie and Oludeniz.
+
+## S4 pageviews and three clean-ups (7 October, D36)
+
+`atlas.pageviews` is written and tested against recorded responses; the live run is the owner's. Laptop runbook, from the repository root, after `git pull`:
+
+1. `make admit` (rebuilds `build/first`, which says which titles are needed).
+2. `make pageviews` (about 5,400 requests, 20 to 25 minutes; stop and re-run freely, it resumes).
+3. `make pageviews-pack`, then commit and push `data/raw/pageviews/2026-10-05/pageviews.parquet` and `data/inputs/MANIFEST.json`.
+
+`atlas.admit` reads the file when it exists and adds `0.5 * log10(1 + PV/1000)` to N; the manifest drops "pageviews" from its list of missing inputs. Until then tiers are computed without it and G-TIER stays red.
