@@ -164,8 +164,10 @@ def candidates(raw: Path, overrides: dict[str, str]) -> dict[str, dict]:
             c["whs"] = whs
         if wdpa:
             c["wdpa"] = wdpa
-    for r in rows("details", "qid, aliases_en, aliases_loc, instance_of, heritage, label_en, label_loc"):
-        qid, a_en, a_loc, inst, her, lab, loc = r
+    up: dict[str, list[str]] = {}
+    for r in rows("details", "qid, aliases_en, aliases_loc, instance_of, heritage, label_en, label_loc, located_in, part_of"):
+        qid, a_en, a_loc, inst, her, lab, loc, located, part = r
+        up[qid] = list(dict.fromkeys([*(located or []), *(part or [])]))
         if qid in cands:
             c = cands[qid]
             c["aliases"] = list(a_en or []) + list(a_loc or [])
@@ -173,6 +175,13 @@ def candidates(raw: Path, overrides: dict[str, str]) -> dict[str, dict]:
             c["heritage"] = list(her or [])
             c["label_en"] = c.get("label_en") or lab
             c["label_loc"] = c.get("label_loc") or loc
+    for qid, c in cands.items():                                              # ancestors up to three hops (Hagia Sophia, Fatih, Istanbul)
+        seen: list[str] = []
+        frontier = up.get(qid, [])
+        for _ in range(3):
+            seen += [q for q in frontier if q not in seen]
+            frontier = [x for q in frontier for x in up.get(q, [])]
+        c["parents"] = seen
     for qid, wikis in rows("profile", "qid, wikis"):
         if qid in cands and any(w.endswith("wikivoyage") for w in wikis or []):
             cands[qid]["voyage"] = True                                       # S3: a travel-guide article is an independent signal
@@ -253,6 +262,103 @@ def merge_duplicates(places: list[dict], same_name_km: float) -> list[dict]:
     return [p for p in places if p["qid"] not in drop]
 
 
+COLOCATED_KM = 5.0
+STUB_SITELINKS = 15                                                  # a World Heritage record this thin is a stub, not a destination
+SAME_KIND_KM = 25.0
+
+
+def _ruins(p: dict) -> bool:
+    return (p.get("_type") or {}).get("place_type") == "site" and (p.get("_type") or {}).get("kind_hint") == "ruins"
+
+
+SERIAL_ID = re.compile(r"^(\d+)-")
+
+
+def absorb(places: list[dict]) -> tuple[list[dict], list[dict]]:
+    """D25 / document 1 section 5.2: nested monuments and same-property neighbours become assets of the parent.
+
+    1. Items sharing one World Heritage property id: the most cited keeps the place.
+    2. Serial components (id 669-612) join the place carrying the whole property (669).
+    3. A site located in or part of an admitted place with more sitelinks becomes its asset (Colosseum into Rome);
+       a site with more sitelinks than its parent stays (Pompeii beside the commune of Pompei, Ephesus beside Selcuk).
+    Returns the kept places and the absorption log; the owner's list is data/golden/structure.csv."""
+    gone: dict[str, tuple[str, str]] = {}
+    whole: dict[str, list[dict]] = defaultdict(list)
+    for p in places:
+        if p.get("whs") and PROPERTY_ID.match(str(p["whs"])):
+            whole[str(p["whs"])].append(p)
+    winner = {w: max(g, key=lambda p: (p["sitelinks"], p["qid"])) for w, g in whole.items()}
+    for w, g in whole.items():
+        for p in g:
+            if p is not winner[w]:
+                gone[p["qid"]] = (winner[w]["qid"], f"same World Heritage property {w}")
+    for p in places:
+        m = SERIAL_ID.match(str(p.get("whs") or ""))
+        if m and m.group(1) in winner and p["qid"] not in gone and winner[m.group(1)]["qid"] != p["qid"]:
+            gone[p["qid"]] = (winner[m.group(1)]["qid"], f"serial component of property {m.group(1)}")
+    held = [p for p in places if p.get("whs") and PROPERTY_ID.match(str(p["whs"])) and p["qid"] not in gone]
+    for p in places:                                                        # 4. the property record and the famous item of one destination
+        if p["qid"] in gone or p.get("whs") or (p.get("_type") or {}).get("place_type") == "settlement":
+            continue
+        for a in held:
+            if a["sitelinks"] < STUB_SITELINKS <= p["sitelinks"] and a["iso3"] == p["iso3"] and a["qid"] != p["qid"] and a["qid"] not in gone and (a.get("_type") or {}).get("place_type") != "settlement" \
+                    and haversine_km(a["lat"], a["lon"], p["lat"], p["lon"]) <= COLOCATED_KM:
+                gone[a["qid"]] = (p["qid"], f"property record of {p['qid']} (within {COLOCATED_KM:g} km, under {STUB_SITELINKS} sitelinks)")
+                p["whs"] = a["whs"]
+                break
+    for p in places:                                                        # 4b. a protected area and its mountain (Kilimanjaro)
+        if p["qid"] in gone or p.get("whs") or (p.get("_type") or {}).get("place_type") != "area":
+            continue
+        for a in held:
+            if (a.get("_type") or {}).get("place_type") == "area" and a["qid"] not in gone and a["iso3"] == p["iso3"] \
+                    and a["sitelinks"] < p["sitelinks"] and haversine_km(a["lat"], a["lon"], p["lat"], p["lon"]) <= COLOCATED_KM:
+                gone[a["qid"]] = (p["qid"], f"protected area of {p['qid']} (areas within {COLOCATED_KM:g} km)")
+                p["whs"] = a["whs"]
+                break
+    held = [p for p in places if p.get("whs") and PROPERTY_ID.match(str(p["whs"])) and p["qid"] not in gone]
+    for p in places:                                                        # 5. ruins within 25 km of a World Heritage ruin (Saqqara into Giza)
+        if p["qid"] in gone or p.get("whs") or not _ruins(p):
+            continue
+        near = [a for a in held if a["iso3"] == p["iso3"] and _ruins(a) and a["sitelinks"] > p["sitelinks"]
+                and haversine_km(a["lat"], a["lon"], p["lat"], p["lon"]) <= SAME_KIND_KM]
+        if near:
+            top = max(near, key=lambda a: (a["sitelinks"], a["qid"]))
+            gone[p["qid"]] = (top["qid"], f"ruins within {SAME_KIND_KM:g} km of World Heritage ruin {top['qid']}")
+    index = {}
+    for p in places:
+        for q in [p["qid"], *p.get("alt_qids", [])]:
+            index[q] = p
+    for p in places:
+        t = p.get("_type") or {}
+        if p["qid"] in gone or t.get("place_type") != "site":
+            continue
+        parents = [index[q] for q in p.get("parents", []) if q in index and index[q] is not p and index[q]["sitelinks"] > p["sitelinks"]
+                   and (index[q].get("_type") or {}).get("place_type") in ("settlement", "site")]
+        if parents:
+            top = max(parents, key=lambda a: (a["sitelinks"], a["qid"]))
+            gone[p["qid"]] = (top["qid"], f"located in or part of {top['qid']}")
+    by_qid = {p["qid"]: p for p in places}
+
+    def root(q: str) -> str:
+        seen = set()
+        while q in gone and q not in seen:
+            seen.add(q)
+            q = gone[q][0]
+        return q
+    log = []
+    for q, (_, why) in sorted(gone.items()):
+        r = root(q)
+        if r == q or r not in by_qid:
+            continue
+        child, parent = by_qid[q], by_qid[r]
+        parent.setdefault("alt_qids", []).extend([q, *child.get("alt_qids", [])])
+        parent["whs"] = parent.get("whs") or child.get("whs")
+        parent.setdefault("absorbed", []).append(child.get("label_en") or q)
+        log.append({"child": q, "child_name": child.get("label_en"), "parent": r, "parent_name": parent.get("label_en"), "reason": why})
+    absorbed = {e["child"] for e in log}
+    return [p for p in places if p["qid"] not in absorbed], log
+
+
 def record(c: dict, place_id: str, types_row: dict | None, types: list[dict]) -> dict:
     qids = [c["qid"], *c.get("alt_qids", [])]
     ev = [{"asset_id": f"wd:{q}", "source": "wikidata", "url": f"https://www.wikidata.org/wiki/{q}",
@@ -310,6 +416,12 @@ def run(raw: Path, out: Path, top_share: float = S.TOP_SHARE) -> dict:
     for c in places:
         c["_n"] = notability(c, cfg)
         c["name_en"] = c.get("label_en") or c.get("label_loc")
+    places, absorbed = absorb(places)
+    out.mkdir(parents=True, exist_ok=True)
+    with open(out / "absorbed.csv", "w", encoding="utf-8", newline="") as fh:
+        w = csv.DictWriter(fh, ["child", "child_name", "parent", "parent_name", "reason"], lineterminator="\n")
+        w.writeheader()
+        w.writerows(absorbed)
     assign_tiers(places, cfg)
     reg = Registry()
     rng = random.Random(20261007)                          # provisional ids: the registry is not committed (D21)

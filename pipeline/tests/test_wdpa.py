@@ -22,3 +22,12 @@ def test_strict_category_and_size_make_a_protected_area_r1():
     cs = {q: cand(q, 7, ["Qsite"], wdpa=q) for q in "123"}
     got = {c["qid"]: c["rules"] for c in A.admit(cs, {}, TYPES, CFG, wdpa=table)}
     assert got["1"] == ["R1"] and "R1" not in got.get("2", []) and "R1" not in got.get("3", [])
+
+
+def test_reduce_reads_the_new_column_names(tmp_path):
+    f = tmp_path / "n.csv"
+    with open(f, "w", encoding="utf-8", newline="") as fh:
+        w = csv.DictWriter(fh, ["SITE_ID", "PRNT_ISO3", "STATUS", "IUCN_CAT", "GIS_AREA"])
+        w.writeheader()
+        w.writerow({"SITE_ID": "9", "PRNT_ISO3": "PER", "STATUS": "Designated", "IUCN_CAT": "II", "GIS_AREA": "1800"})
+    assert W.reduce_files([f], {"PER"}) == [{"wdpaid": "9", "iucn_cat": "II", "area_km2": 1800.0}]

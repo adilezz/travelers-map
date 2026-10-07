@@ -1,7 +1,7 @@
 """S3b: reduce the owner-downloaded WDPA tables to the three facts rule R1 needs.
 
 The WDPA download (protectedplanet.net, terms accepted by the owner) is several GB of polygons and is restricted;
-only a small table is kept: WDPA id, IUCN management category, reported area. Usage:
+only a small table is kept: WDPA id, IUCN management category, reported area. The December 2026 files use SITE_ID and PRNT_ISO3 (older ones WDPAID, ISO3); both are read. Usage:
     python -m atlas.wdpa reduce <WDPA_*_csv.csv ...> --out data/raw/wdpa/wdpa_reduced.csv
 The CSV files of the download (one per part) already carry the attribute columns, so no GIS software is needed.
 """
@@ -19,11 +19,12 @@ def reduce_files(paths: list[Path], isos: set[str]) -> list[dict]:
     for p in paths:
         with open(p, encoding="utf-8", newline="") as fh:
             for r in csv.DictReader(fh):
-                iso = (r.get("ISO3") or r.get("PARENT_ISO3") or "")
+                iso = r.get("PRNT_ISO3") or r.get("PARENT_ISO3") or r.get("ISO3") or ""
                 if not isos.intersection(iso.split(";")) or (r.get("STATUS") or "Designated") != "Designated":
                     continue
                 area = r.get("GIS_AREA") or r.get("REP_AREA") or "0"
-                rows[r["WDPAID"]] = {"wdpaid": r["WDPAID"], "iucn_cat": r.get("IUCN_CAT", ""), "area_km2": float(area or 0)}
+                wid = r.get("SITE_ID") or r["WDPAID"]
+                rows[wid] = {"wdpaid": wid, "iucn_cat": r.get("IUCN_CAT", ""), "area_km2": float(area or 0)}
     return sorted(rows.values(), key=lambda r: int(r["wdpaid"]))
 
 

@@ -33,8 +33,11 @@ PROPS = {"P31": "instance_of", "P131": "located_in", "P361": "part_of", "P1435":
          "P1376": "capital_of", "P856": "official_url", "P571": "inception", "P576": "dissolved"}
 
 
+PARENT_MIN_SITELINKS = 40
+
+
 def select(raw: Path, golden_path: Path | None = None) -> dict[str, set[str]]:
-    """QID -> reasons it is fetched. Reasons: sitelinks, population, whs, wdpa, node, golden."""
+    """QID -> reasons it is fetched. Reasons: sitelinks, population, whs, wdpa, node, golden, parent."""
     import duckdb
     con = duckdb.connect()
     chosen: dict[str, set[str]] = {}
@@ -64,6 +67,15 @@ def select(raw: Path, golden_path: Path | None = None) -> dict[str, set[str]]:
             for r in csv.DictReader(fh):
                 if r.get("qid"):
                     add(r["qid"], "golden")
+    det = raw / "details.parquet"
+    if det.is_file():                                                   # D25: the parents of well-documented items (Sagrada Familia -> Eixample -> Barcelona)
+        have = {r[0] for r in con.execute(f"SELECT qid FROM read_parquet('{det.as_posix()}')").fetchall()}
+        for located, part in con.execute(
+                f"SELECT located_in, part_of FROM read_parquet('{det.as_posix()}') WHERE qid IN "
+                f"(SELECT qid FROM read_parquet('{(raw / 'attention.parquet').as_posix()}') WHERE sitelinks >= {PARENT_MIN_SITELINKS})").fetchall():
+            for q in [*(located or []), *(part or [])]:
+                if q not in have and q not in chosen:
+                    add(q, "parent")
     return chosen
 
 

@@ -64,3 +64,34 @@ def test_notability_and_tiers_follow_the_documented_rules():
     A.assign_tiers(ps, CFG)
     tiers = {p["name_en"]: p["tier"] for p in ps}
     assert tiers["P19"] == tiers["P18"] == tiers["P17"] == "Icon" and tiers["P16"] == "Major" and tiers["P0"] == "Local"
+
+
+def _p(qid, n, ptype, **kw):
+    return {"qid": qid, "_n": n, "label_en": qid, "_type": {"place_type": ptype}, "sitelinks": int(n * 100), "iso3": "XXX",
+            "lat": 0.0, "lon": 0.0, **kw}
+
+
+def test_absorption_follows_d25():
+    rome, colosseum = _p("Rome", 3.0, "settlement"), _p("Colosseum", 2.0, "site", parents=["Rome"])
+    pompeii = _p("Pompeii", 2.0, "site", whs="829", parents=["Village"])              # better documented than its commune: stays
+    chateau = _p("Chateau", 2.5, "site", parents=["Village"])
+    village = _p("Village", 1.0, "settlement")                                       # fewer sitelinks than the site: no absorption
+    giza, saqqara = _p("Giza", 2.5, "site", whs="86"), _p("Saqqara", 2.0, "site", whs="86")
+    camino, ponferrada = _p("Camino", 2.0, "site", whs="669"), _p("Ponferrada", 1.5, "site", whs="669-612")
+    kept, log = A.absorb([rome, colosseum, pompeii, chateau, village, giza, saqqara, camino, ponferrada])
+    assert {p["qid"] for p in kept} == {"Rome", "Pompeii", "Chateau", "Village", "Giza", "Camino"}
+    assert rome["alt_qids"] == ["Colosseum"] and giza["alt_qids"] == ["Saqqara"] and camino["alt_qids"] == ["Ponferrada"]
+    assert {e["child"] for e in log} == {"Colosseum", "Saqqara", "Ponferrada"}
+
+
+def test_absorption_resolves_chains_to_the_final_parent():
+    city, a, b = _p("City", 3.0, "settlement"), _p("A", 2.0, "site", parents=["City"]), _p("B", 1.0, "site", parents=["A"])
+    kept, _ = A.absorb([city, a, b])
+    assert [p["qid"] for p in kept] == ["City"] and sorted(city["alt_qids"]) == ["A", "B"]
+
+
+def test_a_protected_area_and_its_mountain_are_one_destination():
+    mount, park = _p("Mount", 2.0, "area", sitelinks=188, lat=-3.06, lon=37.36, iso3="TZA"), \
+        _p("Park", 2.5, "area", sitelinks=47, lat=-3.07, lon=37.37, iso3="TZA", whs="403")
+    kept, log = A.absorb([mount, park])
+    assert [p["qid"] for p in kept] == ["Mount"] and mount["whs"] == "403" and log[0]["child"] == "Park"
