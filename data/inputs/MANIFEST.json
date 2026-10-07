@@ -53,6 +53,11 @@
           "path": "wikidata/2026-10-05/popall.parquet",
           "bytes": 119279,
           "sha256": "1eb5e94a52cb6a754b0b1717634988cbfa3d2b65ed7757a0b6676b6034721ac4"
+        },
+        {
+          "path": "wikidata/2026-10-05/profile.parquet",
+          "bytes": 1983454,
+          "sha256": "e131cf4ab7b2ad82f98e672d1791dd6e7102f32c4bcebc738af9bf1082c6736b"
         }
       ]
     },
