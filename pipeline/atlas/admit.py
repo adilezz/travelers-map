@@ -23,6 +23,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from atlas import signal as S
+from atlas import wdpa as W
 from atlas.geo import fold, haversine_km
 from atlas.minting import mint_or_reuse
 from atlas.registry import Registry
@@ -172,10 +173,14 @@ def candidates(raw: Path, overrides: dict[str, str]) -> dict[str, dict]:
             c["heritage"] = list(her or [])
             c["label_en"] = c.get("label_en") or lab
             c["label_loc"] = c.get("label_loc") or loc
+    for qid, wikis in rows("profile", "qid, wikis"):
+        if qid in cands and any(w.endswith("wikivoyage") for w in wikis or []):
+            cands[qid]["voyage"] = True                                       # S3: a travel-guide article is an independent signal
     return cands
 
 
-def admit(cands: dict[str, dict], scores: dict[str, dict], types: list[dict], cfg: dict, top_share: float = S.TOP_SHARE) -> list[dict]:
+def admit(cands: dict[str, dict], scores: dict[str, dict], types: list[dict], cfg: dict, top_share: float = S.TOP_SHARE,
+          wdpa: dict | None = None) -> list[dict]:
     a = cfg["admission"]
     out: list[dict] = []
     for c in cands.values():
@@ -191,12 +196,14 @@ def admit(cands: dict[str, dict], scores: dict[str, dict], types: list[dict], cf
         rules: list[str] = []
         if c.get("whs") and PROPERTY_ID.match(str(c["whs"])):
             rules.append("R1")
+        elif W.strict_and_large((wdpa or {}).get(str(c.get("wdpa"))), cfg["admission"].get("r1_institutional", {}).get("iucn_min_area_km2", 100)):
+            rules.append("R1")                                              # IUCN Ia, Ib or II of 100 km2 or more
         if t:
             if (mass is None and c["sitelinks"] >= a["r2_attention_sitelinks"]) or admitted:
                 rules.append("R2")
             if (c.get("population") or 0) >= a["r3_city_population"] and t["place_type"] == "settlement":
                 rules.append("R3")
-            if c["sitelinks"] >= a["r4_corroborated_sitelinks"] and (c["heritage"] or c.get("wdpa")):
+            if c["sitelinks"] >= a["r4_corroborated_sitelinks"] and (c["heritage"] or c.get("wdpa") or (c.get("voyage") and t["place_type"] != "settlement")):
                 rules.append("R4")
         if not rules:
             c["_floor"] = bool(t)                                            # candidate for R5
@@ -295,7 +302,7 @@ def run(raw: Path, out: Path, top_share: float = S.TOP_SHARE) -> dict:
     cands = candidates(raw, overrides)
     items, profiles = S.load(raw)
     scores = S.scores(items, profiles)
-    admitted = admit(cands, scores, types, cfg, top_share)
+    admitted = admit(cands, scores, types, cfg, top_share, W.load(raw.parent.parent / "wdpa" / "wdpa_reduced.csv"))
     for c in admitted:
         c["_n"] = notability(c, cfg)
         c["name_en"] = short_name(c.get("label_en") or c.get("label_loc"), [])
@@ -311,7 +318,7 @@ def run(raw: Path, out: Path, top_share: float = S.TOP_SHARE) -> dict:
         pid = mint_or_reuse(reg, [f"qid:{c['qid']}"], "first-pass", rng)
         recs.append(record(c, pid, c["_type"], types))
     notes = {"first_pass": True, "provisional_ids": True, "scope": "nine prototype countries",
-             "missing": ["pageviews (N has no pageview term)", "WDPA and Ramsar", "landcover and relief for kinds", "registry"],
+             "missing": ["pageviews (N has no pageview term)", "WDPA categories (when data/raw/wdpa/wdpa_reduced.csv is absent) and Ramsar", "landcover and relief for kinds", "registry"],
              "top_share": top_share, "built_utc": datetime.now(UTC).isoformat(timespec="seconds"), "raw": raw.name}
     write_bundle(recs, out, f"first-pass-{raw.name}", notes)
     return {"places": len(recs), "candidates": len(cands), "by_rule": {r: sum(1 for p in recs if r in p["rules"]) for r in ("R1", "R2", "R3", "R4", "R5")}}

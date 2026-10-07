@@ -137,3 +137,9 @@ make extract OUT=data/raw/wikidata/2026-10-05
 make extract-pack OUT=data/raw/wikidata/2026-10-05    # checks completeness, writes Parquet, pins
 make pin-check
 ```
+
+## S3 first slice (7 October)
+
+- **Wikivoyage, no download:** the sitelink profiles already list every wiki, so a `*wikivoyage` sitelink is the independent signal for R4, counted for sites and areas only (for settlements it admitted about 4,500 villages). G-LANDMARK 173 of 184 (94.0 %), bundle 5,531 places.
+- **WDPA, owner download:** `python -m atlas.wdpa reduce <WDPA csv parts> --out data/raw/wdpa/wdpa_reduced.csv` keeps id, IUCN category and area; `atlas.admit` then admits IUCN Ia, Ib and II areas of 100 km² or more under R1 (Nyerere, Megantoni, Wadi El Rayan are the golden cases). The reduced table is restricted, so it is not pinned or committed until the licence flag is settled.
+- Ramsar, Natural Earth and OSM extracts follow when a gate needs them.
