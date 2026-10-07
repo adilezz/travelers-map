@@ -10,6 +10,56 @@ Q32815,mosque,site,sacred,yes,
 Q44539,temple,site,sacred,yes,
 Q570116,tourist attraction,site,,yes,
 Q23413,castle,site,,yes,
+Q15661340,ancient city,site,ruins,yes,widened 7 Oct
+Q148837,polis,site,ruins,yes,widened 7 Oct
+Q93342462,Ancient Greek archaeological site,site,ruins,yes,widened 7 Oct
+Q665247,hypogeum,site,ruins,yes,widened 7 Oct
+Q381885,tomb,site,ruins,yes,widened 7 Oct
+Q200141,necropolis,site,ruins,yes,widened 7 Oct
+Q125866682,Ancient Egyptian necropolis,site,ruins,yes,widened 7 Oct
+Q175582,Egyptian pyramids,site,ruins,yes,widened 7 Oct
+Q4363262,smooth-sided pyramid,site,ruins,yes,widened 7 Oct
+Q855747,Egyptian temple,site,ruins,yes,widened 7 Oct
+Q867143,Roman temple,site,ruins,yes,widened 7 Oct
+Q7362268,Roman amphitheatre,site,ruins,yes,widened 7 Oct
+Q19757,Roman theatre,site,ruins,yes,widened 7 Oct
+Q13218676,Roman aqueduct,site,ruins,yes,widened 7 Oct
+Q17715832,castle ruin,site,ruins,yes,widened 7 Oct
+Q3363945,archaeological park,site,ruins,yes,widened 7 Oct
+Q755017,tell,site,ruins,yes,widened 7 Oct
+Q120560,minor basilica,site,sacred,yes,widened 7 Oct
+Q56242215,Catholic cathedral,site,sacred,yes,widened 7 Oct
+Q2977,cathedral,site,sacred,yes,widened 7 Oct
+Q44613,monastery,site,sacred,yes,widened 7 Oct
+Q160742,abbey,site,sacred,yes,widened 7 Oct
+Q334383,abbey church,site,sacred,yes,widened 7 Oct
+Q817056,benedictine abbey,site,sacred,yes,widened 7 Oct
+Q91315817,Cistercian monastery,site,sacred,yes,widened 7 Oct
+Q1454820,congregational mosque,site,sacred,yes,widened 7 Oct
+Q71974,külliye,site,sacred,yes,widened 7 Oct
+Q840482,shrine of Our Lady,site,sacred,yes,widened 7 Oct
+Q34627,synagogue,site,sacred,yes,widened 7 Oct
+Q162875,mausoleum,site,sacred,yes,widened 7 Oct
+Q1128397,convent,site,sacred,yes,widened 7 Oct
+Q751876,château,site,,yes,widened 7 Oct
+Q16560,palace,site,,yes,widened 7 Oct
+Q53536964,royal palace,site,,yes,widened 7 Oct
+Q57831,fortress,site,,yes,widened 7 Oct
+Q35509,cave,site,wildlife,yes,widened 7 Oct
+Q2232001,show cave,site,,yes,widened 7 Oct
+Q11269813,cave with prehistoric art,site,ruins,yes,widened 7 Oct
+Q1129474,cultural landscape,site,,yes,widened 7 Oct
+Q1200957,tourist destination,site,,yes,widened 7 Oct
+Q133056,mountain pass,site,mountain,yes,widened 7 Oct
+Q207326,summit,site,mountain,yes,widened 7 Oct
+Q111177881,main peak,site,mountain,yes,widened 7 Oct
+Q130003,ski resort,site,mountain,yes,widened 7 Oct
+Q174782,square,site,,yes,widened 7 Oct
+Q1107656,garden,site,,yes,widened 7 Oct
+Q22746,urban park,site,,yes,widened 7 Oct
+Q1497375,architectural ensemble,site,,yes,widened 7 Oct
+Q82117,city gate,site,,yes,widened 7 Oct
+Q1081138,historic site,site,,yes,widened 7 Oct
 Q46169,national park,area,wildlife,yes,
 Q179049,nature reserve,area,wildlife,yes,
 Q8502,mountain,area,mountain,yes,
@@ -19,6 +69,44 @@ Q4022,river,area,water,yes,
 Q40080,beach,area,seaside,yes,
 Q45776,fjord,area,seaside,yes,
 Q23442,island,area,seaside,yes,
+Q82794,region,area,,yes,widened 7 Oct
+Q1620908,historical region,area,,yes,widened 7 Oct
+Q3502482,cultural region,area,,yes,widened 7 Oct
+Q572995,natural region of France,area,,yes,widened 7 Oct
+Q46831,mountain range,area,mountain,yes,widened 7 Oct
+Q1437459,non-geologically related mountain range,area,mountain,yes,widened 7 Oct
+Q2624046,mountain chain,area,mountain,yes,widened 7 Oct
+Q1061151,massif,area,mountain,yes,widened 7 Oct
+Q39816,valley,area,,yes,widened 7 Oct
+Q43742,oasis,area,desert,yes,widened 7 Oct
+Q8514,desert,area,desert,yes,widened 7 Oct
+Q190429,depression,area,desert,yes,widened 7 Oct
+Q75520,plateau,area,,yes,widened 7 Oct
+Q160091,plain,area,,yes,widened 7 Oct
+Q93352,coast,area,seaside,yes,widened 7 Oct
+Q34763,peninsula,area,seaside,yes,widened 7 Oct
+Q185113,cape,area,seaside,yes,widened 7 Oct
+Q191992,headland,area,seaside,yes,widened 7 Oct
+Q39594,bay,area,seaside,yes,widened 7 Oct
+Q1322134,gulf,area,seaside,yes,widened 7 Oct
+Q42523,atoll,area,seaside,yes,widened 7 Oct
+Q33837,archipelago,area,seaside,yes,widened 7 Oct
+Q1402592,island group,area,seaside,yes,widened 7 Oct
+Q1161185,volcanic island,area,volcanic,yes,widened 7 Oct
+Q139595919,reef island,area,seaside,yes,widened 7 Oct
+Q169358,stratovolcano,area,volcanic,yes,widened 7 Oct
+Q204324,volcanic crater lake,area,volcanic,yes,widened 7 Oct
+Q473972,protected area,area,wildlife,yes,widened 7 Oct
+Q15069452,Natura 2000 site,area,wildlife,yes,widened 7 Oct
+Q1316973,national park,area,wildlife,yes,widened 7 Oct
+Q943017,national park,area,wildlife,yes,widened 7 Oct
+Q20488347,national park of Peru,area,wildlife,yes,widened 7 Oct
+Q158454,biosphere reserve,area,wildlife,yes,widened 7 Oct
+Q2140699,wine-producing region,area,rural,yes,widened 7 Oct
+Q54050,hill,area,mountain,yes,widened 7 Oct
+Q1414991,area,area,,yes,widened 7 Oct
+Q12284,canal,area,water,yes,widened 7 Oct
+Q165,sea,area,seaside,yes,widened 7 Oct
 Q515,city,settlement,,yes,
 Q1549591,big city,settlement,metropolis,yes,
 Q3957,town,settlement,,yes,
@@ -31,3 +119,22 @@ Q21869758,commune nouvelle of France,settlement,,yes,mass class (D32)
 Q15284,municipality,settlement,,yes,
 Q5119,capital city,settlement,capital,yes,
 Q44782,port,settlement,maritime,yes,
+Q2276925,municipality of Galicia,settlement,,yes,widened 7 Oct
+Q33146843,municipality of Catalonia,settlement,,yes,widened 7 Oct
+Q123754112,municipality of the Valencian Community,settlement,,yes,widened 7 Oct
+Q61763947,municipality of Aragon,settlement,,yes,widened 7 Oct
+Q123095923,municipality of Cantabria,settlement,,yes,widened 7 Oct
+Q123680441,municipality of La Rioja,settlement,,yes,widened 7 Oct
+Q815324,town municipality of Turkey,settlement,,yes,widened 7 Oct
+Q2460358,municipality of Turkey,settlement,,yes,widened 7 Oct
+Q1529096,village of Turkey,settlement,rural,yes,widened 7 Oct
+Q17051044,mahalle,settlement,,yes,widened 7 Oct
+Q3327862,urban commune of Morocco,settlement,,yes,widened 7 Oct
+Q2989400,commune of Morocco,settlement,,yes,widened 7 Oct
+Q1134686,frazione,settlement,rural,yes,widened 7 Oct
+Q3835961,località,settlement,,yes,widened 7 Oct
+Q2264924,port city,settlement,maritime,yes,widened 7 Oct
+Q317548,resort town,settlement,,yes,widened 7 Oct
+Q676050,old town,settlement,old_town,yes,widened 7 Oct
+Q150784,gorge,area,,yes,widened 7 Oct
+Q319120,erg,area,desert,yes,widened 7 Oct
