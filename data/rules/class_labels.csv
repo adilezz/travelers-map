@@ -1,0 +1,601 @@
+class_qid,count,label_en,description_en,subclass_of
+Q484170,37407,commune of France,France territorial subdivision for municipalities,Q3266850|Q192611|Q583865|Q11618417|Q14757767|Q15640612
+Q747074,7821,comune of Italy,municipal divisions of Italy,Q12357920|Q2824645|Q15284
+Q2074737,6203,municipality of Spain,administrative territorial entity of Spain,Q3183364|Q15284|Q1763214|Q11618417|Q48909258
+Q21869758,2350,delegated commune,,Q192498|Q19730508|Q15640612
+Q3957,1060,town,settlement that is smaller than a city but bigger than a large village (or a large borough in some areas),Q124250988|Q7930989
+Q33146843,947,municipality of Catalonia,"administrative division of Catalonia, Spain",Q2074737|Q11917457
+Q184188,600,canton of France,"former French electoral constituency, and former administrative subdivision of an arrondissement, until March 2015",Q192498|Q12357920|Q14757767|Q16009113|Q2311958|Q19953632|Q192611
+Q515,577,city,large human settlement,Q124250988|Q7930989|Q15284|Q56061
+Q123754112,540,municipality of the Valencian Community,"municipality of the autonomous Valencian Community, Spain",Q2074737
+Q928830,520,metro station,railway station of a rapid transit system,Q55488|Q124673697|Q4346602
+Q22808403,500,underground station,type of station,Q12819564|Q863404
+Q839954,483,archaeological site,place (or group of physical sites) in which evidence of past activity is preserved,Q1291195|Q15642541|Q2221906|Q2686349
+Q18524218,461,canton of France,French electoral constituency of a departement (starting March 2015),Q16009113|Q192498
+Q4022,446,river,larger natural watercourse,Q355304|Q2479431|Q30092769|Q2221906
+Q194203,350,arrondissement of France,territorial subdivision of a department of France,Q192498|Q30059|Q12357832|Q12357920
+Q178561,348,battle,"part of a war which is well defined in duration, area and force commitment",Q650711|Q13418847|Q645883|Q123349687|Q350604
+Q61763947,318,municipality of Aragon,"municipality of the Autonomous community of Aragon, Spain",Q2074737|Q61763780
+Q2276925,312,municipality of Galicia,"administrative territorial entity of Galicia, Spain",Q2074737
+Q8502,293,mountain,large natural elevation of the Earth's surface,Q106589819|Q35145263
+Q3685476,287,abolished municipality in Italy,former municipality in Italy,Q19730508|Q747074
+Q1549591,258,big city,"city with a population of between 100,000 and 250,000",Q515
+Q1134686,253,frazione,territorial subdivision of a comune in Italy,Q486972|Q532|Q2824645|Q177634|Q14757767
+Q1147395,251,district of Turkey,administrative division of Turkey,Q2916486|Q149621|Q12357832
+Q902814,231,border city,town or city on a border between larger political areas,Q515
+Q114609228,227,recurring sporting event edition,"edition in a specific year of a sporting event held regularly, e.g. every year",Q27968055|Q13406554|Q18608583
+Q23442,226,island,piece of sub-continental land completely surrounded by water,Q271669|Q205895|Q2221906|Q17334923
+Q16970,223,church building,building for Christian worship,Q24398318|Q44539|Q17350442
+Q1248784,222,airport,"location where aircraft take off and land with extended support facilities, mostly for commercial air transport",Q62447|Q12819564|Q2516121
+Q486972,215,human settlement,"place of any size, in which people permanently live",Q123964505|Q56061|Q2221906|Q18247357
+Q94993988,212,commercial traffic aerodrome,aerodrome having commercial flights not just hobbyists,Q62447
+Q509686,195,province of Peru,second level administrative subdivision of Peru,Q1342205|Q12357832|Q34876
+Q120560,179,minor basilica,title given to some Roman Catholic churches,Q4846867|Q1088552
+Q123680441,167,municipality of La Rioja,,Q2074737
+Q1154710,157,association football venue,sports venue for association football,Q1076486|Q483110
+Q33506,143,museum,"institution that holds artifacts and other objects of scientific, artistic, cultural, historical, or other importance",Q1030034|Q178706|Q17350442|Q1554231
+Q56242215,132,Catholic cathedral,church that is the seat of the bishop of a diocese of the Catholic Church,Q2977|Q1088552|Q470540
+Q15284,126,municipality,administrative division having corporate status and usually powers of self-government or jurisdiction,Q1048835|Q2659904
+Q3327862,119,urban commune of Morocco,,Q2989400
+Q207694,117,art museum,building or space for the exhibition of art,Q24699794|Q33506
+Q46831,114,mountain range,geographic area containing several geologically related mountains,Q271669|Q82794|Q35145263|Q106589819
+Q15661340,109,ancient city,city in historical records,Q515|Q22674925|Q839954
+Q32815,103,mosque,place of worship for followers of Islam,Q1370598|Q24398318|Q811979|Q43229
+Q875538,103,public university,university predominantly funded by public means,Q3918|Q23002037
+Q644371,102,international airport,airport serving international destinations,Q1248784
+Q123095923,98,municipality of Cantabria,"municipality of the autonomous community of Cantabria, Spain",Q2074737
+Q6465,98,department of France,administrative subdivision in France,Q583865|Q12357832|Q12357832|Q12357920|Q192611|Q643589|Q41773366
+Q4989906,97,monument,"imposing structure created to commemorate a person or event, or used for that purpose",Q811979|Q838948
+Q27787439,94,film festival edition,"specific edition of a film festival, e.g. in a given year of an annual festival",Q27968043|Q476300
+Q26132862,86,Olympic sports discipline event,discipline held at the Olympic Games,Q51031626|Q96679888|Q114609228
+Q15089,83,province of Italy,administrative district of Italy,Q2824645|Q12357832|Q1048835|Q41773366
+Q48336,81,province of Turkey,first-level administrative division of Turkey,Q2916486|Q34876|Q10864048
+Q43229,81,organization,social entity established to meet needs or pursue goals,Q106559804|Q106668099|Q1639378|Q854457|Q16334295|Q24229398|Q131085629
+Q115740682,80,municipio,administrative divisions of Italy,Q2824645|Q14757767
+Q45400320,79,open-access publisher,publisher which gives free online access to all its articles,Q2085381
+Q42523,77,atoll,"ring-shaped coral reef, generally formed over a former oceanic volcano, frequently with small emerging islands (motus) over the rim, often enclosing a central lagoon possibly still containing one or a few emerging elevated islands",Q23442
+Q23413,77,castle,"type of fortified structure built in Europe, Asia and the Middle East during the Middle Ages by nobility",Q57821
+Q5055981,76,council of Asturies,"Asturias municipality-equivalent subdivision, Spain",Q2074737|Q56061
+Q27020041,76,sports season,"season of a sports league or competition, generally a specific one year period",Q10688145|Q13406554|Q114609228
+Q1288568,76,modern language,language in current use,Q20162172
+Q139595919,76,reef island,Island made from sediments accumulated on shoals or reefs,Q86006236|Q184358
+Q55488,74,railway station,railway facility where trains regularly stop to load or unload passengers and/or freight,Q124673697|Q97987466|Q548662|Q800279
+Q82794,73,region,"2D or 3D defined space on something, mainly in terrestrial and astrophysics sciences",Q3622002|Q137023128|Q98929991|Q124711484
+Q174782,73,square,"open public spaces in cities or towns, usually rectilinear, surrounded by buildings, and often located at the junction of two or more thoroughfares",Q811979|Q111415237|Q2015628|Q83620|Q2221906
+Q46169,72,national park,park used for conservation purposes of animal life and plants,Q22698|Q473972|Q62059246|Q56061|Q386426
+Q148837,72,polis,ancient Greek social and political organisation,Q133442|Q15661340
+Q473972,71,protected area,areas protected for having ecological or cultural importance,Q15642541|Q10594991|Q2221906|Q140460149|Q46169
+Q381885,70,tomb,burial place,Q6023295|Q5003624|Q811979
+Q16560,70,palace,"grand residence, especially a royal or episcopal residence",Q41176|Q3947|Q811979
+Q188055,70,siege,military blockade of a city or fortress,Q273976|Q645883|Q350604
+Q3024240,70,historical country,"country, state or territory that once existed",Q19953632|Q96196009|Q19832712|Q6256|Q7275
+Q130003,62,ski resort,"mountainside developed for skiing, snowboarding, and other winter sports",Q6925559|Q55463907|Q16677896
+Q17051044,62,mahalle,type of subdivision in Turkey,Q486972|Q123705|Q2916486
+Q123705,62,neighborhood,"geographically localized community within a larger city, town or suburb",Q48907157|Q15642541|Q486972
+Q1620908,61,historical region,"geographic or cultural region which existed in the past, that may or may not exist anymore",Q82794|Q96088545|Q52551684|Q56061
+Q532,58,village,small clustered human settlement smaller than a town,Q10354598
+Q954172,57,sparse municipality,,Q747074
+Q15629582,57,province of Morocco,administrative territorial entity of Morocco,Q34876|Q4115671|Q12357832
+Q665247,56,hypogeum,underground temple or tomb,Q863404|Q381885|Q173387
+Q2460358,56,municipality of Turkey,type of municipality in Turkey,Q15284|Q2916486
+Q23397,55,lake,"body of relatively still water, localized in a basin",Q337567|Q2479431|Q271669|Q3391202
+Q33742,53,natural language,"language naturally spoken or signed by humans, as opposed to ""constructed"" and ""formal"" languages",Q20162172
+Q1076486,53,sports venue,"facility (building, structure, or place) dedicated to sports",Q23764314|Q811979|Q134497005|Q17350442
+Q8036,53,Italian Grand Prix,auto race held in Italy,Q11924610
+Q751876,52,château,type of manor house mostly built by noble families for representative purposes,Q879050
+Q11303,52,skyscraper,very tall building,Q18142
+Q2977,51,cathedral,"Christian church, which is seat of a bishop",Q16970
+Q14752696,51,ancient Roman structure,building created by the Romans,Q811979|Q21752084
+Q3918,50,university,an institution of tertiary education and research which awards academic degrees in several academic disciplines,Q38723|Q4671277|Q123349660|Q43229
+Q483110,50,stadium,"place or venue for (mostly) outdoor sports, concerts, or other events",Q1076486|Q137884967|Q134497005
+Q124830411,49,Museum of the Italian Ministry of Culture,,Q124830213
+Q3867560,49,Italian national museum,Wikimedia list article,Q17431399|Q124830213
+Q3551775,48,university in France,public university in France,Q3918|Q3591586
+Q15069452,47,Natura 2000 site,"site designated to be part of Natura 2000 network, comprising one or more national protected areas or their parts in an EU country",Q473972|Q386426
+Q171441,46,enclave,territory entirely surrounded by another territory,Q15621274
+Q146591,46,circle of latitude,all locations on the surface of the Earth that are equidistant from the Equator or either pole,Q17278|Q27096213|Q82794
+Q19860854,45,destroyed building or structure,building or structure that has been demolished or destroyed,Q96084375|Q811979|Q811463
+Q17431399,45,national museum,museum maintained by a national authority,Q33506
+Q35112127,44,historic building,structure of historic nature,Q41176|Q51369558
+Q162620,43,province of Spain,second-level type of administrative division of Spain,Q3183364|Q34876|Q12357832|Q1048835|Q41773366|Q126192154
+Q1200957,42,tourist destination,place attracting many tourists,Q960648|Q82794|Q17334923
+Q937876,41,comarca of Catalonia,"groups of municipalities in Catalonia, Spain",Q11917457|Q1345234|Q1048835
+Q33837,41,archipelago,collection of islands including the water around them; use island group (Q1402592) for a collection of islands excluding neighbouring water,Q205895|Q1402592
+Q92755865,41,religious museum,type of museum that documents the history and culture of religion,Q12104174
+Q124830213,41,museum of a public entity,museum belonging to a public entity,Q33506|Q111986502
+Q44613,40,monastery,complex of buildings comprising the domestic quarters and workplace(s) of monks or nuns,Q1370598|Q19691007|Q24398318|Q98116669|Q486972|Q811979|Q2742167
+Q1161185,39,volcanic island,island of volcanic origin,Q23442|Q29025902
+Q133056,38,mountain pass,"navigable route, typically through a saddle or its vicinity, to cross a mountain range or a ridge",Q2221906|Q618123|Q136749248
+Q34442,38,road,"wide way leading from one place to another, especially one with a specially prepared surface which vehicles can use",Q1322323|Q113519195|Q83620|Q123414165|Q27955379|Q28456301
+Q2651004,37,Palazzo,"in Italian-speaking countries, the term for a building with large proportions",Q16560
+Q253326,37,cadastral municipality,European type of municipality,Q56061
+Q317557,36,parish church,church which acts as the religious centre of a parish,Q16970
+Q537127,36,road bridge,bridge that carries road traffic,Q12280
+Q20202072,34,terminus,last stop in a transportation service,Q141162639
+Q3502482,34,cultural region,geographic region associated with a particular culture,Q82794|Q518261|Q140466359
+Q1261499,34,naval battle,battle at sea or on a body of water,Q178561|Q113782315
+Q39816,33,valley,"low area between hills, often with a river running through it",Q190429|Q82794|Q35145263|Q618123
+Q56061,33,administrative territorial entity,"territorial entity for administration purposes, with or without its own local government",Q15642541|Q43229|Q141104744|Q2221906
+Q1529096,33,village of Turkey,rural administrative division in Turkey,Q2916486|Q486972|Q532|Q3257686|Q12357920|Q56061
+Q766277,33,comarque of the Valencian Community,first level of territorial demarcation formed by a group of municipalities in the Valencian Community,Q3183364|Q1345234|Q12357920
+Q22808404,32,station located on surface,type of station,Q12819564|Q130391302
+Q36784,32,region of France,French top-level territorial subdivision,Q583865|Q10864048|Q192498|Q192611|Q3455524
+Q82117,32,city gate,"gate which is, or was, set within a city wall",Q53060|Q57821
+Q44539,32,temple,structure reserved for religious or spiritual activities,Q697295
+Q5150550,32,comarca of Galicia,"division of the Spanish Autonomous Community Galicia into natural regions that share physical (orography, hydrography, climate, etc.), ethnographic and historical characteristics. These are not administrative units",Q1345234
+Q845820,31,region of Tanzania,subdivision of Tanzania,Q867371|Q10864048
+Q2385804,30,educational institution,institution that provides education,Q2169973|Q5341295|Q132759797
+Q744913,30,aviation accident,"aviation occurrence involving serious injury, death, or destruction of aircraft",Q21152775|Q11822042
+Q3924474,30,former province of Italy,former administrative unit of Italy,Q15089|Q19953632
+Q2989400,30,commune of Morocco,administrative territorial entity in Morocco,Q4115671|Q124364380
+Q109607,30,ruins,remains of human-made architecture,Q811979|Q333109
+Q860861,30,sculpture,three-dimensional work of art,Q8205328|Q4502142|Q17537576|Q35459920
+Q2264924,30,port city,city or town which has a port,Q132967635|Q515
+Q19953632,30,former administrative territorial entity,administrative division which is no longer in use,Q96088545|Q56061|Q19832712|Q52551684
+Q1402592,30,island group,"collection of islands, excluding neighbouring water; use archipelago (Q33837) for a group of islands including the water between them",Q20719696|Q271669|Q16887380|Q21157127|Q82794
+Q175582,30,Egyptian pyramids,ancient masonry structures constructed by ancient Egyptians,Q12516|Q125866553
+Q847027,30,grande école,French institutions of higher education,Q38723|Q3914
+Q209495,29,historical province of France,former subdivisions of France,Q1620908|Q34876|Q192498|Q19953632
+Q614316,29,private museum,a museum owned by an individual or organization,Q33506|Q118470621
+Q1497375,29,architectural ensemble,"group of multiple related objects, such as buildings",Q18247357|Q618123
+Q204910,29,governorate of Egypt,top tier of the country's jurisdiction hierarchy,Q15044339|Q1764608|Q10864048
+Q158438,28,arch bridge,bridge type characterized by its supporting arches,Q12280
+Q573344,28,main stem,final large channel of a riverine system,Q4022|Q47521|Q355304
+Q3329412,28,archaeological museum,museum specializing in archaeological artefacts,Q16735822|Q207694
+Q7944,28,earthquake,result of a sudden release of energy in the Earth's crust that creates seismic waves,Q8065|Q108156638|Q2692116|Q123349687|Q136927433
+Q4830453,27,business,"organization undertaking commercial, industrial, or professional activity",Q43229|Q155076
+Q2716259,27,metropolitan municipality in Turkey,Turkish metropolitan municipalities in provinces with a population over 750.000,Q2916486|Q6024226|Q10864048
+Q39594,27,bay,"body of water connected to an ocean or lake, formed by an indentation of the shoreline",Q35116038|Q2507626
+Q125366925,26,village in Egypt,administrative territorial entity of Egypt,Q15044339
+Q3397526,26,stone bridge,type of bridge design with stone or brick material,Q12280|Q83063742
+Q24699794,26,museum building,building housing a museum,Q41176|Q3364296|Q135703109|Q13226383
+Q166118,26,archives,agency or institution responsible for the preservation and communication of records selected for permanent preservation,Q1030034|Q43229|Q2668072
+Q7997,26,French Grand Prix,auto race held in France,Q11924610
+Q185113,26,cape,"headland of large size extending into a body of water, usually the sea",Q93352|Q191992
+Q17318027,25,rural commune of Morocco,administrative division of Morocco,Q2989400|Q4115671|Q10354598|Q14757767
+Q55485,24,dead-end railway station,railway station where trains can only enter and exit from one end,Q55488|Q11606300
+Q34763,24,peninsula,landform surrounded more than half but not entirely by water,Q271669|Q205895|Q35145263
+Q861184,24,department of Peru,first level administrative subdivision of Peru,Q1342205|Q10864048|Q1048835
+Q34770,24,language,"particular system of communication, often named for the region or peoples that use it",Q17376908
+Q35509,24,cave,natural void under the Earth's surface,Q271669|Q863404|Q28367692
+Q867143,24,Roman temple,ancient roman religious building,Q44539|Q14752696
+Q4363262,24,smooth-sided pyramid,type of pyramid,Q12516
+Q24354,24,theatre building,building for performances by actors,Q57660343|Q2310313|Q114961210
+Q53536964,23,royal palace,palace used by a royal family,Q16560
+Q22746,23,urban park,park in a city or other incorporated place,Q22698|Q1107656|Q61055883
+Q149621,23,district,"type of administrative division, in some countries",Q56061
+Q169358,23,stratovolcano,"tall, conical volcano built up by many layers (strata) of hardened lava",Q8072
+Q3363945,23,archaeological park,archeological site that has been preserved in a park setting and opened for public visitation.,Q839954|Q3329412|Q22698|Q756102
+Q1254933,23,astronomical observatory,location used for observing celestial events,Q62832
+Q9208,22,Spanish Grand Prix,Formula 1 Grand Prix,Q11924610
+Q79007,22,street,public thoroughfare in a built environment like a village or city,Q376799|Q811979|Q34442
+Q134447,22,nuclear power plant,thermal power station where the heat source is a nuclear reactor,Q200297|Q1739545
+Q483453,22,fountain,piece of architecture that ejects water,Q811979|Q860861|Q2736507|Q5522423|Q3370053
+Q1229454,22,rione of Rome,traditional administrative division of the city of Rome,Q1019982|Q2983893
+Q907116,21,Monument (Spain),Spanish heritage structures of cultural interest and legal figure of protection for this kind of heritage. Subcategory of BIC,Q23712|Q1019352
+Q702842,21,municipal arrondissement of France,territorial subdivision of some French communes,Q583865|Q192498|Q15640612|Q22927291|Q15640612|Q4286337|Q56061
+Q15848826,21,city palace,urban residence for the nobility,Q16560
+Q3032114,21,district of Madrid,21 administrative units of Madrid,Q4286337|Q5811416
+Q572995,21,natural region of France,,Q1970725
+Q1143635,21,business school,university-level institution granting degrees in business administration,Q3914|Q38723
+Q666943,20,associated commune,France territorial subdivision of a larger commune but retaining certain autonomy,Q3266850
+Q41176,20,building,"structure, typically enclosed with a roof and walls, standing more or less permanently in one place",Q811979
+Q5503,20,rapid transit,high-capacity public transport generally used in urban areas,Q3491904
+Q112132542,20,palazzo museum,,Q33506
+Q61763799,20,comarca of Aragon,"one of the 33 subdivisions of the Spanish autonomous community of Aragon, according to the regional law of co-marketing",Q1345234
+Q15079663,20,rapid transit line,type of railway line,Q728937|Q1067164
+Q153562,20,opera house,theatre building used for opera performances,Q24354|Q8719053|Q41176|Q57660343
+Q755017,20,tell,ancient settlement mound,Q839954|Q1584134
+Q4632675,20,dwelling place,type of human settlement,Q486972|Q15642541|Q2221906|Q56061
+Q54050,20,hill,"landform that extends above the surrounding terrain in lower mountain ranges, smaller and less steep than a mountain",Q271669|Q106589819|Q35145263
+Q200141,19,necropolis,larger ancient burial and consecration site,Q39614|Q839954|Q21751045
+Q1021645,19,office building,building which contains spaces mainly designed to be used for offices,Q41176
+Q2338524,19,motorsport racing track,race track for motor vehicles,Q1777138|Q1076486
+Q143912,19,triumphal arch,monumental structure in the shape of an archway,Q97466153
+Q11269813,19,cave with prehistoric art,,Q1149405|Q56320584
+Q1497364,19,building complex,set of related buildings,Q1497375|Q618123|Q63341786|Q13226383
+Q39614,19,cemetery,place of burial,Q12131650|Q13226383|Q2221906
+Q1322134,19,gulf,large inlet that is an arm of an ocean or sea,Q39594
+Q355304,18,watercourse,"path water takes when flowing as a stream, typically encompassing a stream channel; may change seasonally and be devoid of water at times of the year",Q863944|Q15324|Q137255322
+Q133156,18,colony,"territory under the political control of an overseas state, generally with its own subordinate colonial government",Q161243|Q82794
+Q160742,18,abbey,"monastery or convent, under the authority of an abbot or an abbess",Q44613|Q98116669|Q87351459
+Q1049757,18,Multi-purpose stadium,venue designed to be used for multiple types of sports events,Q1076486|Q123271939
+Q93352,18,coast,area where land meets the sea or ocean,Q468756
+Q506424,18,UCI Road World Championships,UCI Road World Cup Championships tournament,Q106636612
+Q6881511,18,enterprise,"organizational unit producing goods or services, which benefits from a certain degree of autonomy in decision-making, especially for the allocation of its current resources",Q43229|Q4830453
+Q1345234,17,comarca of Spain,"administrative, natural, traditional or historic subdivision of provinces or autonomous communities in Spain",Q3183364|Q12829|Q12357920|Q183366
+Q22698,17,park,"permanently dedicated recreation area, often open to the public and generally characterized by natural, historic, or landscape features",Q111415237|Q13226383|Q35145743|Q338112
+Q645883,17,military operation,coordinated military actions of a state or a non-state actor,Q15835236|Q71266556|Q1190554
+Q32099,17,meridian,line between the poles with the same longitude,Q91347380|Q27096213
+Q16735822,17,history museum,museum covering the knowledge of human history,Q33506|Q1497649
+Q15239622,17,disputed territory,"territory, which status is controversial between two or more existing states",Q15642566|Q183366
+Q3965305,17,alpine subsection,5th level entity in the taxonomy of the Alps according to the International Standardized Mountain Subdivision of the Alps (SOIUSA),Q46831|Q853614
+Q11670533,17,elevated station,type of station,Q55488|Q141503865
+Q1663017,17,engineering school,educational institution for the study of engineering,Q38723|Q5341295
+Q125941113,17,gold river,river from which gold nuggets are extracted,Q4022|Q15104915
+Q2232001,17,show cave,"cave managed by an organization and made accessible to the general public, usually for an entrance fee",Q35509|Q570116|Q98798598
+Q47443726,16,recurring tennis tournament,"tennis competition consisting of editions in different years. Use with ""instance of"" (P31)",Q15259995|Q13219666
+Q97662266,16,museum of modern art,type of museum,Q207694
+Q121076356,16,Istituto museale ad autonomia speciale,,Q3867560
+Q14276458,16,deck arch bridge,bridge with deck on top of arch structure,Q158438
+Q1223230,16,Roman bridge,bridge built by the ancient Romans,Q12280|Q14752696
+Q220505,16,film festival,dedicated event to screen films,Q4801521|Q58687420|Q132241|Q2761147
+Q28716292,16,former region of Morocco,old region in Morocco before 2015,Q19953632|Q4115671
+Q112132527,16,historical park museum,,Q33506
+Q2434238,16,heritage,"property, custom, or other material, immaterial or natural object inherited from previous generations, and conserved for its importance for future generations",Q488383
+Q112132522,16,historical civil building museum,,Q33506
+Q3839081,16,disaster,"hazard resulting in an event causing significant physical damage, destruction or death",Q1689296|Q1132455|Q813912|Q1931388|Q1920219
+Q2223653,16,terrorist attack,offensive action,Q1520311|Q81672|Q1174599
+Q31855,15,research institute,organization whose primary purpose is research,Q136410232|Q1664720
+Q1316973,15,national park,legal form of protection of natural areas of Spain,Q46169|Q25429352
+Q15303456,15,rugby union venue,venue for rugby union matches,Q1076486|Q483110
+Q16110,15,region of Italy,first-level administrative divisions,Q2824645|Q10864048|Q3455524|Q699386|Q20719690
+Q1068842,15,footbridge,"bridge designed for pedestrians and in some cases cyclists, animal traffic and horse riders, rather than vehicular traffic",Q12280|Q3352369|Q112049379|Q141503865
+Q1454820,15,congregational mosque,main mosque of a city or state,Q32815|Q56235676
+Q3257686,15,locality,place of human settlement,Q486972|Q48907157|Q2221906
+Q855747,15,Egyptian temple,structures for official worship of the gods and commemoration of pharaohs in Ancient Egypt,Q44539
+Q10742,15,autonomous community of Spain,first-level political and administrative division of Spain,Q3183364|Q1048835|Q10864048|Q12892398|Q788176|Q20719690
+Q110544132,15,free flight site,place to practice free flight with a glider,Q618123
+Q15110,15,metropolitan city of Italy,administrative divisions of Italy,Q1048835|Q12357832|Q1907114|Q2824645|Q41773366
+Q93342462,15,Ancient Greek archaeological site,,Q839954
+Q162602,14,river island,landmass or fluvial landform within a river,Q202199|Q23442
+Q207326,14,summit,"point on a surface that is higher in elevation than all points immediately adjacent to it, in topography",Q618123|Q3393392
+Q2087181,14,historic house museum,house that has been transformed into a museum,Q24699794|Q5773747|Q33506
+Q2983893,14,quarter,"division or section, region or part of a town, city or municipality, which may be an administrative unit",Q15642541|Q56061|Q486972|Q48907157
+Q172754,14,world's fair,series of international exhibitions initiated in 1851,Q288514|Q29023906
+Q8072,14,volcano,"natural, surface vent or fissure usually in a mountainous form",Q8502|Q29025902
+Q112132534,14,military museum building,,Q41176
+Q641226,14,arena,"enclosed area designed to host sporting events, theater, and musical performances",Q1076486|Q1299240|Q130528096
+Q37901,14,strait,"naturally formed, narrow waterway that connects two larger bodies of water",Q2507626|Q271669
+Q163740,14,nonprofit organization,organization operated for a collective benefit,Q43229
+Q13218676,14,Roman aqueduct,type of aqueduct built by the Romans,Q474|Q38042688|Q355304
+Q8065,14,natural disaster,"major adverse event resulting from natural processes of the Earth, which may cause loss of life or property",Q3839081|Q1322005|Q3433179|Q86923152|Q122355536
+Q1649443,14,national Church,Christian church associated with a specific ethnic group or nation state,Q879146
+Q891723,13,public company,company that offers its securities for sale to the general public,Q6881511|Q134161
+Q902104,13,private university,higher education institution not operated by a government,Q3918|Q23002042
+Q91315817,13,Cistercian monastery,,Q132289901|Q160742|Q132296770
+Q2668072,13,collection,set of purposely gathered physical or digital objects with some common characteristics,Q386724|Q16887380
+Q3835961,13,località,types of minor population areas in Italy,Q486972|Q3257686
+Q71974,13,külliye,complex of buildings around a Turkish mosque,Q1497364
+Q12284,13,canal,man-made channel for water,Q2466889|Q12376661|Q11794693|Q355304|Q121359|Q811979|Q924286
+Q27308988,13,César Awards ceremony,,Q4504495
+Q16917,13,hospital,health care facility,Q178706|Q4287745|Q4260475|Q628858|Q9386252|Q814610|Q30139652|Q41176|Q107123630
+Q165,13,sea,large body of saline water,Q2507626|Q116126039|Q116126228
+Q11707,13,restaurant,"single establishment which prepares and serves food, located in building",Q213441|Q41176|Q27077054
+Q1930585,13,victory column,monument in the form of a column,Q51845395|Q860861
+Q702492,13,urban area,large area with high population density and infrastructure of built environment,Q486972
+Q7075,13,library,"facility charged with the care of a collection of literary, musical, artistic, or reference materials, such as books, manuscripts, recordings, or films",Q3152824|Q58326331|Q1030034|Q294163|Q2668072|Q497893
+Q750215,13,mass murder,act of killing a large number of people by non-state actors,Q132821|Q1184244
+Q38723,13,higher education institution,"institution that provides higher education (e.g., universities, vocational universities, community colleges, liberal arts colleges, institutes of technology, and others)",Q2385804
+Q2140699,12,wine-producing region,type of region,Q1414991|Q82794|Q56061|Q1800229|Q17240136
+Q15104814,12,land boundary,boundary between land zones over which countries have rights,Q12413618
+Q12413618,12,international border,border between two sovereign states,Q1292279
+Q133442,12,city-state,independent or autonomous entity whose territory consists of a city,Q515|Q7275|Q13218276|Q1063239
+Q1414991,12,area,country subdivision,Q4835091
+Q16887380,12,group,"well-defined, enumerable collection of discrete entities that form a collective whole",Q28813620
+Q29102902,12,papal election,,Q40231|Q1363671|Q108974081
+Q186431,12,conclave,meeting to elect a pope,Q29102902|Q1141323
+Q684740,12,real property,subset of land that has been legally defined and the improvements to it made by human efforts,Q975783|Q618123|Q78775270|Q811979
+Q867567,12,governorate of Jordan,administrative subdivisions of Jordan,Q1764608|Q15644813|Q10864048
+Q57831,12,fortress,large fort,Q1785071|Q18691599
+Q317548,12,resort town,town where tourism or vacationing is a primary component of the local culture and economy,Q702492|Q3957|Q1200957
+Q2085381,12,publishing house,organization that prints and distributes pressed goods or electronic media,Q105044823|Q783794|Q6881511
+Q12162186,12,Tram transport,system of railway tracks using tramcars to facilitate public transport,Q3491904|Q112796050|Q18325841
+Q2742167,12,religious community,group of people who practice the same religious faith,Q51041800|Q177634
+Q1542938,12,grand établissement,specific French public institution,Q3591586|Q294163
+Q18493502,12,suicide bombing,type of suicide attack,Q217327|Q891854
+Q22806,12,national library,library specifically established by the government,Q65768782|Q327333
+Q845643,12,region of Morocco,current highest administrative division of Morocco,Q4115671|Q10864048|Q124364380
+Q2577114,12,co-cathedral,type of church,Q2977
+Q2179958,12,district of Peru,third level administrative subdivision of Peru,Q1342205|Q15633191|Q1048835|Q12357920|Q149621
+Q8524,12,association football pitch,rectangular area where association football is played,Q105755419
+Q18536594,12,Olympic sporting event,individual event at the Olympic Games,Q114609228|Q44637051
+Q3241045,12,disease outbreak,sudden increase in occurrences of a disease in a particular time and place,Q1190554|Q5422048|Q11190|Q87075524
+Q2624046,11,mountain chain,"row of high mountain summits, a linear sequence of interconnected or related mountains, or a contiguous ridge of mountains",Q271669|Q106589819
+Q3950,11,villa,"house, generally of some pretension, and often including outbuildings and gardens",Q3947|Q1307276
+Q158454,11,biosphere reserve,UNESCO protected area,Q179049|Q386426
+Q108325,11,chapel,"small place, building or room of Christian fellowship or worship, may be attached or not to a larger institution or part of a building",Q16970|Q811979|Q1370598
+Q162875,11,mausoleum,monument enclosing the interment space or burial chamber of a deceased person or people,Q6023295|Q4989906|Q56055312|Q115096216
+Q8514,11,desert,barren area of land where little precipitation occurs,Q5309708|Q107425|Q37813|Q52105|Q271669
+Q179700,11,statue,sculpture primarily conceived as a representational figure,Q860861|Q29527347|Q8205328|Q220659
+Q1966910,11,national academy,"organizational body, usually operating with state financial support and approval, that co-ordinates scholarly research activities and standards for academic disciplines, most frequently in the sciences but also the humanities",Q414147
+Q84598477,11,commune of French Polynesia,,Q47508609|Q719487
+Q40080,11,beach,area of sand or small stones near the sea or another area of water such as a lake,Q468756|Q2221906|Q618123|Q107123630
+Q18247357,11,group of structures or buildings,"architectural structures or buildings that do not form a building complex, but are treated as a group",Q66661745|Q99018632|Q17489659|Q811979
+Q2221906,11,geographic location,"point, line or area on or near Earth",Q27096213|Q17334923|Q141149247
+Q1088552,11,Catholic church building,church building in the Catholic Church,Q140454931
+Q10545864,11,kism,administrative unit in Egypt,Q15044339|Q12357832
+Q167170,11,multi-sport event,organized sporting event involving multiple sports,Q13406554
+Q676050,11,old town,part of a town or city in which the principal public and historic buildings are located,Q2983893|Q82794|Q1497375
+Q18608583,11,recurring sporting event,sports event scheduled to recur within a decided interval,Q15275719|Q16510064|Q13406554
+Q84669937,11,commune of New Caledonia,,Q583865|Q546080|Q484170
+Q3305213,11,painting,"visual artwork, surface artistically covered with paint",Q110304307|Q8205328|Q838948
+Q7495728,11,shiyakha,administrative unit in Egypt,Q15044339|Q12357920
+Q12518,11,tower,structure with height greater than width,Q41176|Q811979
+Q3199915,11,massacre,incident where some group is killed by another,Q750215|Q1190554|Q4676786|Q123349687|Q4817637|Q844482
+Q22674925,11,former settlement,"settlement that no longer exists, e.g. because it was abandoned, destroyed, abolished or it became part of another settlement",Q486972|Q96088545
+Q3055118,11,single entity of population,Spanish statistical unit of human settlements,Q15042037|Q3183364|Q486972
+Q334383,11,abbey church,"church of an abbey (monastery), seat of an abbot",Q16970
+Q160091,11,plain,flat geographic region,Q271669|Q107425
+Q43742,10,oasis,isolated area of vegetation in a desert,Q20719696
+Q476028,10,association football club,sports club devoted to association football (soccer),Q17270000|Q847017
+Q790344,10,district of Barcelona,10 administrative units of Barcelona,Q5811416|Q486972|Q4286337
+Q34627,10,synagogue,"religious building at the center of a local organization where a Jewish (or rarely Samaritan) community gathers for prayer, education, social assistance or ceremonies",Q831219
+Q131569,10,treaty,express agreement between nations under international law,Q2635077|Q321839|Q49848|Q1151067|Q820655|Q68619446
+Q18674739,10,event venue,"location suitable for hosting events, indoors or outdoors",Q41176|Q17350442
+Q815324,10,town municipality of Turkey,"type of administrative region in Turkey, large village with a municipality",Q2916486|Q486972|Q12357832
+Q3146899,10,Diocese of the Catholic Church,those sees that are under the supervision of a bishop of the Catholic church,Q665487|Q20926517|Q111737478|Q1492823|Q163740
+Q1437459,10,non-geologically related mountain range,"geographic area containing numerous mountains, not necessarily geologically related to each other",Q82794|Q271669
+Q943017,10,national park,type of protected area in France,Q46169|Q19753982|Q2828309
+Q33384,10,dialect,geographically- or socially-determined language variety,Q3329375|Q12442971|Q337968
+Q34876,10,province,administrative division in several countries,Q56061
+Q811979,10,built structure,human-designed and -made structure,Q11908691|Q811430|Q386724|Q134301417
+Q191992,10,headland,"landform extending into a body of water, often with significant height and drop",Q1245089|Q34763|Q2221906
+Q54114,10,boulevard,"type of large road, usually running through a city",Q34442|Q79007
+Q1329623,10,cultural center,"an organization, building or complex that promotes culture and arts",Q101542346|Q41176|Q18674739|Q43229
+Q1128397,10,convent,"religious establishment, where clerics lead a religious life in community",Q24398318|Q2742167|Q1497375|Q98116669|Q132289901
+Q3757179,10,parçan of Occitania,,Q12829|Q192498|Q131689823
+Q1107656,9,garden,"planned space set aside for the display, cultivation and enjoyment of plants",Q107425|Q21950738|Q628858|Q35145743|Q811979
+Q152559,9,macrolanguage,language scope defined in the ISO 639-3 standard,Q2092812
+Q97588309,9,former cathedral,"Christian church, which was seat of a bishop",Q16970
+Q3624078,9,sovereign state,state that has the highest authority over a territory,Q7275|Q6256
+Q6256,9,country,distinct territorial body or political entity,Q4835091|Q1048835
+Q373074,9,suffragan diocese,one of the dioceses other than the metropolitan archdiocese that constitute an ecclesiastical province,Q20926517|Q665487
+Q3152824,9,cultural institution,institution for the promotion of cultural life,Q178706|Q43229|Q141507421
+Q111177881,9,main peak,highest summit of a mountain,Q207326|Q12766313|Q3393392
+Q728937,9,railway line,"constructional unit in rail transport, the route or way of rail tracks between defined locations",Q83620|Q1311670|Q57498564
+Q13226383,9,facility,"place, equipment, or service to support a specific function",Q121359|Q8205328|Q27096235|Q811430|Q386724|Q17334923|Q618123
+Q64953083,9,car-free place,place where cars are not allowed,Q17334923
+Q817056,9,benedictine abbey,monastic community of monks of the Benedictine order,Q116214645|Q160742|Q23955632|Q132289901|Q132296770
+Q1081138,9,historic site,"official location where pieces of political, military or social history have been preserved",Q358|Q4835091|Q210272|Q2221906|Q5003624|Q98929991|Q178706
+Q1061151,9,massif,section of a planet's crust that is demarcated by faults or flexures,Q107425|Q271669|Q1185892|Q106589819
+Q7362268,9,Roman amphitheatre,"large, circular or oval open-air venues with raised seating",Q14752696|Q54831|Q21752084
+Q55491,9,underground railway station,railway station located below ground,Q55488|Q22808403
+Q465299,8,archaeological culture,group of artifacts associated with a past society,Q4808636|Q11042
+Q138313683,8,Royal abbey,Abbey under Royal protection,Q160742
+Q18142,8,tower block,tall building; as opposed to a low-rise building,Q11755959
+Q133346,8,border,legal boundary between two territorial regions,Q3241107|Q27096213
+Q34038,8,waterfall,place where water flows over a steep or vertical drop,Q35145263|Q15324|Q271669
+Q15911738,8,hydroelectric power station,facility generating electric power using hydroelectricity,Q159719
+Q840482,8,shrine of Our Lady,typically Catholic shrines,Q697295|Q15135589|Q29553|Q1370598|Q21850178
+Q108667555,8,one-way station,"station/terminal where service is only possible in one direction, not the other, offering only one platform to passengers in one direction",Q12819564
+Q17715832,8,castle ruin,ruin of a fortified structure built by nobility in Europe and the Middle to Far East during the Middle Ages,Q109607|Q23413
+Q11924610,8,Formula One Grand Prix,,Q87267404|Q18131152
+Q180370,8,hospital,"building for pilgrims, travelers, or the needy; term originally reserved for similar establishments of the Knights Hospitallers",Q47520019|Q4260475
+Q75520,8,plateau,high flat terrain,Q271669|Q3622002|Q106589819
+Q57346,8,defensive wall,fortification used to protect an area from potential aggressors,Q42948|Q57821
+Q20488347,8,national park of Peru,type of protected area in Peru,Q1342205|Q46169
+Q414147,8,academy of sciences,national academy or another learned society dedicated to sciences,Q748019|Q162633
+Q173387,8,grave,location where one dead person or a limited number of people are buried,Q2065736|Q6023295|Q5003624|Q56054752
+Q194029,8,Roman road,roads built in service of the Roman Republic and Empire,Q34442
+Q796174,8,site of community importance,type of protected area of Europe,Q15069452
+Q245065,8,intergovernmental organization,organization composed primarily of sovereign states,Q484652|Q7210356|Q1896989
+Q1129474,8,cultural landscape,"landscape, which is permanently embossed by humans",Q107425|Q15642541|Q106908189
+Q568683,8,age,Subdivision of geological time; shorter than an epoch and larger than a chron,Q4005761
+Q1123245,8,stage,unit in chronostratigraphy,Q4005689
+Q1193438,8,bullring,arena where bullfighting is performed,Q483110|Q174782|Q54831|Q56827005|Q47012103
+Q11606300,8,last station,railway station at the end of a line or service; tracks may or may not continue beyond it,Q55488|Q20202390|Q548662
+Q44782,8,port,maritime facility where ships may dock to load and discharge passengers and cargo,Q2516121|Q12819564|Q283202|Q83620|Q811430|Q811979|Q2466889|Q2479431
+Q1060829,8,concert hall,type of music venue,Q8719053|Q57660343
+Q112132573,8,museum for an artifact of industrial archaeology,,Q33506
+Q55599109,8,border crossing,"a designated location where persons, vehicles, goods, or transport routes cross an international border",Q25296884
+Q1402443,8,border train station,train station at an international border or where immigration formalities take place,Q55488|Q757292|Q11429081
+Q83620,8,thoroughfare,navigable transportation route connecting one location to another,Q294440|Q11794693|Q2874718|Q376799|Q137255322
+Q204324,8,volcanic crater lake,lake formed within a volcanic crater,Q100900880|Q29025902|Q66716634
+Q21480300,8,mass shooting,"incident in which an active shooter shoots multiple people with a firearm, especially with an intent to kill in a public space",Q109217482
+Q46865913,8,geography of geographic location,overview about the geography of geographic location,Q1071|Q74817647
+Q125866682,8,Ancient Egyptian necropolis,,Q200141|Q125866553
+Q383092,8,art academy,academy specializing in art,Q1792623|Q162633
+Q46622,8,controlled-access highway,"highway designed exclusively for high-speed vehicular traffic, with all traffic flow and ingress/egress regulated",Q269949|Q34442
+Q891854,8,bomb attack,action whereby a bomb is used to kill one or more people or to damage or destroy objects,Q1174599|Q179057|Q2223653
+Q129676344,8,large city,"city with a population of between 250,000 and 1,000,000",Q515
+Q12042110,8,steel bridge,bridge made of steel,Q3397572|Q21701614
+Q131689823,8,,,Q12949943
+Q190429,7,depression,landform sunken or depressed below the surrounding area,Q271669
+Q695850,7,airbase,aerodrome specifically used by a military force for the operation of military aircraft,Q62447|Q245016
+Q19757,7,Roman theatre,theatre building built in ancient Roman times,Q11183017|Q14752696|Q21752084
+Q18543139,7,central station,common name for the main railway station,Q55488
+Q114782406,7,break-of-gauge station,railway stations with two or more different gauges,Q55488|Q55493
+Q3393392,7,highest point,highest elevation of a geographical zone,Q271669|Q27096213|Q61642443
+Q7328910,7,art collection,set of purposefully gathered artworks,Q2668072|Q17489659
+Q210077,7,baptistery,separate buildings or parts of buildings containing a font for the baptismal rite,Q108325|Q811979|Q136229031
+Q187971,7,wadi,"river valley, especially a dry (ephemeral) riverbed that contains water only during times of heavy rain",Q4022|Q39816|Q16465938
+Q3744088,7,tourism region,geographical region that has been designated as having common cultural or environmental characteristics,Q82794
+Q20860083,7,educational facility,facility for educational activities,Q19691007|Q13226383
+Q353344,7,countship,historical administrative division,Q1048835|Q56061|Q43229|Q19953632
+Q1187811,7,college town,community dominated by its university population,Q515|Q27702623
+Q3558938,7,villa veneta,"Villa of Veneto, Italy",Q3950
+Q15623950,7,prefecture of Morocco,Administrative divisions of Morocco,Q4115671|Q515716|Q12357832
+Q39715,7,lighthouse,structure designed to emit light to aid navigation,Q41176|Q3565782|Q7321258
+Q1328578,7,region of Turkey,geographical division of Turkey,Q2916486
+Q15642541,7,human-geographic territorial entity,territorial entity of which the borders are determined by physiographic and human features,Q4835091|Q27096235|Q82794
+Q156362,7,winery,agricultural plants cultivating or producing of wine,Q118602002|Q12292478
+Q172896,7,catacombs,subterranean passageways used as burial place,Q39614|Q839954|Q12146012
+Q64578911,7,former hospital,"building or architectural structure no longer used as a hospital, currently existing or not",Q96084375|Q39364723|Q16917
+Q27686,7,hotel,business enterprise that provides indoor lodging in a single location paid on a short-term basis,Q5056668|Q6881511|Q655686
+Q3958626,7,alpine section,3rd level entity in the taxonomy of the Alps according to the International Standardized Mountain Subdivision of the Alps (SOIUSA),Q46831|Q853614
+Q166620,7,drainage basin,"area of land where precipitation collects and drains off into a common outlet, such as into a river, bay, or other body of water",Q813672|Q55462971
+Q1793804,7,S-Bahn station,train station for the S-Bahn or RER,Q55488|Q4346602
+Q112132548,7,archaeological artifact museum,type of museum,Q33506
+Q9259,7,World Heritage Site,place of significance listed by UNESCO,Q386426|Q210272
+Q2065736,7,cultural property,structures and works designated as representing cultural heritage,Q210272|Q8205328
+Q47345468,7,tennis tournament edition,"edition in a specific year of a competition held regularly, e.g. every year. Use with P31",Q114609228|Q13219666
+Q9229,7,Turkish Grand Prix,"Formula One race in Istanbul, Turkey",Q11924610
+Q1456099,7,step pyramid,architectural structure that uses flat platforms or steps to form geometric pyramid,Q12516
+Q158555,7,cable-stayed bridge,type of bridge,Q12280
+Q252916,7,administrative quarter of Paris,"subdivision of arrondissements in Paris, France",Q22575704|Q180928
+Q2001676,7,offensive,type of military operation,Q645883|Q1174599|Q350604
+Q782970,7,domus,Roman urban house of upper classes,Q2525994|Q3125390|Q3947
+Q187223,7,lagoon,shallow body of water separated from larger body of water by a barrier,Q135951980
+Q2120466,7,pontifical university,university established or approved by the Roman Catholic Church,Q5332280|Q38723|Q23002054
+Q6581615,7,thermae,public facilities for bathing in the Roman Empire,Q20983805|Q785952|Q14752696
+Q1191622,7,Special Area of Conservation,type of protected areas in the European Union defined by the Habitats Directive,Q15069452
+Q21752084,7,Roman archaeological site,type of archaeological site,Q839954
+Q11834910,7,state public library,type of library in Italy,Q28564
+Q831663,7,military campaign,"large scale, long duration, significant military strategy plan",Q645883|Q6056746|Q350604
+Q1078765,7,railway accident,"disaster involving one or more trains (for train colliding with a pedestrian, animal or other objects, see Q19403959; for two trains, see Q11396408)",Q4462128|Q11822042
+Q47521,7,stream,natural body of water with current within bed and stream banks,Q355304|Q15324
+Q589481,7,Olympic stadium,name usually given to the stadium of the Summer Olympic Games,Q107640409|Q1049757
+Q15310171,7,seaport,port accessible for seagoing vessels,Q44782|Q27895381|Q2298537
+Q183366,6,territory,area of land under a certain jurisdiction,Q56061|Q82794
+Q30022,6,café,establishment that serves coffee and tea,Q112654507|Q213441|Q17334923
+Q190752,6,supreme court,highest court in a jurisdiction,Q4959031
+Q12949943,6,regions of Occitania,,Q64728694
+Q1007870,6,art gallery,place where art is exhibited and sometimes also sold,Q15090615|Q118554787|Q20897549|Q4830453|Q124081236
+Q51929311,6,largest city,city which has the greatest population in a country,Q515
+Q852190,6,shipwreck,remains of a ship that has wrecked,Q21073029|Q112613829|Q41767843|Q839954
+Q170980,6,obelisk,"tall, four-sided, narrow tapering monument which ends in a pyramid-like shape at the top",Q811979|Q4989906|Q207961
+Q12377751,6,building or structure under construction,"building or structure that is currently under construction and not finished yet, this is a temporary indicator item, and should be removed when construction works are completed",Q811979|Q360418
+Q955824,6,learned society,organization that exists to promote an academic discipline or profession,Q48204|Q16519632|Q431603|Q6815100
+Q719487,6,overseas collectivity of France,"type of French territorial collectivity, used for several overseas islands or archipelagos",Q583865|Q203396|Q10864048
+Q26263224,6,international tunnel,tunnel built across a geopolitical boundary,Q44377|Q25297020|Q1075664|Q55599109
+Q12280,6,bridge,"structure that spans and provides a passage over a road, railway, river, or some other obstacle",Q83620|Q811979|Q618123
+Q137592217,6,Winter Olympic Games edition,edition of multisport event Winter Olympic Games,Q114609228|Q27968055
+Q1065592,6,uninhabited island,island without permanent human population,Q23442
+Q2319498,6,architectural landmark,building that is easily recognizable and/or well known,Q811979|Q4895393|Q570116
+Q131681,6,reservoir,artificial lake impounded using a dam or lock to store water,Q3215290|Q2551525|Q11727010
+Q918230,6,Roman villa,historical residential structure,Q3950|Q14752696|Q489357
+Q677678,6,fortified town,town with fortifications such as defensive walls,Q515|Q57821|Q14601169|Q486972|Q40364446
+Q588140,6,science museum,museum devoted primarily to science,Q33506
+Q107540719,6,edition of the UEFA European Championship,edition in a specific year of the UEFA European Championship,Q27020041
+Q192611,6,electoral unit,territorial division made or used for elections,Q56061|Q1048835
+Q1067867,6,sestiere of Venice,6 historical neighborhoods of Venice,Q401315
+Q2463705,6,Special Protection Area,type of protected areas in the European Union defined by the Birds Directive,Q15069452|Q2714144
+Q5341295,6,educational organization,body with an aim of education,Q43229
+Q194195,6,amusement park,park with rides and attractions,Q338112|Q570116|Q13226383|Q4830453|Q1497375|Q15982170
+Q1779831,6,cross-platform interchange,transfer station design,Q325358|Q7886778
+Q3685477,6,former Italian municipality of Lombardy,Wikimedia list article,
+Q1970365,6,natural history museum,institution that displays exhibits of natural historical significance,Q588140|Q16735822
+Q15823129,6,Carthusian monastery,monastery of the Order of Saint Bruno,Q132289901|Q132296770
+Q62078547,6,public research university,type of higher learning institution; research university predominantly funded by public means,Q875538|Q15936437|Q4671277
+Q12137573,6,Paleolithic site,place with human activity from the first part of the Stone Age,Q4443227
+Q167346,6,botanical garden,area displaying a wide range of plants labelled with their botanical names,Q13226383|Q31855|Q66310308|Q1030034|Q22652|Q2668072
+Q2093358,6,language regulator,academy specializing in languages,Q162633|Q43229|Q1639780
+Q16149276,6,natural park,type of protected area in Spain,Q728904|Q25429352
+Q56320584,6,prehistoric archaeological site,location with human activity before recorded history,Q839954
+Q4421,6,forest,subjective characterization of an area with trees,Q101998|Q184806|Q27096220|Q618123|Q37813|Q52105|Q1554231
+Q1335652,6,airport railway station,railway station that is part of an airport,Q55488
+Q2772772,6,military museum,museum of military and war,Q16735822
+Q16748868,6,city walls,defensive wall around a settlement,Q57346|Q1416685
+Q161243,6,dependent territory,territory that does not possess full political independence as a sovereign state,Q56061|Q1048835
+Q2202509,6,Roman city,Roman-period settlement,Q15661340|Q21752084|Q100205512
+Q43501,6,zoo,"collection of assorted wild animal species kept for purposes like: study, conservation and, or, commercial exhibition",Q96102071|Q22698|Q588140
+Q40357,6,prison,"place in which people are, for legal reasons, physically confined and usually deprived of a range of personal freedoms",Q811979|Q137864285|Q178706
+Q11755880,5,residential building,building mainly used for residential purposes,Q41176|Q1403389
+Q27951514,5,indoor arena,arena covered by roof and walls,Q641226|Q130528096
+Q926439,5,street circuit,motorsport track composed of public roads of a city,Q2338524
+Q15275719,5,recurring event,event recurring at generally regular intervals,Q1190554|Q28314507|Q1656682
+Q327333,5,government agency,"organisational part of a government responsible for specific public services, such as health, judiciary, education, transportation, foreign affairs, etc",Q2659904|Q10541491
+Q484652,5,international organization,organization established by treaty between governments,Q43229
+Q1378975,5,convention center,building designed to hold a convention,Q18674739|Q811979
+Q2398990,5,technology museum,museum devoted to applied science and technological developments,Q588140
+Q1184788,5,suburbicarian diocese,"Catholic dioceses around Rome, the titles of which can be assigned to cardinal bishops",Q3146899|Q373074
+Q113455515,5,automated rapid transit,transit system using a driverless technology on all its lines,Q5503|Q3509172
+Q20162172,5,human language,"set of all languages currently or formerly spoken, written, or signed by humans (excluding computer languages and mathematical/logically-formal languages)",Q34770
+Q220659,5,archaeological artefact,something made or modified by humans and of archaeological interest,Q1791627|Q223557
+Q1250464,5,realm,"denomination of a particular political entity, which is theoretically ruled by a king, or one in which the monarchy is its political regime; but not necessarily identified with a state",Q7275|Q183366
+Q75135432,5,administrative quarter in Barcelona,administrative quarter in Catalonia (Europe),Q56061|Q15642599
+Q202216,5,overseas department and region of France,overseas departments and regions of France that are outside metropolitan France,Q6465|Q26934845|Q36784
+Q2354973,5,road tunnel,tunnel built for vehicular road traffic,Q27955379|Q44377
+Q124734,5,rebellion,violent resistance against government,Q2672648|Q13418847|Q350604
+Q863974,5,lake island,island located in a lake,Q202199
+Q6448147,5,autovía,controlled-access highway in Spain,Q159184
+Q14946335,5,Historic Garden (Spain),subcategory of property of cultural interest of Spain and garden to which this category has been granted,Q23712|Q1019352|Q384213
+Q12059057,5,one-thousander,mountain or hill peaks with an altitude between 1000 and 1999 meters,Q207326
+Q1021711,5,seaside resort,"resort town or resort hotel, located on the coast",Q875157|Q30504307
+Q19730508,5,former municipality,municipality that no longer exists as independent entity,Q15284|Q19953632
+Q57821,5,fortification,military constructions and buildings designed for defense in warfare and military bases,Q811979|Q6852233|Q97095925
+Q3141478,5,comarca of Andalusia,"non offical territorial subdivision of Andalusia, Spain",Q12829|Q12357920
+Q7994,5,European Grand Prix,Formula 1 Grand Prix,Q11924610
+Q12570,5,suspension bridge,type of bridge,Q12280
+Q184644,5,conservatory,"educational institution specialized in the study, training and research of music",Q1021290|Q38723
+Q3573632,5,historic comarca of North Catalonia,,Q19953632|Q12829
+Q12516,5,pyramid,structure whose shape is roughly that of a pyramid in the geometric sense,Q41176
+Q1710033,5,autonomous region with special statute,administrative division in Italy,Q16110
+Q204894,5,marginal sea,"sea partially enclosed by islands, archipelagos, or peninsulas",Q165
+Q104117291,5,region of Spain,"administrative entity of the Spanish State, disappeared with the creation of the State of Autonomies",Q19832712|Q1048835|Q10864048|Q19953632|Q3502482|Q1620908
+Q55876909,5,Catholic parish church,church building that acts as the religious center of a Catholic parish,Q317557|Q1088552|Q17334923
+Q10631691,5,Catholic pilgrimage church,"Church building, site of Roman Catholic pilgrimage",Q15135589|Q697295|Q29553|Q20064854
+Q4286337,5,city district,type of administrative division,Q2983893|Q123705|Q1048835|Q56061|Q149621
+Q4115680,5,Italian city-state,one of the small independent states between the 9th and 15th centuries,Q133442|Q3024240
+Q12104174,5,ethnographic museum,"institution that preserves, collects, and displays ethnographic objects",Q28737012|Q17105874
+Q179049,5,nature reserve,"protected area for flora, fauna or features of geological interest",Q473972|Q1286517|Q386426
+Q131415018,5,long-distance hiking trail,long trail used for walking or backpacking,Q2143825
+Q178743,5,stele,stone or wooden slab erected for funerals or commemorative purposes,Q4989906|Q220659|Q5003624|Q8205328
+Q697295,5,shrine,"holy or sacred place, which is dedicated to a specific deity",Q24398318|Q105889895
+Q23828031,5,village in Jordan,,Q532|Q15644813
+Q399495,5,standard language,language variety used by a population in their public discourse (for public purposes); standardized language that has at least one standard variety besides its other varieties; variety that has undergone standardization,Q3329375|Q34770
+Q12254339,5,comarca of Asturias,Wikimedia list article,Q1345234
+Q55863584,5,former municipality of Spain,,Q2074737|Q19730508|Q19953632
+Q1777138,5,race track,"facility built for racing of animals, vehicles, or athletes",Q1076486|Q123271839|Q101228876
+Q2887138,5,civil basilica,type of construction of the Roman Empire,Q10882966|Q14752696|Q163687
+Q10855061,5,archaeological find,object discovered in archaeological excavation,Q18593264|Q337060|Q220659
+Q1268865,5,light rail,typically an urban form of public transport using steel-tracked fixed guideways,Q3491904
+Q1371037,5,university of technology,college or university for applied sciences,Q3918|Q38723
+Q1365179,5,private mansion,"French town houses, especially of the 18th century, generally more elegant, ornate, and larger than other houses",Q120793870|Q1202402
+Q67123843,5,town divided by border,town that is divided by border,Q902814|Q244793
+Q105763925,5,conservation library,type of library,Q7075
+Q2281788,5,public aquarium,"facility and institution that exhibits live aquatic animals and plants in large tanks for the public to view, learn about, and appreciate",Q57659763|Q570116|Q43501|Q15982170|Q43229|Q16519632
+Q7285116,5,raised coral atoll,atoll that has been lifted high enough above sea level by tectonic forces to protect it from scouring by storms,Q1324426
+Q65045238,5,cross-sea bridge,,Q5188195|Q12280
+Q7814330,5,toll bridge,bridge for which road usage tolls are charged,Q12280
+Q358,5,heritage site,general term for a site of cultural heritage for a specific country (please avoid as a P31 value except for large sites containing multiple entities),Q2065736|Q15642541|Q210272
+Q200250,5,metropolis,large and significant city or urban area usually with millions of inhabitants,Q515
+Q108178728,5,national capital,capital of a sovereign state,Q5119
+Q1640824,5,inscription,"words, texts, lettering, or symbols marked on a work, building, or object, including texts, legends, documentation notes, or commemoration",Q234460|Q340169|Q55412936|Q669777|Q223557|Q47461344|Q206287|Q97570030
+Q110288240,5,Eurovision Song Contest edition,edition of music competition Eurovision Song Contest,Q106594095|Q27968043|Q15416
+Q6017969,5,scenic viewpoint,high place where people can gather to view scenery,Q570116|Q811979|Q960648
+Q1973416,5,type locality,"geologic term regarding rock types, stratigraphic units or mineral species",Q112628506|Q14944328
+Q1970725,5,natural region,"region distinguished by its common natural features of geography, geology, and climate",Q82794|Q27096220
+Q2416723,5,theme park,amusement park focused on a particular theme,Q194195
+Q2713379,5,papal basilica,,Q163687|Q1088552
+Q96312874,4,Public Research Organization,scientific research organization dependent on the Spanish administration,Q2881199
+Q200538,4,party,social event,Q1656682
+Q557206,4,Catholic university,type of university affiliated with the Catholic Church,Q118553707|Q1743327
+Q1759852,4,sculpture garden,outdoor garden dedicated to the presentation of sculptures,Q22698|Q7328910|Q1107656|Q860861|Q756102
+Q3977906,4,alpine supergroup,7th level entity in the taxonomy of the Alps according to the International Standardized Mountain Subdivision of the Alps (SOIUSA),Q46831|Q853614
+Q1616075,4,television station,organization that transmits content on television,Q15265344
+Q129341528,4,institution of the French State,an institution governed by the current French Constitution,Q895526|Q178706
+Q32766,4,constitutional court,court that deals primarily with constitutional law,Q190752|Q895914
+Q2665272,4,Ecclesiastical circumscription immediately subject to the Holy See,,Q3146899|Q111737478
+Q1778235,4,abbacy nullius,"territorially delimited particular church in Catholicism, whose attention is entrusted to a prelate or an abbot, who governs it as its own pastor, in the same way as a diocesan bishop",Q3146899|Q2633744|Q111737478
+Q1802963,4,mansion,very large and imposing dwelling house,Q3947
+Q1779653,4,colossal statue,sculptural genre,Q179700|Q3476533
+Q25392016,4,international shrine,,Q21850178|Q1088552
+Q25422101,4,Bridges in Venice,,Q12280
+Q1941779,4,fashion house,business which designs and sells usually high-end clothing,Q6881511|Q4830453
+Q3822604,4,roman mausoleum,,Q162875|Q6023295|Q14752696
+Q618123,4,geographical feature,components of planets that can be geographically located,Q27096213|Q4406616|Q17334923|Q53617407
+Q174844,4,megacity,very large city with a total population in excess of ten million people,Q1637706|Q7930989
+Q51576574,4,Mediterranean country,country located near the Mediterranean Sea,Q6256|Q3624078
+Q1323642,4,transcontinental country,country whose territory spans more than one continent,Q6256
+Q492255,4,tetrapylon,"ancient Roman monument of cubic shape, generally built on a crossroads",Q4989906
+Q3089219,4,maritime boundary,"boundary between marine zones over which countries have rights, or between such zones and international waters",Q12413618
+Q417175,4,kingdom,state over which a king or queen rules,Q1250464|Q7269
+Q1227095,4,comarca of Álava,,Q5150553
+Q613611,4,alcázar,Spanish term for a castle or fortified palace where the king lives,Q23413|Q7743|Q16560|Q88291|Q57821|Q7265965|Q89691|Q98795663
+Q1570358,4,pyramidal peak,"angular, sharply pointed mountain peak",Q207326
+Q328468,4,Nazi concentration camp,concentration camps operated by Nazi Germany,Q152081|Q1752649
+Q152081,4,concentration camp,"camp in which people are imprisoned or confined, commonly in large groups, without trial",Q3354725
+Q590490,4,code name,"word or name used, sometimes clandestinely, to refer to another name, word, project or person",Q82799
+Q96371632,4,secularized church,"church building that was a place of worship and currently has other uses, such as a museum, library, restaurant, exhibition hall, etc.",Q19899465|Q96376684
+Q4946461,4,spa town,specialized resort town situated around a mineral spa,Q570116|Q317548
+Q107566885,4,,,Q5119
+Q210272,4,cultural heritage,physical artifact or intangible attribute of a society inherited from past generations,Q2434238
+Q118987801,4,specialized museum,type of museum,Q33506
+Q105390172,4,Roman Catholic metropolitan archdiocese,archdiocese of the Roman Catholic Church that has a suffragan diocese under its jurisdiction,Q427961|Q105071180|Q105406193|Q2665272|Q1492823|Q111737478
+Q107343049,4,automated rapid transit railway line,railway line that doesn't need a driver,Q15079663|Q728937
+Q756780,4,Roman colony,Roman outpost established in conquered territory to secure it,Q2202509|Q133156
+Q124757,4,riot,"violent public disturbance against authority, property or people",Q686984|Q273120|Q49773
+Q8719053,4,music venue,location used for a concert or musical performance,Q18674739|Q57660343|Q108266065
+Q131183,4,cabaret,venue for a mixed variety show of music & theatrical revue,Q154250|Q18674739
+Q3073652,4,coastal river,watercourse flowing into the sea or ocean,Q573344|Q4022|Q355304
+Q956214,4,chef-lieu,"pre-eminent administrative town of a sub-division of territory, in some countries",Q1306755|Q470540
+Q157031,4,foundation,type of nonprofit organization,Q163740|Q155076|Q3778211
+Q4671277,4,academic institution,educational institution dedicated to education and research,Q2385804|Q133873855|Q133873821
+Q29553,4,sanctuary,"Sacred or safe place, often revered, protected and/or preserved. Includes buildings, places of refuge, reservations, and other areas often associated with worship, protection, and/or safety.",Q4588528|Q1370598|Q24398318|Q2221906
+Q1147171,4,interchange station,train station for more than one railway route,Q2298537|Q55488
+Q7138926,4,parliament building,"subclass of a legislative building, used by countries/entities which have a parliamentary form of government",Q30124446|Q52177058|Q16831714|Q294422
+Q66344,4,central bank,"financial institution managing a country's monetary policy with a monopoly on increasing the monetary base; typically oversees commercial bank stability, prevents bank runs, and regulates against fraud, money laundering, and terrorism financing",Q22687|Q895526|Q6899005|Q17990971|Q327333
+Q164142,4,protectorate,territory that is protected diplomatically or militarily by a stronger state,Q161243|Q1151405|Q1307214
+Q108886259,4,Formula One event,"series of practice, qualifying, and race sessions which constitutes a weekend in Formula One racing",Q1656682
