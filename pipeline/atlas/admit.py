@@ -161,7 +161,7 @@ def candidates(raw: Path, overrides: dict[str, str]) -> dict[str, dict]:
             c["lat"], c["lon"] = lat, lon
         c["sitelinks"] = max(c["sitelinks"], sl or 0)
         if whs:
-            c["whs"] = whs
+            c["whs"] = norm_whs(whs)
         if wdpa:
             c["wdpa"] = wdpa
     up: dict[str, list[str]] = {}
@@ -188,8 +188,28 @@ def candidates(raw: Path, overrides: dict[str, str]) -> dict[str, dict]:
     return cands
 
 
+def norm_whs(value: object) -> str:
+    """'173rev' is a revised inscription of property 173 (19 such ids in the October 2026 data)."""
+    return re.sub(r"rev$", "", str(value))
+
+
+def load_overrides(path: Path) -> list[dict]:
+    if not path.is_file():
+        return []
+    with open(path, encoding="utf-8", newline="") as fh:
+        return [r for r in csv.DictReader(fh) if r.get("loser_key")]
+
+
+def load_anchors(path: Path) -> dict[str, str]:
+    """R6: qid -> the owner's note (data/anchors/anchors.csv)."""
+    if not path.is_file():
+        return {}
+    with open(path, encoding="utf-8", newline="") as fh:
+        return {r["qid"]: r.get("note", "") for r in csv.DictReader(fh) if r.get("qid")}
+
+
 def admit(cands: dict[str, dict], scores: dict[str, dict], types: list[dict], cfg: dict, top_share: float = S.TOP_SHARE,
-          wdpa: dict | None = None) -> list[dict]:
+          wdpa: dict | None = None, anchors: dict[str, str] | None = None) -> list[dict]:
     a = cfg["admission"]
     out: list[dict] = []
     for c in cands.values():
@@ -214,6 +234,9 @@ def admit(cands: dict[str, dict], scores: dict[str, dict], types: list[dict], cf
                 rules.append("R3")
             if c["sitelinks"] >= a["r4_corroborated_sitelinks"] and (c["heritage"] or c.get("wdpa") or (c.get("voyage") and t["place_type"] != "settlement")):
                 rules.append("R4")
+        if c["qid"] in (anchors or {}):
+            rules.append("R6")                                                # the owner's anchor, labelled with its note
+            c["anchor_note"] = anchors[c["qid"]]
         if not rules:
             c["_floor"] = bool(t)                                            # candidate for R5
             c["_type"] = t
@@ -235,7 +258,7 @@ def admit(cands: dict[str, dict], scores: dict[str, dict], types: list[dict], cf
     return out
 
 
-_GENERIC = re.compile(r"\b(the )?(city|town|municipality|comune|commune|ciudad|ville)( of| de| di)?\b")
+_GENERIC = re.compile(r"\b(the )?(city|town|municipality|comune|commune|ciudad|ville)( of| de| di)?\b|\b(historic|historical|province|ramparts|walls)\b")
 
 
 def base_name(name: str) -> str:
@@ -267,6 +290,11 @@ STUB_SITELINKS = 15                                                  # a World H
 SAME_KIND_KM = 25.0
 
 
+def _holds(p: dict) -> bool:
+    """The place carries a whole World Heritage property: what is inside it is its asset."""
+    return bool(p.get("whs")) and bool(PROPERTY_ID.match(str(p["whs"])))
+
+
 def _ruins(p: dict) -> bool:
     return (p.get("_type") or {}).get("place_type") == "site" and (p.get("_type") or {}).get("kind_hint") == "ruins"
 
@@ -274,7 +302,7 @@ def _ruins(p: dict) -> bool:
 SERIAL_ID = re.compile(r"^(\d+)-")
 
 
-def absorb(places: list[dict]) -> tuple[list[dict], list[dict]]:
+def absorb(places: list[dict], overrides: list[dict] | None = None) -> tuple[list[dict], list[dict]]:
     """D25 / document 1 section 5.2: nested monuments and same-property neighbours become assets of the parent.
 
     1. Items sharing one World Heritage property id: the most cited keeps the place.
@@ -283,6 +311,13 @@ def absorb(places: list[dict]) -> tuple[list[dict], list[dict]]:
        a site with more sitelinks than its parent stays (Pompeii beside the commune of Pompei, Ephesus beside Selcuk).
     Returns the kept places and the absorption log; the owner's list is data/golden/structure.csv."""
     gone: dict[str, tuple[str, str]] = {}
+    keep_kinds: set[str] = set()
+    for o in overrides or []:                                               # 0. the owner's rulings (merge_overrides.csv) come first
+        lo = next((p for p in places if f"qid:{p['qid']}" == o["loser_key"] or o["loser_key"] in {f"qid:{q}" for q in p.get("alt_qids", [])}), None)
+        hi = next((p for p in places if f"qid:{p['qid']}" == o["survivor_key"]), None)
+        if lo and hi and lo is not hi:
+            gone[lo["qid"]] = (hi["qid"], f"owner ruling: {o['reason']}")
+            keep_kinds.add(lo["qid"])
     whole: dict[str, list[dict]] = defaultdict(list)
     for p in places:
         if p.get("whs") and PROPERTY_ID.match(str(p["whs"])):
@@ -328,15 +363,21 @@ def absorb(places: list[dict]) -> tuple[list[dict], list[dict]]:
     for p in places:
         for q in [p["qid"], *p.get("alt_qids", [])]:
             index[q] = p
-    for p in places:
-        t = p.get("_type") or {}
-        if p["qid"] in gone or t.get("place_type") != "site":
-            continue
-        parents = [index[q] for q in p.get("parents", []) if q in index and index[q] is not p and index[q]["sitelinks"] > p["sitelinks"]
-                   and (index[q].get("_type") or {}).get("place_type") in ("settlement", "site")]
-        if parents:
-            top = max(parents, key=lambda a: (a["sitelinks"], a["qid"]))
-            gone[p["qid"]] = (top["qid"], f"located in or part of {top['qid']}")
+    for _ in range(2):                                                      # twice: a place that gained a property by absorption holds it for the second pass
+        for q, (par, _why) in list(gone.items()):
+            owner = index.get(par)
+            child = index.get(q)
+            if owner is not None and child is not None and not owner.get('whs') and child.get('whs'):
+                owner['whs'] = child['whs']
+        for p in places:
+            t = p.get("_type") or {}
+            if p["qid"] in gone or t.get("place_type") != "site":
+                continue
+            parents = [index[q] for q in p.get("parents", []) if q in index and index[q] is not p and (index[q]["sitelinks"] > p["sitelinks"] or _holds(index[q]) and not _holds(p))
+                       and (index[q].get("_type") or {}).get("place_type") in ("settlement", "site")]
+            if parents:
+                top = max(parents, key=lambda a: (a["sitelinks"], a["qid"]))
+                gone[p["qid"]] = (top["qid"], f"located in or part of {top['qid']}")
     by_qid = {p["qid"]: p for p in places}
 
     def root(q: str) -> str:
@@ -353,8 +394,13 @@ def absorb(places: list[dict]) -> tuple[list[dict], list[dict]]:
         child, parent = by_qid[q], by_qid[r]
         parent.setdefault("alt_qids", []).extend([q, *child.get("alt_qids", [])])
         parent["whs"] = parent.get("whs") or child.get("whs")
+        if q in keep_kinds:
+            parent["classes"] = set(parent["classes"]) | set(child["classes"])      # a ruled merge keeps the loser's kinds (Meru on the park)
         parent.setdefault("absorbed", []).append(child.get("label_en") or q)
-        log.append({"child": q, "child_name": child.get("label_en"), "parent": r, "parent_name": parent.get("label_en"), "reason": why})
+        ct, pt = child.get("_type") or {}, parent.get("_type") or {}
+        log.append({"child": q, "child_name": child.get("label_en"), "parent": r, "parent_name": parent.get("label_en"), "reason": why,
+                    "child_type": ct.get("place_type", ""), "parent_type": pt.get("place_type", ""),
+                    "child_hint": ct.get("kind_hint", ""), "parent_hint": pt.get("kind_hint", "")})
     absorbed = {e["child"] for e in log}
     return [p for p in places if p["qid"] not in absorbed], log
 
@@ -408,7 +454,8 @@ def run(raw: Path, out: Path, top_share: float = S.TOP_SHARE) -> dict:
     cands = candidates(raw, overrides)
     items, profiles = S.load(raw)
     scores = S.scores(items, profiles)
-    admitted = admit(cands, scores, types, cfg, top_share, W.load(raw.parent.parent / "wdpa" / "wdpa_reduced.csv"))
+    admitted = admit(cands, scores, types, cfg, top_share, W.load(raw.parent.parent / "wdpa" / "wdpa_reduced.csv"),
+                     load_anchors(ROOT / "data" / "anchors" / "anchors.csv"))
     for c in admitted:
         c["_n"] = notability(c, cfg)
         c["name_en"] = short_name(c.get("label_en") or c.get("label_loc"), [])
@@ -416,10 +463,10 @@ def run(raw: Path, out: Path, top_share: float = S.TOP_SHARE) -> dict:
     for c in places:
         c["_n"] = notability(c, cfg)
         c["name_en"] = c.get("label_en") or c.get("label_loc")
-    places, absorbed = absorb(places)
+    places, absorbed = absorb(places, load_overrides(ROOT / "data" / "anchors" / "merge_overrides.csv"))
     out.mkdir(parents=True, exist_ok=True)
     with open(out / "absorbed.csv", "w", encoding="utf-8", newline="") as fh:
-        w = csv.DictWriter(fh, ["child", "child_name", "parent", "parent_name", "reason"], lineterminator="\n")
+        w = csv.DictWriter(fh, ["child", "child_name", "parent", "parent_name", "reason", "child_type", "parent_type", "child_hint", "parent_hint"], lineterminator="\n")
         w.writeheader()
         w.writerows(absorbed)
     assign_tiers(places, cfg)
@@ -433,7 +480,7 @@ def run(raw: Path, out: Path, top_share: float = S.TOP_SHARE) -> dict:
              "missing": ["pageviews (N has no pageview term)", "WDPA categories (when data/raw/wdpa/wdpa_reduced.csv is absent) and Ramsar", "landcover and relief for kinds", "registry"],
              "top_share": top_share, "built_utc": datetime.now(UTC).isoformat(timespec="seconds"), "raw": raw.name}
     write_bundle(recs, out, f"first-pass-{raw.name}", notes)
-    return {"places": len(recs), "candidates": len(cands), "by_rule": {r: sum(1 for p in recs if r in p["rules"]) for r in ("R1", "R2", "R3", "R4", "R5")}}
+    return {"places": len(recs), "candidates": len(cands), "by_rule": {r: sum(1 for p in recs if r in p["rules"]) for r in ("R1", "R2", "R3", "R4", "R5", "R6")}}
 
 
 def main(argv: list[str] | None = None) -> int:

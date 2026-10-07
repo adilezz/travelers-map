@@ -453,3 +453,11 @@ def test_blank_kinds_need_a_reason_and_stay_rare(oracle, make_ctx):
         p["no_kind_reason"] = "x"
     r = gates.g_kind(make_ctx(many, name="k3"))
     assert not r.passed and "without a kind" in r.detail
+
+
+def test_an_area_row_may_match_several_places(oracle, make_ctx):
+    """D35: a park, its mountain and its islands are several places; only a site or settlement row has duplicates."""
+    park = named(oracle, "Serengeti National Park")
+    assert park["type"] == "area"
+    twin = {**park, "place_id": pid("twinpark"), "qid": "Q2", "name_en": "Serengeti National Park"}
+    assert gates.g_landmark(make_ctx(clone(oracle) + [twin])).passed

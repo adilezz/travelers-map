@@ -53,9 +53,24 @@ def diagnose(raw: Path, bundle: Path, golden_path: Path) -> list[tuple[str, str,
     return out
 
 
-def report(rows: list[tuple[str, str, str, str]]) -> str:
+def recall_both(bundle: Path, golden_path: Path) -> tuple[int, int, int]:
+    """(positives, matched with anchors, matched by the rules alone). A match whose only rule is R6 is an anchor."""
+    from atlas import matching as M
+    places = [p for f in sorted((bundle / "places").glob("*.json")) for p in json.loads(f.read_text(encoding="utf-8"))["places"]]
+    rows = G.load(golden_path)
+    a = M.assign(rows, places)
+    anchored = sum(1 for p in a.matched.values() if p.get("rules") == ["R6"])
+    return sum(1 for r in rows if r.row_kind == "positive"), len(a.matched), len(a.matched) - anchored
+
+
+def report(rows: list[tuple[str, str, str, str]], recall: tuple[int, int, int] | None = None) -> str:
     n = Counter(r[2] for r in rows)
-    lines = ["# First pass: golden places not in the bundle", "",
+    head = []
+    if recall:
+        total, with_anchors, by_rules = recall
+        head = [f"Recall: by the rules alone {by_rules} of {total} ({by_rules / total:.1%}); with the owner's anchors "
+                f"{with_anchors} of {total} ({with_anchors / total:.1%}). Anchors are labelled \"anchored after miss\" (D34).", ""]
+    lines = ["# First pass: golden places not in the bundle", "", *head,
              "Causes: " + ", ".join(f"{k} {v}" for k, v in sorted(n.items())), "",
              "| Golden | Place | Cause | Detail |", "|---|---|---|---|"]
     lines += [f"| {a} | {b} | {c} | {d} |" for a, b, c, d in rows]
@@ -69,7 +84,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--golden", type=Path, default=ROOT / "data" / "golden" / "golden.csv")
     ap.add_argument("--report", type=Path)
     a = ap.parse_args(argv)
-    text = report(diagnose(a.raw, a.bundle, a.golden))
+    text = report(diagnose(a.raw, a.bundle, a.golden), recall_both(a.bundle, a.golden))
     print(text)
     if a.report:
         a.report.write_text(text, encoding="utf-8")

@@ -81,7 +81,7 @@ def assign(rows: list[G.Row], places: list[dict]) -> Assignment:
         if r.golden_id not in out.matched:
             out.missed.append(r)
             continue
-        extra = [p for _d, p in candidates(r, places, loose=True) if id(p) not in used]
+        extra = [] if r.type == "area" else [p for _d, p in candidates(r, places, loose=True) if id(p) not in used]   # D35: an area spans several places
         if extra:
             out.duplicates[r.golden_id] = extra
     return out

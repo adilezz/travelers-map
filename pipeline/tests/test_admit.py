@@ -95,3 +95,33 @@ def test_a_protected_area_and_its_mountain_are_one_destination():
         _p("Park", 2.5, "area", sitelinks=47, lat=-3.07, lon=37.37, iso3="TZA", whs="403")
     kept, log = A.absorb([mount, park])
     assert [p["qid"] for p in kept] == ["Mount"] and mount["whs"] == "403" and log[0]["child"] == "Park"
+
+
+def test_revised_inscriptions_are_whole_properties():
+    assert A.norm_whs("173rev") == "173" and A.PROPERTY_ID.match(A.norm_whs("173rev")) and not A.PROPERTY_ID.match("874.594")
+
+
+def test_owner_anchors_enter_by_r6_and_stay_labelled():
+    cs = {"Q9": cand("Q9", 7, ["Qsite"])}
+    out = A.admit(cs, {}, TYPES, CFG, anchors={"Q9": "anchored after miss"})
+    assert out[0]["rules"] == ["R6"] and out[0]["anchor_note"] == "anchored after miss"
+
+
+def test_owner_rulings_merge_and_keep_the_losers_kinds_and_property():
+    town = _p("Town", 2.0, "settlement", whs="173", classes={"Qa"})
+    city = _p("City", 2.5, "settlement", classes={"Qb"})
+    kept, log = A.absorb([town, city], [{"loser_key": "qid:City", "survivor_key": "qid:Town", "reason": "one destination"}])
+    assert [p["qid"] for p in kept] == ["Town"] and town["classes"] == {"Qa", "Qb"} and town["whs"] == "173"
+    assert log[0]["reason"].startswith("owner ruling")
+
+
+def test_a_site_inside_a_world_heritage_place_is_its_asset_even_if_better_cited():
+    valley = _p("Valley", 2.0, "site", sitelinks=88, parents=["Thebes"])
+    thebes = _p("Thebes", 1.9, "site", sitelinks=82, whs="87")
+    kept, _ = A.absorb([valley, thebes])
+    assert [p["qid"] for p in kept] == ["Thebes"]
+
+
+def test_descriptors_do_not_make_a_second_name():
+    assert A.base_name("Historic City of Toledo") == A.base_name("Toledo") and A.base_name("Konya Province") == "konya"
+    assert A.base_name("Essaouira Ramparts") == "essaouira"
