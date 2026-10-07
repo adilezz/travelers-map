@@ -1,0 +1,33 @@
+class_qid,label,place_type,kind_hint,place_like,note
+Q9259,World Heritage Site,site,,yes,
+Q839954,archaeological site,site,ruins,yes,
+Q109607,ruins,site,ruins,yes,
+Q39715,lighthouse,site,maritime,yes,
+Q34038,waterfall,site,water,yes,
+Q1370598,structure of worship,site,sacred,yes,
+Q16970,church building,site,sacred,yes,
+Q32815,mosque,site,sacred,yes,
+Q44539,temple,site,sacred,yes,
+Q570116,tourist attraction,site,,yes,
+Q23413,castle,site,,yes,
+Q46169,national park,area,wildlife,yes,
+Q179049,nature reserve,area,wildlife,yes,
+Q8502,mountain,area,mountain,yes,
+Q8072,volcano,area,volcanic,yes,
+Q23397,lake,area,water,yes,
+Q4022,river,area,water,yes,
+Q40080,beach,area,seaside,yes,
+Q45776,fjord,area,seaside,yes,
+Q23442,island,area,seaside,yes,
+Q515,city,settlement,,yes,
+Q1549591,big city,settlement,metropolis,yes,
+Q3957,town,settlement,,yes,
+Q532,village,settlement,rural,yes,
+Q486972,human settlement,settlement,,yes,
+Q484170,commune of France,settlement,,yes,mass class (D32)
+Q747074,comune of Italy,settlement,,yes,mass class (D32)
+Q2074737,municipality of Spain,settlement,,yes,mass class (D32)
+Q21869758,commune nouvelle of France,settlement,,yes,mass class (D32)
+Q15284,municipality,settlement,,yes,
+Q5119,capital city,settlement,capital,yes,
+Q44782,port,settlement,maritime,yes,

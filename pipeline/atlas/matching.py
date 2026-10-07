@@ -25,29 +25,34 @@ def place_names(p: dict) -> set[str]:
     return names
 
 
+QID_MAX_KM = 150.0   # an area or route has a footprint, not a point: with a QID its anchor may lie this far
+
+
 def candidates(row: G.Row, places: list[dict], loose: bool = False) -> list[tuple[float, dict]]:
-    """Places that could be this row: same country (ISO3), type, within tol_km, and the QID
-    when the row has one, otherwise a listed name. `loose` accepts either (for duplicate
-    detection: a second Florence under another QID is still a duplicate)."""
+    """Places that could be this row. When the row has a QID and the place carries it (as its QID or one
+    of its merged keys), that is identity: the type may differ (D33) and, for an area or route, the anchor may lie up to QID_MAX_KM
+    away; a site or settlement must still lie within tol_km. Otherwise: same country (ISO3), type, within tol_km, and a listed name. `loose` also
+    accepts a name match when the row has a QID, for duplicate detection (a second Florence under
+    another QID is still a duplicate)."""
     out = []
     for p in places:
-        if not usable(p) or p["iso3"] != row.iso3 or p["type"] != row.type:
+        if not usable(p) or p["iso3"] != row.iso3:
             continue
         if row.lat is None or row.lon is None or row.tol_km is None:
             continue
-        d = haversine_km(row.lat, row.lon, p["lat"], p["lon"])
-        if d > row.tol_km:
-            continue
-        by_qid = bool(row.qid) and p.get("qid") == row.qid
+        by_qid = bool(row.qid) and (p.get("qid") == row.qid or f"qid:{row.qid}" in (p.get("keys") or ()))
         by_name = bool(row.names & place_names(p))
-        if loose:
-            if not (by_qid or by_name):
+        d = haversine_km(row.lat, row.lon, p["lat"], p["lon"])
+        if by_qid:
+            if d > (max(row.tol_km, QID_MAX_KM) if row.type in ("area", "route") else row.tol_km):
                 continue
-        elif row.qid:
-            if not by_qid:
+        else:
+            if p["type"] != row.type or d > row.tol_km:
                 continue
-        elif not by_name:
-            continue
+            if row.qid and not (loose and by_name):
+                continue
+            if not row.qid and not by_name:
+                continue
         out.append((d, p))
     return out
 

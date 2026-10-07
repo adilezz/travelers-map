@@ -63,6 +63,10 @@ Proposed rule R2 (for the owner's approval, then document 1 section 5): an item 
 
 `atlas.details` selects the QIDs worth describing (15 or more sitelinks, 100,000 or more inhabitants, a World Heritage or protected-area id, a transport node, or a golden place): 24,875 QIDs, about 500 requests of 50. For each it keeps English and local labels and aliases, the English description, instance-of, located-in, part-of, heritage designations, capital-of with an "ended" flag (current against former capital), inception and dissolution years, the official site, the English Wikipedia title (the key to pageviews), and `redirected_to` when Wikidata has merged the item since the extraction. Resumable; failed batches are listed. Commands: `make details`, then `make details-pack`.
 
+## First admission pass (7 October)
+
+`python -m atlas.admit` builds `build/first` (git-ignored): 3,732 places (FRA 1,489, ITA 865, ESP 522, TUR 416, EGY 152, PER 93, MAR 87, TZA 73, JOR 35). G-LANDMARK is 155 of 184 (84.2 %); `data/golden/first_pass.md` lists the 29 misses: 21 have no place-like class in `data/rules/types.csv` (regions, valleys, canyons, oases, islands), 8 fall below the floors (no independent signal for R4, WDPA not yet ingested). Next: owner runs `make classlabels`, the typing table is widened, absorption (D25) and kind rules follow, then S3 (WDPA, Wikivoyage) and S4 (pageviews). Ids stay provisional until G-LANDMARK passes.
+
 ## Order and effort
 
 1. **S1 first, today.** It is the only stage that decides what the golden set can be matched against. About 693 queries at a polite one or two seconds each; I estimate 30 to 90 minutes if the public endpoint behaves, and the run is resumable.

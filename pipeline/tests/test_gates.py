@@ -53,7 +53,11 @@ def test_landmark_fails_when_a_regression_landmark_is_missing(oracle, make_ctx):
 def test_landmark_requires_the_right_type_and_country(oracle, make_ctx):
     wrong_type = clone(oracle)
     named(wrong_type, "Petra")["type"] = "settlement"
-    assert not gates.g_landmark(make_ctx(wrong_type)).passed
+    assert gates.g_landmark(make_ctx(wrong_type)).passed            # identity is the QID; the type may differ (D33)
+    no_qid = clone(oracle)
+    petra = named(no_qid, "Petra")
+    petra.update(type="settlement", qid=None, keys=[])
+    assert not gates.g_landmark(make_ctx(no_qid, name="nq")).passed   # by name alone the type must match
     wrong_country = clone(oracle)
     named(wrong_country, "Petra")["iso3"] = "EGY"
     assert not gates.g_landmark(make_ctx(wrong_country)).passed
