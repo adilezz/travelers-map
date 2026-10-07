@@ -1,13 +1,13 @@
 # Attention signal calibration (2026-10-05)
 
-Mass classes (at least 1000 members in a country): 4; admitted by attention if in the top 2% of the class in the country.
+Mass classes (at least 1000 members in a country): 4; admitted by attention if in the top 3% of the class in the country.
 
 | Country | Class | Members | Admitted |
 |---|---|---|---|
-| ESP | Q2074737 | 6203 | 124 |
+| ESP | Q2074737 | 6203 | 186 |
 | FRA | Q21869758 | 2350 | 0 |
-| FRA | Q484170 | 37407 | 748 |
-| ITA | Q747074 | 7821 | 156 |
+| FRA | Q484170 | 37407 | 1122 |
+| ITA | Q747074 | 7821 | 235 |
 
 ## Golden places that belong to a mass class (33)
 

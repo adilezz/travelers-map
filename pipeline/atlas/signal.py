@@ -24,7 +24,7 @@ from atlas import golden as G
 
 ROOT = Path(__file__).resolve().parents[2]
 MASS_MIN = 1000      # members in one country that make a class "mass"
-TOP_SHARE = 0.02     # share of a mass class admitted by attention
+TOP_SHARE = 0.03     # share of a mass class admitted by attention (owner decision, 7 Oct 2026: a safety margin above Alberobello)
 SISTER = {"commonswiki", "specieswiki", "metawiki", "mediawikiwiki", "wikidatawiki"}
 
 

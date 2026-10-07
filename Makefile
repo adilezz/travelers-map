@@ -5,7 +5,7 @@ BUNDLE ?=
 PREVIOUS ?=
 ARGS ?=
 
-.PHONY: help test lint verify release-verify freeze qids qids-apply classes pin-check extract-plan extract extract-pack recall details details-pack profile signal
+.PHONY: help test lint verify release-verify freeze qids qids-apply classes pin-check extract-plan extract extract-pack recall details details-pack profile signal classlabels
 OUT ?= data/raw/wikidata/$(shell date -u +%F)
 
 help:
@@ -25,6 +25,7 @@ help:
 	@echo "make details-pack    convert the details to Parquet and pin them"
 	@echo "make profile         (owner, laptop) fetch which Wikipedias carry each candidate (about 1,700 requests; resumable), then pack"
 	@echo "make signal          calibrate the attention signal against the golden set (data/golden/s1_signal.md)"
+	@echo "make classlabels     (owner, laptop) labels and parents of the 600 most frequent candidate classes -> data/rules/class_labels.csv"
 	@echo "make pin-check       check that every pinned input is present and unchanged"
 	@echo "make freeze          freeze the owner-written holdout by hash (see data/holdout/README.md)"
 	@echo "ARGS=--prototype     accept skipped checks for a declared prototype build"
@@ -79,3 +80,6 @@ profile:
 
 signal:
 	$(PY) -m atlas.signal --report data/golden/s1_signal.md
+
+classlabels:
+	$(PY) -m atlas.classlabels

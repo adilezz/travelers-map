@@ -101,7 +101,7 @@ A candidate is any item with a coordinate (or representative point) and a place-
 | Rule | Condition (initial values) |
 |---|---|
 | R1 Institutional | World Heritage property; IUCN Ia–II protected area ≥ 100 km²; UNESCO biosphere core, global geopark; Ramsar site ≥ 100 km² |
-| R2 Attention | Wikipedia sitelinks ≥ 40 |
+| R2 Attention | Wikipedia sitelinks ≥ 40 for an ordinary item. For an item of a **mass class** (a class with 1,000 or more members in its country: communes, comuni, municipalities) raw counts are meaningless, because bot-written Wikipedias give every municipality about 25 articles; there the item must rank in the **top 3 % of its class in its country** by the discrimination score *D* (`atlas.signal`, D32) |
 | R3 City | Population ≥ 100,000 (metropolis anchor) |
 | R4 Corroborated | Sitelinks ≥ 15 **and** one independent signal (a Wikivoyage destination article, an intangible-heritage location, a national top-tier designation, an IUCN III–V area, high OSM tourism density) |
 | R5 Country floor | The top five by notability *N* in each sovereign state; the top two in each dependency and territory |
