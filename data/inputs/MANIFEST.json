@@ -31,8 +31,8 @@
         },
         {
           "path": "wikidata/2026-10-05/details.parquet",
-          "bytes": 6887738,
-          "sha256": "d12bed59a09d8988b1f26f8f061812b88e76336128456d5c143f4587279ed348"
+          "bytes": 7169922,
+          "sha256": "313a59fb473ace2aec1750a2775068d9c83696a126d8962db9e4d8f9052d1c59"
         },
         {
           "path": "wikidata/2026-10-05/institutional.parquet",
