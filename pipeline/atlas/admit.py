@@ -23,6 +23,10 @@ from collections import defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
 
+from atlas import capitals as CAP
+from atlas import geofacts as GF
+from atlas import kindrules as KR
+from atlas import kinds as K
 from atlas import pageviews as PV
 from atlas import signal as S
 from atlas import wdpa as W
@@ -216,14 +220,15 @@ def candidates(raw: Path, overrides: dict[str, str]) -> dict[str, dict]:
         if wdpa:
             c["wdpa"] = wdpa
     up: dict[str, list[str]] = {}
-    for r in rows("details", "qid, aliases_en, aliases_loc, instance_of, heritage, label_en, label_loc, located_in, part_of"):
-        qid, a_en, a_loc, inst, her, lab, loc, located, part = r
+    for r in rows("details", "qid, aliases_en, aliases_loc, instance_of, heritage, label_en, label_loc, located_in, part_of, capital_of"):
+        qid, a_en, a_loc, inst, her, lab, loc, located, part, cap = r
         up[qid] = list(dict.fromkeys([*(located or []), *(part or [])]))
         if qid in cands:
             c = cands[qid]
             c["aliases"] = list(a_en or []) + list(a_loc or [])
             c["classes"] |= set(inst or [])
             c["heritage"] = list(her or [])
+            c["capital_of"] = [dict(x) for x in (cap or [])]
             c["label_en"] = c.get("label_en") or lab
             c["label_loc"] = c.get("label_loc") or loc
     for qid, c in cands.items():                                              # ancestors up to three hops (Hagia Sophia, Fatih, Istanbul)
@@ -378,6 +383,19 @@ def base_name(name: str) -> str:
     return " ".join(_GENERIC.sub(" ", fold(name)).split()) or fold(name)
 
 
+NESTED = ("located in", "ruins within", "serial component")        # absorbed as an asset, not as the same destination
+
+
+def _take_members(parent: dict, child: dict, nested: bool = False) -> None:
+    """Remember what the merged items were (their classes and capital-of statements) so kinds can cite them.
+    A nested asset (a mosque in Cairo) can only support a kind; an identity merge (Thebes into Luxor) can create one."""
+    m = parent.setdefault("members", {})
+    m[child["qid"]] = {"classes": set(child.get("classes", ())), "capital_of": child.get("capital_of", []), "nested": nested,
+                       "sitelinks": child.get("sitelinks", 0)}
+    for q, x in (child.get("members") or {}).items():
+        m[q] = {**x, "nested": x.get("nested", False) or nested}
+
+
 def merge_duplicates(places: list[dict], same_name_km: float) -> list[dict]:
     """Same folded name within `same_name_km` in one country: keep the one with most sitelinks (document 1 §5.1)."""
     by_key: dict[tuple[str, str], list[dict]] = defaultdict(list)
@@ -393,6 +411,7 @@ def merge_duplicates(places: list[dict], same_name_km: float) -> list[dict]:
                 if b["qid"] not in drop and haversine_km(a["lat"], a["lon"], b["lat"], b["lon"]) <= same_name_km:
                     drop.add(b["qid"])
                     a.setdefault("alt_qids", []).append(b["qid"])
+                    _take_members(a, b)
                     a["whs"] = better_whs(a.get("whs"), b.get("whs"))
     return [p for p in places if p["qid"] not in drop]
 
@@ -533,6 +552,7 @@ def absorb(places: list[dict], overrides: list[dict] | None = None, admin: set[s
             continue
         child, parent = by_qid[q], by_qid[r]
         parent.setdefault("alt_qids", []).extend([q, *child.get("alt_qids", [])])
+        _take_members(parent, child, why.startswith(NESTED))
         if not why.startswith("located in") and not why.startswith("administrative province"):
             parent["whs"] = better_whs(parent.get("whs"), child.get("whs"))   # a nested site does not give its city the property
         if q in keep_kinds:
@@ -546,15 +566,25 @@ def absorb(places: list[dict], overrides: list[dict] | None = None, admin: set[s
     return [p for p in places if p["qid"] not in absorbed], log
 
 
-def record(c: dict, place_id: str, types_row: dict | None, types: list[dict]) -> dict:
+def record(c: dict, place_id: str, types_row: dict | None, types: list[dict], selection=None, hits: dict | None = None) -> dict:
     qids = [c["qid"], *c.get("alt_qids", [])]
     ev = [{"asset_id": f"wd:{q}", "source": "wikidata", "url": f"https://www.wikidata.org/wiki/{q}",
            "retrieved": RETRIEVED, "source_key": f"qid:{q}"} for q in qids]
     if c.get("whs") and PROPERTY_ID.match(str(c["whs"])):
         ev.append({"asset_id": f"whs:{c['whs']}", "source": "unesco_whs", "url": f"https://whc.unesco.org/en/list/{c['whs']}",
                    "retrieved": RETRIEVED, "source_key": f"whs:{c['whs']}"})
-    hints = kind_hints(sorted(c["classes"]), types)
-    kinds = [{"kind": k, "rule": "class-hint", "evidence": [ev[0]["asset_id"]]} for k in hints]
+    kinds: list[dict] = []
+    have = {e["asset_id"] for e in ev}
+    for ch in (selection.kept if selection else []):
+        ids: list[str] = []
+        for rid in ch.rule_ids:
+            ids += (hits or {}).get(rid, [])
+        ids = list(dict.fromkeys(ids))
+        for a in ids:
+            if a not in have:
+                ev.append(_asset(a, c))
+                have.add(a)
+        kinds.append({"kind": ch.kind, "rule": "+".join(ch.rule_ids), "strength": ch.strength, "evidence": ids})
     full = " ".join((c.get("label_en") or c.get("label_loc")).split())
     name = short_name(full, [x for x in [c.get("label_loc"), *c.get("aliases", [])] if x])
     aliases = sorted({x for x in [full, c.get("label_loc"), *c.get("aliases", [])] if x and x != name})
@@ -566,9 +596,22 @@ def record(c: dict, place_id: str, types_row: dict | None, types: list[dict]) ->
         r["whs_id"] = c["whs"]
     if c.get("population"):
         r["population"] = c["population"]
+    if selection is not None:
+        r["cut_kinds"] = selection.cut
+        r["crowded"] = selection.crowded
     if not kinds:
-        r["no_kind_reason"] = "kinds pending: the rule engine needs landcover, relief and WDPA facts (M2)"
+        r["no_kind_reason"] = "no kind rule fired on the stored facts"
     return r
+
+
+def _asset(asset_id: str, c: dict) -> dict:
+    """The evidence record behind a kind rule that is not a Wikidata class."""
+    kind, _, key = asset_id.partition(":")
+    if kind == "geo":
+        return {"asset_id": asset_id, "source": "geofacts", "retrieved": RETRIEVED, "source_key": asset_id,
+                "url": "https://github.com/adilezz/travelers-map/blob/main/pipeline/atlas/geofacts.py"}
+    return {"asset_id": asset_id, "source": "wdpa", "retrieved": RETRIEVED, "source_key": asset_id,
+            "url": f"https://www.protectedplanet.net/{key}"}
 
 
 def write_bundle(places: list[dict], out: Path, build_id: str, notes: dict) -> None:
@@ -634,11 +677,17 @@ def run(raw: Path, out: Path, top_share: float = S.TOP_SHARE) -> dict:
     reg = Registry()
     rng = random.Random(20261007)                          # provisional ids: the registry is not committed (D21)
     recs = []
+    ctx = KR.Context(KR.load_rules(), KR.load_class_sets(), KR.load_params(), KR.state_classes_from(raw),
+                     W.load(raw.parent.parent / "wdpa" / "wdpa_reduced.csv"),
+                     GF.load(raw.parent.parent / "geofacts" / raw.name / "geofacts.parquet"), KR.city_index_from(places),
+                     KR.whs_titles_from(), CAP.load(raw / "capitals.parquet"))
+    pairs = K.load_pairs(ROOT / "data" / "rules" / "kind_pairs.csv")
     for c in sorted(places, key=lambda c: c["qid"]):
         pid = mint_or_reuse(reg, [f"qid:{c['qid']}"], "first-pass", rng)
-        recs.append(record(c, pid, c["_type"], types))
+        selection, hits = KR.kinds_for(c, ctx, pairs)
+        recs.append(record(c, pid, c["_type"], types, selection, hits))
     notes = {"first_pass": True, "provisional_ids": True, "scope": "nine prototype countries",
-             "missing": ([] if with_pv else ["pageviews (N has no pageview term)"]) + [ "WDPA categories (when data/raw/wdpa/wdpa_reduced.csv is absent) and Ramsar", "landcover and relief for kinds", "registry"],
+             "missing": ([] if with_pv else ["pageviews (N has no pageview term)"]) + ["WDPA categories (when data/raw/wdpa/wdpa_reduced.csv is absent) and Ramsar", "OSM and UNESCO criteria for the kind rules marked not evaluated", "registry"],
              "top_share": top_share, "built_utc": datetime.now(UTC).isoformat(timespec="seconds"), "raw": raw.name}
     write_bundle(recs, out, f"first-pass-{raw.name}", notes)
     return {"places": len(recs), "candidates": len(cands), "by_rule": {r: sum(1 for p in recs if r in p["rules"]) for r in ("R1", "R2", "R3", "R4", "R5", "R6")}}

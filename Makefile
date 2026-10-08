@@ -5,7 +5,7 @@ BUNDLE ?=
 PREVIOUS ?=
 ARGS ?=
 
-.PHONY: tiercal admit help test lint verify release-verify freeze qids qids-apply classes pin-check extract-plan extract extract-pack recall details details-pack profile signal classlabels pageviews pageviews-pack
+.PHONY: capitals capitals-pack geofacts tiercal admit help test lint verify release-verify freeze qids qids-apply classes pin-check extract-plan extract extract-pack recall details details-pack profile signal classlabels pageviews pageviews-pack
 OUT ?= data/raw/wikidata/$(shell date -u +%F)
 
 help:
@@ -23,6 +23,9 @@ help:
 	@echo "make recall           how many golden places the extraction found (data/golden/s1_recall.md)"
 	@echo "make details         (owner, laptop) fetch labels, aliases, part-of and dates for the candidates; resumable"
 	@echo "make admit            build the first bundle in build/first and the review lists in data/review"
+	@echo "make capitals         (owner, laptop) which states each place is or was the capital of (Wikidata P36); resumable"
+	@echo "make capitals-pack    convert to Parquet and pin"
+	@echo "make geofacts         relief, land cover and distance to the coast per place (public AWS and Natural Earth data); resumable"
 	@echo "make pageviews       (owner, laptop) twelve months of English pageviews for the places in build/first; resumable"
 	@echo "make pageviews-pack  convert the pageviews to Parquet and pin them"
 	@echo "make details-pack    convert the details to Parquet and pin them"
@@ -86,6 +89,15 @@ admit:
 
 tiercal:
 	$(PY) -m atlas.tiercal --report data/golden/tier_calibration.md
+
+capitals:
+	$(PY) -m atlas.capitals run
+
+capitals-pack:
+	$(PY) -m atlas.capitals parquet && $(PY) -m atlas.capitals pin
+
+geofacts:
+	$(PY) -m atlas.geofacts run && $(PY) -m atlas.geofacts parquet && $(PY) -m atlas.geofacts pin
 
 pageviews:
 	$(PY) -m atlas.pageviews run

@@ -1,22 +1,29 @@
 rule_id,kind,source,test,strength,role,excludes,calibrated,rationale
-R01,capital,wikidata,"P1376 (capital of) a sovereign state, no end time (current capital); Rome, Cairo, Amman",0.90,core,,no,"A current capital of a sovereign state"
-R02,capital,wikidata,"former capital: P1376 with an end time, or class former capital, of an empire or sovereign state",0.80,core,,no,"A former seat of an empire or sovereign state; sub-state seats do not count"
-R03,seaside,wikidata,"P31/P279* in {beach Q40080, fjord Q45776, coral reef Q184358, lagoon Q187223, sea cliff}, or island Q23442 within 2 km of the sea",0.80,core,,no,"A beach, scenic coast, island, reef or lagoon"
-R04,seaside,coast,"centroid within 1 km of the coastline and an OSM natural=beach of 500 m or more within 5 km",0.65,support,,no,"Coastline plus a mapped beach"
-R05,maritime,wikidata,"P31/P279* in {port Q44782, harbour Q283202, lighthouse Q39715}, within 3 km of the sea",0.85,core,,no,"A port or harbour city"
-R06,maritime,osm,"harbour=* or landuse=port or man_made=lighthouse within 3 km, and a quay or pier of 1 km or more",0.60,support,,no,"Mapped harbour infrastructure"
-R07,ruins,wikidata,"P31/P279* in {ruins Q109607, archaeological site Q839954, ancient city}",0.80,core,,no,"A civilisation no longer living there"
-R08,ruins,osm,"historic=ruins or historic=archaeological_site",0.70,support,,no,"Mapped ruins"
-R09,ruins,unesco,"cultural criterion iii or iv, inception before 1500, no continuing urban fabric",0.70,support,,no,"UNESCO cultural value of a vanished civilisation"
-R10,sacred,wikidata,"P31/P279* in {place of worship Q1370598, pilgrimage site}",0.80,core,,no,"A place of worship or pilgrimage"
-R11,sacred,unesco,"criterion vi with a religious association",0.70,support,,no,"Outstanding religious association"
-R12,wildlife,iucn,"IUCN Ia, Ib, II or IV area overlapping the footprint by 50 % or more",0.85,core,rural,no,"The place is or is mostly a protected area; a city beside a park is not wildlife"
-R13,desert,landcover,"ESA WorldCover bare or sparse over 60 % of a 20 km buffer, and aridity index below 0.2 or Koppen BW",0.80,core,,no,"Desert and dry plains"
-R14,mountain,relief,"relief of 1000 m or more within 10 km, or a summit of 2500 m or more in the footprint",0.80,core,,no,"A mountain landscape"
-R15,volcanic,wikidata,"P31/P279* in {volcano, volcanic field, geyser field}, part of the place itself",0.85,core,,no,"A volcano or geothermal field is part of it"
-R16,metropolis,pop,"population 1,000,000 or more, or a 300 km2 urban area (GHSL)",0.85,core,,no,"A big modern city"
-R17,old_town,unesco,"historic centre or old town property, and people live in it",0.85,core,,no,"Protected living urban fabric"
+R01,capital,wikidata,"P1376 (capital of) a sovereign state, no end time (current capital); Rome, Cairo, Amman",0.90,core,,no,A current capital of a sovereign state
+R02,capital,wikidata,"former capital: P1376 with an end time, or class former capital, of an empire or sovereign state",0.80,core,,no,A former seat of an empire or sovereign state; sub-state seats do not count
+R03,seaside,wikidata,"class beach, fjord, reef, lagoon, coast, cape, bay, gulf, peninsula, atoll, archipelago or island (kind_classes.csv R03)",0.80,core,,no,"A beach, scenic coast, island, reef or lagoon"
+R03b,seaside,coast,the pin within 2 km of the Natural Earth coastline (a stand-in for the OSM beach rule R04 until S3d),0.65,core,,no,The sea is the setting
+R04,seaside,coast,"centroid within 1 km of the coastline and an OSM natural=beach of 500 m or more within 5 km [needs OSM, S3d: not evaluated yet]",0.65,support,,no,Coastline plus a mapped beach
+R05,maritime,wikidata,"class port, harbour, port city or lighthouse, and the pin within 3 km of the coastline",0.85,core,,no,A port or harbour city
+R05b,maritime,coast,"a settlement of 100,000 inhabitants or more within 3 km of the coastline (a stand-in for the OSM harbour rule R06 until S3d)",0.60,core,,no,A coastal city of that size is a port
+R06,maritime,osm,"harbour=* or landuse=port or man_made=lighthouse within 3 km, and a quay or pier of 1 km or more [needs OSM, S3d: not evaluated yet]",0.60,support,,no,Mapped harbour infrastructure
+R07,ruins,wikidata,"P31/P279* in {ruins Q109607, archaeological site Q839954, ancient city}",0.80,core,,no,A civilisation no longer living there
+R08,ruins,osm,"historic=ruins or historic=archaeological_site [needs OSM, S3d: not evaluated yet]",0.70,support,,no,Mapped ruins
+R09,ruins,unesco,"cultural criterion iii or iv, inception before 1500, no continuing urban fabric [needs the UNESCO criteria, not ingested: not evaluated yet]",0.70,support,,no,UNESCO cultural value of a vanished civilisation
+R10,sacred,wikidata,"P31/P279* in {place of worship Q1370598, pilgrimage site}",0.80,core,,no,A place of worship or pilgrimage
+R11,sacred,unesco,"criterion vi with a religious association [needs the UNESCO criteria, not ingested: not evaluated yet]",0.70,support,,no,Outstanding religious association
+R12,wildlife,iucn,"WDPA category Ia, Ib, II or IV and the place IS that protected area (its WDPA id); polygon overlap needs the WDPA polygons",0.85,core,rural,no,The place is or is mostly a protected area; a city beside a park is not wildlife
+R12b,wildlife,wikidata,"class national park, nature reserve, biosphere reserve or protected area on the place itself (kind_classes.csv R12b)",0.80,core,rural,no,A national park or reserve by class; the IUCN category (R12) raises it when WDPA is present
+R13,desert,landcover,ESA WorldCover bare or sparse over 60 % of a 20 km buffer (the aridity index is not used yet: no open aridity raster is ingested),0.80,core,,no,Desert and dry plains
+R13b,desert,wikidata,"class desert, oasis, depression, erg or dune (kind_classes.csv R13b)",0.80,core,,no,A desert landform named by Wikidata
+R14,mountain,relief,"relief of 1000 m or more within 10 km, or a summit of 2500 m or more in the footprint",0.80,core,,no,A mountain landscape
+R14b,mountain,wikidata,"class mountain, mountain range, massif, pass, summit, hill or ski resort (kind_classes.csv R14b)",0.75,core,,no,A mountain feature named by Wikidata
+R15,volcanic,wikidata,"P31/P279* in {volcano, volcanic field, geyser field}, part of the place itself",0.85,core,,no,A volcano or geothermal field is part of it
+R16,metropolis,pop,"population 1,000,000 or more, or a 300 km2 urban area (GHSL)",0.85,core,,no,A big modern city
+R17,old_town,unesco,"a whole World Heritage property whose UNESCO title names a historic centre, old town, medina, walled city or historic city, held by a settlement (the title is the UNESCO asset's text; the place's own name is never read)",0.85,core,,no,Protected living urban fabric
+R17b,old_town,wikidata,"class old town (Q676050) on the place or an identity-merged item, and it is a settlement",0.75,core,,no,Protected or recognised historic urban fabric named by Wikidata
 R18,water,wikidata,"freshwater lake, river, delta, wetland or waterfall of 5 km2 or more is the destination or its main setting",0.80,core,,no,"Lakes, rivers and waterfalls"
-R19,forest,landcover,"tree cover over 50 % of a 10 km buffer, or a protected forest",0.80,core,,no,"Forest and jungle"
-R20,rural,landcover,"cropland or pasture over 60 % of a 10 km buffer, density under 100/km2, no city of 50k within 10 km",0.65,core,,no,"Countryside and villages"
-R21,metropolis,pop,"fallback: population 100,000 or more, used only when no other kind survives (an ordinary modern city: Lille, Nantes, Murcia, Eskişehir)",0.60,fallback,,no,"D26: every ordinary city carries a kind"
+R18b,water,landcover,water and wetland over 15 % of a 10 km buffer (WorldCover) and the pin at least 5 km from the sea,0.60,core,,no,Freshwater is the setting
+R19,forest,landcover,"tree cover over 50 % of a 10 km buffer, or a protected forest",0.80,core,,no,Forest and jungle
+R20,rural,landcover,"cropland plus grassland over 60 % of a 10 km buffer (WorldCover), no other place of 50,000 inhabitants within 10 km; density is not used yet",0.65,core,,no,Countryside and villages
+R21,metropolis,pop,"fallback: population 100,000 or more, used only when no other kind survives (an ordinary modern city: Lille, Nantes, Murcia, Eskişehir)",0.60,fallback,,no,D26: every ordinary city carries a kind

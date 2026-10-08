@@ -1,0 +1,25 @@
+{
+  "_note": "Thresholds of the kind rules (document 1 section 7.1). Initial values, calibrated against the hand-labelled sample in M3.",
+  "relief_10km_m": 1500,
+  "summit_2km_m": 2500,
+  "bare_20km": 0.75,
+  "tree_10km": 0.7,
+  "open_land_10km": 0.75,
+  "big_city_pop": 50000,
+  "big_city_km": 10,
+  "maritime_coast_km": 3,
+  "metropolis_pop": 1000000,
+  "fallback_pop": 100000,
+  "strict_iucn": [
+    "Ia",
+    "Ib",
+    "II",
+    "IV"
+  ],
+  "seaside_coast_km": 2,
+  "maritime_city_pop": 100000,
+  "water_share": 0.15,
+  "water_min_coast_km": 5,
+  "old_town_title": "historic (centre|center|town|city|quarter|district|areas?)|old (town|city|quarter)|medina|walled|ksar|historic city|city of|historic (monuments|sites) of",
+  "nested_core_share": 0.4
+}

@@ -169,6 +169,22 @@
       "sha256": null,
       "licence": "CDLA / varies",
       "restricted": true
+    },
+    {
+      "source_id": "geofacts",
+      "name": "Geometry facts per place: relief (AWS Terrain Tiles, zoom 10), land cover (ESA WorldCover 2021 v200, CC BY 4.0) and distance to the coastline (Natural Earth 10 m)",
+      "url": "https://registry.opendata.aws/terrain-tiles/ ; https://esa-worldcover.org/ ; https://www.naturalearthdata.com/",
+      "snapshot": "2026-10-05",
+      "sha256": null,
+      "licence": "CC BY 4.0 (WorldCover); public domain (Natural Earth); terrain tiles per their attribution",
+      "restricted": false,
+      "files": [
+        {
+          "path": "geofacts/2026-10-05/geofacts.parquet",
+          "bytes": 306238,
+          "sha256": "4c10f0983010dddd2b051f6054aa88d635891b109ee445d7d740d5adecebe024"
+        }
+      ]
     }
   ]
 }

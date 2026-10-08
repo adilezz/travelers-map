@@ -171,3 +171,11 @@ The pageviews (5,434 articles) were built from the monthly dumps because the per
 ## D38 applied (8 October)
 
 Council review, then the package: context entities out (about 130, `build/first/context.csv`), World Heritage ids validated against the UNESCO list, Icon by country rank scaled to World Heritage properties, Major the next 30, city term capped, parks at 0.5. G-TIER 37 to 18 violations; G-LANDMARK unchanged (176 of 184 with anchors, 173 by the rules). `data/review/tier_changes.md` shows the before and after for the top of each country. What remains is read as findings: Abu Simbel, Cusco and Cappadocia are Major where the golden set says Icon; parks in Tanzania, Morocco and Spain and the French regions (Loire, Provence, Riviera, Chamonix, Alsace) score low on English pageviews; Lake Como, Lourdes and Picos de Europa are below Major. Next lever, if wanted: pageviews from the largest local-language edition (dump route), tested on rows held back from the golden set.
+
+## Kind rules and the geometry facts (9 October, D39)
+
+`atlas.geofacts` sampled terrain (AWS Terrain Tiles), land cover (ESA WorldCover) and the Natural Earth coastline for the 4,454 places from the sandbox, because those hosts answer; the result is `data/raw/geofacts/2026-10-05/geofacts.parquet`, pinned. `atlas.kindrules` turns those facts, the Wikidata classes and the capital-of statements into fired rules, and `atlas.kinds` chooses at most three kinds per place. Golden `kinds_expected` agreement: precision 0.76, recall 0.62 (wildlife 0.93/0.77, maritime 0.95/0.64, water 0.92/0.69, old_town 0.90/0.40; rural and sacred are weak). 1,672 places have no kind.
+
+Laptop (the only step that needs Wikidata): `make capitals` reads who is the capital of what from the state side (about 30 requests), then `make capitals-pack`; commit `data/raw/wikidata/2026-10-05/capitals.parquet` and the manifest. Also, if the reduced WDPA table (`data/raw/wdpa/wdpa_reduced.csv`) is present, `make admit` uses its IUCN categories for the wildlife kind and the recognition term.
+
+Not evaluated yet, and listed as such: OSM rules (R04, R06, R08: beaches, harbours, mapped ruins; S3d) and UNESCO criteria (R09, R11).

@@ -1,0 +1,96 @@
+rule_id,class_qid,label
+R03,Q40080,beach
+R03,Q45776,fjord
+R03,Q23442,island
+R03,Q42523,atoll
+R03,Q33837,archipelago
+R03,Q1402592,island group
+R03,Q1161185,volcanic island
+R03,Q139595919,reef island
+R03,Q93352,coast
+R03,Q185113,cape
+R03,Q191992,headland
+R03,Q39594,bay
+R03,Q1322134,gulf
+R03,Q34763,peninsula
+R03,Q184358,coral reef
+R03,Q187223,lagoon
+R05,Q44782,port
+R05,Q283202,harbour
+R05,Q39715,lighthouse
+R05,Q2264924,port city
+R07,Q839954,archaeological site
+R07,Q109607,ruins
+R07,Q15661340,ancient city
+R07,Q148837,polis
+R07,Q93342462,Ancient Greek archaeological site
+R07,Q665247,hypogeum
+R07,Q381885,tomb
+R07,Q200141,necropolis
+R07,Q125866682,Ancient Egyptian necropolis
+R07,Q175582,Egyptian pyramids
+R07,Q4363262,smooth-sided pyramid
+R07,Q855747,Egyptian temple
+R07,Q867143,Roman temple
+R07,Q7362268,Roman amphitheatre
+R07,Q19757,Roman theatre
+R07,Q13218676,Roman aqueduct
+R07,Q17715832,castle ruin
+R07,Q3363945,archaeological park
+R07,Q755017,tell
+R07,Q11269813,cave with prehistoric art
+R07,Q23413,castle
+R07,Q57831,fortress
+R07,Q82117,city gate
+R07,Q57346,defensive wall
+R10,Q1370598,structure of worship
+R10,Q16970,church building
+R10,Q32815,mosque
+R10,Q44539,temple
+R10,Q120560,minor basilica
+R10,Q56242215,Catholic cathedral
+R10,Q2977,cathedral
+R10,Q44613,monastery
+R10,Q160742,abbey
+R10,Q334383,abbey church
+R10,Q817056,benedictine abbey
+R10,Q91315817,Cistercian monastery
+R10,Q1454820,congregational mosque
+R10,Q71974,külliye
+R10,Q840482,shrine of Our Lady
+R10,Q34627,synagogue
+R10,Q1128397,convent
+R10,Q317557,parish church
+R10,Q1088552,Catholic church building
+R10,Q2577114,co-cathedral
+R12b,Q46169,national park
+R12b,Q1316973,national park
+R12b,Q943017,national park
+R12b,Q20488347,national park of Peru
+R12b,Q179049,nature reserve
+R12b,Q158454,biosphere reserve
+R12b,Q473972,protected area
+R13b,Q8514,desert
+R13b,Q43742,oasis
+R13b,Q190429,depression
+R13b,Q319120,erg
+R13b,Q25391,dune
+R14b,Q8502,mountain
+R14b,Q46831,mountain range
+R14b,Q2624046,mountain chain
+R14b,Q1061151,massif
+R14b,Q133056,mountain pass
+R14b,Q207326,summit
+R14b,Q111177881,main peak
+R14b,Q54050,hill
+R14b,Q130003,ski resort
+R15,Q8072,volcano
+R15,Q1161185,volcanic island
+R15,Q169358,stratovolcano
+R15,Q204324,volcanic crater lake
+R17b,Q676050,old town
+R18,Q23397,lake
+R18,Q34038,waterfall
+R18,Q43197,delta
+R18,Q170321,wetland
+R18,Q355304,watercourse
