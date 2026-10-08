@@ -163,3 +163,7 @@ Open: ancestors are only as deep as the S2 details. 3,390 parents of well-docume
 3. `make pageviews-pack`, then commit and push `data/raw/pageviews/2026-10-05/pageviews.parquet` and `data/inputs/MANIFEST.json`.
 
 `atlas.admit` reads the file when it exists and adds `0.5 * log10(1 + PV/1000)` to N; the manifest drops "pageviews" from its list of missing inputs. Until then tiers are computed without it and G-TIER stays red.
+
+## S4 result and tier calibration (8 October, D37)
+
+The pageviews (5,434 articles) were built from the monthly dumps because the per-article API throttled to about 500 requests an hour; totals agree with the API within 2 % on the 1,183 articles fetched both ways. For a larger bundle the dump route (about 2.3 GB a month) is the plan. `make tiercal` searches the tier thresholds against the golden set only. G-TIER: 45 violations before the calibration, 37 after (D37). The remaining rows fall in four families, listed in `data/golden/tier_calibration.md` for the owner's decision.

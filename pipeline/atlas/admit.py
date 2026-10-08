@@ -31,6 +31,8 @@ from atlas.registry import Registry
 
 ROOT = Path(__file__).resolve().parents[2]
 RETRIEVED = "2026-10-05"
+# national parks, nature and biosphere reserves, protected areas and Natura 2000 sites: the class route to a national designation
+PROTECTED = {"Q46169", "Q1316973", "Q943017", "Q20488347", "Q179049", "Q158454", "Q473972", "Q15069452"}
 PROPERTY_ID = re.compile(r"^\d+(bis|ter|quater)?$")      # a whole World Heritage property; "669-612" is a component (an asset, D25)
 MAX_NAME = 60
 
@@ -96,6 +98,11 @@ def notability(c: dict, cfg: dict) -> float:
         r += n["recognition"]["whs"]
     if c.get("heritage"):
         r += n["recognition"]["national_top"]
+    rec = n["recognition"]
+    if c.get("iucn"):
+        r += rec.get("iucn_ia_ii", 0.0)                                       # WDPA category Ia, Ib or II of 100 km2 or more
+    elif set(c.get("classes", ())) & PROTECTED:
+        r += rec.get("protected_designation", 0.0)                            # a national park or reserve by class (a national designation)
     r = min(r, n["recognition_cap"])
     pv = c.get("pv") or 0                                                   # S4: twelve-month English pageviews, the best of the merged items
     pop = c.get("population") or 0
@@ -254,10 +261,10 @@ def admit(cands: dict[str, dict], scores: dict[str, dict], types: list[dict], cf
             admitted = sc["pct"] >= 100.0 * (1.0 - top_share)
             mass = True
         rules: list[str] = []
-        if c.get("whs") and PROPERTY_ID.match(str(c["whs"])):
+        strict = W.strict_and_large((wdpa or {}).get(str(c.get("wdpa"))), cfg["admission"].get("r1_institutional", {}).get("iucn_min_area_km2", 100))
+        c["iucn"] = strict                                                    # IUCN Ia, Ib or II of 100 km2 or more: also a recognition term
+        if strict or (c.get("whs") and PROPERTY_ID.match(str(c["whs"]))):
             rules.append("R1")
-        elif W.strict_and_large((wdpa or {}).get(str(c.get("wdpa"))), cfg["admission"].get("r1_institutional", {}).get("iucn_min_area_km2", 100)):
-            rules.append("R1")                                              # IUCN Ia, Ib or II of 100 km2 or more
         if t:
             if (mass is None and c["sitelinks"] >= a["r2_attention_sitelinks"]) or admitted:
                 rules.append("R2")
@@ -495,7 +502,8 @@ def write_bundle(places: list[dict], out: Path, build_id: str, notes: dict) -> N
     (out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def run(raw: Path, out: Path, top_share: float = S.TOP_SHARE) -> dict:
+def prepare(raw: Path, top_share: float = S.TOP_SHARE) -> dict:
+    """Everything up to the tiers: the kept places with their N, the absorption log and the inputs used."""
     cfg = json.loads((ROOT / "data" / "rules" / "tiers.json").read_text(encoding="utf-8"))
     types = load_types(ROOT / "data" / "rules" / "types.csv")
     with open(ROOT / "data" / "rules" / "country_overrides.csv", encoding="utf-8", newline="") as fh:
@@ -518,6 +526,12 @@ def run(raw: Path, out: Path, top_share: float = S.TOP_SHARE) -> dict:
     with_pv = attach_pageviews(places, pv)
     for c in places:
         c["_n"] = notability(c, cfg)
+    return {"cfg": cfg, "types": types, "cands": cands, "places": places, "absorbed": absorbed, "with_pv": with_pv}
+
+
+def run(raw: Path, out: Path, top_share: float = S.TOP_SHARE) -> dict:
+    prep = prepare(raw, top_share)
+    cfg, types, cands, places, absorbed, with_pv = (prep[k] for k in ("cfg", "types", "cands", "places", "absorbed", "with_pv"))
     out.mkdir(parents=True, exist_ok=True)
     with open(out / "absorbed.csv", "w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, ["child", "child_name", "parent", "parent_name", "reason", "child_type", "parent_type", "child_hint", "parent_hint"], lineterminator="\n")

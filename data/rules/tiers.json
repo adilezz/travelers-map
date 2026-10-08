@@ -1,5 +1,5 @@
 {
-  "_note": "Initial values (document 1 sections 5 and 6). Tuned only against the golden set, never the holdout; every change is recorded in the build manifest.",
+  "_note": "Initial values (document 1 sections 5 and 6). Tuned only against the golden set, never the holdout; every change is recorded in the build manifest. 8 Oct 2026 (D37): icon country_top 3 to 5, major country_next 10 to 20, protected_designation 0.2 added.",
   "admission": {
     "r1_institutional": {"iucn_min_area_km2": 100, "ramsar_min_area_km2": 100},
     "r2_attention_sitelinks": 40,
@@ -11,14 +11,14 @@
     "pageview_weight": 0.5,
     "pageview_divisor": 1000,
     "recognition_cap": 1.5,
-    "recognition": {"whs": 1.0, "iucn_ia_ii": 0.4, "ramsar_geopark_biosphere": 0.3, "ich_located": 0.3, "national_top": 0.2},
+    "recognition": {"whs": 1.0, "iucn_ia_ii": 0.4, "ramsar_geopark_biosphere": 0.3, "ich_located": 0.3, "national_top": 0.2, "protected_designation": 0.2},
     "size_term_cap": 0.3,
     "size_term_coefficient": 0.15,
     "size_term_reference_population": 100000
   },
   "tiers": {
-    "icon": {"global_percentile": 99, "country_top": 3, "small_country_top": 1, "small_country_below": 10},
-    "major": {"global_percentile": 95, "country_next": 10, "small_country_next": 3},
+    "icon": {"global_percentile": 99, "country_top": 5, "small_country_top": 1, "small_country_below": 10},
+    "major": {"global_percentile": 95, "country_next": 20, "small_country_next": 3},
     "notable": {"global_percentile": 75, "country_top_share": 0.4}
   },
   "dedup": {"same_name_km": 5, "name_distance_min_confidence": 0.8},

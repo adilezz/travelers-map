@@ -143,3 +143,14 @@ def test_a_province_record_folds_into_its_seat_and_a_park_does_not_fold_into_its
     island = {**_p("Isle", 2.0, "area", whs="380", label_en="La Gomera"), "sitelinks": 40}
     park = {**_p("Park", 2.0, "area", label_en="Garajonay National Park"), "sitelinks": 90}
     assert len(A.absorb([island, park])[0]) == 2
+
+
+def test_recognition_terms_for_protected_areas_do_not_stack():
+    cfg = {**CFG, "notability": {**CFG["notability"], "recognition": {"whs": 1.0, "national_top": 0.2, "iucn_ia_ii": 0.4,
+                                                                     "protected_designation": 0.2}}}
+    base = A.notability({"sitelinks": 9}, cfg)
+    assert A.notability({"sitelinks": 9, "classes": {"Q46169"}}, cfg) == base + 0.2
+    assert A.notability({"sitelinks": 9, "classes": {"Q46169"}, "iucn": True}, cfg) == base + 0.4
+    table = {"1": {"iucn_cat": "II", "area_km2": 500.0}}
+    out = A.admit({"Q1": cand("Q1", 7, ["Qsite"], wdpa="1")}, {}, TYPES, CFG, wdpa=table)
+    assert out[0]["iucn"] is True and out[0]["rules"] == ["R1"]

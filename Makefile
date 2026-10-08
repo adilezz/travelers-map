@@ -5,7 +5,7 @@ BUNDLE ?=
 PREVIOUS ?=
 ARGS ?=
 
-.PHONY: admit help test lint verify release-verify freeze qids qids-apply classes pin-check extract-plan extract extract-pack recall details details-pack profile signal classlabels pageviews pageviews-pack
+.PHONY: tiercal admit help test lint verify release-verify freeze qids qids-apply classes pin-check extract-plan extract extract-pack recall details details-pack profile signal classlabels pageviews pageviews-pack
 OUT ?= data/raw/wikidata/$(shell date -u +%F)
 
 help:
@@ -83,6 +83,9 @@ profile:
 
 admit:
 	$(PY) -m atlas.admit && $(PY) -m atlas.review
+
+tiercal:
+	$(PY) -m atlas.tiercal --report data/golden/tier_calibration.md
 
 pageviews:
 	$(PY) -m atlas.pageviews run
