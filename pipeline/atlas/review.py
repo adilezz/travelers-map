@@ -74,8 +74,9 @@ def tier_diff(before: list[dict], after: list[dict], golden_qids: set[str]) -> s
     lines = ["# Tier changes (D38)", "", f"Before: {len(before)} places, {share(before)}.", f"After: {len(after)} places, {share(after)}.", "",
              "## Icons by country", "", "| Country | Before | After |", "|---|---|---|"]
     for iso in sorted({p["iso3"] for p in after}):
-        icons = lambda d: ", ".join(sorted(p["name_en"] for p in d.values() if p["iso3"] == iso and p["tier"] == "Icon"))  # noqa: E731
-        lines.append(f"| {iso} | {icons(b)} | {icons(a)} |")
+        before_icons = ", ".join(sorted(p["name_en"] for p in b.values() if p["iso3"] == iso and p["tier"] == "Icon"))
+        after_icons = ", ".join(sorted(p["name_en"] for p in a.values() if p["iso3"] == iso and p["tier"] == "Icon"))
+        lines.append(f"| {iso} | {before_icons} | {after_icons} |")
     rank = {"Local": 0, "Notable": 1, "Major": 2, "Icon": 3}
     moved = [(q, b[q], a[q]) for q in a if q in b and q not in golden_qids and a[q]["tier"] != b[q]["tier"]]
     gone = [b[q] for q in b if q not in a and q not in golden_qids and rank[b[q]["tier"]] >= 2]
