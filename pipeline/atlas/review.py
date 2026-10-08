@@ -66,10 +66,34 @@ def absorption_summary(rows: list[dict]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def tier_diff(before: list[dict], after: list[dict], golden_qids: set[str]) -> str:
+    """Before and after a rule change: tier shares, each country's Icons, and the non-golden places whose tier moved."""
+    b = {p["qid"]: p for p in before}
+    a = {p["qid"]: p for p in after}
+    share = lambda ps: ", ".join(f"{t} {100 * sum(1 for p in ps if p['tier'] == t) / len(ps):.1f} %" for t in ("Icon", "Major", "Notable", "Local"))  # noqa: E731
+    lines = ["# Tier changes (D38)", "", f"Before: {len(before)} places, {share(before)}.", f"After: {len(after)} places, {share(after)}.", "",
+             "## Icons by country", "", "| Country | Before | After |", "|---|---|---|"]
+    for iso in sorted({p["iso3"] for p in after}):
+        icons = lambda d: ", ".join(sorted(p["name_en"] for p in d.values() if p["iso3"] == iso and p["tier"] == "Icon"))  # noqa: E731
+        lines.append(f"| {iso} | {icons(b)} | {icons(a)} |")
+    rank = {"Local": 0, "Notable": 1, "Major": 2, "Icon": 3}
+    moved = [(q, b[q], a[q]) for q in a if q in b and q not in golden_qids and a[q]["tier"] != b[q]["tier"]]
+    gone = [b[q] for q in b if q not in a and q not in golden_qids and rank[b[q]["tier"]] >= 2]
+    lines += ["", f"## Non-golden places whose tier changed: {len(moved)} ({sum(1 for _, x, y in moved if rank[y['tier']] > rank[x['tier']])} up, "
+              f"{sum(1 for _, x, y in moved if rank[y['tier']] < rank[x['tier']])} down)", "",
+              "Largest moves among the top of each country (Icon or Major before or after):", "", "| Place | Country | Before | After |", "|---|---|---|---|"]
+    big = sorted((m for m in moved if max(rank[m[1]["tier"]], rank[m[2]["tier"]]) >= 2), key=lambda m: -abs(rank[m[2]["tier"]] - rank[m[1]["tier"]]))
+    lines += [f"| {y['name_en']} | {y['iso3']} | {x['tier']} | {y['tier']} |" for _, x, y in big[:60]]
+    lines += ["", f"## Major or Icon before and no longer a place (context, absorbed or merged): {len(gone)}", ""]
+    lines += [f"- {p['name_en']} ({p['iso3']}, {p['tier']})" for p in gone[:80]]
+    return "\n".join(lines) + "\n"
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--bundle", type=Path, default=ROOT / "build" / "first")
     ap.add_argument("--out", type=Path, default=ROOT / "data" / "review")
+    ap.add_argument("--before", type=Path, help="an earlier bundle: also write tier_changes.md")
     a = ap.parse_args(argv)
     a.out.mkdir(parents=True, exist_ok=True)
     with open(a.bundle / "absorbed.csv", encoding="utf-8", newline="") as fh:
@@ -81,6 +105,10 @@ def main(argv: list[str] | None = None) -> int:
         w.writerow(["iso3", "type", "place_a", "qid_a", "tier_a", "place_b", "qid_b", "tier_b", "km", "verdict"])
         for x, y, d in pairs:
             w.writerow([x["iso3"], x["type"], x["name_en"], x["qid"], x["tier"], y["name_en"], y["qid"], y["tier"], f"{d:.1f}", ""])
+    if a.before:
+        with open(ROOT / "data" / "golden" / "golden.csv", encoding="utf-8", newline="") as fh:
+            gq = {r["qid"] for r in csv.DictReader(fh) if r.get("qid")}
+        (a.out / "tier_changes.md").write_text(tier_diff(load_places(a.before), load_places(a.bundle), gq), encoding="utf-8")
     print(f"{len(rows)} absorbed, {len(pairs)} same-kind neighbour pairs for review")
     return 0
 

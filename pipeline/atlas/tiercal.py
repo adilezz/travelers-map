@@ -92,29 +92,29 @@ def main(argv: list[str] | None = None) -> int:
     out.append(f"`tiers.json` when run: **{len(b)} violations**; tier shares {shares(places)}.\n")
     out += [f"- {x}" for x in b]
     results = []
-    for prot, pvw, icon_g, major_g, icon_top, major_next, notable_g in itertools.product(
-            [0.0, 0.2, 0.4], [0.5, 1.0], [99, 99.5], [90, 95], [3, 5, 8, 12], [10, 20, 30], [60, 75]):
+    for prot, pvw, scale, major_next, notable_g in itertools.product(
+            [0.2, 0.5, 0.8], [0.5, 1.0], [(3, 5, 7), (4, 6, 8), (5, 7, 9)], [20, 30, 40], [60, 75]):
         cfg = copy.deepcopy(base)
         cfg["notability"]["recognition"]["protected_designation"] = prot
         cfg["notability"]["pageview_weight"] = pvw
-        cfg["tiers"]["icon"].update(global_percentile=icon_g, country_top=icon_top)
-        cfg["tiers"]["major"].update(global_percentile=major_g, country_next=major_next)
+        cfg["tiers"]["icon"]["country_top_by_whs"] = [[9, scale[0]], [30, scale[1]], [None, scale[2]]]
+        cfg["tiers"]["major"]["country_next"] = major_next
         cfg["tiers"]["notable"]["global_percentile"] = notable_g
         for p in places:
             p["_n"] = A.notability(p, cfg)
         tiers = tiers_for(places, cfg)
-        results.append((len(violations(rows, matched, tiers)), shares(places), prot, pvw, icon_g, major_g, icon_top, major_next, notable_g))
+        results.append((len(violations(rows, matched, tiers)), shares(places), prot, pvw, scale, major_next, notable_g))
     results.sort(key=lambda r: (r[0], r[1][0] + r[1][1]))
     out.append("\n## Lowest violations (ties by the smallest Icon plus Major share)\n\n"
-               "| violations | Icon % | Major % | Notable % | protected R | pageview weight | icon p | major p | icon top | major next | notable p |\n"
-               "|---|---|---|---|---|---|---|---|---|---|---|")
+               "| violations | Icon % | Major % | Notable % | protected R | pageview weight | Icon 4/6/8 steps | major next | notable p |\n"
+               "|---|---|---|---|---|---|---|---|---|")
     out += [f"| {r[0]} | {r[1][0]:.1f} | {r[1][1]:.1f} | {r[1][2]:.1f} | {' | '.join(str(x) for x in r[2:])} |" for r in results[:15]]
     best = {}
     for r in results:
         best.setdefault(r[0], r)
     out.append("\n## Violations against the cost in Icon and Major places (cheapest setting per violation count)\n\n"
-               "| violations | Icon % | Major % | protected R | pageview weight | icon top | major next |\n|---|---|---|---|---|---|---|")
-    out += [f"| {k} | {v[1][0]:.1f} | {v[1][1]:.1f} | {v[2]} | {v[3]} | {v[6]} | {v[7]} |" for k, v in sorted(best.items())[:14]]
+               "| violations | Icon % | Major % | protected R | pageview weight | Icon steps | major next |\n|---|---|---|---|---|---|---|")
+    out += [f"| {k} | {v[1][0]:.1f} | {v[1][1]:.1f} | {v[2]} | {v[3]} | {v[4]} | {v[5]} |" for k, v in sorted(best.items())[:14]]
     text = "\n".join(out) + "\n"
     print(text)
     if a.report:

@@ -11,6 +11,7 @@ to be argued with, not a result.
 from __future__ import annotations
 
 import argparse
+import bisect
 import csv
 import hashlib
 import json
@@ -94,8 +95,8 @@ def notability(c: dict, cfg: dict) -> float:
     n = cfg["notability"]
     sl = c.get("D") if c.get("D") is not None else c.get("sitelinks", 0)
     r = 0.0
-    if c.get("whs"):
-        r += n["recognition"]["whs"]
+    if c.get("whs") and PROPERTY_ID.match(str(c["whs"])):
+        r += n["recognition"]["whs"]                                          # a whole property, never a serial component
     if c.get("heritage"):
         r += n["recognition"]["national_top"]
     rec = n["recognition"]
@@ -122,28 +123,47 @@ def attach_pageviews(places: list[dict], pv: dict[str, int]) -> int:
     return n
 
 
+def whs_counts(places: list[dict]) -> dict[str, int]:
+    n: dict[str, int] = defaultdict(int)
+    for p in places:
+        if _holds(p):
+            n[p["iso3"]] += 1
+    return n
+
+
+def icon_count(whs: int, t: dict) -> int:
+    """How many Icons a country gets: more where UNESCO inscribed more (D38)."""
+    steps = t["icon"]["country_top_by_whs"]                              # [[max_whs, top], ...] in ascending order
+    for limit, top in steps:
+        if limit is None or whs <= limit:
+            return top
+    return steps[-1][1]
+
+
 def assign_tiers(places: list[dict], cfg: dict) -> None:
-    """Tier by the higher of a global percentile and a within-country rank (document 1 section 6.3)."""
+    """Icon and Major by country rank (Icon count scaled by World Heritage properties); Notable also by global
+    percentile or the top 40 % of the country (document 1 section 6.3, D38)."""
     t = cfg["tiers"]
     ns = sorted(p["_n"] for p in places)
 
     def pct(n: float) -> float:
-        return 100.0 * sum(1 for x in ns if x < n) / max(1, len(ns))
+        return 100.0 * bisect.bisect_left(ns, n) / max(1, len(ns))
 
     by_iso: dict[str, list[dict]] = defaultdict(list)
     for p in places:
         by_iso[p["iso3"]].append(p)
-    for ps in by_iso.values():
+    counts = whs_counts(places)
+    for iso, ps in by_iso.items():
         ps.sort(key=lambda p: (-p["_n"], p["name_en"]))
         small = len(ps) < t["icon"]["small_country_below"]
-        icon_top = t["icon"]["small_country_top"] if small else t["icon"]["country_top"]
+        icon_top = t["icon"]["small_country_top"] if small else icon_count(counts.get(iso, 0), t)
         major_next = t["major"]["small_country_next"] if small else t["major"]["country_next"]
         for i, p in enumerate(ps):
             g = pct(p["_n"])
-            if g >= t["icon"]["global_percentile"] or i < icon_top:
-                p["tier"], p["tier_reason"] = "Icon", "global p99 or top of country"
+            if i < icon_top:
+                p["tier"], p["tier_reason"] = "Icon", "top of its country"
             elif g >= t["major"]["global_percentile"] or i < icon_top + major_next:
-                p["tier"], p["tier_reason"] = "Major", "global p95 or next of country"
+                p["tier"], p["tier_reason"] = "Major", "global p95 or next of its country"
             elif g >= t["notable"]["global_percentile"] or i < t["notable"]["country_top_share"] * len(ps):
                 p["tier"], p["tier_reason"] = "Notable", "global p75 or top 40 % of country"
             else:
@@ -158,7 +178,8 @@ def candidates(raw: Path, overrides: dict[str, str]) -> dict[str, dict]:
 
     def get(qid: str, iso: str) -> dict:
         iso = overrides.get(qid, iso)
-        c = cands.setdefault(qid, {"qid": qid, "iso3": iso, "classes": set(), "sitelinks": 0, "heritage": []})
+        c = cands.setdefault(qid, {"qid": qid, "iso3": iso, "classes": set(), "sitelinks": 0, "heritage": [], "isos": set()})
+        c["isos"].add(iso)
         if qid in overrides:
             c["iso3"] = overrides[qid]
         return c
@@ -191,7 +212,7 @@ def candidates(raw: Path, overrides: dict[str, str]) -> dict[str, dict]:
             c["lat"], c["lon"] = lat, lon
         c["sitelinks"] = max(c["sitelinks"], sl or 0)
         if whs:
-            c["whs"] = norm_whs(whs)
+            c["whs"] = better_whs(c.get("whs"), norm_whs(whs) or None)
         if wdpa:
             c["wdpa"] = wdpa
     up: dict[str, list[str]] = {}
@@ -226,9 +247,62 @@ def load_admin_classes(path: Path) -> set[str]:
         return {r["class_qid"] for r in csv.DictReader(fh) if r.get("class_qid")}
 
 
+_KNOWN_WHS: set[str] | None = None
+
+
+# D38: entities that are not destinations. They stay out of the bundle and are listed in context.csv.
+CONTEXT_CLASSES = {"Q5107", "Q165", "Q9430", "Q4022", "Q3024240"}      # continent, sea, ocean, river, historical country
+CONTEXT_POPULATION = 20_000_000                                          # a region this populous is a macro-region (Middle East)
+# a wadi, a valley or a protected area is a destination even when Wikidata also calls it a river (Wadi Rum, Wadi Mujib)
+DESTINATION_CLASSES = {"Q187971", "Q39816", "Q473972", "Q46169", "Q179049", "Q15069452"}
+LARGE_FEATURES = {"Q8514", "Q46831", "Q2624046"}                        # desert, mountain range, mountain chain
+LARGE_SITELINKS = 150
+TRANSNATIONAL = 3                                                        # a desert, lake or region found in this many of the nine countries
+
+
+def is_context(c: dict, types: list[dict]) -> str:
+    """Why an admitted candidate is context, not a destination ('' when it is one)."""
+    if c["classes"] & CONTEXT_CLASSES and not (c["classes"] & DESTINATION_CLASSES) and not c.get("whs"):
+        return "continent, sea, ocean, river or historical country"
+    t = c.get("_type") or {}
+    if c["classes"] & LARGE_FEATURES and c["sitelinks"] >= LARGE_SITELINKS and not (c["classes"] & DESTINATION_CLASSES) and not c.get("whs"):
+        return "a desert or mountain range known in 150 or more languages (Sahara, Alps, Andes)"
+    if t.get("place_type") == "area" and (c.get("population") or 0) >= CONTEXT_POPULATION:
+        return f"region of {c['population']:,.0f} inhabitants"
+    if t.get("place_type") == "area" and len(c.get("isos", ())) >= TRANSNATIONAL and c["sitelinks"] >= 100 and "R1" not in c["rules"]:
+        return f"found in {len(c['isos'])} of the nine countries"
+    return ""
+
+
+def better_whs(a: object, b: object) -> object:
+    """Of two World Heritage ids keep a whole property over a serial component, else the first."""
+    whole = lambda x: bool(x) and bool(PROPERTY_ID.match(str(x)))      # noqa: E731
+    return a if whole(a) or not whole(b) and a else (b or a)
+
+
+def known_whs() -> set[str]:
+    """Property numbers of the UNESCO list (data/inputs/whs_properties.csv)."""
+    global _KNOWN_WHS
+    if _KNOWN_WHS is None:
+        path = ROOT / "data" / "inputs" / "whs_properties.csv"
+        with open(path, encoding="utf-8", newline="") as fh:
+            _KNOWN_WHS = {r["id_number"] for r in csv.DictReader(fh)}
+    return _KNOWN_WHS
+
+
 def norm_whs(value: object) -> str:
-    """'173rev' is a revised inscription of property 173 (19 such ids in the October 2026 data)."""
-    return re.sub(r"rev$", "", str(value))
+    """A World Heritage id checked against the UNESCO list, or "" when it is not one (D38).
+
+    '173rev' is a revised inscription of property 173; '1133bis' an extension; '669-612' and '874.594' are
+    serial components (kept as such, never whole properties); a stray string such as the Russian wiki label
+    '№395 в списке...' on Pisa holds one number, which is used when UNESCO lists it."""
+    v = str(value).strip()
+    v = re.sub(r"rev$", "", v)
+    m = re.match(r"^(\d+)(bis|ter|quater)?$", v) or re.match(r"^(\d+)[-.]\d+$", v)
+    if m:
+        return v if m.group(1) in known_whs() else ""
+    nums = re.findall(r"\d+", v)
+    return nums[0] if len(nums) == 1 and nums[0] in known_whs() else ""
 
 
 def load_overrides(path: Path) -> list[dict]:
@@ -319,7 +393,7 @@ def merge_duplicates(places: list[dict], same_name_km: float) -> list[dict]:
                 if b["qid"] not in drop and haversine_km(a["lat"], a["lon"], b["lat"], b["lon"]) <= same_name_km:
                     drop.add(b["qid"])
                     a.setdefault("alt_qids", []).append(b["qid"])
-                    a["whs"] = a.get("whs") or b.get("whs")
+                    a["whs"] = better_whs(a.get("whs"), b.get("whs"))
     return [p for p in places if p["qid"] not in drop]
 
 
@@ -347,7 +421,7 @@ def _ruins(p: dict) -> bool:
     return (p.get("_type") or {}).get("place_type") == "site" and (p.get("_type") or {}).get("kind_hint") == "ruins"
 
 
-SERIAL_ID = re.compile(r"^(\d+)-")
+SERIAL_ID = re.compile(r"^(\d+)[-.]")
 
 
 def absorb(places: list[dict], overrides: list[dict] | None = None, admin: set[str] | None = None) -> tuple[list[dict], list[dict]]:
@@ -377,7 +451,8 @@ def absorb(places: list[dict], overrides: list[dict] | None = None, admin: set[s
                 gone[p["qid"]] = (winner[w]["qid"], f"same World Heritage property {w}")
     for p in places:
         m = SERIAL_ID.match(str(p.get("whs") or ""))
-        if m and m.group(1) in winner and p["qid"] not in gone and winner[m.group(1)]["qid"] != p["qid"]:
+        if m and m.group(1) in winner and p["qid"] not in gone and winner[m.group(1)]["qid"] != p["qid"] \
+                and not ((p.get("_type") or {}).get("place_type") == "settlement" and winner[m.group(1)]["sitelinks"] * 3 < p["sitelinks"]):
             gone[p["qid"]] = (winner[m.group(1)]["qid"], f"serial component of property {m.group(1)}")
     held = [p for p in places if p.get("whs") and PROPERTY_ID.match(str(p["whs"])) and p["qid"] not in gone]
     for p in places:                                                        # 4. the property record and the famous item of one destination
@@ -387,6 +462,15 @@ def absorb(places: list[dict], overrides: list[dict] | None = None, admin: set[s
             if a["sitelinks"] < STUB_SITELINKS <= p["sitelinks"] and a["iso3"] == p["iso3"] and a["qid"] != p["qid"] and a["qid"] not in gone and (a.get("_type") or {}).get("place_type") != "settlement" \
                     and haversine_km(a["lat"], a["lon"], p["lat"], p["lon"]) <= COLOCATED_KM:
                 gone[a["qid"]] = (p["qid"], f"property record of {p['qid']} (within {COLOCATED_KM:g} km, under {STUB_SITELINKS} sitelinks)")
+                p["whs"] = a["whs"]
+                break
+    for p in places:                                                        # 4a. a city and the record of its historic centre (Rome, Florence)
+        if p["qid"] in gone or _holds(p) or (p.get("_type") or {}).get("place_type") != "settlement":
+            continue
+        for a in held:
+            if a["sitelinks"] * 3 < p["sitelinks"] and a["iso3"] == p["iso3"] and a["qid"] not in gone \
+                    and _core(a) & _core(p) and haversine_km(a["lat"], a["lon"], p["lat"], p["lon"]) <= SEAT_KM:
+                gone[a["qid"]] = (p["qid"], f"property record of {p['qid']} (shared name, within {SEAT_KM:g} km, a third of its sitelinks)")
                 p["whs"] = a["whs"]
                 break
     for p in places:                                                        # 4b. a protected area and its mountain (Kilimanjaro)
@@ -449,7 +533,8 @@ def absorb(places: list[dict], overrides: list[dict] | None = None, admin: set[s
             continue
         child, parent = by_qid[q], by_qid[r]
         parent.setdefault("alt_qids", []).extend([q, *child.get("alt_qids", [])])
-        parent["whs"] = parent.get("whs") or child.get("whs")
+        if not why.startswith("located in") and not why.startswith("administrative province"):
+            parent["whs"] = better_whs(parent.get("whs"), child.get("whs"))   # a nested site does not give its city the property
         if q in keep_kinds:
             parent["classes"] = set(parent["classes"]) | set(child["classes"])      # a ruled merge keeps the loser's kinds (Meru on the park)
         parent.setdefault("absorbed", []).append(child.get("label_en") or q)
@@ -513,6 +598,8 @@ def prepare(raw: Path, top_share: float = S.TOP_SHARE) -> dict:
     scores = S.scores(items, profiles)
     admitted = admit(cands, scores, types, cfg, top_share, W.load(raw.parent.parent / "wdpa" / "wdpa_reduced.csv"),
                      load_anchors(ROOT / "data" / "anchors" / "anchors.csv"))
+    context = [(c, is_context(c, types)) for c in admitted]
+    admitted = [c for c, why in context if not why]
     for c in admitted:
         c["_n"] = notability(c, cfg)
         c["name_en"] = short_name(c.get("label_en") or c.get("label_loc"), [])
@@ -526,12 +613,18 @@ def prepare(raw: Path, top_share: float = S.TOP_SHARE) -> dict:
     with_pv = attach_pageviews(places, pv)
     for c in places:
         c["_n"] = notability(c, cfg)
-    return {"cfg": cfg, "types": types, "cands": cands, "places": places, "absorbed": absorbed, "with_pv": with_pv}
+    return {"cfg": cfg, "types": types, "cands": cands, "places": places, "absorbed": absorbed, "with_pv": with_pv,
+            "context": [(c["qid"], c.get("label_en") or c.get("label_loc"), c["iso3"], why) for c, why in context if why]}
 
 
 def run(raw: Path, out: Path, top_share: float = S.TOP_SHARE) -> dict:
     prep = prepare(raw, top_share)
     cfg, types, cands, places, absorbed, with_pv = (prep[k] for k in ("cfg", "types", "cands", "places", "absorbed", "with_pv"))
+    out.mkdir(parents=True, exist_ok=True)
+    with open(out / "context.csv", "w", encoding="utf-8", newline="") as fh:
+        w = csv.writer(fh, lineterminator="\n")
+        w.writerow(["qid", "name", "iso3", "why"])
+        w.writerows(sorted(prep["context"]))
     out.mkdir(parents=True, exist_ok=True)
     with open(out / "absorbed.csv", "w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, ["child", "child_name", "parent", "parent_name", "reason", "child_type", "parent_type", "child_hint", "parent_hint"], lineterminator="\n")

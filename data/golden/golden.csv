@@ -10,7 +10,7 @@ G008,Egypt,EGY,Siwa Oasis,,positive,area,29.203,25.519,10,Major,,desert|rural,,Q
 G009,Egypt,EGY,White Desert,,positive,area,27.33,28.17,25,Notable,,desert|wildlife,,Q2556953,resolved 2026-10-03,,,,,Farafra; area anchor tolerance is wide
 G010,Egypt,EGY,Sharm el-Sheikh,,positive,settlement,27.916,34.33,8,Major,,seaside,,Q644,resolved 2026-10-03,,,,,Ras Mohammed is near; one pin is enough
 G012,Egypt,EGY,Edfu,,positive,settlement,24.978,32.873,5,Notable,,ruins,,Q239107,resolved 2026-10-03,,,,,
-G013,Egypt,EGY,Wadi Al-Hitan,Whale Valley|Wadi El-Hitan,positive,area,29.27,30.04,20,Notable,Notable,desert|wildlife,1186,Q501833,resolved 2026-10-03,,,y,whs_id verified by name in whs_expanded.xml,"v1's Egypt #1 was a Faiyum village; this natural WHS must be Notable, not top"
+G013,Egypt,EGY,Wadi Al-Hitan,Whale Valley|Wadi El-Hitan,positive,area,29.27,30.04,20,Notable,Major,desert|wildlife,1186,Q501833,resolved 2026-10-03,,,y,whs_id verified by name in whs_expanded.xml,"v1's Egypt #1 was a Faiyum village; this natural WHS must be Notable, not top. D38 (8 Oct 2026): max_tier raised from Notable to Major by owner ruling; it is a World Heritage property"
 G014,Peru,PER,Machu Picchu,Machu Pichu|Historic Sanctuary of Machu Picchu,positive,site,-13.163,-72.545,5,Icon,,mountain|ruins,274,Q676203,resolved 2026-10-03,,,y,whs_id verified by name in whs_expanded.xml,"v1 shipped this as 'Quillabamba'; Aguas Calientes is the gateway, linked not merged"
 G015,Peru,PER,Cusco,Cuzco,positive,settlement,-13.532,-71.967,6,Icon,,capital|old_town|mountain,273,Q5582862,resolved 2026-10-03,,,,whs_id verified by name in whs_expanded.xml,Inca capital
 G016,Peru,PER,Sacred Valley (Ollantaytambo),,positive,area,-13.258,-72.264,15,Major,,mountain|rural,,Q2237464,resolved 2026-10-03,,,,,

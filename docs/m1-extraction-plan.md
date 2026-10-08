@@ -167,3 +167,7 @@ Open: ancestors are only as deep as the S2 details. 3,390 parents of well-docume
 ## S4 result and tier calibration (8 October, D37)
 
 The pageviews (5,434 articles) were built from the monthly dumps because the per-article API throttled to about 500 requests an hour; totals agree with the API within 2 % on the 1,183 articles fetched both ways. For a larger bundle the dump route (about 2.3 GB a month) is the plan. `make tiercal` searches the tier thresholds against the golden set only. G-TIER: 45 violations before the calibration, 37 after (D37). The remaining rows fall in four families, listed in `data/golden/tier_calibration.md` for the owner's decision.
+
+## D38 applied (8 October)
+
+Council review, then the package: context entities out (about 130, `build/first/context.csv`), World Heritage ids validated against the UNESCO list, Icon by country rank scaled to World Heritage properties, Major the next 30, city term capped, parks at 0.5. G-TIER 37 to 18 violations; G-LANDMARK unchanged (176 of 184 with anchors, 173 by the rules). `data/review/tier_changes.md` shows the before and after for the top of each country. What remains is read as findings: Abu Simbel, Cusco and Cappadocia are Major where the golden set says Icon; parks in Tanzania, Morocco and Spain and the French regions (Loire, Provence, Riviera, Chamonix, Alsace) score low on English pageviews; Lake Como, Lourdes and Picos de Europa are below Major. Next lever, if wanted: pageviews from the largest local-language edition (dump route), tested on rows held back from the golden set.

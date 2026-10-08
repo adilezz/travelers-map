@@ -6,7 +6,7 @@ CFG = {"admission": {"r2_attention_sitelinks": 40, "r3_city_population": 100000,
                      "r5_country_floor": {"sovereign": 2}},
        "notability": {"recognition_cap": 1.5, "recognition": {"whs": 1.0, "national_top": 0.2}, "size_term_cap": 0.3,
                       "size_term_coefficient": 0.15, "size_term_reference_population": 100000},
-       "tiers": {"icon": {"global_percentile": 99, "country_top": 3, "small_country_top": 1, "small_country_below": 10},
+       "tiers": {"icon": {"country_top_by_whs": [[9, 4], [30, 6], [None, 8]], "small_country_top": 1, "small_country_below": 10},
                  "major": {"global_percentile": 95, "country_next": 10, "small_country_next": 3},
                  "notable": {"global_percentile": 75, "country_top_share": 0.4}}}
 TYPES = [{"class_qid": "Qsite", "label": "archaeological site", "place_type": "site", "kind_hint": "ruins", "place_like": "yes"},
@@ -63,7 +63,7 @@ def test_notability_and_tiers_follow_the_documented_rules():
     ps = [{"iso3": "ITA", "name_en": f"P{i}", "_n": float(i)} for i in range(20)]
     A.assign_tiers(ps, CFG)
     tiers = {p["name_en"]: p["tier"] for p in ps}
-    assert tiers["P19"] == tiers["P18"] == tiers["P17"] == "Icon" and tiers["P16"] == "Major" and tiers["P0"] == "Local"
+    assert {tiers[f"P{i}"] for i in (19, 18, 17, 16)} == {"Icon"} and tiers["P15"] == "Major" and tiers["P0"] == "Local"
 
 
 def _p(qid, n, ptype, **kw):
@@ -154,3 +154,36 @@ def test_recognition_terms_for_protected_areas_do_not_stack():
     table = {"1": {"iucn_cat": "II", "area_km2": 500.0}}
     out = A.admit({"Q1": cand("Q1", 7, ["Qsite"], wdpa="1")}, {}, TYPES, CFG, wdpa=table)
     assert out[0]["iucn"] is True and out[0]["rules"] == ["R1"]
+
+
+def test_icon_count_grows_with_world_heritage_properties():
+    t = CFG["tiers"]
+    assert [A.icon_count(n, t) for n in (0, 9, 10, 30, 31, 61)] == [4, 4, 6, 6, 8, 8]
+    ps = [{"iso3": "ITA", "name_en": f"P{i}", "_n": float(i), "whs": str(i + 1), "_type": {}} for i in range(40)]
+    ps = [{**p, "lat": 0, "lon": 0} for p in ps]
+    A.assign_tiers(ps, CFG)
+    assert sum(1 for p in ps if p["tier"] == "Icon") == 8                       # 40 places hold a whole property each: over 30 gives 8
+
+
+def test_world_heritage_ids_are_checked_against_the_unesco_list():
+    assert A.norm_whs("1133bis") == "1133bis" and A.norm_whs("9999") == "" and A.norm_whs("not an id") == ""
+    assert A.norm_whs("№395 в списке (en)") == "395" and A.norm_whs("874.594") == "874.594"
+    assert A.better_whs("91-001", "91") == "91" and A.better_whs("91", "91-001") == "91" and A.better_whs(None, "91-001") == "91-001"
+
+
+def test_context_is_not_a_destination_but_a_wadi_or_a_park_is():
+    t = []
+    river = {"classes": {"Q4022"}, "sitelinks": 200, "rules": ["R2"], "_type": {"place_type": "area"}}
+    wadi = {"classes": {"Q4022", "Q187971"}, "sitelinks": 60, "rules": ["R2"], "_type": {"place_type": "area"}}
+    region = {"classes": {"Q82794"}, "sitelinks": 200, "rules": ["R2"], "_type": {"place_type": "area"}, "population": 371_000_000}
+    sahara = {"classes": {"Q8514"}, "sitelinks": 225, "rules": ["R2"], "_type": {"place_type": "area"}}
+    assert A.is_context(river, t) and A.is_context(region, t) and A.is_context(sahara, t)
+    assert not A.is_context(wadi, t) and not A.is_context({**river, "whs": "87"}, t)
+
+
+def test_a_city_takes_the_record_of_its_historic_centre():
+    rome = {**_p("Rome", 4.0, "settlement"), "sitelinks": 344, "label_en": "Rome", "lat": 41.89, "lon": 12.48, "iso3": "ITA", "whs": "91-003"}
+    rec = {**_p("Rec", 1.0, "settlement"), "sitelinks": 21, "label_en": "Historic Centre of Rome", "lat": 41.90, "lon": 12.47, "iso3": "ITA",
+           "whs": "91"}
+    kept, log = A.absorb([rome, rec])
+    assert [p["qid"] for p in kept] == ["Rome"] and rome["whs"] == "91"
