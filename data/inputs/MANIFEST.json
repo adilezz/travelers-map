@@ -25,6 +25,11 @@
           "sha256": "d96d8d1be6c7cbfbdc1ac02e6e5b1f97629e5e7673488743616e96d15a751626"
         },
         {
+          "path": "wikidata/2026-10-05/capitals.parquet",
+          "bytes": 57935,
+          "sha256": "fecf5b30e7f46e4df6b1f531c4f8c1e5c4661d132adaa793ccfee03af44b00fa"
+        },
+        {
           "path": "wikidata/2026-10-05/class.parquet",
           "bytes": 1422039,
           "sha256": "6ba9342a29cc00da8cba48cbd121af7edf1bead2450c6374b7b890763d38f8a5"
