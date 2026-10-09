@@ -179,3 +179,9 @@ Council review, then the package: context entities out (about 130, `build/first/
 Laptop (the only step that needs Wikidata): `make capitals` reads who is the capital of what from the state side (about 30 requests), then `make capitals-pack`; commit `data/raw/wikidata/2026-10-05/capitals.parquet` and the manifest. Also, if the reduced WDPA table (`data/raw/wdpa/wdpa_reduced.csv`) is present, `make admit` uses its IUCN categories for the wildlife kind and the recognition term.
 
 Not evaluated yet, and listed as such: OSM rules (R04, R06, R08: beaches, harbours, mapped ruins; S3d) and UNESCO criteria (R09, R11).
+
+## Capitals and the viewer (9 October)
+
+State-side capitals are in (5,167 statements). A historical country or empire is former by definition, since Wikidata often omits the end date; the result is recall 0.89 and precision 0.53 on the golden `capital` rows, because Wikidata also calls the seats of medieval kingdoms and republics (Barcelona, Seville, Cordoba, Lyon) capitals of historical countries. That is a judgement for the owner in the viewer, not a rule I can tell apart from Venice or Siena.
+
+`make viewer` serves `build/first` on http://127.0.0.1:8765 (this machine only). Tabs: all places, places without a kind, **Label kinds** (a seeded stratified sample of 300: 20 per kind plus 20 without a kind; the predicted kinds and the golden expectations are hidden until you save, so your labels do not follow the rules), **Precision review** (a random 100: right, wrong entity, wrong place, wrong name, should not exist, and whether the tier looks right) and **Left out** (context entities and absorbed places). Labels are written to `data/golden/kind_labels.csv` and `data/review/precision_review.csv`; the samples to `data/golden/kind_sample.csv` and `data/review/precision_sample.csv`, drawn once and kept so they do not move when the bundle is rebuilt. Commit those files to share them.

@@ -89,10 +89,10 @@ def _capital(c: dict, ctx: Context) -> tuple[list[str], list[str]]:
     for q, lst in items:
         for e in [*lst, *ctx.capitals.get(q, [])]:
             cl = set(e.get("classes") or ()) or ctx.state_classes.get(e["qid"], set())
-            if not e.get("ended") and cl & STATE:
+            if not e.get("ended") and cl & STATE and not cl & FORMER_STATE:
                 now.append(q)
-            elif e.get("ended") and cl & (FORMER_STATE | STATE):
-                past.append(q)
+            elif cl & FORMER_STATE or (e.get("ended") and cl & STATE):
+                past.append(q)             # a historical country or empire is former by definition, whether or not the statement has an end date
     return now, past
 
 
